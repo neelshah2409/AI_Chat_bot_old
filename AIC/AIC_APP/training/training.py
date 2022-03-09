@@ -29,6 +29,7 @@ for intent in intents['intents']:
 words=[lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
 words=sorted(set(words))
 
+
 classes=sorted(set(classes))
 
 pickle.dump(words,open('words.pkl','wb'))
