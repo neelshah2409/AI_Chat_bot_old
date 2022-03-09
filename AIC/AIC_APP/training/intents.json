@@ -14,5 +14,10 @@
     "tag": "WHATSPPbabe",
     "patterns": ["BUDDYkaka", "MAJAMAkaak", "NA NATHIkaka MJAMA", "KAKA", "PAPAkaka"],
     "responses": ["kaka","HU AK DUM kaka","kaka"]
+  },
+  {
+    "tag": "Ques",
+    "patterns": ["How are you?", "are you available?", "what are you doing "],
+    "responses": ["kaka","HU AK DUM kaka","kaka"]
   }
 ]}
