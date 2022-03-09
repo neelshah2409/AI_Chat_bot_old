@@ -50,7 +50,9 @@ def get_response(intent_list, intent_json):
 
     return result
 def index(request):
-    return render(request, 'AIC_APP/index.html')
+    return render(request, 'AIC_APP/index2.html')
+
+
 def takeOutput(request):
     message = request.POST.get('input', 'hey')
     ints = predict_class(message)

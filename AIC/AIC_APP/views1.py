@@ -12,5 +12,5 @@ def index(request):
 # Create your views here.
 
 def harshil(request):
-    return render(request, 'AIC_APP/index.html')
+    return render(request, 'AIC_APP/index2.html')
 
