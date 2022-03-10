@@ -54,9 +54,10 @@ def index(request):
 
 
 def takeOutput(request):
-    message = request.POST.get('etext', 'hey')
+    message = request.POST.get('message', 'hey')
     ints = predict_class(message)
     res = get_response(ints, intents)
     print(res)
     # return render(request, 'AIC_APP/index.html')
     return HttpResponse(res)
+
