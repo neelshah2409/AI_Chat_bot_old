@@ -141,6 +141,7 @@ body {
 .sug {
     background-color: #efefef;
     visibility: hidden;
+    border-radius: 5px !important;
 }
 
 .msg p {
