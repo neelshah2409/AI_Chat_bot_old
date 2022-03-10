@@ -53,6 +53,12 @@ $(document).ready(function() {
             </div>`);
 
                 $("#etext").val("");
+
+
+                $(".box").scrollTop(10000);
+
+
+
             }
 
 
