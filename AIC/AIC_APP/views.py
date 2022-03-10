@@ -50,7 +50,7 @@ def get_response(intent_list, intent_json):
 
     return result
 def index(request):
-    return render(request, 'AIC_APP/index2.html')
+    return render(request, 'AIC_APP/background.html')
 
 
 def takeOutput(request):

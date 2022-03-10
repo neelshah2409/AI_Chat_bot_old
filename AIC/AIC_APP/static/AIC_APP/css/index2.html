@@ -1,0 +1,35 @@
+<div class="wrapper">
+    <div class="title">AICTE Chatbot</div>
+    <div class="box">
+        <div class="item left">
+            <div class="icon">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="msg">
+                <p>Hello everyone, How are you?</p>
+            </div>
+        </div>
+        <div class="item right">
+            <div class="msg">
+                <p>Nice</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="typing-area">
+        <div class="input-field">
+            <form action="/takeOutput" method="post" id="eform">
+                <!-- {% csrf_token %} -->
+                <input type="text" placeholder="Type your message" id="etext" name="etext" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="sug" id="sug">
+        <p>one que</p>
+        <p>one que</p>
+        <p>one que</p>
+    </div>
+</div>
