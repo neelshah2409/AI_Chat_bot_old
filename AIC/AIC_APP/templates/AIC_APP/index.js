@@ -7,7 +7,4 @@ etext.addEventListener("keyup", function(e) {
     if (document.getElementById("etext").value == "") {
         sug.style.visibility = "hidden";
     }
-
-
-
 })

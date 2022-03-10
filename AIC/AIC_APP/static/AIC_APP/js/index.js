@@ -4,9 +4,10 @@ etext.addEventListener("keyup", function(e) {
     var sug = document.getElementById("sug");
 
     sug.style.visibility = "visible";
-    if (document.getElementById("etext").value = "") {
+    if (document.getElementById("etext").value == "") {
         sug.style.visibility = "hidden";
-    };
+    }
+
 
 
 })

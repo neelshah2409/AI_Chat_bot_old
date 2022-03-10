@@ -16,8 +16,8 @@
     "responses": ["kaka","HU AK DUM kaka","kaka"]
   },
   {
-    "tag": "marojadiyo",
-    "patterns": ["maro_jadiyo", "jadiyo", "nano jadiyo"],
-    "responses": ["DHinglu 6 a taru","DHinglu 6 a taru sachv ane","DHinglu yarr","motu DHinglu 6 a taru"]
+    "tag": "Ques",
+    "patterns": ["How are you?", "are you available?", "what are you doing "],
+    "responses": ["kaka","HU AK DUM kaka","kaka"]
   }
 ]}
