@@ -141,7 +141,11 @@ body {
 .sug {
     background-color: #efefef;
     visibility: hidden;
+<<<<<<< HEAD
+    border-radius: 5px;
+=======
     border-radius: 5px !important;
+>>>>>>> 3cbaf8d755b791cfa150d0b2823001afe856d3d7
 }
 
 .msg p {
