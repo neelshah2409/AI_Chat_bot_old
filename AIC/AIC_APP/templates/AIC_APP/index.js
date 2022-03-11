@@ -14,19 +14,18 @@ etext.addEventListener("keyup", function(e) {
 
 
 $(document).ready(function() {
-    $('#eform').on("submit", function(e) {
+    $(document).on("submit", "#eform", function(e) {
         e.preventDefault();
         let input = $('#etext').val();
         // alert($(".box"));
         // $("div").setAtt
         $(".box").append(`<div class= 'item right'> <div class = 'msg'> <p>${input} </p> </div> </div>`);
 
-
         $.ajax({
             url: "/takeOutput",
             method: "POST",
             data: {
-                "message": input
+                message: input
             },
             success: function(data) {
 
@@ -56,15 +55,7 @@ $(document).ready(function() {
 
 
                 $(".box").scrollTop(10000);
-
-
-
             }
-
-
-
         })
-
-
     })
 })
