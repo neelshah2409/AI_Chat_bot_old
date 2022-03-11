@@ -22,7 +22,7 @@ $(document).ready(function() {
         $(".box").append(`<div class= 'item right'> <div class = 'msg'> <p>${input} </p> </div> </div>`);
 
         $.ajax({
-            url: "/takeOutput",
+            url: "/takeOutputp",
             method: "POST",
             data: {
                 message: input

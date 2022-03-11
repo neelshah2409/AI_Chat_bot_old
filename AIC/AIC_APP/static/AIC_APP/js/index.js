@@ -26,7 +26,8 @@ $(document).ready(function() {
             url: "/takeOutput",
             method: "POST",
             data: {
-                "message": input
+                message: input,
+                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
             },
             success: function(data) {
 
