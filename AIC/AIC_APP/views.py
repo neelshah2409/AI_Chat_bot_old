@@ -10,10 +10,10 @@ from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/training/intents.json').read())
-words = pickle.load(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/training/words.pkl', 'rb'))
-classes = pickle.load(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/training/classes.pkl', 'rb'))
-model = load_model('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/training/modelData/chatbotmodel.h5')
+intents = json.loads(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json').read())
+words = pickle.load(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/words.pkl', 'rb'))
+classes = pickle.load(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/classes.pkl', 'rb'))
+model = load_model('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5')
 
 
 def clean_up_sentence(sentence):
