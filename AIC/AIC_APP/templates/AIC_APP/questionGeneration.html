@@ -628,7 +628,8 @@
                             <h5 class="card-title text-center text-light py-2 my-auto">Question-Answer Generator</h5>
                         </div>
                         <div class="card-body p-0 m-0">
-                            <form method="post" id="question" action="/fetchInputTextArea" >
+                            <form method="post" id="question" action="/fetchInputTextArea" > {% csrf_token %}
+
                                 <textarea class="form-control m-0 question" placeholder="Enter Your Data Here" id="questions" rows="12" name="inputText"></textarea>
                                 <div class="text-center py-2">
                                     <button type="submit" class="btn btn-submit w-100 text-light py-2 mx-auto">Submit</button>
