@@ -39,23 +39,23 @@ $(document).ready(function() {
             </div>`);
 
                 $("#etext").val("");
-            },
-            error: function(data) {
-
-                $(".box").append(`<div class="item left">
-                <div class="icon">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="msg">
-                    <p>sorry!! we can't help you</p>
-                </div>
-            </div>`);
-
-                $("#etext").val("");
-
-
-                $(".box").scrollTop(10000);
             }
+//            error: function(data) {
+//
+//                $(".box").append(`<div class="item left">
+//                <div class="icon">
+//                    <i class="fa fa-user"></i>
+//                </div>
+//                <div class="msg">
+//                    <p>sorry!! we can't help you</p>
+//                </div>
+//            </div>`);
+//
+//                $("#etext").val("");
+//
+//
+//                $(".box").scrollTop(10000);
+//            }
         })
     })
 })
