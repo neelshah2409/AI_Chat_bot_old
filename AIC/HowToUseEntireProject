@@ -1,0 +1,16 @@
+For XYZ Company
+comany will add text to the textarea on QuestionGeneration.html page
+then this text will save in inputText File
+then first step is generate the question from that text so we will run
+    question_generation/runnow.py file it will update intents.json file in Main AIC folder
+
+then we apply paraphrasing for creating one question to more questions for accuracy so we will run
+    OneQueToManyQues/main.py file it will update in Main AIC folder's intents.json. it will add more simmilar que for mapping and
+    accuracy
+
+then this intents.json file of Main AIC folder's content is copy to AIC_APP/training/intents.json file manually
+then now we have to run training.py file in training folder which train the data of the AIC_APP/training/intents.json file
+now all are done just open terminal, shift to Main AIC folder (cd AIC) and then type "python manage.py runserver" in terminal
+and we are good to go
+
+we can access the text Input page by type http://127.0.0.1:8000/fetchInputTextArea

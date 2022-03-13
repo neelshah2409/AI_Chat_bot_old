@@ -1,0 +1,12 @@
+[{'answer': '<pad> the curvature of spacetime',
+  'question': 'What is the general theory of relativity?'},
+ {'answer': '<pad> black hole',
+  'question': 'What is the most extreme example of gravity?'},
+ {'answer': "<pad> Newton's law of universal gravitation",
+  'question': 'What law describes gravity as a force causing any two bodies to be attracted toward each other?'},
+ {'answer': '<pad> pound-force per square inch',
+  'question': 'What is the traditional unit of pressure in the imperial and U.S. customary systems?'},
+ {'answer': '<pad> the atmosphere (atm) is equal to this pressure',
+  'question': 'What is the standard atmospheric pressure of a manometer?'},
+ {'answer': '<pad> centimetre of water, millimetre of mercury, and inch of mercury',
+  'question': 'How many manometric units are used to express pressures in terms of the height of column of a particular fluid in a manometer?'}]
