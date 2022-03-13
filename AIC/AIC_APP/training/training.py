@@ -9,7 +9,7 @@ from keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 # nltk.download('punkt')
 # nltk.download('wordnet')
-nltk.download('omw-1.4')
+# nltk.download('omw-1.4')
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json').read())
