@@ -74,7 +74,7 @@ def takeOutput(request):
 
 # for handling the data given by the company xyz
 def fetchInputTextArea(request):
-    inputText = request.POST.get('inputText', 'default')
+    inputText = request.POST.get('inputText.txt', 'default')
     print(inputText)
     file = open('inputText', 'w')
 
