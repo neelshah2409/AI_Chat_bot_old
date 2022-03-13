@@ -8,12 +8,14 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
-
+import os
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json').read())
-words = pickle.load(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/words.pkl', 'rb'))
-classes = pickle.load(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/classes.pkl', 'rb'))
-model = load_model('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5')
+
+
+intents = json.loads(open(f"{os.getcwd()}\\AIC_APP\\training\\intents.json").read())
+words = pickle.load(open(f"{os.getcwd()}\\AIC_APP\\training\\words.pkl", 'rb'))
+classes = pickle.load(open(f"{os.getcwd()}\\AIC_APP\\training\\words.pkl", 'rb'))
+model = load_model(f"{os.getcwd()}\\AIC_APP\\training\\modelData\\chatbotmodel.h5")
 
 
 def clean_up_sentence(sentence):
@@ -61,3 +63,18 @@ def takeOutput(request):
     # return render(request, 'AIC_APP/index.html')
     return HttpResponse(res)
 
+
+
+# for handling the data given by the company xyz
+def fetchInputTextArea(request):
+    inputText = request.POST.get('inputText', 'default')
+    print(inputText)
+    file = open('inputText', 'w')
+
+    file.writelines(inputText)
+    print('write')
+    file.close()
+    return HttpResponse("Success")
+
+def QueGenerator(request):
+    return render(request, 'AIC_APP/questionGeneration.html')
