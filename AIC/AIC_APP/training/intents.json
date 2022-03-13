@@ -1,493 +1,225 @@
 {
   "intents": [
     {
-      "tag": "queone",
+      "tag": "Data-1",
       "patterns": [
-        "I have forgotten password for logging in AICTE Web Portal. What is the procedureto recover this?",
-        "",
-        "Is it possible for users to reset their password for AICTE Web Portal without losing the security features?",
-        "How can I reset my password to AICTE Web Portal?",
-        "I forgot my password to AICTE web portal. How could I recover this?",
-        "How do I find my old password in the AICTE web portal?",
-        "I had forgotten my password to AICTE web portal. What should I do?",
-        "How do I reset AICTE password when I forgot it?",
-        "I forget my password for my AICTE Web portal. How can I log in?",
-        "I don't remember my password to AICTE Web Portal. How can I access to it?",
-        "What can I do if I forgot my password for the AICTE Web Portal?",
-        "How do I recover my AICTE Web Access Password?"
+        "What is clarity and definition associated with?",
+        "What is definition and clarity?",
+        "What is definition? Why are clarity and definition associated with it?",
+        "What does clarity and definition mean?",
+        "What is clearness and definition associated with?",
+        "What is clarity and definition?"
       ],
       "responses": [
-        "Kindly fill User Id or Institute Permanent Id or any of the Application Ids and click on Submit Request. Click on Click Here to Make Payment and make Online Payment of Rs 5000. Thereafter, please submit affidavit in concerned Regional Office to retrieve forgot password. Affidavit format is available in AICTE Approval Process Handbook"
+        "physical spareness"
+      ]
+
+    },
+    {
+      "tag": "Data-2",
+      "responses": [
+        "<pad> obese"
+      ],
+      "patterns": [
+        "What do most deciduous trees of England give one the impression of being?",
+        "What do deciduous trees in England mean?",
+        "What do most deciduous trees in England give you the impression of being?",
+        "What do deciduous trees of England give?",
+        "What do deciduous trees of England give one the impression of being?",
+        "What do most deciduous trees of England give a person an impression of being?",
+        "Which deciduous trees in England are most successful?",
+        "What do deciduous trees in England give the impression of being?",
+        "What do deciduous trees in England really feel?",
+        "What do deciduous trees give the impression of being?",
+        "What do deciduous trees in the whole of England give one the impression of being?"
       ]
     },
     {
-      "tag": "quetwo",
-      "patterns": [
-        "Is PAN No. field mandatory for 'Forgot Password' form?",
-        "",
-        "Needs PAN NO.?",
-        "How will I know my password and email if I forgot my password?",
-        "Is it mandatory to submit PAN No in order to get a refund of my BAN on MyForgot Password?",
-        "Is it possible to reset password by using PAN PAN or other key after completing PAN form?",
-        "Does PAN NO field compulsory for password for form?",
-        "Why am I asked to fill pn no, per official instructions?",
-        "Did you know that 'Forgot password' should be called as a mandatory field in msgr.Form 5dn?",
-        "Is PAN number mandatory in 'Forgot Password' form?",
-        "Is PAN IDS field mandatory for \u2018Forgot Password\u2019 form?",
-        "Is PAN number necessary to submit Forgot Password form?"
-      ],
+      "tag": "Data-3",
       "responses": [
-        "No, PAN Card is not mandatory. Only User Id or any one of the Application Ids is\nrequired."
+        "<pad> Embla"
+      ],
+      "patterns": [
+        "What is the name of the first woman in Scandinavian mythology?",
+        "What was the name of a woman who is not the most important in Scandinavian mythology?",
+        "What is the name of the first woman in Nordic mythology?",
+        "What's the first woman in Scandinavian mythology and why?",
+        "Which was the first girl in the Scandinavian mythology?",
+        "Which is the name of the first woman in Scandinavian mythology?",
+        "Who is the first woman in Scandinavian mythology?",
+        "Who was the first female in Scandinavian mythology, and why is the name of her considered so?"
       ]
     },
     {
-      "tag": "quethree",
-      "patterns": [
-        "When I try to login with Institute's Credentials, error message 'Invalid username and\npassword' is displayed. What should I do?\n",
-        "",
-        "When I try to login with Institute's Credentials, error message 'Invalid username and password' is displayed. What should I do?",
-        "What should I do if I can't remember my password or my password to Institute Credentials?",
-        "I found my login credentials with Information Password, it was not found. How can I try to log in in in ITS (Data Analytics)?",
-        "When I try to login with Institute's Credentials, an error message 'Invalid username and password' is displayed. What should I do?",
-        "I had forgotten my password to Institute credentials. I find the credentials to be invalid. How should I log in?",
-        "When I login with Institute's Credentials, error message 'Invalid username and password' is displayed. What should I do?",
-        "When I try to login with Institute's Credentials, error message \"Invalid username and password\" is displayed. What should I do?",
-        "I don't remember my password or username what should I do?",
-        "What can I do if I forgot my username and password in school?",
-        "How do I get my login details back when I don't remember my email and password?"
-      ],
+      "tag": "Data-4",
       "responses": [
-        "Recheck the login credentials (Case sensitive). Confirm whether someone else has\nlogged in with the same credentials (Please note that per user only 3 sessions are\nallowed. Hence, if someone tries for 4th session then again invalid user name and\npassword message will popup). If no session is live and still getting an invalid\nusername and password message then you can"
+        "<pad> men of insight"
+      ],
+      "patterns": [
+        "Who were the Scandinavians?",
+        "Who are Scandinavians?",
+        "Who was the Scandinavian / Scandinavians?",
+        "What is Scandinavian?",
+        "Who are the Scandinavians?",
+        "Who are the Scandinavians and why?",
+        "Who are Scandinavians and why?",
+        "Who were the Scandinavians? Why?"
       ]
     },
     {
-      "tag": "quefour",
-      "patterns": [
-        "I am not able to find some tabs in New upgraded AICTE Web Portal internship",
-        "",
-        "I am not able to find some tabs in New upgraded AICTE Web Portal internships.",
-        "How will I be able to find some tabs in New upgraded AICTE Web Portal intern?",
-        "I am not able to find some tabs in the New upgraded AICTE Web Portal internships. I am not able to find any tabs in the cvm application portal web portals, but I am able to find some tabs on the AICTE web portals. I am not able to find some tabs on the new upgraded AICTE web portal internships. Can someone help me with knowledge about the AICTE web portals?",
-        "I am not able to find some tabs in New upgraded AICTE Web Portal internship for a non graduate.",
-        "I am not able to find any tabs in New upgraded AICTE Web Portal internships with all over my grades. I still do not find some tabs in AICTE New upgraded and I am new to AICTE Web Portal development. If I see one able to do what I go all the way under 1st class, I go all over on here.",
-        "I am not able to find some tabs in New upgraded AICTE Web Portal internships for the students. I am not able to find some tabs in the current AICTE Web Portal internship positions for the students.",
-        "I am not able to find some tabs in New upgraded AICTE web portal internships. I am not able to find some tabs in the New update AICTE Web Portal internships.",
-        "I am not able to find some tabs in New upgraded AICTE Web Portal internship I am not able to find some tabs in AICTE website. What is a better word?",
-        "I am not able to find any tabs in New upgraded AICTE Web Portal interns. I am getting a certificate in IT. But the portal will be there in this coming quarter. Please provide the link."
-      ],
+      "tag": "Data-5",
       "responses": [
-        "All sub tabs are available under drop down or You may find all available tabs in one\npage by Sitemap option. Sitemap option is available in Navigate Menu. Shortcut\nKeyboard key for Sitemap is Ctrl+Shift+A."
+        "<pad> brood with all their bulging masses of foliage"
+      ],
+      "patterns": [
+        "What is a blowsily female about the vast trees that brood above the meadows of the home counties?",
+        "What is beautiful about the vast trees that brood above the meadows of the home counties?",
+        "What is female about the vast trees that brood above the meadows of the home counties?",
+        "What is such a blowsily female about the vast trees that brood over the meadows of home counties?"
       ]
     },
     {
-      "tag": "quefive",
-      "patterns": [
-        "I am a diploma Institute and unable to enter details under Quality Education Mandate Screen",
-        "",
-        "Is it possible for the diploma institute to enter details under Quality Education Mandate Screening Procedures?",
-        "I'm a diploma Institute and unable to enter details under Quality Education Mandate Screening. Is it a job?",
-        "I am a diploma Institute and unable to enter details under quality education mandate screen.",
-        "I am a diploma institute. unable to enter details under quality education mandate screen.",
-        "I am a diploma Institute and unable to enter details under quality education Mandate Screening (Quality Commission) screen. I am a diploma institute and unable to enter details under Quality Education Mandate Screening (Quality Commission) for any examination.",
-        "I am a diploma Institute and unable to enter details under Quality Education Mandate Screening in ACE. I am a diploma Institute and unable to enter details under Quality Education Mandate Screening in Pune for ECE. I am a diploma institute and unable to enter details under Grade 4 Examination.",
-        "I am a diploma Institute and unable to enter details under Quality Education Mandate Screening. I am a diploma institute and unable to enter details under Quality Education Mandate Screening. I am an phd Diploma Institute and unable to enter details under Quality Education Mandate Screening.",
-        "I am a diploma Institute and unable to enter details under quality education Mandate Screening despite the university's name and diploma. I had a diploma School in 2010. I is an MBA Architect. My doctorate is from an O.C.O. level only. I am registered in an IIT with a high score in exams.",
-        "I am diploma Institute and unable to enter details under quality education mandate screen. I am a diploma Institute.",
-        "I am a diploma Institute. Can I enter details under Quality Education Mandate Screening?"
-      ],
+      "tag": "Data-6",
       "responses": [
-        "No. You cannot enter the details because this screen is only for Engineering under \ngraduates institutes"
+        "<pad> giant skeletons"
+      ],
+      "patterns": [
+        "What do the elm trees brood with in winter?",
+        "What do elm trees brood with in winter?",
+        "What do some elm trees brood?",
+        "What do Elm trees brood in winter?",
+        "What does the elms brood with each year?",
+        "What do the elm trees brood with at the same time as the trees in the winter?",
+        "How do elm trees breed and how do they survive?",
+        "What do elm trees brood?",
+        "What does the elm tree brood with in winter?"
       ]
     },
     {
-      "tag": "quesix",
-      "patterns": [
-        "How to delete old faculty details?",
-        "",
-        "How do I delete a professor record?",
-        "How do you delete faculty member details?",
-        "How do I get rid of old faculty details in YAM?",
-        "How do you delete faculty or professor data?",
-        "How do I delete old faculty details?",
-        "How do you delete a faculty member's information?",
-        "How do I delete a list of faculty I did not know existed?",
-        "How do you delete your faculty details from the library?",
-        "How can I delete all faculty details?",
-        "How do I remove old faculty details?"
-      ],
+      "tag": "Data-7",
       "responses": [
-        "Faculty record cannot be deleted. Faculty can be marked as Duplicate or Left the \nInstitute in Faculty Details tab."
+        "<pad> inflated"
+      ],
+      "patterns": [
+        "What type of style is a kind of euphemism?",
+        "What are some examples of euphemisms?",
+        "What types of euphemism is not only a sexist but a political euphemism?",
+        "What is an euphemism?",
+        "What's called euphemism?",
+        "What are some examples of euphemism?",
+        "Which style of euphemism do you prefer?",
+        "What is considered euphemism?",
+        "What is euphemism and what are some examples?",
+        "What kind of euphemism is it?",
+        "What is euphemism?"
       ]
     },
     {
-      "tag": "queseven",
-      "patterns": [
-        "Is Aadhaar/PAN details mandatory to update faculty details in AICTE Web Portal?",
-        "",
-        "Is it necessary for the faculty record in AICTE web portal?",
-        "How will I update faculty member details in AICTE Web Portal?",
-        "Is it mandatory to update Aadhaar details in AICTE Web portal?",
-        "Is A.N.P./Aadhaar mandatory for adding new faculty in AICTE web portal?",
-        "Does AICTE Web Portal require NCC/PAN to update staff details?",
-        "Does AoC adhaar/pan details are mandatory to update faculty details in AICTE Web Portal?",
-        "Did AICTE Web Portal require aadhaar/pan details to update faculty details?",
-        "Is Aadhaar/PAN details mandatory for faculty details in AICTE Web Portal?",
-        "Is it mandatory to update Aadhaar/PAN details in AICTE web portal?",
-        "Is Aadhaar/PAN details mandatory for updating faculty details in AICTE web portal?"
-      ],
+      "tag": "Data-8",
       "responses": [
-        "Yes"
+        "<pad> soft snow"
+      ],
+      "patterns": [
+        "What does a mass of Latin words fall upon?",
+        "What do Latin words fall upon?",
+        "What does Latin spell?",
+        "What shall Latin words fall upon?",
+        "What do Latin words fall upon? How can we assemble them?",
+        "What does the Latin word fall upon?"
       ]
     },
     {
-      "tag": "queeight",
-      "patterns": [
-        "How to add re-joined faculty in AICTE Web Portal",
-        "",
-        "How do I add re-joined faculty in AICTE web portal?",
-        "How to add new faculty member to AICTE Web Portal?",
-        "How do I get a new faculty to join me on the AICTE Web portal?",
-        "How to add guest faculty in AICTE web portal?",
-        "How do I add new faculty to AICTE Web Portal?",
-        "How do I add a re-joined faculty in AICTE Web Portal?",
-        "How can I put my re-joined faculty in AICTE Web Portal?",
-        "How can I include a re-joined faculty in AICTE Web Portal?",
-        "How do I get my re-joined faculty in AICTE web portal?"
-      ],
+      "tag": "Data-9",
       "responses": [
-        "Click on Left The Institute tab. Enter date of rejoining. Automatically it will get \nreflected on Web portal."
+        "<pad> insincerity"
+      ],
+      "patterns": [
+        "What is the great enemy of clear language?",
+        "What are the dangers of clear language?",
+        "What is the enemy of lucid language?",
+        "What is the greatest enemy of clear language?",
+        "Why do people hate clear language?",
+        "What is the enemy of clearly written materials?",
+        "What's the great enemy of clear language?",
+        "What is the great enemies of clear language?",
+        "Who is the biggest enemy of clear language and how can we combat it?",
+        "What is the biggest enemy of clear language?"
       ]
     },
     {
-      "tag": "quenine",
-      "patterns": [
-        "I have made Online Payment but amount is not updated in portal",
-        "",
-        "Is the amount I have made available in my payment system?",
-        "How can I make payment online but amount is not updated in portal?",
-        "I've paid using credit card without any verification, it still doesn't have my personal information. My payment is in kassa. I made the original payment via bank transfer. What is the problem?",
-        "I have made payment but amount is not updated in portal. I cant solve any problem using internet. I just have to pay in advance.",
-        "I had made online payment but the amount is not updated in portal. Is it the last one I have made?",
-        "I am making online payment but now I cannot find the amount of online payment in portal. please help me.",
-        "I made online payment but my amounts are not updated in portal nor saved in my webserver.",
-        "I have completed payments through noot.in my portal. The amount is not updated.Also no Noot.in portal is unable to be credited.",
-        "I made payment online but amount is not updated in portal. I have no account. It will not be rectified.",
-        "I made Online Payment but amount is not updated in portal. Available in 14 days. I want to make payment for any future will. But in PC platform, there is no solution to fix it. I have done payment in bank account and got rejected in that regard but my account was not accepted."
-      ],
+      "tag": "Data-10",
       "responses": [
-        "Generally, payment receipt gets updated immediately. Incase, your payment receipt \nis not updated then click on View Transaction Button under Payment tab. Otherwise \nit will get updated within 48 hours (2 working days). In case it is not updated even \nafter that, please send details of the transaction (Transaction Id generated while \nmaking the payment) and application through Grievance form.\n"
+        "<pad> a cuttlefish spurting out ink"
+      ],
+      "patterns": [
+        "What does one turn as instinctively to long words and exhausted idioms?",
+        "What instinctively turns one to long words and exhausted idioms?",
+        "What is one's reaction as instinctively to long words and exhausted idioms?",
+        "What do we turn to to get rid of all long words?",
+        "What does one turn as instinctively to long and clumpy words?",
+        "What does one turn instinctively to long words and exhausted idioms?",
+        "What does one turn to in reaction to long words and tired idioms?"
       ]
     },
     {
-      "tag": "queten",
-      "patterns": [
-        "I am not able to make payment because AICTE Website is not directing to Payment \nGateway.?",
-        "",
-        "Is it normal for AICTE website to use payment gateway?",
-        "How can I make payment using AICTE online without any payment gateway?",
-        "I am not able to make payment because AICTE Website is not directing to Payment Gateway..What is the best remedy?",
-        "I am not able to make payment because AICTE website is not directing to Payment Gateway.?",
-        "I'm not able to make payment because AICTE Website is not directing to payment gateway for my IAS?",
-        "Why am I not able to make payment because AICTE Website is not directing to payment gateway?",
-        "I can't make my payment through AICTE mobile no payment gateways. I understand that this is a common error. Are there solutions?",
-        "I don't have any way to make payment because of AICTE website is not directing to payment gateway. will it affect my earnings?",
-        "I can't make payment because AICTE website is not directing to Payment Gateway. Can I make payment?",
-        "Is AICTE a payment gateway? How can I make my payment?"
-      ],
+      "tag": "Data-11",
       "responses": [
-        "Please check whether your application has been submitted successfully or not. If \nsubmitted then allow Popups for AICTE Website through Web browser URL."
+        "<pad> keeping out of politics"
+      ],
+      "patterns": [
+        "What is a mass of lies, evasions, folly, hatred, and schizophrenia?",
+        "What are the mass of lies, evasions, folly, hatred, and schizophrenia?",
+        "What is mass of lies, evasions, folly, hatred, and schizophrenia?",
+        "What's the mass of lies, evasions, folly, hatred, and schizophrenia?",
+        "What is a mass of lies, evasion, folly, hatred, and schizophrenia?",
+        "What's a mass of lies, evasions, folly, hatred, and schizophrenia?",
+        "What is the mass of lies, evasions, folly, hate, and schizophrenia?",
+        "What is the mass of lies, evasions, folly, hatred and schizophrenia?"
       ]
     },
     {
-      "tag": "queseleven",
-      "patterns": [
-        "Who is Who button is not available in AICTE New Website.",
-        "",
-        "Whos Who button is not available on new AICTE website.",
-        "What's who in AICTE website?",
-        "Who is who button is not available in AICTE New Website. Please visit http://iatt.aicte.gov/articles/who -is-who?",
-        "How to get the Who is Who button in AICTE website?",
-        "Does the Who is Who button really exist?",
-        "Why is There A Who Is button not available in AICTE New Website?",
-        "Did you know that a Who is Who button did not get available on AICTE New website?",
-        "Is the Who's Who button on AICTE's New Website is?",
-        "What is the Who Is Who button in AICTE New Website?",
-        "Is who is who button missing in AICTE website?"
-      ],
+      "tag": "Data-12",
       "responses": [
-        "Please Visit Directory on Website.\n"
+        "<pad> lies, evasions, folly, hatred, and schizophrenia"
+      ],
+      "patterns": [
+        "What is politics itself a mass of?",
+        "What is politics considered a mass of?",
+        "What is politics?",
+        "What is political mass?",
+        "What is politics a mass of?",
+        "What is politics and its mass?",
+        "What is politics in itself mass of?",
+        "What is politics actually?"
       ]
     },
     {
-      "tag": "quetwelve",
-      "patterns": [
-        "Where to send the queries related to portal, payment and approval related issues for \nthe Academic Year 2018-19? ",
-        "",
-        "Where do I send your queries related to online payments for the academic year 2018-19?",
-        "How can I submit my questions regarding approval, portal and portals for academic year 2018-19 from school?",
-        "Where can I get the answers for All the questions related to Portal, payment and approval related in the academic year 2018-19?",
-        "Where to send queries related to portal, payment and approval related issues for the academic year 2018-19?",
-        "Where to send the query related to portal, payment and approval related issues for the Academic year 2018-19?",
-        "Which is the best service to pay for academic year 2018-19?",
-        "Where can I send all my queries related to payment and portal for Academic year 2018-19?",
-        "Where can I send the information related to payment and approval of academic year 2018-19?",
-        "Where can I send all the queries related to payment related issues for Academic Year 2018-19 as per the timeline and specifications?",
-        "Where can I get the necessary documentation for student portals for AAP 2018-19?"
-      ],
+      "tag": "Data-13",
       "responses": [
-        "Raise a Grievance via grievance form available at http://www.facilities.aicte\u0002india.org/ApprovalProcess/apformEmail.php. "
+        "<pad> language must suffer"
+      ],
+      "patterns": [
+        "What happens when the general atmosphere is bad?",
+        "What happens when general atmosphere is bad?",
+        "What happens when the environment is bad?"
       ]
     },
     {
-      "tag": "quethirteen",
-      "patterns": [
-        "Our Institution was allotted a User ID for the approval process 2017-18 as a new \nInstitution. Some information was uploaded but the application could not be \nsubmitted at that time. Now I want to know that the same User ID can be used for \napproval process 2018-19.",
-        "",
-        "Our Institution was allotted a User ID for the approval process 2017-18 as a new Institution. Some information was uploaded but the application could not be submitted at that time. Now I want to know that the same User ID can be used for approval process 2018-19.",
-        "Our Institution was allotted a User ID for the approval process 2017-18 as a new Institution. Some information was uploaded but the application could not be submitted at that time. Now I want to know that the same User ID can be used for approval process 2018-19?",
-        "Our Institution was allotted a User ID for the approval process 2017-18 as a new Institution. Some information was uploaded but the application couldn't be submitted at that time. I want to know that the same User ID can be used for approval process 2018-19",
-        "Our Institution was allotted a user ID for the approval process 2017-18 as a new Institution. Some information was uploaded but the application could not be submitted at that time. Now I want to know that the same User ID can be used for approval process 2018-19.",
-        "Our institution was allotted a User ID for the approval process 2017-18 as a new Institution. Some information was uploaded but the application could not be submitted at that time. Now I want to know that the same User ID can be used for approval process 2018-19.",
-        "Our Institution was allotted a User ID for the approval process 2017-18 as a new institution. Some information was uploaded but the application could not be submitted at that time. Now I want to know that the same User ID can be used for approval process 2018-19.",
-        "Our Institution was allotted a user ID for the approval process 2017-18 as a new Institution. Some information was uploaded but the application could not be submitted at that time. Now I want to know that the same user ID can be used for approval process 2018-19."
-      ],
+      "tag": "Data-14",
       "responses": [
-        "If you want to use existing user id then contact AICTE. Else apply afresh.\n"
-      ]
-    },
-    {
-      "tag": "queforteen",
-      "patterns": [
-        "What we have to do in case we face server busy message??",
-        "",
-        "What do I do if I don't know what to do when I get hit by a server busy message?",
-        "What should I do in case we face server busy message?",
-        "What would happen if I face server busy message?",
-        "What we have to do in case server busy message?",
-        "Does server busy message?",
-        "What do we have to do if we face server busy message?",
-        "What should I do if my server has busy message?",
-        "How can I tell if my server is busy?",
-        "What can I do if I face server busy message?",
-        "How do I face server busy message?"
+        "<pad> ten or fifteen years"
       ],
-      "responses": [
-        "If you are getting Server busy message, try again after sometime or try during off \npeak hours. "
-      ]
-    },
-    {
-      "tag": "quefifteen",
       "patterns": [
-        "We want to change details which are non-editable / read-only?\n",
-        "",
-        "We want to change details which are not editable / read-only?",
-        "How do you change details which are not editable / readable?",
-        "I want to change details which are non-editable / read-only?",
-        "We want to change details which are non-editable / read-only?",
-        "What are the details I want changes to which are readonly / non editable?",
-        "How do I change details which are non editable / read-only?"
-      ],
-      "responses": [
-        "The details which are seen non-editable cannot be changed beyond the specified \nschedule for uploading details; you may contact the Approval Bureau. "
-      ]
-    },
-    {
-      "tag": "quesixteen",
-      "patterns": [
-        "Whether Affidavit can be submitted in e-Stamp Paper?",
-        "",
-        "Can affidavits be submitted in electronic signature?",
-        "How can one submit an Affidavit on the e-Stamp?",
-        "Can an affidavit be submitted in e-Stamp Paper?",
-        "Can you submit an affidavit in e-stamp?",
-        "Does an e-stamp paper for documents accept Affidavits?",
-        "Can you submit an Affidavit Online?",
-        "Can an Affidavit be submitted in SSS paper?",
-        "Is it possible to prepare Affidavits as a printed form?",
-        "Can I send Affidavit with e-Stamp Paper?",
-        "How do I get an e-stamp paper with a fabricated, faux-detailed affidavit?"
-      ],
-      "responses": [
-        "Permissible"
-      ]
-    },
-    {
-      "tag": "queseventeen",
-      "patterns": [
-        "We want to open new Management Institution and want approval for MBA and \nPGDM Course in one time. Required land and infrastructure (according to AICTE \nnorms) are available and ready withthe Society. Please confirm whether we have to \npay ?8Lakh TER Charges for both the Courses or have to pay ?8Lakh TER Charges \nAns\u0002for individual Course?",
-        "",
-        "Needs approval for PGDM course in one time. Required land and infrastructure (according to AICTE norms) are available and ready with the Society. Please confirm whether we have to pay?8Lakh TER Charges both the Courses or have to pay?8Lakh TER Charges Ansfor individual Course?",
-        "What's your opinion about us going to the AICTE for PGDM courses and how are they similar to MBA courses?",
-        "I want to get permission for new Management Institution in one time. Required land and infrastructure (according to AICTE norms) are available and ready with the Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges Ansfor individual Courses?",
-        "We want to open new Management Institution and want approval for MBA and PGDM Course in one time. Required land and infrastructure are available and ready withthe Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges ansfor individual Courses?",
-        "We want to open new Management Institution and want approval for MBA and PGDM Course in one time. Required land and infrastructure (according to AICTE norms) are available and ready withthe Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges For individual Course?",
-        "We want to open new Management Institution and want approval for MBA and PGDM Course in one time. Required land and infrastructure (according to AICTE norms) are available and ready withthe Society. Please confirm whether we have to pay?8Lakh TER Charges for both courses or have to pay?8Lakh TER Charges for individual Course?",
-        "We want to open new Management Institution and want approval for MBA and PGDM Course in one time. Required land and infrastructure (according to AICTE norms) are available and ready withthe Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges for individual Courses?",
-        "I want to open new Management Institution and want approval for PGDM & MBA courses in one time. Required land and infrastructure (according to AICTE norms) is available and ready with the Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges?",
-        "What are the requirements to open new Management Institution for MBA and PGDM Course in one time. Required land and infrastructure are available and ready with the Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges?",
-        "I want to open new Management Institution and want approval for MBA and PGDM course in one time. Required land and infrastructure (according to AICTE norms) are available and ready with the Society. Please confirm whether we have to pay?8Lakh TER Charges for both the Courses or have to pay?8Lakh TER Charges Ansfor individual Course?"
-      ],
-      "responses": [
-        "for individual Course?\nThe TER Charges is 8 Lakh for both Courses together. "
-      ]
-    },
-    {
-      "tag": "queeighteen",
-      "patterns": [
-        "Is TER Charges refundable in case application for approval is rejected",
-        "",
-        "Is TER charges refundable?",
-        "How will my application for approval of termer charges be refunded?",
-        "Is TER Charges Refundable in case application for approval is rejected?",
-        "Is TER Charges refundable?",
-        "Is TER payment refundable in case approval is rejected?",
-        "Is TER a refundable fee?",
-        "Is the TER Charges refundable in case of no approval?",
-        "Is TER Charge refundable in case application is rejected for approval?",
-        "Is the TER fees refundable in case application for approval is rejected?",
-        "Is TER charges refundable in case of application for approval is rejected?"
-      ],
-      "responses": [
-        "Refer APH 2018-19 Clause 1.10(j) page 33 of APH 2018-19. "
-      ]
-    },
-    {
-      "tag": "queninteen",
-      "patterns": [
-        "Where I can find information related to Approval Process 2018-19?",
-        "",
-        "Where can I find information about Approval Process 2018-19?",
-        "What's the Approval Process 2018-19?",
-        "Where can I get detailed information about the approval process 2018-19?",
-        "Where can I find details regarding approval process?",
-        "Where can I find application approval process documents?",
-        "Where do I find all the details about Approval Process 2018-19?",
-        "Where can I get information about approval process for 2018-19?",
-        "Where can I find out about the approval process 2018/19?",
-        "Where can I get complete details on Approval Process 2018-19?"
-      ],
-      "responses": [
-        "Information related to Approval Process 2018-19 can be found on AICTE Home \npage under Quick Links (Approval Process 2018-19)"
-      ]
-    },
-    {
-      "tag": "quetwenty",
-      "patterns": [
-        "How can I get New User-id and password (login credentials) for Website password?",
-        "",
-        "How do I reset a password on website using username and password?",
-        "How can I reset my password to Email without the email or password to my password recovery page?",
-        "How do I get my new password without any verification?",
-        "How do I verify my user ID and password on a website with my correct Password?",
-        "How do I get password to website?",
-        "How do I get a new password of my website without it requiring the login credentials?",
-        "How do I crack a login email without password?",
-        "How can I reset my password to my new website?",
-        "How can I get a new password for my website?",
-        "How do I get my new password for an email?"
-      ],
-      "responses": [
-        "Please click on Request New User Id link on AICTE Web-portal or go to link \nhttp://portal.aicte-india.org/partnerportal_en"
-      ]
-    },
-    {
-      "tag": "quetwoone",
-      "patterns": [
-        "We have applied for New Programme (Engineering/Architecture/Management/\nPharmacy/HMCT/MCA/Arts and Crafts) with level UG/PG/Diploma as New\nInstitution in 2017-18. However, the same was rejected and we have received Final\nLOR. Can we apply again for starting New Institution in the same name?\n",
-        "",
-        "We applied for New Programme (Engineering/Architecture/Management/Pharmacy/HMCT/MCA/Arts and Crafts) with level UG/PG/Diploma as New Institution in 2017-18. The same was rejected and we have received Final LOR. Can we apply again for starting New Institution in the same name?",
-        "How will we be able to apply again for the same name for New Institution (Engineering/Architecture/Management/ Pharmacy/HMCT/MCA/Arts and Crafts) in 2017-18. We have rejected the same and received Final LOR. Can we even get into the same institution?",
-        "I've applied for new programme (engineering/architecture/management/pharmacy/HMCT/MCA/arts and crafts) with level UG/PG/Diploma as New Institution, but I rejected this application and we have received final LOR. Can I apply again for starting new institute in the same name?",
-        "We applied for New Programme (Engineering/Architecture/Management/ Pharmacy/HMCT/MCA/Arts and Crafts) with level UG/PG/Diploma as new Institution in 2017-18. However, the same was rejected and we have received Final LOR. How do I apply again for starting New Institution in the same name?",
-        "We had applied for New Programme (Engineering/Architecture/Management/Pharmacy/HMCT/MCA/Arts and Crafts) with level UG/PG/Diploma as New Institution in 2017-18. However, the same was rejected and we have received Final LOR. Can we apply again for starting new institutions in the same name?",
-        "We have applied for a new programme (Engineering/Architecture/Management/ Pharmacy/HMCT/MCA/Arts and Crafts) with level UG/PG/Diploma as New Institution in 2017-18. However, the same was rejected and we have received Final LOR. Can we apply again for starting New Institution in the same name?",
-        "We have applied for a new engineering programme (Engineering/Architecture/Management/ Pharmacy) with level UG/PG/Diploma at New Institution in 2017-18 but last year we received Final LOR. Can we apply again for starting new institution in the same name?",
-        "Our application has been rejected in 2017-2018 for New Programme of engineering/Architecture/Management/ Pharmacy (PG/MBC) with level UG/PG/Diploma (arts and crafts), can we apply again for starting New Institution in same name?",
-        "We have applied for new programme (Engineering/Architecture/Management/Pharmacy/HMCT/MCA/Arts and Crafts) with level UG/PG/Diploma as New Institution in 2017-18. The same was rejected and we have received Final LOR. Can we apply again for starting new institution in the same name?",
-        "Is it possible to apply again for New Programmes in Engineering & Architecture(Architecture/Management/Pharmacy) with level UG/PG or diploma in 2017-18?"
-      ],
-      "responses": [
-        "Yes. You can apply a fresh as new Institution under Chapter I of APH 2018-19. You \ncan use the existing User ID and apply for new Institution and required to pay TER \nCharges as applicable. "
-      ]
-    },
-    {
-      "tag": "quetwotwo",
-      "patterns": [
-        "Can a new standalone Management Institution start PGDM 120 seats and MBA 120 \nseats at the same time if they satisfy all the requirements of AICTE?",
-        "",
-        "Can a new standalone Management Institution start PGDM 120 seats and MBA 120 seats at the same time if they satisfy all the requirements of AICTE?",
-        "How will a new private administration commence PGDM 120 and MBA 120 seats at the same time?",
-        "Can an individual starting PGDM course with 120 seats completing MBA course has an MBA course in it.? If yes then how?",
-        "Does a new stand-alone management institution start PGDM 120 seats and MBA 120 seats at the same time if they satisfy all the requirements of AICTE?",
-        "Can a new ad-hoc management institute start PGDM 120 seats at the same time if they fulfill all the requirements of AICTE?",
-        "Can a new standalone management institution start PGDM 120 seats and MBA 120 seats at the same time if they fulfill all the requirements of AICTE?",
-        "Is it possible for a new MBA and PGDM institutes to add more seats to their management faculty simultaneously if they meet all the requirements of AICTE?",
-        "Can I start MBA 150 seats and PGDM 150 seats at the same time in my standalone Management College?",
-        "Is it possible for a new management institution to offer PGDM 120 seats, but an MBA 120 seats at the same time?"
-      ],
-      "responses": [
-        "No. The maximum Intake allowed for an Institution offering PG Programme in \nManagement is 180 (inclusive of MBA and PGDM)."
-      ]
-    },
-    {
-      "tag": "quetwothree",
-      "patterns": [
-        "What is the last date of submission of hard copy application at Regional Office for\nthe applications under Chapter I?\n",
-        "",
-        "What is the last date of submission of hard copy application at Regional Office for the applications under the chap. I?",
-        "What is the last date of submission of hard copy application at Regional Office for the applications under Chapter I?",
-        "What is the last date of submission of hard copy application at Regional Office for the application under Chapter I (aptitude test)?",
-        "When is the last time to submit the Hard copy application at Regional Office for the applications under Chapter I?",
-        "When is the last application deadline for preparation of the hard copy application at regional office?",
-        "When is the last date of submission of Hard copy application at Regional Office for the applications under Chapter I?",
-        "When will the final date for submission of the application under chapter 1 be?",
-        "When is the last date of submission of hard copy application at Regional Office for the applications under chapter I?",
-        "What is the last date of submission of paper copy application at Regional Office for the applications under Chapter I?",
-        "Which is the last date of submission of hard copy application in Regional Office for the applications under Chapter I?"
-      ],
-      "responses": [
-        "All the Institutions applying under Chapter I should submit hardcopy of the\napplication to respective Regional Office on the date of Scrutiny. "
-      ]
-    },
-    {
-      "tag": "quetwofour",
-      "patterns": [
-        "How the Mega and Metro Cities, Urban Area and Rural Area have been determined?\n",
-        "",
-        "Where, how and why was Mega and Metro Cities, Urban Area and Rural Area determined?",
-        "How are mega cities, metro cities and rural areas determined?",
-        "How is the city zone determined for urban area and city centre?",
-        "How are mega and metro cities located?",
-        "How had Mega and Metro Cities been defined?",
-        "How are Mega and metro cities, urban area and rural areas determined?",
-        "How was the determination of my Metro city, Urban Area and Rural Area?",
-        "How has the planning for mega and metro cities been determined?",
-        "What is the methodology to determine the Mega and Metro Cities, Urban Area and Rural Area as defined by the WHO?",
-        "How and where are mega city, metro, city and urban areas based?"
-      ],
-      "responses": [
-        "The classification of cities has been made as per Census 2011 data. "
-      ]
-    },
-    {
-      "tag": "quesixteen",
-      "patterns": [
-        "Whether Affidavit can be submitted in e-Stamp Paper?",
-        "",
-        "Can affidavits be submitted in electronic signature?",
-        "How can one submit an Affidavit on the e-Stamp?",
-        "Can an affidavit be submitted in e-Stamp Paper?",
-        "Can you submit an affidavit in e-stamp?",
-        "Does an e-stamp paper for documents accept Affidavits?",
-        "Can you submit an Affidavit Online?",
-        "Can an Affidavit be submitted in SSS paper?",
-        "Is it possible to prepare Affidavits as a printed form?",
-        "Can I send Affidavit with e-Stamp Paper?",
-        "How do I get an e-stamp paper with a fabricated, faux-detailed affidavit?"
-      ],
-      "responses": [
-        "Permissible"
+        "How long have German, Russian and Italian languages deteriorated?",
+        "How long has the German, Russian and Italian languages deteriorated?",
+        "How long has the German, Russian and Italian languages not evolved?",
+        "What is the way over which the German, Russian and Italian languages have deteriorated?",
+        "How long has the German, Russian and Italian languages changed?",
+        "How long did the German language deteriorate?",
+        "How long have Russian and English languages deteriorated?",
+        "How long has the Italian, German and the Russian languages deteriorated?",
+        "How long have German, Russian, Italian languages deteriorated?"
       ]
     }
-  ]
-}
+
+    ]}

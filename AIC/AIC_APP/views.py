@@ -12,10 +12,10 @@ import os
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open(f"{os.getcwd()}\\AIC_APP\\training\\intents.json").read())
-words = pickle.load(open(f"{os.getcwd()}\\AIC_APP\\training\\words.pkl", 'rb'))
-classes = pickle.load(open(f"{os.getcwd()}\\AIC_APP\\training\\words.pkl", 'rb'))
-model = load_model(f"{os.getcwd()}\\AIC_APP\\training\\modelData\\chatbotmodel.h5")
+intents = json.loads(open("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json").read())
+words = pickle.load(open("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/words.pkl", 'rb'))
+classes = pickle.load(open("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/classes.pkl", 'rb'))
+model = load_model("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5")
 
 
 def clean_up_sentence(sentence):
@@ -63,8 +63,9 @@ def index(request):
     return render(request, 'AIC_APP/background.html')
 
 
-def takeOutput(request):
+def takeOutputdp(request):
     message = request.POST.get('message', 'hey')
+    print(message)
     ints = predict_class(message)
     res = get_response(ints, intents)
     print(res)
@@ -74,7 +75,7 @@ def takeOutput(request):
 
 # for handling the data given by the company xyz
 def fetchInputTextArea(request):
-    inputText = request.POST.get('inputText.txt', 'default')
+    inputText = request.POST.get('inputText', 'default')
     print(inputText)
     file = open('inputText', 'w')
 

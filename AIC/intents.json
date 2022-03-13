@@ -2,55 +2,14 @@
   "intents": [
     {
       "tag": "Data-1",
-      "responses": [
-        "<pad> the curvature of spacetime"
-      ],
       "patterns": [
-        "What does the general theory of relativity describe gravity as?",
-        "What does the general theory of relativity mean?",
-        "What is gravity? How does the theory of relativity describe it?",
-        "What is the general theory of relativity?",
-        "What does the theory of relativity describe as gravitational force?",
-        "What does gravity mean?",
-        "How does the general theory of relativity and non-gravitational gravity communicate and describe gravity?",
-        "What is the general theory of relativity and gravity?",
-        "What does the general theory of relativity describe gravity?"
-      ]
-    },
-    {
-      "tag": "Data-2",
-      "responses": [
-        "<pad> 1<unk>760"
+        "What does the general"," theory of relativity"," describe gravity as?",
+        "What does the general"
       ],
-      "patterns": [
-        "What is the torr defined as?",
-        "What is Torr? What do Torrrs mean?",
-        "What is torr?",
-        "What is Torr described by the Word?",
-        "What is the torr?",
-        "What is TorrR? What is its definition?",
-        "What's torr meant?",
-        "What is the torr defined?",
-        "How is the torr defined?"
-      ]
-    },
-    {
-      "tag": "Data-3",
       "responses": [
-        "<pad> centimetre of water, millimetre of mercury, and inch of mercury"
-      ],
-      "patterns": [
-        "How many manometric units are used to express pressures in terms of the height of column of a particular fluid in a manometer?",
-        "How many manometric units are used to compute pressures when there is a specified quantity of vacuum fluid in a manometer?",
-        "How many manometric units are used to measure pressures in terms of the height of a particular fluid in a manometer?",
-        "How many manometric units are used to express pressures in terms of the height of column of fluids in a manometer?",
-        "How many manometric units are used to express pressure in terms of the height of column in a manometer?",
-        "How many manometer units are used to express pressures in terms of the height of column of a particular fluid in a manometer?",
-        "How many manometric units are used to express pressures in terms of the height of column in a manometer?",
-        "How many manometer units are used to express pressure in terms of the height of column of the fluid in a manometer?",
-        "How many manometric units are used to express pressures in terms of the height of the column of a particular fluid in a manometer?",
-        "How many manometer units are used to express pressure in terms of the height of column of a particular fluid in a manometer?"
+        "the curvature of spacetime"
       ]
+
     }
   ]
 }
