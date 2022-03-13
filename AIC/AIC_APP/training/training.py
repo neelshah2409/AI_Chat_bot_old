@@ -10,6 +10,12 @@ from tensorflow.keras.optimizers import SGD
 # nltk.download('punkt')
 # nltk.download('wordnet')
 # nltk.download('omw-1.4')
+
+
+# lemmatizer = WordNetLemmatizer()
+# intents = json.loads(open('C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json').read())
+
+
 import os
 
 lemmatizer = WordNetLemmatizer()
@@ -68,7 +74,7 @@ sgd=SGD(lr=0.01, decay=1e-6, momentum=0.9,nesterov=True)
 model.compile(loss='categorical_crossentropy',optimizer=sgd)
 
 hist = model.fit(np.array(train_x),np.array(train_y),epochs=200,batch_size=5,verbose=1)
-model.save((f"{os.getcwd()}\\AIC_APP\\training\\modelData\\chatbotmodel.h5"), hist)
+model.save(("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5"), hist)
 print("Sucess")
 
 

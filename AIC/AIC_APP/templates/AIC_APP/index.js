@@ -14,6 +14,7 @@ etext.addEventListener("keyup", function(e) {
 
 
 $(document).ready(function() {
+alert("hey")
     $(document).on("submit", "#eform", function(e) {
         e.preventDefault();
         let input = $('#etext').val();
