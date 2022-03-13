@@ -14,19 +14,18 @@ etext.addEventListener("keyup", function(e) {
 
 
 $(document).ready(function() {
-    $('#eform').on("submit", function(e) {
+    $(document).on("submit", "#eform", function(e) {
         e.preventDefault();
         let input = $('#etext').val();
         // alert($(".box"));
         // $("div").setAtt
         $(".box").append(`<div class= 'item right'> <div class = 'msg'> <p>${input} </p> </div> </div>`);
 
-
         $.ajax({
-            url: "/takeOutput",
+            url: "/takeOutputp",
             method: "POST",
             data: {
-                "message": input
+                message: input
             },
             success: function(data) {
 
@@ -40,31 +39,23 @@ $(document).ready(function() {
             </div>`);
 
                 $("#etext").val("");
-            },
-            error: function(data) {
-
-                $(".box").append(`<div class="item left">
-                <div class="icon">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="msg">
-                    <p>sorry!! we can't help you</p>
-                </div>
-            </div>`);
-
-                $("#etext").val("");
-
-
-                $(".box").scrollTop(10000);
-
-
-
             }
-
-
-
+//            error: function(data) {
+//
+//                $(".box").append(`<div class="item left">
+//                <div class="icon">
+//                    <i class="fa fa-user"></i>
+//                </div>
+//                <div class="msg">
+//                    <p>sorry!! we can't help you</p>
+//                </div>
+//            </div>`);
+//
+//                $("#etext").val("");
+//
+//
+//                $(".box").scrollTop(10000);
+//            }
         })
-
-
     })
 })
