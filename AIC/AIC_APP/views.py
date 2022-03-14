@@ -12,10 +12,10 @@ import os
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json").read())
-words = pickle.load(open("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/words.pkl", 'rb'))
-classes = pickle.load(open("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/classes.pkl", 'rb'))
-model = load_model("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5")
+intents = json.loads(open("/Applications/XAMPP/xamppfiles/htdocs/AI_Chat_bot/AIC/AIC_APP/training/intents.json").read())
+words = pickle.load(open("/Applications/XAMPP/xamppfiles/htdocs/AI_Chat_bot/AIC/AIC_APP/training/words.pkl", 'rb'))
+classes = pickle.load(open("/Applications/XAMPP/xamppfiles/htdocs/AI_Chat_bot/AIC/AIC_APP/training/classes.pkl", 'rb'))
+model = load_model("/Applications/XAMPP/xamppfiles/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5")
 
 
 def clean_up_sentence(sentence):

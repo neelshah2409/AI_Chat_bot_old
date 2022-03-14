@@ -2,6 +2,9 @@ $(document).ready(function() {
     // gsap.from("#Green_1_", { duration: 3, y: -200, rotation: 360, ease: "bounce" });
 
     gsap.from("#polygon polygon", { duration: 1, opacity: 0, y: -200, stagger: 0.2 });
+    gsap.timeline().from("#chatbox div", { duration: 0.7, delay: 1.5, opacity: 0, stagger:1, y: -400, ease: "ease.in" })
+                    .from(".box", { duration: 0.7, delay: 1.5, opacity: 0, scale:0, ease: "ease.in" });
+
     gsap.timeline().from("#Green_1_", { duration: 1, rotation: 180, y: -200, scale: 0, ease: "ease.in" })
         .from("path", { scaleX: 0, duration: 0.7, ease: "power2" })
         .from("ellipse", { scaleX: 0, duration: 0.5, ease: "power2" })

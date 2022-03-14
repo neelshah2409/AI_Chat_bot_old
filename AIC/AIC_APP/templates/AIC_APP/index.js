@@ -14,16 +14,16 @@ etext.addEventListener("keyup", function(e) {
 
 
 $(document).ready(function() {
-alert("hey")
     $(document).on("submit", "#eform", function(e) {
+        alert("HK");
         e.preventDefault();
         let input = $('#etext').val();
         // alert($(".box"));
         // $("div").setAtt
-        $(".box").append(`<div class= 'item right'> <div class = 'msg'> <p>${input} </p> </div> </div>`);
+        $(".box").append(`<div class= 'item right'> <div class = 'msg text-breakword'> <p>${input} </p> </div> </div>`);
 
         $.ajax({
-            url: "/takeOutputp",
+            url: "/takeOutput",
             method: "POST",
             data: {
                 message: input
