@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="{% static 'AIC_APP/css/background.css' %}">
+    <style>
+        @font-face {
+            font-family: "Android";
+            src: url("{% static 'AIC_APP/css/Android.ttf' %}");
+        }
+    </style>
     <link rel="stylesheet" href="{% static 'AIC_APP/css/style.css' %}">
 
 </head>
@@ -637,5 +643,11 @@
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
 <script src="{% static 'AIC_APP/js/bganimation.js' %}"></script>
 <script src="{% static 'AIC_APP/js/index.js' %}"></script>
+<script>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+</script>
 
 </html>
