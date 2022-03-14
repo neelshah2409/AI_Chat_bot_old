@@ -1,5 +1,15 @@
 {
   "intents": [
+{
+      "tag": "Data-0",
+      "patterns": [
+        "Which types of schems are available?"
+      ],
+      "responses": [
+        "physical spareness"
+      ]
+
+    },
     {
       "tag": "Data-1",
       "patterns": [

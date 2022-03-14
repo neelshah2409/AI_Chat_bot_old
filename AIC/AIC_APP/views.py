@@ -17,6 +17,12 @@ words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}w
 classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
 model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
 
+# curr = os.getcwd()
+# print(curr)
+# intents = json.loads(open(f"{curr}\\training\\intents.json").read())
+# words = pickle.load(open(f"{curr}\\training\\words.pkl", 'rb'))
+# classes = pickle.load(open(f"{curr}\\training\\classes.pkl", 'rb'))
+# model = load_model(f"{curr}\\training\\modelData\\chatbotmodel.h5")
 
 
 def clean_up_sentence(sentence):
