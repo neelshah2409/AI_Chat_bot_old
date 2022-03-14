@@ -1,17 +1,25 @@
 <div class="wrapper">
-    <div class="title">AICTE Chatbot</div>
+    <div class="title">Yo Bot</div>
     <div class="box">
-        <div class="item left">
+        <div class="sticky-top w-100 h-100 d-flex justify-content-center" style="z-index: -1;">
+            {% load static %}
+            <img src="{% static 'AIC_APP/images/chatbot-marketing.gif' %}" />
+
+        </div>
+        <div class="item left d-flex align-items-start">
             <div class="icon">
-                <i class="fa fa-user"></i>
+                <img src="{% static 'AIC_APP/images/chatbot.svg' %}">
             </div>
             <div class="msg">
                 <p>Hello everyone, How are you?</p>
             </div>
         </div>
-        <div class="item right">
-            <div class="msg">
+        <div class="item right d-flex justify-content-between gap-2 align-items-center">
+            <div class="msg px-2">
                 <p>Nice</p>
+            </div>
+            <div class="icon">
+                <i class="bi bi-person-fill"></i>
             </div>
         </div>
 
@@ -21,16 +29,16 @@
         <div class="input-field">
 
             <form action="" method="post" id="eform">
-                 {% csrf_token %}
+                {% csrf_token %}
                 <input type="text" placeholder="Type your message" id="etext" name="etext" required>
                 <button type="submit">Send</button>
             </form>
         </div>
     </div>
 
-    <div class="sug" id="sug">
+    <!-- <div class="sug" id="sug">
         <p>one que</p>
         <p>one que</p>
         <p>one que</p>
-    </div>
+    </div> -->
 </div>

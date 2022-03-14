@@ -1,64 +1,62 @@
-alert("start js");
-var etext = document.getElementById("etext");
-etext.addEventListener("keyup", function(e) {
-    e.preventDefault();
-    var sug = document.getElementById("sug");
-    // console.log(sug);
-    sug.style.visibility = "visible";
-    if (document.getElementById("etext").value == "") {
-        sug.style.visibility = "hidden";
-    }
-});
-
 $(document).ready(function() {
-//alert("hey")
+    let etext = $("#etext");
+    $(".box").scrollTop(1000);
     $('#eform').on("submit", function(e) {
         e.preventDefault();
-        var input = $('#etext').val();
-         alert(input);
-        $(".box").append(`<div class= 'item right'> <div class = 'msg'> <p>${input} </p> </div> </div>`);
-
-
+        let input = $('#etext').val();
+        $('#etext').val('');
+        // alert($(".box"));
+        // $("div").setAtt
+        let temp1 = $(`<div class="item right d-flex justify-content-between gap-2 align-items-center">
+                                <div class="msg px-2">
+                                    <p>${input}</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="bi bi-person-fill"></i>
+                                </div>
+                            </div>`);
+        $(".box").append(temp1);
+        // $(".box").scrollTop(height);
+        $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 700);
+        $("#etext").prop('disabled', true);
         $.ajax({
             url: "/takeOutputdp",
-            method: "post",
+            method: "POST",
             data: {
                 message: input,
-                csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
             },
             success: function(data) {
-                alert("hey success");
-                $(".box").append(`<div class="item left">
-                <div class="icon">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="msg">
-                    <p>${data}</p>
-                </div>
-            </div>`);
-            console.log(data);
+                let temp = $(`<div class="item left d-flex align-items-start">
+                                <div class="icon">
+                                    <img src="../images/chatbot.svg">
+                                </div>
+                                <div class="msg">
+                                    <p>${data}</p>
+                                </div>
+                            </div>`);
+                $(".box").append(temp);
+                $("#etext").prop('disabled', false);
                 $("#etext").val("");
+                temp.fadeIn(200);
+                $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 700);
+
             },
             error: function(data) {
 
                 $(".box").append(`<div class="item left">
-                <div class="icon">
-                    <i class="fa fa-user"></i>
-                </div>
-                <div class="msg">
-                    <p>sorry!! we can't help you</p>
-                </div>
-            </div>`);
-
+                                   <div class="icon">
+                                       <i class="fa fa-user"></i>
+                                   </div>
+                                   <div class="msg">
+                                       <p>sorry!! we can't help you</p>
+                                   </div>
+                               </div>`);
+                console.log($(".box").children().last().height());
+                $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 600);
                 $("#etext").val("");
+                $("#etext").prop('disabled', false);
             }
-
-
-
         })
-
-
     })
 })
-
-

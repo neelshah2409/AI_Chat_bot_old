@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $("#temp").load("index2.html");
+    $("#chatbox").load("index2.html");
 });
