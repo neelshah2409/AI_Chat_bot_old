@@ -74,7 +74,7 @@ sgd=SGD(lr=0.01, decay=1e-6, momentum=0.9,nesterov=True)
 model.compile(loss='categorical_crossentropy',optimizer=sgd)
 
 hist = model.fit(np.array(train_x),np.array(train_y),epochs=200,batch_size=5,verbose=1)
-model.save(("C:/xampp1/htdocs/AI_Chat_bot/AIC/AIC_APP/training/modelData/chatbotmodel.h5"), hist)
+model.save((f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5"), hist)
 print("Sucess")
 
 
