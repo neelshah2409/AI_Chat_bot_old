@@ -60,7 +60,7 @@ def get_response(intent_list, intent_json):
     # print(list_of_intent)
     for i in list_of_intent:
         if i['tag'] == tag:
-            result = random.choice(i['responses'])
+            result = (i['responses'])
             break
 
     return result
@@ -89,8 +89,10 @@ def fetchInputTextArea(request):
     file.writelines(inputText)
     print('write')
     file.close()
-    return HttpResponse("Success")
+    return render(request, 'AIC_APP/questionGenerationdisplay.html')
 
 
 def QueGenerator(request):
     return render(request, 'AIC_APP/questionGeneration.html')
+def tp(request):
+    return render(request,'AIC_APP/questionGenerationdisplay.html')

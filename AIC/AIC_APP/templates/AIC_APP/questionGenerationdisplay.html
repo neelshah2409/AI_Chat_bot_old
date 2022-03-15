@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>questionGenerationdisplay</title>
+</head>
+<body>
+<div id="questionGenerationdisplay"></div>
+</body>
+hiii
+
+<!--<script src="../training/intents.json"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+      $(document).ready(function() {
+
+
+               $.getJSON('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/training/intents.json', function(jd) {
+                 $(body).html('<p> Name: ' + jd.tag + '</p>');
+                  $(body).append('<p>Age : ' + jd.patterns+ '</p>');
+                  $(body).append('<p> Sex: ' + jd.responses+ '</p>');
+               });
+
+
+         });
+</script>
+</html>

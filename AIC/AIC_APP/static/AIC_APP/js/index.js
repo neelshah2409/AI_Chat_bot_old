@@ -74,7 +74,6 @@ $(document).ready(function() {
             let temp1 = $(`<div class="item right d-flex justify-content-between gap-2 align-items-center m-3">
                                 <div class="msg p-2">
                                     <form class="m-0 text-center" method="post">
-                                        {% csrf_token %}
                                         <h4 class="text-light m-0 text-center py-2 rounded-2">Feedback</h4>
                                         <textarea name="feedback" placeholder="Enter Your Feedback" rows="4" class="form-control"></textarea>
                                         <button type="submit" class="btn text-light">Submit</button>
