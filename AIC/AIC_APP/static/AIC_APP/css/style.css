@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#chatbox{
-margin-right:1%;
+
+#chatbox {
+    margin-right: 1%;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     /* display: flex; */
@@ -17,6 +18,8 @@ body {
     background-color: #FFDEE9;
     background-image: linear-gradient(225deg, #B5FFFC 0%, #FFDEE9 100%);
 }
+
+
 /*#QuestionGeneration{
 margin-left:70%;
 margin-bottom:3%;
@@ -25,61 +28,66 @@ background-color: #0097ce;
     border-color: #0097ce;
 
 }*/
-.button-29 a{
-color:white;
-text-decoration:none;
+
+.button-29 a {
+    color: white;
+    text-decoration: none;
 }
+
+
 /*#QuestionGeneration a:hover{
 text-decoration:underline;
 
 }*/
+
 .button-29 {
-margin-left:70%;
-margin-bottom:3%;
-  align-items: center;
-  appearance: none;
-background-image: radial-gradient(100% 100% at 100% 0, #68c4cd 0, #b894e9 100%);  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .07s,transform .07s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
+    margin-right: 0%;
+    margin-bottom: 3%;
+    align-items: center;
+    appearance: none;
+    background-color: #0093E9;
+    background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .07s, transform .07s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
 }
 
 .button-29:focus {
-  /*box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;*/
+    /*box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;*/
 }
 
 .button-29:hover {
-  /*box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #80aff4  0 -3px 0 inset;*/
-   /*transform: translateY(-2px); */
+    /*box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #80aff4  0 -3px 0 inset;*/
+    /*transform: translateY(-2px); */
 }
 
 .button-29:active {
-  /*box-shadow: #3c4fe0 0 3px 7px inset;*/
-  box-shadow: none;
-  /*transform: translateY(2px);*/
+    /*box-shadow: #3c4fe0 0 3px 7px inset;*/
+    box-shadow: none;
+    /*transform: translateY(2px);*/
 }
-
 
 .box .bg {
     background-color: transparent;
@@ -172,10 +180,7 @@ background-image: radial-gradient(100% 100% at 100% 0, #68c4cd 0, #b894e9 100%);
     border-radius: 10px;
     /* width: 150px; */
     margin-left: 10px;
-
-background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(186 147 233) 0%, rgba(116,182,247,1) 90% );
-
-
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgb(186 147 233) 0%, rgba(116, 182, 247, 1) 90%);
 }
 
 .wrapper .box .item .msg p {
@@ -196,8 +201,7 @@ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(186 1
     /*background: #0097CE;*/
     color: #fff;
     background-color: #0093E9;
-background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
 .wrapper .typing-area {
@@ -210,8 +214,7 @@ background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     padding: 10px;
     border: 0.5px solid rgb(0 0 0 / 25%);
     background-color: #FFDEE9;
-    background-image: linear-gradient(225deg, #B5FFFC 0%, #FFDEE9 100%);
-
+    background-image: linear-gradient(225deg, #B5FFFC 0%, #e8fcfc 100%);
 }
 
 .wrapper .typing-area .input-field {
@@ -229,29 +232,31 @@ background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     font-family: 'Poppins', sans-serif;
     transition: 0.3s all ease;
     /*background-color: #efefef !important;*/
-background-color: #FFDEE9;
-    background-image: linear-gradient(225deg, #B5FFFC 0%, #FFDEE9 100%);
- }
+    background-color: #FFDEE9;
+    background-image: linear-gradient(225deg, #B5FFFC 0%, #e8fcfc 100%);
+}
 
 .wrapper .typing-area .input-field input:focus {
     outline: none;
 }
 
-.wrapper .typing-area .input-field button {
+.wrapper .typing-area .input-field .submitBtn {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 90%;
     transform: translateY(-50%);
     background: transparent;
-    border: 1px solid #006FBC;
+    border: 0px solid #006FBC;
     padding: 5px 10px;
     border-radius: 3px;
     color: #006FBC;
     outline: none;
     cursor: pointer;
+    transition: 0.7s all ease;
     opacity: 0;
-    pointer-events: none;
-    transition: 0.3s all ease;
+    z-index: -1;
+    pointer-events: auto;
+    transform-origin: -32px 0px;
 }
 
 .sug {
@@ -269,12 +274,32 @@ background-color: #FFDEE9;
     margin-bottom: 5px;
 }
 
-.wrapper .typing-area .input-field button:hover {
-    background: #006FBC;
-    color: white;
+.wrapper .typing-area .input-field input:valid~.submitBtn {
+    opacity: 1;
+    z-index: 1;
+    right: -2%;
 }
 
-.wrapper .typing-area .input-field input:valid~button {
-    opacity: 1;
+.wrapper .typing-area .input-field .submitBtn:hover {
+    transition: 0.5s all ease;
+    transform: rotate(-30deg);
+}
+
+.rotate {
+    position: absolute;
+    top: 50%;
+    right: 90%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0px solid #006FBC;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #006FBC;
+    outline: none;
+    cursor: pointer;
+    transition: 0.7s all ease;
+    opacity: 0;
+    z-index: -1;
     pointer-events: auto;
+    transform-origin: -32px 0px;
 }
