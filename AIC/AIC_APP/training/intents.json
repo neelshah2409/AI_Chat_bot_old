@@ -1,235 +1,106 @@
 {
   "intents": [
-{
-      "tag": "Data-0",
+    {
+      "tag": "Data-1",
       "patterns": [
-        "Which types of schems are available?"
+        "What does the general",
+        " theory of relativity",
+        " describe gravity as?",
+        "What does the general",
+        "What does general mean? What do some of them mean?",
+        "What does the general do?",
+        "What is general principles?",
+        "What's the general term?",
+        "What does the general terminology mean?",
+        "What does general mean?",
+        "What is the general rule?",
+        "What is the general terminology of general terms and definitions?",
+        "What is General (Fact)?",
+        "What does the general law mean?"
       ],
       "responses": [
-        "physical spareness"
+        "the curvature of spacetime"
       ]
-
     },
     {
       "tag": "Data-1",
       "patterns": [
-        "What is clarity and definition associated with?",
-        "What is definition and clarity?",
-        "What is definition? Why are clarity and definition associated with it?",
-        "What does clarity and definition mean?",
-        "What is clearness and definition associated with?",
-        "What is clarity and definition?"
+        "What is the fastest developing discipline in the world?",
+        "Which is the fastest developing discipline in the world?",
+        "What is the fastest developing discipline of the world?",
+        "What's the fastest developing discipline in the world, and why?",
+        "Which is the fastest developing discipline?",
+        "Which is the fastest growing science discipline in world?"
       ],
-      "responses": [
-        "physical spareness"
-      ]
-
+      "responses": "<pad> Computer engineering"
     },
     {
       "tag": "Data-2",
-      "responses": [
-        "<pad> obese"
-      ],
       "patterns": [
-        "What do most deciduous trees of England give one the impression of being?",
-        "What do deciduous trees in England mean?",
-        "What do most deciduous trees in England give you the impression of being?",
-        "What do deciduous trees of England give?",
-        "What do deciduous trees of England give one the impression of being?",
-        "What do most deciduous trees of England give a person an impression of being?",
-        "Which deciduous trees in England are most successful?",
-        "What do deciduous trees in England give the impression of being?",
-        "What do deciduous trees in England really feel?",
-        "What do deciduous trees give the impression of being?",
-        "What do deciduous trees in the whole of England give one the impression of being?"
-      ]
+        "Computer engineering integrates several fields of what to develop computer hardware and software?",
+        "Computer engineering incorporates several different fields of what to develop computer hardware and software?",
+        "Computer engineering integrates several fields of what to develop a computer hardware and software?",
+        "Computer engineering incorporates several fields of what to develop computer hardware and software?"
+      ],
+      "responses": "<pad> electrical engineering and computer science"
     },
     {
       "tag": "Data-3",
-      "responses": [
-        "<pad> Embla"
-      ],
       "patterns": [
-        "What is the name of the first woman in Scandinavian mythology?",
-        "What was the name of a woman who is not the most important in Scandinavian mythology?",
-        "What is the name of the first woman in Nordic mythology?",
-        "What's the first woman in Scandinavian mythology and why?",
-        "Which was the first girl in the Scandinavian mythology?",
-        "Which is the name of the first woman in Scandinavian mythology?",
-        "Who is the first woman in Scandinavian mythology?",
-        "Who was the first female in Scandinavian mythology, and why is the name of her considered so?"
-      ]
+        "What do computer engineers do to transfer data?",
+        "What does a computer engineer do when it is not possible to transfer data?",
+        "What is computer engineering?",
+        "How do computers handle information?",
+        "What do computer engineers do?",
+        "How do computer engineers transfer data?",
+        "How do computer engineers to transmit and transfer data?",
+        "How do software engineers transfer data?"
+      ],
+      "responses": ["<pad> build networks"]
     },
     {
       "tag": "Data-4",
-      "responses": [
-        "<pad> men of insight"
-      ],
       "patterns": [
-        "Who were the Scandinavians?",
-        "Who are Scandinavians?",
-        "Who was the Scandinavian / Scandinavians?",
-        "What is Scandinavian?",
-        "Who are the Scandinavians?",
-        "Who are the Scandinavians and why?",
-        "Who are Scandinavians and why?",
-        "Who were the Scandinavians? Why?"
-      ]
+        "What are the major technical areas of Computer Engineering?",
+        "What are the major technical areas in computer engineering?",
+        "What are some of the major technical areas in computer engineering?",
+        "What are the major fields of technical computer engineering and what are some of them?",
+        "Which are the major technical areas in computer engineering?",
+        "What are the main technical areas of computer engineering?",
+        "What are the main technical areas in computer engineering?",
+        "What are the major technical areas in computer engineering? What are the concepts and solutions?",
+        "What are the major technical areas in the field of computer engineering?"
+      ],
+      "responses": "<pad> Cybersecurity, Networking, Database Handling, Artificial Intelligence, Design Automation, Computer software, Embedded Systems"
     },
     {
       "tag": "Data-5",
-      "responses": [
-        "<pad> brood with all their bulging masses of foliage"
-      ],
       "patterns": [
-        "What is a blowsily female about the vast trees that brood above the meadows of the home counties?",
-        "What is beautiful about the vast trees that brood above the meadows of the home counties?",
-        "What is female about the vast trees that brood above the meadows of the home counties?",
-        "What is such a blowsily female about the vast trees that brood over the meadows of home counties?"
-      ]
+        "What are future opportunities in this field?",
+        "What are the future of computing?",
+        "What are the opportunities in this field?",
+        "What are some opportunities in this field?",
+        "What are the future opportunities in industry?",
+        "What are the future opportunities in this field?",
+        "What are some of the opportunities in this field?",
+        "What are the future opportunities in this domain?",
+        "What are opportunities in the field of information and communications?",
+        "Are there any future opportunities in this field?"
+      ],
+      "responses": "<pad> beyond boundaries"
     },
     {
       "tag": "Data-6",
-      "responses": [
-        "<pad> giant skeletons"
-      ],
       "patterns": [
-        "What do the elm trees brood with in winter?",
-        "What do elm trees brood with in winter?",
-        "What do some elm trees brood?",
-        "What do Elm trees brood in winter?",
-        "What does the elms brood with each year?",
-        "What do the elm trees brood with at the same time as the trees in the winter?",
-        "How do elm trees breed and how do they survive?",
-        "What do elm trees brood?",
-        "What does the elm tree brood with in winter?"
-      ]
-    },
-    {
-      "tag": "Data-7",
-      "responses": [
-        "<pad> inflated"
+        "Where is the Computer Engineering Department located?",
+        "Where is computer engineering department located?",
+        "What is the location of CS Department?",
+        "What is Computer Engineering Department of India?",
+        "Where is the Computer Engineering Department?",
+        "Which department is best for computer engineering?",
+        "Where is the IT department of the department and how can I find out more about it?"
       ],
-      "patterns": [
-        "What type of style is a kind of euphemism?",
-        "What are some examples of euphemisms?",
-        "What types of euphemism is not only a sexist but a political euphemism?",
-        "What is an euphemism?",
-        "What's called euphemism?",
-        "What are some examples of euphemism?",
-        "Which style of euphemism do you prefer?",
-        "What is considered euphemism?",
-        "What is euphemism and what are some examples?",
-        "What kind of euphemism is it?",
-        "What is euphemism?"
-      ]
-    },
-    {
-      "tag": "Data-8",
-      "responses": [
-        "<pad> soft snow"
-      ],
-      "patterns": [
-        "What does a mass of Latin words fall upon?",
-        "What do Latin words fall upon?",
-        "What does Latin spell?",
-        "What shall Latin words fall upon?",
-        "What do Latin words fall upon? How can we assemble them?",
-        "What does the Latin word fall upon?"
-      ]
-    },
-    {
-      "tag": "Data-9",
-      "responses": [
-        "<pad> insincerity"
-      ],
-      "patterns": [
-        "What is the great enemy of clear language?",
-        "What are the dangers of clear language?",
-        "What is the enemy of lucid language?",
-        "What is the greatest enemy of clear language?",
-        "Why do people hate clear language?",
-        "What is the enemy of clearly written materials?",
-        "What's the great enemy of clear language?",
-        "What is the great enemies of clear language?",
-        "Who is the biggest enemy of clear language and how can we combat it?",
-        "What is the biggest enemy of clear language?"
-      ]
-    },
-    {
-      "tag": "Data-10",
-      "responses": [
-        "<pad> a cuttlefish spurting out ink"
-      ],
-      "patterns": [
-        "What does one turn as instinctively to long words and exhausted idioms?",
-        "What instinctively turns one to long words and exhausted idioms?",
-        "What is one's reaction as instinctively to long words and exhausted idioms?",
-        "What do we turn to to get rid of all long words?",
-        "What does one turn as instinctively to long and clumpy words?",
-        "What does one turn instinctively to long words and exhausted idioms?",
-        "What does one turn to in reaction to long words and tired idioms?"
-      ]
-    },
-    {
-      "tag": "Data-11",
-      "responses": [
-        "<pad> keeping out of politics"
-      ],
-      "patterns": [
-        "What is a mass of lies, evasions, folly, hatred, and schizophrenia?",
-        "What are the mass of lies, evasions, folly, hatred, and schizophrenia?",
-        "What is mass of lies, evasions, folly, hatred, and schizophrenia?",
-        "What's the mass of lies, evasions, folly, hatred, and schizophrenia?",
-        "What is a mass of lies, evasion, folly, hatred, and schizophrenia?",
-        "What's a mass of lies, evasions, folly, hatred, and schizophrenia?",
-        "What is the mass of lies, evasions, folly, hate, and schizophrenia?",
-        "What is the mass of lies, evasions, folly, hatred and schizophrenia?"
-      ]
-    },
-    {
-      "tag": "Data-12",
-      "responses": [
-        "<pad> lies, evasions, folly, hatred, and schizophrenia"
-      ],
-      "patterns": [
-        "What is politics itself a mass of?",
-        "What is politics considered a mass of?",
-        "What is politics?",
-        "What is political mass?",
-        "What is politics a mass of?",
-        "What is politics and its mass?",
-        "What is politics in itself mass of?",
-        "What is politics actually?"
-      ]
-    },
-    {
-      "tag": "Data-13",
-      "responses": [
-        "<pad> language must suffer"
-      ],
-      "patterns": [
-        "What happens when the general atmosphere is bad?",
-        "What happens when general atmosphere is bad?",
-        "What happens when the environment is bad?"
-      ]
-    },
-    {
-      "tag": "Data-14",
-      "responses": [
-        "<pad> ten or fifteen years"
-      ],
-      "patterns": [
-        "How long have German, Russian and Italian languages deteriorated?",
-        "How long has the German, Russian and Italian languages deteriorated?",
-        "How long has the German, Russian and Italian languages not evolved?",
-        "What is the way over which the German, Russian and Italian languages have deteriorated?",
-        "How long has the German, Russian and Italian languages changed?",
-        "How long did the German language deteriorate?",
-        "How long have Russian and English languages deteriorated?",
-        "How long has the Italian, German and the Russian languages deteriorated?",
-        "How long have German, Russian, Italian languages deteriorated?"
-      ]
+      "responses": "<pad> L.D.C.E"
     }
-
-    ]}
+  ]
+}

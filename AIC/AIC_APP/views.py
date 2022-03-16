@@ -9,6 +9,12 @@ from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
+try:
+    from AIC.question_generation import runnow
+    from AIC.OneQueToManyQues import main
+except:
+    pass
+
 
 lemmatizer = WordNetLemmatizer()
 
@@ -16,6 +22,12 @@ intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}
 words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
 classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
 model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+
+# intents = json.loads(open(f"{os.getcwd()}{os.sep}training{os.sep}intents.json").read())
+# words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
+# classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
+# model = load_model(f"{os.getcwd()}{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+
 
 # curr = os.getcwd()
 # print(curr)
@@ -94,5 +106,78 @@ def fetchInputTextArea(request):
 
 def QueGenerator(request):
     return render(request, 'AIC_APP/questionGeneration.html')
+
+
 def tp(request):
-    return render(request,'AIC_APP/questionGenerationdisplay.html')
+    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+
+
+def linkingAllFunc():
+    with open('../inputText.txt', 'r') as file:
+        data = file.read().replace('\n', '')
+    if data:
+        intentsfile = open('../intents.json', 'w')
+        intentsfile.write('''{
+                              "intents": [
+                                {
+                                  "tag": "Data-0",
+                                  "patterns": [],
+                                  "responses": ""
+                                }
+                              ]
+                            }''')
+        intentsfile.close()
+        print("runnow will run")
+        runnow.runnow()
+        intentsfile.close()
+        # intentsfile = open('../intents.json', 'w')
+        # intentsdata = f'''{intentsfile}'''
+#         intentsdata.replace('''{
+#   "intents": [
+#     {
+#       "tag": "Data-0",
+#       "patterns": [],
+#       "responses": ""
+#     }
+#   ]
+# }
+#         ''', '''{
+#   "intents": [
+#     {
+#       "tag": "Data-0",
+#       "patterns": [],
+#       "responses": ""
+#     }
+#   ,''')
+        # print(intentsdata)
+        # print(type(intentsdata))
+        # intentsload = json.loads(intentsdata)
+        #
+        #
+        # json.dump(intentsload, intentsfile)
+        intentsfile.close()
+        # print(intentsfile)
+        return "done"
+    else:
+        return "NotDone"
+
+
+def onetomany():
+    main.run_main()
+
+
+def runcombine():
+    resutlLink = linkingAllFunc()
+    if resutlLink == "done":
+        print("yeah done")
+    else:
+        print("Some error occured")
+
+
+# onetomany()
+# runcombine()
+# with json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json', 'r').read()) as file:
+#     data = file
+#
+# print(data)
+# print('Rishi relax kr')

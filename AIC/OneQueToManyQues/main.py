@@ -1,7 +1,7 @@
 import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 import json
-intentsfile = json.loads(open('../intents.json').read())
+intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json').read())
 
 model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
@@ -47,18 +47,40 @@ def updatePatterns(input):
         ques.append(final_output)
     return ques
 
-for intent in intentsfile['intents']:
-    ques = updatePatterns(intent.get('patterns')[0])
-    for i in ques:
-        print(i)
-        intent.get('patterns').append(i)
-    print(intent.get('patterns'))
-    updatejson(intent)
-    print('done')
+# for intent in intentsfile['intents']:
+#     ques = updatePatterns(intent.get('patterns')[0])
+#     for i in ques:
+#         print(i)
+#         intent.get('patterns').append(i)
+#     print(intent.get('patterns'))
+#     updatejson(intent)
+#     print('done')
 
 
 
 
 
+def run_main():
+    import torch
+    from transformers import T5ForConditionalGeneration, T5Tokenizer
+    import json
+    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json').read())
 
+    model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
+    tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
 
+    for intent in intentsfile['intents']:
+        print(intent)
+        print(intent.get('patterns'))
+        ques = updatePatterns(intent.get('patterns')[0])
+        for i in ques:
+            print(i)
+            intent.get('patterns').append(i)
+        print(intent.get('patterns'))
+        updatejson(intent)
+        print('done')
+
+if __name__ == '__main__':
+    run_main()

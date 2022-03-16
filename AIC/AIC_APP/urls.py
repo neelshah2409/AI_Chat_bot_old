@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.index, name="Home"),
     path('fetchInputTextArea', views.fetchInputTextArea, name="fetchInputTextArea"),
     path('QueGenerator', views.QueGenerator, name="QueGenerator"),
-    path('takeOutputdp', views.takeOutputdp, name="takeOutput")
+    path('takeOutputdp', views.takeOutputdp, name="takeOutput"),
+    path('tp', views.tp, name="tp")
 
 ]
