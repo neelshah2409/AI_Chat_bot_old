@@ -108,7 +108,7 @@ def QueGenerator(request):
     return render(request, 'AIC_APP/questionGeneration.html')
 
 
-def tp(request):
+def questionShow(request):
     return render(request, 'AIC_APP/questionGenerationdisplay.html')
 
 
