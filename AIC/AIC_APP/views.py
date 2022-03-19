@@ -9,32 +9,46 @@ from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
+
+curr = os.getcwd()
 try:
-    from AIC.question_generation import runnow
-    from AIC.OneQueToManyQues import main
+    # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\question_generation")
+    print(os.getcwd())
+    from AIC.question_generation.runnow import runnow
+    print("sucesssssssssssssssssssssssssssssssssssssss")
+
+    # os.chdir(r'C:\Users\patel\PycharmProjects\AIChatBot\AIC\OneQueToManyQues')
+    from AIC.OneQueToManyQues.main import run_main
+    print("sucesssssssssssssssssssssssssssssssssssssss")
+    # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\AIC_APP")
+except Exception as e:
+    print(f"errrorrrrr{e}")
+print(os.getcwd())
+try:
+    from question_generation.runnow import runnow
+    from OneQueToManyQues.main import run_main
 except:
-    pass
+    print("still err")
+
 
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}intents.json").read())
-words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
-classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
-model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+try:
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}intents.json").read())
+    words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
+    classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
+    model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+except:
+    pass
 
-# intents = json.loads(open(f"{os.getcwd()}{os.sep}training{os.sep}intents.json").read())
-# words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
-# classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
-# model = load_model(f"{os.getcwd()}{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
-
-
-# curr = os.getcwd()
-# print(curr)
-# intents = json.loads(open(f"{curr}\\training\\intents.json").read())
-# words = pickle.load(open(f"{curr}\\training\\words.pkl", 'rb'))
-# classes = pickle.load(open(f"{curr}\\training\\classes.pkl", 'rb'))
-# model = load_model(f"{curr}\\training\\modelData\\chatbotmodel.h5")
+try:
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}training{os.sep}intents.json").read())
+    words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
+    classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
+    model = load_model(f"{os.getcwd()}{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+except Exception:
+    pass
 
 
 def clean_up_sentence(sentence):
@@ -92,31 +106,14 @@ def takeOutputdp(request):
     return HttpResponse(res)
 
 
-# for handling the data given by the company xyz
-def fetchInputTextArea(request):
-    inputText = request.POST.get('inputText', 'default')
-    print(inputText)
-    file = open('inputText', 'w')
-
-    file.writelines(inputText)
-    print('write')
-    file.close()
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
-
-
-def QueGenerator(request):
-    return render(request, 'AIC_APP/questionGeneration.html')
-
-
-def questionShow(request):
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
-
 
 def linkingAllFunc():
-    with open('../inputText.txt', 'r') as file:
+
+    with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/inputText.txt', 'r') as file:
         data = file.read().replace('\n', '')
     if data:
-        intentsfile = open('../intents.json', 'w')
+        intentsfile = open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json', 'w')
+
         intentsfile.write('''{
                               "intents": [
                                 {
@@ -128,56 +125,76 @@ def linkingAllFunc():
                             }''')
         intentsfile.close()
         print("runnow will run")
-        runnow.runnow()
-        intentsfile.close()
-        # intentsfile = open('../intents.json', 'w')
-        # intentsdata = f'''{intentsfile}'''
-#         intentsdata.replace('''{
-#   "intents": [
-#     {
-#       "tag": "Data-0",
-#       "patterns": [],
-#       "responses": ""
-#     }
-#   ]
-# }
-#         ''', '''{
-#   "intents": [
-#     {
-#       "tag": "Data-0",
-#       "patterns": [],
-#       "responses": ""
-#     }
-#   ,''')
-        # print(intentsdata)
-        # print(type(intentsdata))
-        # intentsload = json.loads(intentsdata)
-        #
-        #
-        # json.dump(intentsload, intentsfile)
-        intentsfile.close()
-        # print(intentsfile)
-        return "done"
+        print(f"this this this{os.getcwd()}")
+        runnow()
+        return True
     else:
-        return "NotDone"
-
-
-def onetomany():
-    main.run_main()
+        return False
 
 
 def runcombine():
+
+    new_data = []
     resutlLink = linkingAllFunc()
-    if resutlLink == "done":
-        print("yeah done")
+    print(resutlLink)
+    if (resutlLink):
+        with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json') as json_file:
+            data = json.load(json_file)
+            temp = data["intents"]
+            print(f"this is temp{temp}")
+        i = 0
+        for entry in temp:
+            if i == 0:
+                pass
+                i += 1
+            else:
+                new_data.append(entry)
+                i += 1
+        print(new_data)
+        new_dict = {"intents": new_data}
+        print(new_dict)
+        with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json', "w") as f:
+            json.dump(new_dict, f, indent=4)
+        print("rich here")
+        run_main()
+        print("Intent Json file is completely updated..")
     else:
-        print("Some error occured")
+        print("Question Generation is failed")
+
+# for handling the data given by the company xyz
+def fetchInputTextArea(request):
+    inputText = request.POST.get('inputText', 'default')
+    print(inputText)
+    file = open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/inputText.txt', 'a')
+    file.writelines(inputText)
+    file.close()
+    runcombine()
+    # try:
+    #
+    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+    # except Exception:
+    #     return HttpResponse("Some Error Occured")
 
 
-# onetomany()
-# runcombine()
-# with json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json', 'r').read()) as file:
-#     data = file
-#
-# print(data)
-# print('Rishi relax kr')
+
+
+
+
+
+
+
+def QueGenerator(request):
+    return render(request, 'AIC_APP/questionGeneration.html')
+
+
+def questionShow(request):
+    runcombine()
+
+    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+
+def improveFeatures(request):
+    message = request.POST.get('message', 'hey')
+    return HttpResponse("done feedback")
+
+if __name__ == '__main__':
+    runcombine()

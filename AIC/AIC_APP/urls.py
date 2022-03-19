@@ -8,6 +8,7 @@ urlpatterns = [
     path('fetchInputTextArea', views.fetchInputTextArea, name="fetchInputTextArea"),
     path('QueGenerator', views.QueGenerator, name="QueGenerator"),
     path('takeOutputdp', views.takeOutputdp, name="takeOutput"),
-    path('questionShow', views.questionShow, name="questionShow")
+    path('questionShow', views.questionShow, name="questionShow"),
+    path('improveFeatures', views.improveFeatures, name="improveFeatures")
 
 ]

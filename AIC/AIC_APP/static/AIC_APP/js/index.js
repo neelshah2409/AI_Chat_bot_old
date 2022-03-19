@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     let feedback = false;
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -69,13 +70,14 @@ $(document).ready(function() {
         })
     })
     $('#feedback').on("click",function (){
+
         if(!feedback)
         {
             let temp1 = $(`<div class="item right d-flex justify-content-between gap-2 align-items-center m-3">
                                 <div class="msg p-2">
-                                    <form class="m-0 text-center" method="post">
+                                    <form class="m-0 text-center" action="" method="post" id="improvementFeatures">
                                         <h4 class="text-light m-0 text-center py-2 rounded-2">Feedback</h4>
-                                        <textarea name="feedback" placeholder="Enter Your Feedback" rows="4" class="form-control"></textarea>
+                                        <textarea name="improvementFeatures" placeholder="Enter Your Feedback" rows="4" class="form-control"></textarea>
                                         <button type="submit" class="btn text-light">Submit</button>
                                     </form>
                                 </div>
@@ -90,4 +92,53 @@ $(document).ready(function() {
             feedback = true;
         }
     })
+    $('#improvementFeatures').on("submit", function(e) {
+        alert("lol")
+        e.preventDefault();
+
+        $.ajax({
+            url: "/improveFeatures",
+            method: "POST",
+            headers: {
+              "X-CSRFToken": $("[name=csrfmiddlewaretoken]").val()
+         },
+            data: {
+                message: improvementFeatures,
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+            },
+
+            success: function(data) {
+                let temp = $(`<div class="item left d-flex align-items-start m-3">
+                                <div class="icon">
+                                    ${chatbot}
+                                </div>
+                                <div class="msg">
+                                    <p>Your Feedback is submitted</p>
+                                </div>
+                            </div>`);
+                $(".box").append(temp);
+                $("#etext").prop('disabled', false);
+                $("#etext").val("");
+                temp.fadeIn(200);
+                $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 700);
+
+            },
+            error: function(data) {
+
+                $(".box").append(`<div class="item left d-flex align-items-start m-3">
+                                   <div class="icon">
+                                       <i class="fa fa-user"></i>
+                                   </div>
+                                   <div class="msg">
+                                       <p>sorry!! we can't help you</p>
+                                   </div>
+                               </div>`);
+                $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 600);
+                $("#etext").val("");
+                $("#etext").prop('disabled', false);
+            }
+        })
+    })
 })
+
+

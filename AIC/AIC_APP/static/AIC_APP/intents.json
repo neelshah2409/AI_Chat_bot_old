@@ -1,105 +1,357 @@
 {
-    "intents": [{
-            "tag": "Data-1",
+    "intents": [
+        {
+            "tag": "Data-3",
             "patterns": [
-                "What does the general",
-                " theory of relativity",
-                " describe gravity as?",
-                "What does the general",
-                "What does general mean? What do some of them mean?",
-                "What does the general do?",
-                "What is general principles?",
-                "What's the general term?",
-                "What does the general terminology mean?",
-                "What does general mean?",
-                "What is the general rule?",
-                "What is the general terminology of general terms and definitions?",
-                "What is General (Fact)?",
-                "What does the general law mean?"
+                "What does privatisation provide?"
             ],
-            "responses": [
-                "the curvature of spacetime"
-            ]
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
         },
         {
             "tag": "Data-1",
             "patterns": [
-                "What is the fastest developing discipline in the world?",
-                "Which is the fastest developing discipline in the world?",
-                "What is the fastest developing discipline of the world?",
-                "What's the fastest developing discipline in the world, and why?",
-                "Which is the fastest developing discipline?",
-                "Which is the fastest growing science discipline in world?"
+                "What should be considered as responses to several distinct pressures?"
             ],
-            "responses": "<pad> Computer engineering"
+            "responses": "<pad> Policies of privatisation"
         },
         {
             "tag": "Data-2",
             "patterns": [
-                "Computer engineering integrates several fields of what to develop computer hardware and software?",
-                "Computer engineering incorporates several different fields of what to develop computer hardware and software?",
-                "Computer engineering integrates several fields of what to develop a computer hardware and software?",
-                "Computer engineering incorporates several fields of what to develop computer hardware and software?"
+                "What is the main cause of privatisation?"
             ],
-            "responses": "<pad> electrical engineering and computer science"
+            "responses": "<pad> increasing fiscal problems"
         },
         {
             "tag": "Data-3",
             "patterns": [
-                "What do computer engineers do to transfer data?",
-                "What does a computer engineer do when it is not possible to transfer data?",
-                "What is computer engineering?",
-                "How do computers handle information?",
-                "What do computer engineers do?",
-                "How do computer engineers transfer data?",
-                "How do computer engineers to transmit and transfer data?",
-                "How do software engineers transfer data?"
+                "What does privatisation provide?"
             ],
-            "responses": ["<pad> build networks"]
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What are responses to several distinct pressures?",
+                "What are the responses to a pressure?",
+                "What shall be considered as response to several distinct pressures?",
+                "What should be considered as response to each distinct pressure?",
+                "What should be considered as response to multiple distinct pressures?",
+                "What shall be considered as responses to multiple distinct pressures?",
+                "What are some responses to pressure?",
+                "What can be considered as response to multiple distinctive pressures?",
+                "What should be considered as responses to the two distinct pressures?",
+                "What should be considered as responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is the main purpose of privatisation?",
+                "What cause did privatization?",
+                "What cause is privatisation?",
+                "What are the main causes of privatisation?",
+                "What is the main reason for privatisation?",
+                "What causes the privatisation of business?",
+                "What is the main reason behind privatisation?",
+                "What is the cause of privatisation?",
+                "How can privatisation make money available for different businesses?",
+                "What is the main cause of privatisation?"
+            ],
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What does privatisation mean?",
+                "What is privatisation?",
+                "What are privatisation / privatization services?",
+                "What are the implications of privatisation on the government?",
+                "What does privatization provide?",
+                "What does privatisation provide?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What are the main causes of privatisation?",
+                "What was the main cause of privatisation?",
+                "What is privatisation? What are the reasons?",
+                "Why do people hate privatisation?",
+                "What causes privatization?",
+                "What's the main reason for privatisation?",
+                "What is the main reason for privatisation and how can it help?",
+                "What is the cause of privatisation?",
+                "What is the main cause of privatisation?"
+            ],
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What does privatisation do for employers?",
+                "What is privatisation?",
+                "What will privatization do to industry?",
+                "What does privatization provide?",
+                "What is privatization?",
+                "What does privatisation provide?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What are responses to several distinct pressures?",
+                "What are the responses to a pressure?",
+                "What shall be considered as response to several distinct pressures?",
+                "What should be considered as response to each distinct pressure?",
+                "What should be considered as response to multiple distinct pressures?",
+                "What shall be considered as responses to multiple distinct pressures?",
+                "What are some responses to pressure?",
+                "What can be considered as response to multiple distinctive pressures?",
+                "What should be considered as responses to the two distinct pressures?",
+                "What should be considered as responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What should be considered as responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is the main cause of privatisation?"
+            ],
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What does privatisation provide?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
         },
         {
             "tag": "Data-4",
             "patterns": [
-                "What are the major technical areas of Computer Engineering?",
-                "What are the major technical areas in computer engineering?",
-                "What are some of the major technical areas in computer engineering?",
-                "What are the major fields of technical computer engineering and what are some of them?",
-                "Which are the major technical areas in computer engineering?",
-                "What are the main technical areas of computer engineering?",
-                "What are the main technical areas in computer engineering?",
-                "What are the major technical areas in computer engineering? What are the concepts and solutions?",
-                "What are the major technical areas in the field of computer engineering?"
+                "What are the main causes of privatisation?",
+                "What was the main cause of privatisation?",
+                "What is privatisation? What are the reasons?",
+                "Why do people hate privatisation?",
+                "What causes privatization?",
+                "What's the main reason for privatisation?",
+                "What is the main reason for privatisation and how can it help?",
+                "What is the cause of privatisation?",
+                "What is the main cause of privatisation?"
             ],
-            "responses": "<pad> Cybersecurity, Networking, Database Handling, Artificial Intelligence, Design Automation, Computer software, Embedded Systems"
+            "responses": "<pad> increasing fiscal problems"
         },
         {
             "tag": "Data-5",
             "patterns": [
-                "What are future opportunities in this field?",
-                "What are the future of computing?",
-                "What are the opportunities in this field?",
-                "What are some opportunities in this field?",
-                "What are the future opportunities in industry?",
-                "What are the future opportunities in this field?",
-                "What are some of the opportunities in this field?",
-                "What are the future opportunities in this domain?",
-                "What are opportunities in the field of information and communications?",
-                "Are there any future opportunities in this field?"
+                "Why does privatisation help?",
+                "What does privatization really provide us?",
+                "What can privatization provide for society?",
+                "What is privatisation and how does it affect global competitiveness?",
+                "What do privatisations do?",
+                "What is privatisation primarily about?",
+                "What does privatisation offer?",
+                "What does privatisation do for us?",
+                "What do privatisation provide?",
+                "What does privatisation provide?"
             ],
-            "responses": "<pad> beyond boundaries"
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What does privatisation do for employers?",
+                "What is privatisation?",
+                "What will privatization do to industry?",
+                "What does privatization provide?",
+                "What is privatization?",
+                "What does privatisation provide?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What are responses to several distinct pressures?",
+                "What are the responses to a pressure?",
+                "What shall be considered as response to several distinct pressures?",
+                "What should be considered as response to each distinct pressure?",
+                "What should be considered as response to multiple distinct pressures?",
+                "What shall be considered as responses to multiple distinct pressures?",
+                "What are some responses to pressure?",
+                "What can be considered as response to multiple distinctive pressures?",
+                "What should be considered as responses to the two distinct pressures?",
+                "What should be considered as responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What are the main causes of privatisation?",
+                "What was the main cause of privatisation?",
+                "What is privatisation? What are the reasons?",
+                "Why do people hate privatisation?",
+                "What causes privatization?",
+                "What's the main reason for privatisation?",
+                "What is the main reason for privatisation and how can it help?",
+                "What is the cause of privatisation?",
+                "What is the main cause of privatisation?"
+            ],
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What does privatisation do for employers?",
+                "What is privatisation?",
+                "What will privatization do to industry?",
+                "What does privatization provide?",
+                "What is privatization?",
+                "What does privatisation provide?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "What are responses for several distinct pressures?",
+                "What are the responses to a pressure?",
+                "What are some responses to multiple pressures?",
+                "What are the responses to multiple pressures?",
+                "What are the three distinct impulses that are responded to in different situations?",
+                "What are some responses to different pressures?",
+                "What are the responses to different pressures?",
+                "What are the responses of pressure?",
+                "What are the responses of another pressure?",
+                "What are the responses to pressures?",
+                "What are responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
         },
         {
             "tag": "Data-6",
             "patterns": [
-                "Where is the Computer Engineering Department located?",
-                "Where is computer engineering department located?",
-                "What is the location of CS Department?",
-                "What is Computer Engineering Department of India?",
-                "Where is the Computer Engineering Department?",
-                "Which department is best for computer engineering?",
-                "Where is the IT department of the department and how can I find out more about it?"
+                "What is the purpose of privatisation?",
+                "What is purpose of privatisation?",
+                "What is privatisation?",
+                "What's the aim of privatisation?",
+                "What's the purpose of privatisation?",
+                "What is the main purpose of privatisation and how can it help us?",
+                "What is the main purpose of privatisation?"
             ],
-            "responses": "<pad> L.D.C.E"
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-7",
+            "patterns": [
+                "What does privatisation do?",
+                "What is privatisation?",
+                "What's privatisation?",
+                "What does privatization do?",
+                "What does privatisation mean in a business?",
+                "What is privatisation and what is its purposes?",
+                "What is privatization?",
+                "What does privatisation mean?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-8",
+            "patterns": [
+                "What are the main cause of privatisation?",
+                "What is privatisation? What are the reasons?",
+                "What are the main reasons for privatisation?",
+                "What causes privatization?",
+                "What are the main causes of privatisation and how can we stop being privatized?",
+                "What are the main causes of privatisation?"
+            ],
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-9",
+            "patterns": [
+                "What does privatisation mean for employers?",
+                "What is privatisation? What benefits can it bring for the employers?",
+                "How will privatization affect employers?",
+                "What does privatization do for employers?",
+                "What does privatisation do to employers?",
+                "How does privatisation benefit employers?",
+                "What does privatization do?",
+                "What does privatisation do?",
+                "What does privatisation do for employers?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+        },
+        {
+            "tag": "Data-10",
+            "patterns": [
+                "What are responses for several distinct pressures?",
+                "What are the responses to a pressure?",
+                "What are some responses to multiple pressures?",
+                "What are the responses to multiple pressures?",
+                "What are the three distinct impulses that are responded to in different situations?",
+                "What are some responses to different pressures?",
+                "What are the responses to different pressures?",
+                "What are the responses of pressure?",
+                "What are the responses of another pressure?",
+                "What are the responses to pressures?",
+                "What are responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
+        },
+        {
+            "tag": "Data-11",
+            "patterns": [
+                "What are responses to several distinct pressures?",
+                "What are the responses to a pressure?",
+                "What shall be considered as response to several distinct pressures?",
+                "What should be considered as response to each distinct pressure?",
+                "What should be considered as response to multiple distinct pressures?",
+                "What shall be considered as responses to multiple distinct pressures?",
+                "What are some responses to pressure?",
+                "What can be considered as response to multiple distinctive pressures?",
+                "What should be considered as responses to the two distinct pressures?",
+                "What should be considered as responses to several distinct pressures?"
+            ],
+            "responses": "<pad> Policies of privatisation"
+        },
+        {
+            "tag": "Data-12",
+            "patterns": [
+                "What are the main causes of privatisation?",
+                "What was the main cause of privatisation?",
+                "What is privatisation? What are the reasons?",
+                "Why do people hate privatisation?",
+                "What causes privatization?",
+                "What's the main reason for privatisation?",
+                "What is the main reason for privatisation and how can it help?",
+                "What is the cause of privatisation?",
+                "What is the main cause of privatisation?"
+            ],
+            "responses": "<pad> increasing fiscal problems"
+        },
+        {
+            "tag": "Data-13",
+            "patterns": [
+                "What does privatisation do for employers?",
+                "What is privatisation?",
+                "What will privatization do to industry?",
+                "What does privatization provide?",
+                "What is privatization?",
+                "What does privatisation provide?"
+            ],
+            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
         }
     ]
 }

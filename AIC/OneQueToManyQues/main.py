@@ -1,7 +1,7 @@
 import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 import json
-intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json').read())
+intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
 
 model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
@@ -9,13 +9,17 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
 
+def write_json(data, filename="C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json"):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
 def set_seed(seed):
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
 def updatejson(intent):
-    a_file = open("../intents.json", "a")
+    a_file = open("C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json", "a")
     json.dump(intent ,a_file)
     a_file.write(',')
     a_file.close()
@@ -64,22 +68,34 @@ def run_main():
     import torch
     from transformers import T5ForConditionalGeneration, T5Tokenizer
     import json
-    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json').read())
+    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
 
     model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
     tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
-
+    iterate= 0
     for intent in intentsfile['intents']:
         print(intent)
         print(intent.get('patterns'))
         ques = updatePatterns(intent.get('patterns')[0])
-        for i in ques:
-            print(i)
-            intent.get('patterns').append(i)
-        print(intent.get('patterns'))
-        updatejson(intent)
+
+        ques.append(intent.get('patterns')[0])
+
+        answer = intent.get('responses')
+        # for i in ques:
+        #     print(i)
+        #     intent.get('patterns').append(i)
+        # print(intent.get('patterns'))
+        # updatejson(intent)
+
+        with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json') as json_file:
+            data = json.load(json_file)
+            temp = data["intents"]
+            y = {"tag": f"Data-{str(iterate + 1)}", "patterns": ques, "responses": answer}
+            temp.append(y)
+        iterate += 1
+        write_json(data)
         print('done')
 
 if __name__ == '__main__':

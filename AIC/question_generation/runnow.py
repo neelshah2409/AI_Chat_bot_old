@@ -1,44 +1,38 @@
-from AIC.question_generation.pipelines import pipeline
+# from AIC.question_generation.pipelines import pipeline
 import json
 
-intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json').read())
+intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
 
-
-def updatejson(intent):
-    a_file = open("../intents.json", "a")
-    json.dump(intent ,a_file)
-    a_file.write(',')
-
-    a_file.close()
-
-
-
-def lastupdateTag():
-    a_file = open("../intents.json", "a")
-    a_file.write(']}')
-    a_file.close()
+def write_json(data, filename="C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json"):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
 
 
 def runnow():
-    from AIC.question_generation.pipelines import pipeline
+    try:
+        from question_generation.pipelines import pipeline
+    except Exception as e:
+        print("pipeline errr")
     import json
 
-    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/intents.json').read())
+    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
     print("here i am ")
+
+
     # to generate questions simply pass the text
-    ans = nlp('''Approval Process 2021-22
-    Frequently Asked Questions
-    Page | 1
-    Q : Where to send the queries related to portal and approval related issues for the approval
-    process 2021-22? ''')
+    ans = nlp('''Policies of privatisation should be considered as responses to several distinct pressures. First,
+     privatisation is a response by the state to internal forces such as increasing fiscal problems (O’Connor, 1973).
+     It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
+      which, theoretically at least''')
 
-    # with open('../inputText.txt', 'r') as file:
+    # with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/inputText.txt', 'r') as file:
     #     data = file.read().replace('\n', '')
-
     # ans = nlp(data)
 
+    # format of the generation
+    # {'answer': 'heuwiehish', 'question':'rhishi, 'answer': 'heuwiehish', 'question':'rhishi, }
     # print(ans)
 
     anslist = []
@@ -56,17 +50,18 @@ def runnow():
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
             list.append(quelist[iterate])
-            intent['patterns'] = list
-            list = []
-            list.append(answer)
-            intent['responses'] =  answer
-
+            with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json') as json_file:
+                data = json.load(json_file)
+                temp = data["intents"]
+                y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
+                temp.append(y)
             iterate +=1
-
-            updatejson(intent)
-
-    lastupdateTag()
-
+            write_json(data)
 
 if __name__ == '__main__':
     runnow()
+
+
+class RunNow:
+    def __init__(self):
+        runnow()
