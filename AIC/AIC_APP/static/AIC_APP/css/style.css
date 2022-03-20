@@ -103,18 +103,7 @@ text-decoration:underline;
 
 .wrapper {
     width: 48vw;
-}
-
-@media only screen and (max-width: 1000px) {
-    .wrapper {
-        width: 60vw;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .wrapper {
-        width: 80vw;
-    }
+    overflow: hidden;
 }
 
 .wrapper .title {
@@ -142,6 +131,7 @@ text-decoration:underline;
     display: flex;
     float: left;
     margin: 10px 0;
+    overflow-wrap: anywhere;
 }
 
 .wrapper .box .left .icon {
@@ -190,6 +180,7 @@ text-decoration:underline;
 .wrapper .box .item.right {
     float: right;
     clear: both;
+    flex-direction: row-reverse;
 }
 
 .wrapper .box .item.left {
@@ -259,6 +250,25 @@ text-decoration:underline;
     transform-origin: -32px 0px;
 }
 
+.submitBtnOut {
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0px solid #006FBC;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #006FBC;
+    outline: none;
+    cursor: pointer;
+    transition: 0.7s all ease;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: auto;
+    transform-origin: -32px 0px;
+}
+
 .sug {
     background-color: #efefef;
     /*display: none;*/
@@ -282,7 +292,6 @@ text-decoration:underline;
 
 .wrapper .typing-area .input-field .submitBtn:hover {
     transition: 0.5s all ease;
-    transform: rotate(-30deg);
 }
 
 .rotate {
@@ -302,4 +311,23 @@ text-decoration:underline;
     z-index: -1;
     pointer-events: auto;
     transform-origin: -32px 0px;
+}
+
+.questionGeneration {
+    width: 40vw !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 784px) {
+    .wrapper {
+        width: 80vw;
+    }
+    .questionGeneration {
+        width: 70vw !important;
+    }
 }

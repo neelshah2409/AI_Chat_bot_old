@@ -1,0 +1,26 @@
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.75);
+    z-index: -1 !important;
+}
+
+@keyframes processingAnimation {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.processing {
+    font-family: Android;
+    stroke: aliceblue;
+    fill: antiquewhite;
+    animation: processingAnimation 1s infinite ease-in;
+}
