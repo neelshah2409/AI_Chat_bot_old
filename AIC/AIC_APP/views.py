@@ -15,22 +15,23 @@ try:
     # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\question_generation")
     print(os.getcwd())
     from AIC.question_generation.runnow import runnow
+
     print("sucesssssssssssssssssssssssssssssssssssssss")
 
     # os.chdir(r'C:\Users\patel\PycharmProjects\AIChatBot\AIC\OneQueToManyQues')
     from AIC.OneQueToManyQues.main import run_main
+
     print("sucesssssssssssssssssssssssssssssssssssssss")
     # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\AIC_APP")
 except Exception as e:
     print(f"errrorrrrr{e}")
 print(os.getcwd())
+
 try:
     from question_generation.runnow import runnow
     from OneQueToManyQues.main import run_main
 except:
     print("still err")
-
-
 
 lemmatizer = WordNetLemmatizer()
 
@@ -106,13 +107,11 @@ def takeOutputdp(request):
     return HttpResponse(res)
 
 
-
 def linkingAllFunc():
-
-    with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/inputText.txt', 'r') as file:
+    with open(f'{os.getcwd()}{os.sep}inputText.txt', 'r') as file:
         data = file.read().replace('\n', '')
     if data:
-        intentsfile = open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json', 'w')
+        intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
 
         intentsfile.write('''{
                               "intents": [
@@ -133,12 +132,11 @@ def linkingAllFunc():
 
 
 def runcombine():
-
     new_data = []
     resutlLink = linkingAllFunc()
     print(resutlLink)
     if (resutlLink):
-        with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json') as json_file:
+        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
             data = json.load(json_file)
             temp = data["intents"]
             print(f"this is temp{temp}")
@@ -153,7 +151,7 @@ def runcombine():
         print(new_data)
         new_dict = {"intents": new_data}
         print(new_dict)
-        with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json', "w") as f:
+        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', "w") as f:
             json.dump(new_dict, f, indent=4)
         print("rich here")
         run_main()
@@ -161,26 +159,20 @@ def runcombine():
     else:
         print("Question Generation is failed")
 
+
 # for handling the data given by the company xyz
 def fetchInputTextArea(request):
     inputText = request.POST.get('inputText', 'default')
     print(inputText)
-    file = open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/inputText.txt', 'a')
+    file = open(f'{os.getcwd()}{os.sep}inputText.txt', 'a')
     file.writelines(inputText)
     file.close()
     runcombine()
     # try:
     #
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+    return HttpResponse("success")
     # except Exception:
     #     return HttpResponse("Some Error Occured")
-
-
-
-
-
-
-
 
 
 def QueGenerator(request):
@@ -192,9 +184,19 @@ def questionShow(request):
 
     return render(request, 'AIC_APP/questionGenerationdisplay.html')
 
+
 def improveFeatures(request):
     message = request.POST.get('message', 'hey')
     return HttpResponse("done feedback")
 
+
 if __name__ == '__main__':
     runcombine()
+
+
+def QueShow(request):
+    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+
+
+def trainModel(request):
+    return HttpResponse("success")

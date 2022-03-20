@@ -1,7 +1,9 @@
 import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 import json
-intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
+import os
+
+intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
 model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
@@ -9,7 +11,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
 
-def write_json(data, filename="C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json"):
+def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json"):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
@@ -19,7 +21,7 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 def updatejson(intent):
-    a_file = open("C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json", "a")
+    a_file = open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json", "a")
     json.dump(intent ,a_file)
     a_file.write(',')
     a_file.close()
@@ -68,7 +70,7 @@ def run_main():
     import torch
     from transformers import T5ForConditionalGeneration, T5Tokenizer
     import json
-    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
     model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
     tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
@@ -89,7 +91,7 @@ def run_main():
         # print(intent.get('patterns'))
         # updatejson(intent)
 
-        with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json') as json_file:
+        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
             data = json.load(json_file)
             temp = data["intents"]
             y = {"tag": f"Data-{str(iterate + 1)}", "patterns": ques, "responses": answer}

@@ -1,9 +1,10 @@
 # from AIC.question_generation.pipelines import pipeline
 import json
+import os
 
-intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
+intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
-def write_json(data, filename="C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json"):
+def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json"):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
@@ -15,7 +16,7 @@ def runnow():
         print("pipeline errr")
     import json
 
-    intentsfile = json.loads(open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json').read())
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
     print("here i am ")
@@ -27,7 +28,7 @@ def runnow():
      It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
       which, theoretically at least''')
 
-    # with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/inputText.txt', 'r') as file:
+    # with open(f'{os.getcwd()}/inputText.txt', 'r') as file:
     #     data = file.read().replace('\n', '')
     # ans = nlp(data)
 
@@ -50,7 +51,7 @@ def runnow():
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
             list.append(quelist[iterate])
-            with open('C:/Users/patel/PycharmProjects/AIChatBot/AIC/AIC_APP/static/AIC_APP/intents.json') as json_file:
+            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents.json') as json_file:
                 data = json.load(json_file)
                 temp = data["intents"]
                 y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
