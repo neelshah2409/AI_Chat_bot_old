@@ -3,25 +3,61 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "Who is a very talented person but babaRamdev is very ugly?"
+                "Which is the fastest developing discipline in the world?",
+                "What is the fastest developing discipline of the world?",
+                "What's the fastest developing discipline in the world, and why?",
+                "Which is the fastest developing discipline?",
+                "Which is the fastest growing science discipline in world?",
+                "What is the fastest developing discipline in the world?"
             ],
-            "responses": "<pad> BabaRamdev"
+            "responses": "<pad> Computer engineering"
         },
         {
-            "tag": "Data-1",
+            "tag": "Data-2",
             "patterns": [
-                "Who is beautiful person, but baba Rajdev is ugly?",
-                "Who is a talented person but baba Ramdev is very ugly?",
-                "What is bad about Baba Ramdev?",
-                "Who is a very talented person but Baba Ramdev is very ugly?",
-                "Who is amazing person but baba Ramdev a ugly person?",
-                "Who is very talented person but baba Ramdev is very ugly?",
-                "Who is such a talented person, but baba Ramdev is ugly?",
-                "Who is a beautiful woman but baba Ramdev is ugly?",
-                "Who is a very talented person but baba Ramdev is very ugly?",
-                "Who is a very talented person but babaRamdev is very ugly?"
+                "Computer engineering incorporates several different fields of what to develop computer hardware and software?",
+                "Computer engineering integrates several fields of what to develop a computer hardware and software?",
+                "Computer engineering incorporates several fields of what to develop computer hardware and software?",
+                "Computer engineering integrates several fields of what to develop computer hardware and software?"
             ],
-            "responses": "<pad> BabaRamdev"
+            "responses": "<pad> electricalengineering and computer science"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What does a computer engineer do?",
+                "What is computer engineering?",
+                "What do computer engineers do?"
+            ],
+            "responses": "<pad> embed computersin other machines and systems"
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "Which is the fastest developing discipline in the world?",
+                "What is the fastest developing discipline of the world?",
+                "What's the fastest developing discipline in the world, and why?",
+                "Which is the fastest developing discipline?",
+                "Which is the fastest growing science discipline in world?",
+                "What is the fastest developing discipline in the world?"
+            ],
+            "responses": "<pad> Computer Engineering"
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "What are the major technical areas of computer engineering?",
+                "What is the name of a technical area in computer engineering?",
+                "What is the main technical area of computer engineering?",
+                "What's the name of the major technical area in computer engineering?",
+                "What is the major area of computer engineering?",
+                "Which is the name of the major computer engineering discipline?",
+                "What is the main technical field of computer engineering?",
+                "What is the main technical area in computer engineering?",
+                "What is the name of the major technical area in computer engineering?",
+                "What is the name of the major technical area of Computer Engineering?"
+            ],
+            "responses": "<pad> Compute doneFinal Siddhi"
         }
     ]
 }

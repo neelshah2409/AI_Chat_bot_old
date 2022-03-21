@@ -9,9 +9,7 @@ urlpatterns = [
     path('QueGenerator', views.QueGenerator, name="QueGenerator"),
     path('takeOutputdp', views.takeOutputdp, name="takeOutput"),
     path('QueShow', views.QueShow, name="QueShow"),
-    path('questionShow', views.questionShow, name="questionShow"),
     path('trainModel', views.trainModel, name="trainModel"),
     path('improveFeatures', views.improveFeatures, name="improveFeatures")
-    # path('TrainTheUpdatedDate', views.TrainTheUpdatedDate, name="TrainTheUpdatedDate")
 
 ]

@@ -1,8 +1,5 @@
-# from curses.ascii import HT
-from django.http import HttpResponse
 import json
 import pickle
-import random
 import nltk
 import numpy as np
 from django.http import HttpResponse
@@ -10,46 +7,35 @@ from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
-try:
-    # djngo server when run so it will accept this pass so ignore the error
-    from path import *
-except:
-    from ..path import *
-    print("pathpy err")
 
 
-curr = os.getcwd()
-try:
-    # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\question_generation")
-    print(os.getcwd())
-    from AIC.question_generation.runnow import runnow
-    from AIC.question_generation.paraphrase import run_main
-    # from AIC.OneQueToManyQues.main import run_main
+# This will help you when you run direct views.py
+# try:
+#     from AIC.question_generation.runnow import runnow
+#     from AIC.question_generation.paraphrase import run_main
+#
+# except Exception as e:
+#     print(f"Error In import Section Views.py{e}")
 
-    print("sucesssssssssssssssssssssssssssssssssssssss")
+# try:
+#     intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
+#     words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
+#     classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
+#     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+#
+# except Exception:
+#     pass
 
-    # os.chdir(r'C:\Users\patel\PycharmProjects\AIChatBot\AIC\OneQueToManyQues')
-    # from AIC.OneQueToManyQues.main import run_main
 
-    print("sucesssssssssssssssssssssssssssssssssssssss")
-    # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\AIC_APP")
-except Exception as e:
-    print(f"errrorrrrr{e}")
-print(os.getcwd())
 
 try:
     # djngo server when run so it will accept this pass so ignore the error
     from question_generation.runnow import runnow
-    # from OneQueToManyQues.main import run_main
     from question_generation.paraphrase import run_main
-
-except:
-    print("still err")
-
-try:
     from AIC_APP.training.training import trainTheChatBot
-except:
-    pass
+except Exception as e:
+    print(f"Error In import Section Views.py{e}")
+
 
 
 
@@ -60,17 +46,8 @@ try:
     words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
     classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
-except:
-    pass
-
-try:
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
-    words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
-    classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
-    model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
-
-except Exception:
-    pass
+except Exception as e:
+    print(f"Error In import Files Views.py{e}")
 
 
 def clean_up_sentence(sentence):
@@ -103,9 +80,7 @@ def predict_class(sentence):
 
 def get_response(intent_list, intent_json):
     tag = intent_list[0]['intent']
-    # print(tag)
     list_of_intent = intent_json['intents']
-    # print(list_of_intent)
     for i in list_of_intent:
         if i['tag'] == tag:
             result = (i['responses'])
@@ -120,11 +95,8 @@ def index(request):
 
 def takeOutputdp(request):
     message = request.POST.get('message', 'hey')
-    print(message)
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
-    # return render(request, 'AIC_APP/index.html')
     return HttpResponse(res)
 
 
@@ -144,8 +116,7 @@ def linkingAllFunc():
                               ]
                             }''')
         intentsfile.close()
-        print("runnow will run")
-        print(f"this this this{os.getcwd()}")
+        print("Question is generating now...")
         runnow()
         return True
     else:
@@ -153,14 +124,13 @@ def linkingAllFunc():
 
 
 def runcombine():
-    new_data = []
+    # new_data = []
     resutlLink = linkingAllFunc()
-    print(resutlLink)
     if (resutlLink):
+        new_data = []
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
             data = json.load(json_file)
             temp = data["intents"]
-            print(f"this is temp{temp}")
         i = 0
         for entry in temp:
             if i == 0:
@@ -169,12 +139,9 @@ def runcombine():
             else:
                 new_data.append(entry)
                 i += 1
-        print(new_data)
         new_dict = {"intents": new_data}
-        print(new_dict)
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', "w") as f:
             json.dump(new_dict, f, indent=4)
-        print("rich here")
         run_main()
         print("Intent Json file is completely updated..")
     else:
@@ -184,31 +151,29 @@ def runcombine():
 # for handling the data given by the company xyz
 def fetchInputTextArea(request):
     inputText = request.POST.get('inputText', 'default')
-    print(inputText)
     file = open(f'{os.getcwd()}{os.sep}inputText.txt', 'a')
     file.writelines(inputText)
     file.close()
     runcombine()
-    # try:
-    #
     return HttpResponse("success")
-    # except Exception:
-    #     return HttpResponse("Some Error Occured")
 
 
 def QueGenerator(request):
     return render(request, 'AIC_APP/questionGeneration.html')
 
 
-def questionShow(request):
-    runcombine()
 
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
 
 
 def improveFeatures(request):
-    message = request.POST.get('message', 'hey')
-    return HttpResponse("done feedback")
+    try:
+        messege = request.POST.get('messege', 'default')
+        file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement.txt', 'a')
+        file.writelines(messege)
+        file.close()
+        return HttpResponse("success")
+    except Exception as e:
+        return HttpResponse("failed")
 
 
 
@@ -218,11 +183,13 @@ def QueShow(request):
 
 
 def trainModel(request):
-    try:
-        trainTheChatBot()
-        return HttpResponse("success")
-    except:
-        return HttpResponse("failed")
+    # try:
+    print("before")
+    trainTheChatBot()
+    print("here")
+    return HttpResponse("success")
+    # except Exception as e:
+    #     return HttpResponse(f"failed {e}")
     
 
 

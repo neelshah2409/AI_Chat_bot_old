@@ -3,9 +3,6 @@ import logging
 from typing import Optional, Dict, Union
 
 
-#########################
-import re
-#######################
 
 
 from nltk import sent_tokenize
@@ -62,7 +59,7 @@ class QGPipeline:
 
         if self.qg_format == "prepend":
             qg_examples = self._prepare_inputs_for_qg_from_answers_prepend(inputs, answers)
-            print(f"qg_exp {qg_examples}")
+            # print(f"qg_exp {qg_examples}")
         else:
             qg_examples = self._prepare_inputs_for_qg_from_answers_hl(sents, answers)
         
@@ -93,14 +90,10 @@ class QGPipeline:
             attention_mask=inputs['attention_mask'].to(self.device), 
             max_length=32,
         )
-        print(outs)
         dec = [self.ans_tokenizer.decode(ids, skip_special_tokens=False) for ids in outs]
-        print(f"This is my answer {dec}")
         answers = [item.split('<sep>') for item in dec]
-        print(f"This is my answer {answers}")
         answers = [i[:-1] for i in answers]
-        print(f"This is my answer {answers}")
-        
+
         return sents, answers
     
     def _tokenize(self,
@@ -171,20 +164,8 @@ class QGPipeline:
             if self.model_type == "t5":
                 source_text = source_text + " </s>"
 
-                ########################################################################################
-            full_answer_list = []
-            full_answer_list.append(
-                re.findall(r"[a-z]+", source_text))
-            print(full_answer_list)
-            # ans in sc
-            # soruce ans source
-            # ans =. ans .
-            ########################################################################################
-
+        #########################################################################################
             examples.append({"answer": answer, "source_text": source_text})
-
-            ########################################################################################
-        print(examples)
         ########################################################################################
 
         return examples

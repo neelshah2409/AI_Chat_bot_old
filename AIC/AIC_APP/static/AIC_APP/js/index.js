@@ -57,13 +57,12 @@ $(document).ready(function() {
                 }, 200);
             },
             error: function(data) {
-
                 $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
                                    <div class="icon col-2">
                                        <i class="fa fa-user"></i>
                                    </div>
                                    <div class="msg">
-                                       <p>sorry!! we can't help you</p>
+                                       <p>sorry!! we can not help you</p>
                                    </div>
                                </div>`);
                 $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 600);
@@ -110,18 +109,36 @@ $(document).ready(function() {
             url: "/improveFeatures",
             data: { messege: input },
             success: function(response) {
-                $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
-                                   <div class="icon col-2">
-                                       ${chatbot}
-                                   </div>
-                                   <div class="msg">
-                                       <p>Your Feedback is Submitted Successfully !!</p>
-                                   </div>
-                               </div>`);
-                $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 600);
-                $("#etext").val("");
-                $("#etext").prop('disabled', false);
-                feedback = false;
+                if(response=="success")
+                {
+                    $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
+                                       <div class="icon col-2">
+                                           ${chatbot}
+                                       </div>
+                                       <div class="msg">
+                                           <p>Your Feedback is Submitted Successfully !!</p>
+                                       </div>
+                                   </div>`);
+                    $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 600);
+                    $("#etext").val("");
+                    $("#etext").prop('disabled', false);
+                    feedback = false;
+                }
+                if(response=="failed")
+                {
+                    $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
+                                           <div class="icon col-2">
+                                               ${chatbot}
+                                           </div>
+                                           <div class="msg">
+                                               <p>Sorry Your Feedback Can not be Submitted Right Now !!</p>
+                                           </div>
+                                        </div>`);
+                    $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 600);
+                    $("#etext").val("");
+                    $("#etext").prop('disabled', false);
+                    feedback = false;
+                }
             },
             error: function(error) {
                 $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
