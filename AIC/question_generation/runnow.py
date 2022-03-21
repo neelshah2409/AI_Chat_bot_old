@@ -23,14 +23,14 @@ def runnow():
 
 
     # to generate questions simply pass the text
-    ans = nlp('''Policies of privatisation should be considered as responses to several distinct pressures. First,
-     privatisation is a response by the state to internal forces such as increasing fiscal problems (O’Connor, 1973).
-     It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
-      which, theoretically at least''')
+    # ans = nlp('''Policies of privatisation should be considered as responses to several distinct pressures. First,
+    #  privatisation is a response by the state to internal forces such as increasing fiscal problems (O’Connor, 1973).
+    #  It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
+    #   which, theoretically at least''')
 
-    # with open(f'{os.getcwd()}/inputText.txt', 'r') as file:
-    #     data = file.read().replace('\n', '')
-    # ans = nlp(data)
+    with open(f'{os.getcwd()}/inputText.txt', 'r') as file:
+        data = file.read().replace('\n', '')
+    ans = nlp(data)
 
     # format of the generation
     # {'answer': 'heuwiehish', 'question':'rhishi, 'answer': 'heuwiehish', 'question':'rhishi, }

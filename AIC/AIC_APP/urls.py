@@ -12,5 +12,6 @@ urlpatterns = [
     path('questionShow', views.questionShow, name="questionShow"),
     path('trainModel', views.trainModel, name="trainModel"),
     path('improveFeatures', views.improveFeatures, name="improveFeatures")
+    # path('TrainTheUpdatedDate', views.TrainTheUpdatedDate, name="TrainTheUpdatedDate")
 
 ]

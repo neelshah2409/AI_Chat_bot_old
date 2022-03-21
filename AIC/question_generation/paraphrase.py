@@ -2,14 +2,7 @@ import torch
 from transformers import T5ForConditionalGeneration,T5Tokenizer
 import json
 import os
-# from ..path import *
-# try:
-#     # djngo server when run so it will accept this pass so ignore the error
-#     from path import *
-# except:
-#     from ..path import *
-#
-#     print("pathpy err")
+
 
 intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
@@ -17,7 +10,7 @@ model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphrase
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
-
+print("i am paraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 
 def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json"):
     with open(filename, "w") as f:
@@ -75,6 +68,7 @@ def updatePatterns(input):
 
 
 def run_main():
+    print("i m from paraphrasing")
     import torch
     from transformers import T5ForConditionalGeneration, T5Tokenizer
     import json
@@ -106,7 +100,8 @@ def run_main():
             temp.append(y)
         iterate += 1
         write_json(data)
-        print('done')
+        print('done from para')
+
 
 if __name__ == '__main__':
     run_main()

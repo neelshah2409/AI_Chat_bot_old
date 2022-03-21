@@ -1,3 +1,4 @@
+# from curses.ascii import HT
 from django.http import HttpResponse
 import json
 import pickle
@@ -9,17 +10,26 @@ from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
+try:
+    # djngo server when run so it will accept this pass so ignore the error
+    from path import *
+except:
+    from ..path import *
+    print("pathpy err")
+
 
 curr = os.getcwd()
 try:
     # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\question_generation")
     print(os.getcwd())
     from AIC.question_generation.runnow import runnow
+    from AIC.question_generation.paraphrase import run_main
+    # from AIC.OneQueToManyQues.main import run_main
 
     print("sucesssssssssssssssssssssssssssssssssssssss")
 
     # os.chdir(r'C:\Users\patel\PycharmProjects\AIChatBot\AIC\OneQueToManyQues')
-    from AIC.OneQueToManyQues.main import run_main
+    # from AIC.OneQueToManyQues.main import run_main
 
     print("sucesssssssssssssssssssssssssssssssssssssss")
     # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\AIC_APP")
@@ -28,15 +38,25 @@ except Exception as e:
 print(os.getcwd())
 
 try:
+    # djngo server when run so it will accept this pass so ignore the error
     from question_generation.runnow import runnow
-    from OneQueToManyQues.main import run_main
+    # from OneQueToManyQues.main import run_main
+    from question_generation.paraphrase import run_main
+
 except:
     print("still err")
+
+try:
+    from AIC_APP.training.training import trainTheChatBot
+except:
+    pass
+
+
 
 lemmatizer = WordNetLemmatizer()
 
 try:
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}intents.json").read())
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
     words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
     classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
@@ -44,10 +64,11 @@ except:
     pass
 
 try:
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}training{os.sep}intents.json").read())
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
     words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
     classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
-    model = load_model(f"{os.getcwd()}{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+    model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+
 except Exception:
     pass
 
@@ -190,8 +211,6 @@ def improveFeatures(request):
     return HttpResponse("done feedback")
 
 
-if __name__ == '__main__':
-    runcombine()
 
 
 def QueShow(request):
@@ -199,4 +218,13 @@ def QueShow(request):
 
 
 def trainModel(request):
-    return HttpResponse("success")
+    try:
+        trainTheChatBot()
+        return HttpResponse("success")
+    except:
+        return HttpResponse("failed")
+    
+
+
+if __name__ == '__main__':
+    runcombine()

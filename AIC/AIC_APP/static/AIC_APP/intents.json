@@ -3,66 +3,25 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "What should be considered as responses to several distinct pressures?"
+                "Who is a very talented person but babaRamdev is very ugly?"
             ],
-            "responses": "<pad> Policies of privatisation"
-        },
-        {
-            "tag": "Data-2",
-            "patterns": [
-                "What is the main cause of privatisation?"
-            ],
-            "responses": "<pad> increasing fiscal problems"
-        },
-        {
-            "tag": "Data-3",
-            "patterns": [
-                "What does privatisation provide?"
-            ],
-            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+            "responses": "<pad> BabaRamdev"
         },
         {
             "tag": "Data-1",
             "patterns": [
-                "What are responses to several distinct pressures?",
-                "What are the responses to a pressure?",
-                "What shall be considered as response to several distinct pressures?",
-                "What should be considered as response to each distinct pressure?",
-                "What should be considered as response to multiple distinct pressures?",
-                "What shall be considered as responses to multiple distinct pressures?",
-                "What are some responses to pressure?",
-                "What can be considered as response to multiple distinctive pressures?",
-                "What should be considered as responses to the two distinct pressures?",
-                "What should be considered as responses to several distinct pressures?"
+                "Who is beautiful person, but baba Rajdev is ugly?",
+                "Who is a talented person but baba Ramdev is very ugly?",
+                "What is bad about Baba Ramdev?",
+                "Who is a very talented person but Baba Ramdev is very ugly?",
+                "Who is amazing person but baba Ramdev a ugly person?",
+                "Who is very talented person but baba Ramdev is very ugly?",
+                "Who is such a talented person, but baba Ramdev is ugly?",
+                "Who is a beautiful woman but baba Ramdev is ugly?",
+                "Who is a very talented person but baba Ramdev is very ugly?",
+                "Who is a very talented person but babaRamdev is very ugly?"
             ],
-            "responses": "<pad> Policies of privatisation"
-        },
-        {
-            "tag": "Data-2",
-            "patterns": [
-                "What are the main causes of privatisation?",
-                "What was the main cause of privatisation?",
-                "What is privatisation? What are the reasons?",
-                "Why do people hate privatisation?",
-                "What causes privatization?",
-                "What's the main reason for privatisation?",
-                "What is the main reason for privatisation and how can it help?",
-                "What is the cause of privatisation?",
-                "What is the main cause of privatisation?"
-            ],
-            "responses": "<pad> increasing fiscal problems"
-        },
-        {
-            "tag": "Data-3",
-            "patterns": [
-                "What does privatisation do for employers?",
-                "What is privatisation?",
-                "What will privatization do to industry?",
-                "What does privatization provide?",
-                "What is privatization?",
-                "What does privatisation provide?"
-            ],
-            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+            "responses": "<pad> BabaRamdev"
         }
     ]
 }
