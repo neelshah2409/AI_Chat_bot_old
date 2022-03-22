@@ -79,7 +79,8 @@
             var temp = "{% static 'AIC_APP/intents.json' %}";
             setTimeout(function() {
                 $.getJSON(temp, function(jd) {
-                    jd["intents"].splice(deleteIndex, deleteIndex);
+                    jd["intents"].splice(deleteIndex, deleteIndex+1);
+                    console.log(jd);
                     let temp1 = "";
                     let iterate = 0;
                     for (let i in jd) {
@@ -103,7 +104,7 @@
                         url: "/updateJson",
                         method: "POST",
                         data: {
-                            updateData: jd,
+                            updateData: JSON.stringify(jd)
                         },
                         success: function(data) {
                             $('#questionGenerationdisplay').html(temp1);
