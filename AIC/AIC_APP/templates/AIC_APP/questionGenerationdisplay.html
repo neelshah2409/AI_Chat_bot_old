@@ -67,7 +67,7 @@
                     }
                     temp1 += '</div>';
                     temp1 += `<div class="card-footer">
-                                    <h4 class="bg-light text-dark card-title d-flex justify-content-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><i class="bi bi-trash3 text-danger fs-2"></i></span></h4>
+                                    <h4 class="bg-light text-dark card-title d-flex justify-content-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><button class='btn btn-dark'>Delete</button></span></h4>
                                 <p class="bg-light text-dark card-title">${jd[i][j]['responses']}</p></div></div>`;
                     iterate++;
                 }
@@ -80,7 +80,7 @@
             var temp = "{% static 'AIC_APP/intents.json' %}";
             setTimeout(function() {
                 $.getJSON(temp, function(jd) {
-                    jd["intents"].splice(deleteIndex,1);
+                    jd["intents"].splice(deleteIndex, 1);
                     console.log(jd);
                     console.log(jd);
                     let temp1 = "";
@@ -96,7 +96,7 @@
                             }
                             temp1 += '</div>';
                             temp1 += `<div class="card-footer">
-                                            <h4 class="bg-light text-dark card-title d-flex text-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><i class="bi bi-trash3 text-danger fs-2"></i></span></p></h4>
+                                            <h4 class="bg-light text-dark card-title d-flex text-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><button class='btn btn-dark'>Delete</button></span></p></h4>
                                         <p class="bg-light text-dark card-title">${jd[i][j]['responses']}
                                         </div></div>`;
                             iterate++;
