@@ -7,6 +7,7 @@
     {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <style>
         @font-face {
             font-family: "Android";
@@ -38,42 +39,85 @@
         <a href="#" id="trainModel" class="text-decoration-none ms-auto"><button class="button-29" role="button">Train Your Model</button></a>
     </div>
     <div id="questionGenerationdisplay" class="d-flex justify-content-center flex-column align-items-center"></div>
-</body> 
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="{% static 'AIC_APP/js/gsap.min.js' %}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-    <script src="{% static 'AIC_APP/js/bganimation.js' %}"></script>
-    <script src="{% static 'AIC_APP/js/index.js' %}"></script>
-    <script src="{% static 'AIC_APP/js/question.js' %}"></script>
-    <script src="{% static 'AIC_APP/js/TweenMax.min.js' %}"></script>
-    <script src="{% static 'AIC_APP/js/loading.js' %}"></script>
-    <script>
-        $(document).ready(function () {
-            var temp = "{% static 'AIC_APP/intents.json' %}";
-            let temp1 = "";
-            $.getJSON(temp, function (jd) {
-                for (let i in jd) {
-                    for (let j = 0; j < jd[i].length; j++) {
-                        temp1+=`<div class="card my-3 w-75 ṃx-auto border-0">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="{% static 'AIC_APP/js/gsap.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+<script src="{% static 'AIC_APP/js/bganimation.js' %}"></script>
+<script src="{% static 'AIC_APP/js/index.js' %}"></script>
+<script src="{% static 'AIC_APP/js/question.js' %}"></script>
+<script src="{% static 'AIC_APP/js/TweenMax.min.js' %}"></script>
+<script src="{% static 'AIC_APP/js/loading.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        var temp = "{% static 'AIC_APP/intents.json' %}";
+        let temp1 = "";
+        let iterate = 0;
+        $.getJSON(temp, function(jd) {
+            for (let i in jd) {
+                for (let j = 0; j < jd[i].length; j++) {
+                    temp1 += `<div class="card my-3 w-75 ṃx-auto border-0">
                                     <div class="card-header bg-que">
                                             <h4 class="text-light card-title">Questions</h4>`;
-                        // for (let n = 0; n < jd[i][j]['patterns'].length; j++) {
-                        for (n in jd[i][j]['patterns']) {
-                            temp1+=`<p class=" card-title text-light">${jd[i][j]['patterns'][n]}</p>`;
-                        }
-                        temp1+='</div>';
-                        temp1 +=`<div class="card-footer">
-                                    <h4 class="bg-light text-dark card-title">Answer</h4>
-                                <p class="bg-light text-dark card-title">${jd[i][j]['responses']}</p></div></div>`;
+                    // for (let n = 0; n < jd[i][j]['patterns'].length; j++) {
+                    for (n in jd[i][j]['patterns']) {
+                        temp1 += `<p class=" card-title text-light">${jd[i][j]['patterns'][n]}</p>`;
                     }
+                    temp1 += '</div>';
+                    temp1 += `<div class="card-footer">
+                                    <h4 class="bg-light text-dark card-title d-flex justify-content-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><i class="bi bi-trash3 text-danger fs-2"></i></span></h4>
+                                <p class="bg-light text-dark card-title">${jd[i][j]['responses']}</p></div></div>`;
                 }
-                $('#questionGenerationdisplay').html(temp1);
-            });
-
-
+            }
+            $('#questionGenerationdisplay').html(temp1);
         });
-    </script>
+        $(document).on("click", "#deleteQuestionSet", function() {
+            $(this).parent().parent().parent().hide("fold", 700);
+            let deleteIndex = $(this).attr("name");
+            var temp = "{% static 'AIC_APP/intents.json' %}";
+            setTimeout(function() {
+                $.getJSON(temp, function(jd) {
+                    jd["intents"].splice(deleteIndex, deleteIndex);
+                    let temp1 = "";
+                    let iterate = 0;
+                    for (let i in jd) {
+                        for (let j = 0; j < jd[i].length; j++) {
+                            temp1 += `<div class="card my-3 w-75 ṃx-auto border-0">
+                                            <div class="card-header bg-que">
+                                                    <h4 class="text-light card-title">Questions</h4>`;
+                            // for (let n = 0; n < jd[i][j]['patterns'].length; j++) {
+                            for (n in jd[i][j]['patterns']) {
+                                temp1 += `<p class=" card-title text-light">${jd[i][j]['patterns'][n]}</p>`;
+                            }
+                            temp1 += '</div>';
+                            temp1 += `<div class="card-footer">
+                                            <h4 class="bg-light text-dark card-title d-flex text-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><i class="bi bi-trash3 text-danger fs-2"></i></span></p></h4>
+                                        <p class="bg-light text-dark card-title">${jd[i][j]['responses']}
+                                        </div></div>`;
+                            iterate++;
+                        }
+                    }
+                    $.ajax({
+                        url: "/updateJson",
+                        method: "POST",
+                        data: {
+                            updateData: jd,
+                        },
+                        success: function(data) {
+                            $('#questionGenerationdisplay').html(temp1);
+                        },
+                        error: function(data) {
+                            alert("Error");
+                        }
+                    })
+
+                });
+            }, 1000);
+        })
+
+    });
+</script>
 
 </html>
