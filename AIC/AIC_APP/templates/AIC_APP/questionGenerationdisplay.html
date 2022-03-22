@@ -69,6 +69,7 @@
                     temp1 += `<div class="card-footer">
                                     <h4 class="bg-light text-dark card-title d-flex justify-content-between align-items-center">Answer <span class="ms-auto" name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><i class="bi bi-trash3 text-danger fs-2"></i></span></h4>
                                 <p class="bg-light text-dark card-title">${jd[i][j]['responses']}</p></div></div>`;
+                    iterate++;
                 }
             }
             $('#questionGenerationdisplay').html(temp1);
@@ -79,7 +80,8 @@
             var temp = "{% static 'AIC_APP/intents.json' %}";
             setTimeout(function() {
                 $.getJSON(temp, function(jd) {
-                    jd["intents"].splice(deleteIndex, deleteIndex+1);
+                    jd["intents"].splice(deleteIndex,1);
+                    console.log(jd);
                     console.log(jd);
                     let temp1 = "";
                     let iterate = 0;

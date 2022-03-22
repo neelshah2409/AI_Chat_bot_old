@@ -1,1 +1,72 @@
-{"intents":[{"tag":"Data-1","patterns":["What is the name of the reputed institute of state?","What is the name of a state institute?","What is the name of the institute of the state?","Which is the best institutes in the state and what is its name?","Which institutes are referred in the State?","What is the name of institute of state?","What is the name of the institute of state?","What is the name of institute of the state?","What is the name of the renowned institute of the state?"],"responses":"<pad> The Central Library"},{"tag":"Data-2","patterns":["What is the central library of the famous institute of the state?","What is the central library of institute of state?","Which is the Central Library in a State Institute?","What is the central library of state institutes?","What is the central library of the renowned institute of the state?"],"responses":"<pad> creative and innovative partner"},{"tag":"Data-3","patterns":["What is the central library of the Institute of Information Technology located in a separate building?","What is the location of a central library at IMTH?","What is the main library of the institute located in a separate building or a library associated with the institute?","Why is the library in the institute located in a separate building?","Which library is located in the institute?","What is the central library in the institute located in a separate building?","How is the central library of the Institute located in a separate building?","Are the main library, library, the library institute, located separately from the central library (the library located at the institute's site)?","What is the central library of the institute located in a separate building?"],"responses":"<pad> lush green plants"},{"tag":"Data-4","patterns":["What is the size of a central library in Ahmedabad?","How big is the library in Ahmedabad?","Which size library is best in Ahmedabad?","How big is central library in Ahmedabad?","What is the size of central library of Ahmedabad?","What is the size of central library at Ahmedabad?","What is the size of the central library in Ahmedabad?"],"responses":"<pad> 2845.85 Sq."},{"tag":"Data-5","patterns":["What is the size of a central library in Ahmedabad?","How big is the library in Ahmedabad?","Which size library is best in Ahmedabad?","How big is central library in Ahmedabad?","What is the size of central library of Ahmedabad?","What is the size of central library at Ahmedabad?","What is the size of the central library in Ahmedabad?"],"responses":"<pad> 2845.85 Sq."},{"tag":"Data-6","patterns":["On what days the Library is closed?","On which days the library is closed?","Why is the library closed on some days?","When does the Library remain closed? How can we make it happen?","On which days does the Library remain closed?","What days does the Library remain closed?","How long does the Library remain closed every day?","When does the Library stays closed when the house is not open?","On what days does the Library remain closed?"],"responses":"<pad> Sunday & Public Holidaysghjfg"}]}
+{
+    "intents": [{
+            "tag": "Data-1",
+            "patterns": [
+                "What is the name of the reputed institute of state?",
+                "What is the name of a state institute?",
+                "What is the name of the institute of the state?",
+                "Which is the best institutes in the state and what is its name?",
+                "Which institutes are referred in the State?",
+                "What is the name of institute of state?",
+                "What is the name of the institute of state?",
+                "What is the name of institute of the state?",
+                "What is the name of the renowned institute of the state?"
+            ],
+            "responses": "<pad> The Central Library"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is the central library of the famous institute of the state?",
+                "What is the central library of institute of state?",
+                "Which is the Central Library in a State Institute?",
+                "What is the central library of state institutes?",
+                "What is the central library of the renowned institute of the state?"
+            ],
+            "responses": "<pad> creative and innovative partner"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What is the central library of the Institute of Information Technology located in a separate building?",
+                "What is the location of a central library at IMTH?",
+                "What is the main library of the institute located in a separate building or a library associated with the institute?",
+                "Why is the library in the institute located in a separate building?",
+                "Which library is located in the institute?",
+                "What is the central library in the institute located in a separate building?",
+                "How is the central library of the Institute located in a separate building?",
+                "Are the main library, library, the library institute, located separately from the central library (the library located at the institute's site)?",
+                "What is the central library of the institute located in a separate building?"
+            ],
+            "responses": "<pad> lush green plants"
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What is the size of a central library in Ahmedabad?",
+                "How big is the library in Ahmedabad?",
+                "Which size library is best in Ahmedabad?",
+                "How big is central library in Ahmedabad?",
+                "What is the size of central library of Ahmedabad?",
+                "What is the size of central library at Ahmedabad?",
+                "What is the size of the central library in Ahmedabad?"
+            ],
+            "responses": "<pad> 2845.85 Sq."
+        },
+        {
+            "tag": "Data-6",
+            "patterns": [
+                "On what days the Library is closed?",
+                "On which days the library is closed?",
+                "Why is the library closed on some days?",
+                "When does the Library remain closed? How can we make it happen?",
+                "On which days does the Library remain closed?",
+                "What days does the Library remain closed?",
+                "How long does the Library remain closed every day?",
+                "When does the Library stays closed when the house is not open?",
+                "On what days does the Library remain closed?"
+            ],
+            "responses": "<pad> Sunday & Public Holidaysghjfg"
+        }
+    ]
+}
