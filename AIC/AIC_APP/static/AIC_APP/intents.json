@@ -1,6 +1,5 @@
 {
-    "intents": [
-        {
+    "intents": [{
             "tag": "Data-1",
             "patterns": [
                 "What is the name of the reputed institute of state?",
@@ -43,19 +42,6 @@
         },
         {
             "tag": "Data-4",
-            "patterns": [
-                "What is the size of a central library in Ahmedabad?",
-                "How big is the library in Ahmedabad?",
-                "Which size library is best in Ahmedabad?",
-                "How big is central library in Ahmedabad?",
-                "What is the size of central library of Ahmedabad?",
-                "What is the size of central library at Ahmedabad?",
-                "What is the size of the central library in Ahmedabad?"
-            ],
-            "responses": "<pad> 2845.85 Sq."
-        },
-        {
-            "tag": "Data-5",
             "patterns": [
                 "What is the size of a central library in Ahmedabad?",
                 "How big is the library in Ahmedabad?",
