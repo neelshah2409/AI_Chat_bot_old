@@ -7,7 +7,7 @@ except Exception as e:
     print(f"Import pipeline error {e}")
 
 
-intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
+# intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
 def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json"):
     with open(filename, "w") as f:
@@ -15,6 +15,14 @@ def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.se
 
 
 def runnow():
+    try:
+        from question_generation.pipelines import pipeline
+    except Exception as e:
+        print("pipeline errr")
+    import json
+
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
+
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
 
@@ -35,22 +43,23 @@ def runnow():
 
     anslist = [qa.get('answer') for qa in ans]
     quelist = [qa.get('question') for qa in ans]
-    print(quelist)
-    print(anslist)
+
     iterate = 0
     for intent in intentsfile['intents']:
         for answer in anslist:
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
-            if (len(quelist) > iterate):
-                list.append(quelist[iterate])
-                with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents.json') as json_file:
-                    data = json.load(json_file)
-                    temp = data["intents"]
-                    y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
-                    temp.append(y)
-                iterate +=1
-                write_json(data)
+            list.append(quelist[iterate])
+            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents.json') as json_file:
+                data = json.load(json_file)
+                temp = data["intents"]
+                y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
+                temp.append(y)
+            iterate += 1
+            write_json(data)
+            print("json data Written ..")
+
+
 
 if __name__ == '__main__':
     runnow()

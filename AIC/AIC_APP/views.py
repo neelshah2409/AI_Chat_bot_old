@@ -31,12 +31,14 @@ import os
 try:
     # djngo server when run so it will accept this pass so ignore the error
     from question_generation.runnow import runnow
-    from question_generation.paraphrase import run_main
     from AIC_APP.training.training import trainTheChatBot
 except Exception as e:
     print(f"Error In import Section Views.py{e}")
 
-
+try:
+    from question_generation.paraphrase import run_main
+except:
+    print("Run main load failed")
 
 
 lemmatizer = WordNetLemmatizer()
@@ -103,6 +105,7 @@ def takeOutputdp(request):
 def linkingAllFunc():
     with open(f'{os.getcwd()}{os.sep}inputText.txt', 'r') as file:
         data = file.read().replace('\n', '')
+
     if data:
         intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
 
@@ -124,7 +127,7 @@ def linkingAllFunc():
 
 
 def runcombine():
-    # new_data = []
+    new_data = []
     resutlLink = linkingAllFunc()
     if (resutlLink):
         new_data = []
@@ -142,6 +145,7 @@ def runcombine():
         new_dict = {"intents": new_data}
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', "w") as f:
             json.dump(new_dict, f, indent=4)
+
         run_main()
         print("Intent Json file is completely updated..")
     else:
@@ -184,13 +188,11 @@ def QueShow(request):
 
 def trainModel(request):
     # try:
-    print("before")
     trainTheChatBot()
-    print("here")
     return HttpResponse("success")
     # except Exception as e:
     #     return HttpResponse(f"failed {e}")
-    
+
 
 
 if __name__ == '__main__':

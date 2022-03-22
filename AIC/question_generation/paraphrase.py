@@ -56,27 +56,39 @@ def updatePatterns(input):
     return ques
 
 def run_main():
+    import torch
+    from transformers import T5ForConditionalGeneration, T5Tokenizer
+    import json
+    intentsfile = json.loads(
+        open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
+
+    model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
+    tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
+
+
+
     print("Paraphrasing For the Question Running")
     iterate= 0
-    intentDict = intentsfile['intents'].copy()
+    intentDict = intentsfile['intents']
     for intent in intentsfile['intents']:
-        print(intent)
-        print(intent.get('patterns'))
         ques = updatePatterns(intent.get('patterns')[0])
         ques.append(intent.get('patterns')[0])
         answer = intent.get('responses')
 
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
             data = json.load(json_file)
+            temp = data["intents"]
             y = {"tag": f"Data-{str(iterate + 1)}", "patterns": ques, "responses": answer}
-            intentDict.append(y)
-            intentDict.pop(0)
+            temp.append(y)
+            temp.pop(0)
+        write_json(data)
 
         iterate += 1
 
-    intentDict = {"intents": intentDict}
-    write_json(intentDict)
-
+    print("Updated IntentDict with intents")
+    # write_json(intentDict)
     print('Paraphrasing For The question..')
 
 
