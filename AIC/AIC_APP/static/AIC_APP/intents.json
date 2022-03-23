@@ -70,17 +70,17 @@
         {
             "tag": "Data-6",
             "patterns": [
-                "On what days the Library is closed?",
-                "On which days the library is closed?",
-                "Why is the library closed on some days?",
-                "When does the Library remain closed? How can we make it happen?",
-                "On which days does the Library remain closed?",
-                "What days does the Library remain closed?",
-                "How long does the Library remain closed every day?",
-                "When does the Library stays closed when the house is not open?",
-                "On what days does the Library remain closed?"
+                "On what days the Library of Ahmedabad remains closed?",
+                "On which days the Library of Ahmedabad is not open?",
+                "Why is the library in Ahmedabad closed for 4 days?",
+                "When does the Library of Ahmedabad close and reopen?",
+                "On which days does the Library of Ahmedabad remain closed?",
+                "On what day does the Library of Ahmedabad remain closed?",
+                "How long does the Ahmedabad Library remain closed on?",
+                "When does the Library of Ahmedabad open?",
+                "On what days does the Library of Ahmedabad remain closed?"
             ],
-            "responses": "<pad> Sunday & Public Holidaysghjfg"
+            "responses": "<pad> Sunday & Public Holidaysghjfgr"
         }
     ]
 }

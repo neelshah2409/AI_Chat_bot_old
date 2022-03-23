@@ -10,6 +10,8 @@ urlpatterns = [
     path('takeOutputdp', views.takeOutputdp, name="takeOutput"),
     path('QueShow', views.QueShow, name="QueShow"),
     path('trainModel', views.trainModel, name="trainModel"),
-    path('improveFeatures', views.improveFeatures, name="improveFeatures")
+    path('improveFeatures', views.improveFeatures, name="improveFeatures"),
+    path('Showdatafromdb', views.Showdatafromdb, name="Showdatafromdb")
+
 
 ]

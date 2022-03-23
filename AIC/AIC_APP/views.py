@@ -7,6 +7,10 @@ from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
+from django.db import connection
+
+# This is for db connection you should use this as a db insertion and updation
+from .models import Question_ans
 
 
 # This will help you when you run direct views.py
@@ -193,6 +197,28 @@ def trainModel(request):
     # except Exception as e:
     #     return HttpResponse(f"failed {e}")
 
+def Showdatafromdb(request):
+    # section_id = 1
+    # fetch = Question_ans.objects.all()
+    # fetch = Question_ans.objects.get(questions = "what is this?")
+    new_question = "Is is my connection is complete or not?"
+    query = f'''INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ("{new_question}");'''
+    # query = f'''(Insert into aic_app_question_ans values(%s, %s)",['{1}','{new_question}']);'''
+    # fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
+    # try:
+    #     Question_ans.objects.raw(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
+    #     fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
+    #     print(fetch)
+    #     # print(fetch[0].answers)
+    #     # print(fetch[0].questions)
+    #     # ans_que = [(fetch.questions) for fetch in fetch]
+    #     # print(ans_que)
+    # except:
+    #     print("error now")
+
+    with connection.cursor() as cursor:
+        cursor.execute(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
+    return HttpResponse("yeah")
 
 
 if __name__ == '__main__':
