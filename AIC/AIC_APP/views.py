@@ -1,7 +1,5 @@
-from django.http import HttpResponse
 import json
 import pickle
-import random
 import nltk
 import numpy as np
 from django.http import HttpResponse
@@ -9,47 +7,53 @@ from django.shortcuts import render
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
+from django.db import connection
 
-curr = os.getcwd()
+# This is for db connection you should use this as a db insertion and updation
+from .models import Question_ans
+
+
+# This will help you when you run direct views.py
+# try:
+#     from AIC.question_generation.runnow import runnow
+#     from AIC.question_generation.paraphrase import run_main
+#
+# except Exception as e:
+#     print(f"Error In import Section Views.py{e}")
+
+# try:
+#     intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
+#     words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
+#     classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
+#     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+#
+# except Exception:
+#     pass
+
+
+
 try:
-    # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\question_generation")
-    print(os.getcwd())
-    from AIC.question_generation.runnow import runnow
-
-    print("sucesssssssssssssssssssssssssssssssssssssss")
-
-    # os.chdir(r'C:\Users\patel\PycharmProjects\AIChatBot\AIC\OneQueToManyQues')
-    from AIC.OneQueToManyQues.main import run_main
-
-    print("sucesssssssssssssssssssssssssssssssssssssss")
-    # os.chdir(r"C:\Users\patel\PycharmProjects\AIChatBot\AIC\AIC_APP")
-except Exception as e:
-    print(f"errrorrrrr{e}")
-print(os.getcwd())
-
-try:
+    # djngo server when run so it will accept this pass so ignore the error
     from question_generation.runnow import runnow
-    from OneQueToManyQues.main import run_main
+    from AIC_APP.training.training import trainTheChatBot
+except Exception as e:
+    print(f"Error In import Section Views.py{e}")
+
+try:
+    from question_generation.paraphrase import run_main
 except:
-    print("still err")
+    print("Run main load failed")
+
 
 lemmatizer = WordNetLemmatizer()
 
 try:
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}intents.json").read())
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
     words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
     classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
-except:
-    pass
-
-try:
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}training{os.sep}intents.json").read())
-    words = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}words.pkl", 'rb'))
-    classes = pickle.load(open(f"{os.getcwd()}{os.sep}training{os.sep}classes.pkl", 'rb'))
-    model = load_model(f"{os.getcwd()}{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
-except Exception:
-    pass
+except Exception as e:
+    print(f"Error In import Files Views.py{e}")
 
 
 def clean_up_sentence(sentence):
@@ -82,9 +86,7 @@ def predict_class(sentence):
 
 def get_response(intent_list, intent_json):
     tag = intent_list[0]['intent']
-    # print(tag)
     list_of_intent = intent_json['intents']
-    # print(list_of_intent)
     for i in list_of_intent:
         if i['tag'] == tag:
             result = (i['responses'])
@@ -99,17 +101,15 @@ def index(request):
 
 def takeOutputdp(request):
     message = request.POST.get('message', 'hey')
-    print(message)
     ints = predict_class(message)
     res = get_response(ints, intents)
-    print(res)
-    # return render(request, 'AIC_APP/index.html')
     return HttpResponse(res)
 
 
 def linkingAllFunc():
     with open(f'{os.getcwd()}{os.sep}inputText.txt', 'r') as file:
         data = file.read().replace('\n', '')
+
     if data:
         intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
 
@@ -123,8 +123,7 @@ def linkingAllFunc():
                               ]
                             }''')
         intentsfile.close()
-        print("runnow will run")
-        print(f"this this this{os.getcwd()}")
+        print("Question is generating now...")
         runnow()
         return True
     else:
@@ -134,12 +133,11 @@ def linkingAllFunc():
 def runcombine():
     new_data = []
     resutlLink = linkingAllFunc()
-    print(resutlLink)
     if (resutlLink):
+        new_data = []
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
             data = json.load(json_file)
             temp = data["intents"]
-            print(f"this is temp{temp}")
         i = 0
         for entry in temp:
             if i == 0:
@@ -148,12 +146,10 @@ def runcombine():
             else:
                 new_data.append(entry)
                 i += 1
-        print(new_data)
         new_dict = {"intents": new_data}
-        print(new_dict)
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', "w") as f:
             json.dump(new_dict, f, indent=4)
-        print("rich here")
+
         run_main()
         print("Intent Json file is completely updated..")
     else:
@@ -163,35 +159,31 @@ def runcombine():
 # for handling the data given by the company xyz
 def fetchInputTextArea(request):
     inputText = request.POST.get('inputText', 'default')
-    print(inputText)
     file = open(f'{os.getcwd()}{os.sep}inputText.txt', 'a')
     file.writelines(inputText)
     file.close()
     runcombine()
-    # try:
-    #
     return HttpResponse("success")
-    # except Exception:
-    #     return HttpResponse("Some Error Occured")
 
 
 def QueGenerator(request):
     return render(request, 'AIC_APP/questionGeneration.html')
 
 
-def questionShow(request):
-    runcombine()
 
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
 
 
 def improveFeatures(request):
-    message = request.POST.get('message', 'hey')
-    return HttpResponse("done feedback")
+    try:
+        messege = request.POST.get('messege', 'default')
+        file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement.txt', 'a')
+        file.writelines(messege)
+        file.close()
+        return HttpResponse("success")
+    except Exception as e:
+        return HttpResponse("failed")
 
 
-if __name__ == '__main__':
-    runcombine()
 
 
 def QueShow(request):
@@ -199,4 +191,40 @@ def QueShow(request):
 
 
 def trainModel(request):
+    # try:
+    trainTheChatBot()
     return HttpResponse("success")
+    # except Exception as e:
+    #     return HttpResponse(f"failed {e}")
+
+def Showdatafromdb(request):
+    # section_id = 1
+    # fetch = Question_ans.objects.all()
+    # fetch = Question_ans.objects.get(questions = "what is this?")
+    new_question = "Is is my connection is complete or not?"
+    query = f'''INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ("{new_question}");'''
+    # query = f'''(Insert into aic_app_question_ans values(%s, %s)",['{1}','{new_question}']);'''
+    # fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
+    # try:
+    #     Question_ans.objects.raw(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
+    #     fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
+    #     print(fetch)
+    #     # print(fetch[0].answers)
+    #     # print(fetch[0].questions)
+    #     # ans_que = [(fetch.questions) for fetch in fetch]
+    #     # print(ans_que)
+    # except:
+    #     print("error now")
+
+    with connection.cursor() as cursor:
+        cursor.execute(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
+    return HttpResponse("yeah")
+
+def updateJson(request):
+    jsonData = request.POST.get("updateData","default")
+    intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
+    intentsfile.write(jsonData)
+    print(jsonData)
+    return HttpResponse("success")
+if __name__ == '__main__':
+    runcombine()

@@ -3,66 +3,84 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "What should be considered as responses to several distinct pressures?"
+                "What is the name of the reputed institute of state?",
+                "What is the name of a state institute?",
+                "What is the name of the institute of the state?",
+                "Which is the best institutes in the state and what is its name?",
+                "Which institutes are referred in the State?",
+                "What is the name of institute of state?",
+                "What is the name of the institute of state?",
+                "What is the name of institute of the state?",
+                "What is the name of the renowned institute of the state?"
             ],
-            "responses": "<pad> Policies of privatisation"
+            "responses": "<pad> The Central Library"
         },
         {
             "tag": "Data-2",
             "patterns": [
-                "What is the main cause of privatisation?"
+                "What is the central library of the famous institute of the state?",
+                "What is the central library of institute of state?",
+                "Which is the Central Library in a State Institute?",
+                "What is the central library of state institutes?",
+                "What is the central library of the renowned institute of the state?"
             ],
-            "responses": "<pad> increasing fiscal problems"
+            "responses": "<pad> creative and innovative partner"
         },
         {
             "tag": "Data-3",
             "patterns": [
-                "What does privatisation provide?"
+                "What is the central library of the Institute of Information Technology located in a separate building?",
+                "What is the location of a central library at IMTH?",
+                "What is the main library of the institute located in a separate building or a library associated with the institute?",
+                "Why is the library in the institute located in a separate building?",
+                "Which library is located in the institute?",
+                "What is the central library in the institute located in a separate building?",
+                "How is the central library of the Institute located in a separate building?",
+                "Are the main library, library, the library institute, located separately from the central library (the library located at the institute's site)?",
+                "What is the central library of the institute located in a separate building?"
             ],
-            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+            "responses": "<pad> lush green plants"
         },
         {
-            "tag": "Data-1",
+            "tag": "Data-4",
             "patterns": [
-                "What are responses to several distinct pressures?",
-                "What are the responses to a pressure?",
-                "What shall be considered as response to several distinct pressures?",
-                "What should be considered as response to each distinct pressure?",
-                "What should be considered as response to multiple distinct pressures?",
-                "What shall be considered as responses to multiple distinct pressures?",
-                "What are some responses to pressure?",
-                "What can be considered as response to multiple distinctive pressures?",
-                "What should be considered as responses to the two distinct pressures?",
-                "What should be considered as responses to several distinct pressures?"
+                "What is the size of a central library in Ahmedabad?",
+                "How big is the library in Ahmedabad?",
+                "Which size library is best in Ahmedabad?",
+                "How big is central library in Ahmedabad?",
+                "What is the size of central library of Ahmedabad?",
+                "What is the size of central library at Ahmedabad?",
+                "What is the size of the central library in Ahmedabad?"
             ],
-            "responses": "<pad> Policies of privatisation"
+            "responses": "<pad> 2845.85 Sq."
         },
         {
-            "tag": "Data-2",
+            "tag": "Data-5",
             "patterns": [
-                "What are the main causes of privatisation?",
-                "What was the main cause of privatisation?",
-                "What is privatisation? What are the reasons?",
-                "Why do people hate privatisation?",
-                "What causes privatization?",
-                "What's the main reason for privatisation?",
-                "What is the main reason for privatisation and how can it help?",
-                "What is the cause of privatisation?",
-                "What is the main cause of privatisation?"
+                "What is the size of a central library in Ahmedabad?",
+                "How big is the library in Ahmedabad?",
+                "Which size library is best in Ahmedabad?",
+                "How big is central library in Ahmedabad?",
+                "What is the size of central library of Ahmedabad?",
+                "What is the size of central library at Ahmedabad?",
+                "What is the size of the central library in Ahmedabad?"
             ],
-            "responses": "<pad> increasing fiscal problems"
+            "responses": "<pad> 2845.85 Sq."
         },
         {
-            "tag": "Data-3",
+            "tag": "Data-6",
             "patterns": [
-                "What does privatisation do for employers?",
-                "What is privatisation?",
-                "What will privatization do to industry?",
-                "What does privatization provide?",
-                "What is privatization?",
-                "What does privatisation provide?"
+                "On what days the Library of Ahmedabad remains closed?",
+                "On which days the Library of Ahmedabad is not open?",
+                "Why is the library in Ahmedabad closed for 4 days?",
+                "When does the Library of Ahmedabad close and reopen?",
+                "On which days does the Library of Ahmedabad remain closed?",
+                "On what day does the Library of Ahmedabad remain closed?",
+                "How long does the Ahmedabad Library remain closed on?",
+                "When does the Library of Ahmedabad open?",
+                "On what days does the Library of Ahmedabad remain closed?"
             ],
-            "responses": "<pad> a means of lessening the state\u2019s fiscal responsibilities by encouraging the development of private alternatives"
+            "responses": "<pad> Sunday & Public Holidaysghjfgr"
         }
     ]
 }

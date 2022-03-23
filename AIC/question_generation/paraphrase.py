@@ -3,8 +3,8 @@ from transformers import T5ForConditionalGeneration,T5Tokenizer
 import json
 import os
 
-intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
+intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -14,6 +14,8 @@ model = model.to(device)
 def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json"):
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
+
+
 
 def set_seed(seed):
     torch.manual_seed(seed)
@@ -53,52 +55,42 @@ def updatePatterns(input):
         ques.append(final_output)
     return ques
 
-# for intent in intentsfile['intents']:
-#     ques = updatePatterns(intent.get('patterns')[0])
-#     for i in ques:
-#         print(i)
-#         intent.get('patterns').append(i)
-#     print(intent.get('patterns'))
-#     updatejson(intent)
-#     print('done')
-
-
-
-
-
 def run_main():
     import torch
     from transformers import T5ForConditionalGeneration, T5Tokenizer
     import json
-    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
+    intentsfile = json.loads(
+        open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
     model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
     tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
+
+
+
+    print("Paraphrasing For the Question Running")
     iterate= 0
+    intentDict = intentsfile['intents']
     for intent in intentsfile['intents']:
-        print(intent)
-        print(intent.get('patterns'))
         ques = updatePatterns(intent.get('patterns')[0])
-
         ques.append(intent.get('patterns')[0])
-
         answer = intent.get('responses')
-        # for i in ques:
-        #     print(i)
-        #     intent.get('patterns').append(i)
-        # print(intent.get('patterns'))
-        # updatejson(intent)
 
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
             data = json.load(json_file)
             temp = data["intents"]
             y = {"tag": f"Data-{str(iterate + 1)}", "patterns": ques, "responses": answer}
             temp.append(y)
-        iterate += 1
+            temp.pop(0)
         write_json(data)
-        print('done')
+
+        iterate += 1
+
+    print("Updated IntentDict with intents")
+    # write_json(intentDict)
+    print('Paraphrasing For The question..')
+
 
 if __name__ == '__main__':
     run_main()
