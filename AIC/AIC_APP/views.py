@@ -220,6 +220,11 @@ def Showdatafromdb(request):
         cursor.execute(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
     return HttpResponse("yeah")
 
-
+def updateJson(request):
+    jsonData = request.POST.get("updateData","default")
+    intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
+    intentsfile.write(jsonData)
+    print(jsonData)
+    return HttpResponse("success")
 if __name__ == '__main__':
     runcombine()
