@@ -3,77 +3,18 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "What is the name of the reputed institute of state?",
-                "What is the name of a state institute?",
-                "What is the name of the institute of the state?",
-                "Which is the best institutes in the state and what is its name?",
-                "Which institutes are referred in the State?",
-                "What is the name of institute of state?",
-                "What is the name of the institute of state?",
-                "What is the name of institute of the state?",
-                "What is the name of the renowned institute of the state?"
+                "What are the General Guidelines for all FDC Schemes?",
+                "What are guidelines for all fdc schemes?",
+                "What is the General Guidelines of the FDC Scheme?",
+                "What are general guidelines for FDC Scheme?",
+                "What are the general guidelines for all FDC Schemes?",
+                "What are general guidelines for Selected FDC Schemes?",
+                "What are the general guidelines for FDC Schemes?",
+                "What are the rules and general guidance for FDC Schemes?",
+                "What is General guidelines for FDC Schemes? What are the concepts?",
+                "What are the general guidelines of all the FDC schemes Schemes?"
             ],
-            "responses": "<pad> The Central Library"
-        },
-        {
-            "tag": "Data-2",
-            "patterns": [
-                "What is the central library of the famous institute of the state?",
-                "What is the central library of institute of state?",
-                "Which is the Central Library in a State Institute?",
-                "What is the central library of state institutes?",
-                "What is the central library of the renowned institute of the state?"
-            ],
-            "responses": "<pad> creative and innovative"
-        },
-        {
-            "tag": "Data-3",
-            "patterns": [
-                "What is the central library of the Institute of Information Technology located in a separate building?",
-                "What is the location of a central library at IMTH?",
-                "What is the main library of the institute located in a separate building or a library associated with the institute?",
-                "Why is the library in the institute located in a separate building?",
-                "Which library is located in the institute?",
-                "What is the central library in the institute located in a separate building?",
-                "How is the central library of the Institute located in a separate building?",
-                "Are the main library, library, the library institute, located separately from the central library (the library located at the institute's site)?",
-                "What is the central library of the institute located in a separate building?"
-            ],
-            "responses": "<pad> lush green plants"
-        },
-        {
-            "tag": "Data-4",
-            "patterns": [
-                "What is the size of the library of IIT?",
-                "What is the size of a central library of IMCO?",
-                "What is the size of the central library?",
-                "How big is the library?",
-                "What is the size of library?",
-                "How big is the size of a central library of an institute?",
-                "What is the size of institute central library (IIM)?",
-                "How big is the central library of a non-profit institution?",
-                "What is the size of central library of the institute?",
-                "What is the size of the centre library of institute?",
-                "What is the size of the central library of the institute?"
-            ],
-            "responses": "<pad> 2845.85 Sq."
-        },
-        {
-            "tag": "Data-5",
-            "patterns": [
-                "What is the size of the library of IIT?",
-                "What is the size of a central library of IMCO?",
-                "What is the size of the central library?",
-                "How big is the library?",
-                "What is the size of library?",
-                "How big is the size of a central library of an institute?",
-                "What is the size of institute central library (IIM)?",
-                "How big is the central library of a non-profit institution?",
-                "What is the size of central library of the institute?",
-                "What is the size of the centre library of institute?",
-                "What is the size of the central library of the institute?"
-            ],
-            "responses": "<pad> 2845.85 Sq."
+            "responses": "General Guidelines for All FDC Schemes<br/>General Guidelines Applicable to all Faculty Development Schemes of AICTE.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-1",
