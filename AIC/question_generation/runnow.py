@@ -59,7 +59,37 @@ def runnow():
             write_json(data)
             print("json data Written ..")
 
+def generatefromOnlyAns(Big_anslist):
+    try:
+        from question_generation.pipelines import pipeline
+    except Exception as e:
+        print("pipeline errr")
+    import json
+
+
+    nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
+
+    updatedQuestionBigList = []
+    for ans in Big_anslist:
+        ans = nlp(ans)
+        quelist = [q.get('question') for q in ans]
+        updatedQuestionBigList.append(quelist)
+
+    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
+        data = json.load(json_file)
+        temp = data["intents"]
+        iterate = 0
+        for i in updatedQuestionBigList:
+            print(i)
+            print(i[0])
+            y = {"tag": f"Data-{iterate}", "patterns": i, "responses": Big_anslist[iterate]}
+            temp.append(y)
+            iterate+=1
+        write_json(data)
+    print("From OnlyAnser question is generated and updated json file")
+
 
 
 if __name__ == '__main__':
     runnow()
+    generatefromOnlyAns()

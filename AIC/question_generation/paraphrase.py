@@ -17,6 +17,7 @@ def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.se
 
 
 
+
 def set_seed(seed):
     torch.manual_seed(seed)
     if torch.cuda.is_available():
@@ -91,6 +92,34 @@ def run_main():
     # write_json(intentDict)
     print('Paraphrasing For The question..')
 
+def parafromqueans(anslist, quelist):
+    iterate = 0
+    MainParaQueList = []
+    for i in quelist:
+        answer = anslist[iterate]
+        paraquelist = []
+        paraquelist.append(updatePatterns(i))
+        MainParaQueList.append(paraquelist)
+        iterate += 1
+    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
+        data = json.load(json_file)
+        temp = data["intents"]
+        iterate = 0
+        for i in MainParaQueList:
+            print(i)
+            y = {"tag": f"Data-{str(iterate + 1)}", "patterns": i[0], "responses": anslist[iterate]}
+            temp.append(y)
+            iterate+=1
+        write_json(data)
+
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     run_main()
+    parafromqueans()

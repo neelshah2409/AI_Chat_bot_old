@@ -34,13 +34,13 @@ from .models import Question_ans
 
 try:
     # djngo server when run so it will accept this pass so ignore the error
-    from question_generation.runnow import runnow
+    from question_generation.runnow import runnow,generatefromOnlyAns
     from AIC_APP.training.training import trainTheChatBot
 except Exception as e:
     print(f"Error In import Section Views.py{e}")
 
 try:
-    from question_generation.paraphrase import run_main
+    from question_generation.paraphrase import run_main, parafromqueans
 except:
     print("Run main load failed")
 
@@ -225,17 +225,26 @@ def updateJson(request):
     jsonData = request.POST.get("updateData","default")
     intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
     intentsfile.write(jsonData)
-    print(jsonData)
     return HttpResponse("success")
 
 def onlyAnswersData(request):
     answers = request.POST.get("inputText","default")
+    answers = json.loads(answers)
+    print(type(answers))
+    # {'answers': ['I am rishi patel', 'i am patel rishi']}
     print(answers)
+    anslist = [ans for ans in answers['answers']]
+    generatefromOnlyAns(anslist)
+    print("Sucessfully answering done in json file")
     return HttpResponse("success")
 
 def questionAnswerData(request):
     questionAnswer = request.POST.get("inputText","default")
-    print(questionAnswer)
+    jsonquesans = json.loads(questionAnswer)
+    anslist = [ans for ans in jsonquesans['answers']]
+    quelist = [que for que in jsonquesans['questions']]
+    parafromqueans(anslist, quelist)
+    print("Sucessfully paraphrasing done in json file")
     return HttpResponse("success")
 
 if __name__ == '__main__':
