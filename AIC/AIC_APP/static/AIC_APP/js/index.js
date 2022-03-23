@@ -155,6 +155,15 @@ $(document).ready(function() {
         });
     })
 
+    function urlify(text) {
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.replace(urlRegex, function(url) {
+                return '<a href="' + url + '">' + "Click Here For More" + '</a>';
+            })
+            // or alternatively
+            // return text.replace(urlRegex, '<a href="$1">$1</a>')
+    }
+
     $(document).on("submit", "#questionAnswersForm", function(e) {
         e.preventDefault();
         $(".processing").html("Processing").attr("x", "325");
@@ -163,12 +172,22 @@ $(document).ready(function() {
         let answers = []
         for (let i in input.split("\n\n")) {
             let temp = input.split("\n\n")[i].split("\n");
-            if (temp.length != 2) {
+            queAns = []
+            console.log(temp);
+            queAns.push(temp.shift());
+            let combined = temp.join("\n");
+            if (combined != "") {
+                queAns.push(combined);
+            } else {
                 alert("Your input is not in Proper Format");
                 break;
             }
-            questions.push(temp[0]);
-            answers.push(temp[1]);
+            if (queAns.length != 2) {
+                alert("Your input is not in Proper Format");
+                break;
+            }
+            questions.push(queAns[0]);
+            answers.push(urlify(queAns[1].replaceAll('\n', '<br/>')));
         }
         let questionAnswersList = { "questions": questions, "answers": answers };
         if (input == "") {
@@ -202,8 +221,13 @@ $(document).ready(function() {
         e.preventDefault();
         $(".processing").html("Processing").attr("x", "325");
         let input = $($(this).children()[1]).val();
+        ans = []
+        for (let i in input.split("\n\n")) {
+            ans.push(urlify(input.split("\n\n")[i].replaceAll('\n', '<br/>')));
+        }
+
         let answersList = {
-            "answers": input.split("\n\n")
+            "answers": ans
         };
         if (input == "") {
             alert("Please Provide Some Input")
