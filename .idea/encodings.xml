@@ -3,7 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/classes.pkl" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/intents.json" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/AIC/AIC_APP/static/AIC_APP/intents.json" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/classes.pkl" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/intents.json" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/words.pkl" charset="windows-1252" />
