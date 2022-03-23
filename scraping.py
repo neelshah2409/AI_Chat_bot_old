@@ -42,29 +42,85 @@ import requests as r
 #
 # student_schemes = scrap.find("div",class_="schemes_html lzt_html")
 #
+# temp = ""
+# queAns = []
+i = 0
 # for schemes in student_schemes.find_all("div"):
-#     print(schemes.h5.text.strip())
-#     print(schemes.p.text.strip())
-#     print(schemes.ul.li.a.text)
-#     print(schemes.ul.li.a['href'].replace(" ",""))
+#     # print("\n\n")
+#
+#     # print(f"What is {schemes.h5.text.strip()}?")
+#     if temp != "":
+#         temp = temp+f", {schemes.h5.text.strip()}"
+#     else:
+#         temp = temp + f"{schemes.h5.text.strip()}"
+#     if schemes.ul is not None:
+#         tempDict = {"tag": f"Data-{i}", "patterns": [
+#             f"What is {schemes.h5.text.strip()}?"
+#         ], "responses": f"{schemes.h5.text.strip()} {schemes.p.text.strip()} For More Information : <a href = '{schemes.ul.li.a['href'].replace(' ','')}'>{schemes.ul.li.a.text.strip()}</a>" }
+#     else:
+#         tempDict = {"tag": f"Data-{i}", "patterns": [
+#             f"What is {schemes.h5.text.strip()}?"
+#         ], "responses": f"{schemes.h5.text.strip()} {schemes.p.text.strip()}"}
 
+#     i += 1
+#     queAns.append(tempDict)
+#
+# tempDict = {"tag": f"Data-{i}", "patterns": [
+#             f"What are the available schemes for student ?"
+#         ], "responses": f"Available Schemes Are : {temp}"}
+#
+# i += 1
+# queAns.append(tempDict)
+#
+# print(queAns)
+#
 
 
 
 # Faculty Development Scheme
 ##########################################################
-# html_page = requests.get("https://www.aicte-india.org/schemes/staff-development-schemes").text
-#
-# scrap = BeautifulSoup(html_page,"lxml")
-#
-# student_schemes = scrap.find("div",class_="schemes_html lzt_html")
-#
-# for schemes in student_schemes.find_all("div"):
-#     print(schemes.h5.text.strip())
-#     print(schemes.p.text.strip())
-#     for sub in schemes.ul.find_all("li"):
-#         print(sub.a.text)
-#         print(sub.a['href'].replace(" ", ""))
+html_page = requests.get("https://www.aicte-india.org/schemes/staff-development-schemes").text
+
+scrap = BeautifulSoup(html_page,"lxml")
+
+student_schemes = scrap.find("div",class_="schemes_html lzt_html")
+temp=""
+queans=[]
+# i=0
+for schemes in student_schemes.find_all("div"):
+    print(f"What is {schemes.h5.text.strip()}?")
+    if temp != "":
+        temp = temp+f", {schemes.h5.text.strip()}"
+    else:
+        temp = temp + f"{schemes.h5.text.strip()}"
+
+    if schemes.ul is not None:
+        tempDict = {"tag": f"Data-{i}", "patterns": [
+            f"What is {schemes.h5.text.strip()}?"
+        ],
+                    "responses": f"{schemes.h5.text.strip()} {schemes.p.text.strip()} For More Information : <a href = '{schemes.ul.li.a['href'].replace(' ', '')}'>{schemes.ul.li.a.text.strip()}</a>"}
+    else:
+        tempDict = {"tag": f"Data-{i}", "patterns": [
+            f"What is {schemes.h5.text.strip()}?"
+        ], "responses": f"{schemes.h5.text.strip()} {schemes.p.text.strip()}"}
+    # print(schemes.p.text.strip())
+    # for sub in schemes.ul.find_all("li"):
+    #     print(sub.a.text)
+    #     print(sub.a['href'].replace(" ", ""))
+    i += 1
+    queans.append(tempDict)
+
+tempDict = {"tag": f"Data-{i}", "patterns": [
+                f"What are the available schemes for student ?"
+            ], "responses": f"Available Schemes Are : {temp}"}
+
+i += 1
+queans.append(tempDict)
+
+print(queans)
+
+
+
 
 
 
@@ -127,21 +183,21 @@ import requests as r
 
 # Oppertunities for students
 ######################################################################################################
-html_page = requests.get("https://www.aicte-india.org/opportunities/students/overview").text
-
-scrap = BeautifulSoup(html_page, "lxml")
-
-student_opp = scrap.find('section', id = "col_nats")
-
-
-for opps in student_opp.find_all("div"):
-    for subopp in opps.find_all("article"):
-        print(subopp.h3.text)
-        if subopp.find("p") is not None:
-            print(subopp.p.text)
-        # print(opps.p.text)
-        print(subopp.a['href'].replace(" ",""))
-        print(subopp.a.text)
+# html_page = requests.get("https://www.aicte-india.org/opportunities/students/overview").text
+#
+# scrap = BeautifulSoup(html_page, "lxml")
+#
+# student_opp = scrap.find('section', id = "col_nats")
+#
+#
+# for opps in student_opp.find_all("div"):
+#     for subopp in opps.find_all("article"):
+#         print(subopp.h3.text)
+#         if subopp.find("p") is not None:
+#             print(subopp.p.text)
+#         # print(opps.p.text)
+#         print(subopp.a['href'].replace(" ",""))
+#         print(subopp.a.text)
 
 
 
@@ -191,3 +247,5 @@ for opps in student_opp.find_all("div"):
 #
 # for dots in sc.section.ul.find_all("li"):
 #     print(dots.text)
+
+
