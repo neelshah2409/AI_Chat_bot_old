@@ -12,6 +12,8 @@ urlpatterns = [
     path('trainModel', views.trainModel, name="trainModel"),
     path('Showdatafromdb', views.Showdatafromdb, name="Showdatafromdb"),
     path('updateJson', views.updateJson, name="updateJson"),
+    path('onlyAnswersData', views.onlyAnswersData, name="onlyAnswersData"),
+    path('questionAnswerData', views.questionAnswerData, name="questionAnswerData"),
     path('improveFeatures', views.improveFeatures, name="improveFeatures")
 
 ]
