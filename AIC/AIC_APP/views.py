@@ -101,7 +101,6 @@ def index(request):
 
 
 def takeOutputdp(request):
-    model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
     message = request.POST.get('message', 'hey')
     ints = predict_class(message)
     res = get_response(ints, intents)
@@ -177,12 +176,14 @@ def QueGenerator(request):
 
 
 def improveFeatures(request):
-    messege = request.POST.get('messege', 'default')
-    file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement.txt', 'a')
-    file.writelines(messege)
-    file.close()
-    return HttpResponse("success")
-
+    try:
+        messege = request.POST.get('messege', 'default')
+        file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement.txt', 'a')
+        file.writelines(messege)
+        file.close()
+        return HttpResponse("success")
+    except Exception as e:
+        return HttpResponse("failed")
 
 
 
@@ -194,7 +195,6 @@ def QueShow(request):
 def trainModel(request):
     # try:
     trainTheChatBot()
-    model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
     return HttpResponse("success")
     # except Exception as e:
     #     return HttpResponse(f"failed {e}")
