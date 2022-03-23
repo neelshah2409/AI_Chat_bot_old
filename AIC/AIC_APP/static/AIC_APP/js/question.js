@@ -1,10 +1,11 @@
 $(document).ready(function() {
     $(".btn-submit").hide();
-    $('#questions').on("keyup", function() {
+    $('.question').on("keyup", function() {
+        let temp = $($(this).parent().children()[2]).children()[0];
         if ($(this).val() == "") {
-            $(".btn-submit").fadeOut();
+
         } else {
-            $(".btn-submit").fadeIn();
+            $(temp).fadeIn();
         }
     })
 });

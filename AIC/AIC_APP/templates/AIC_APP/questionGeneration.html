@@ -648,25 +648,96 @@
                         <a href="/QueShow" class="text-decoration-none col-12 col-md-4 col-lg-4"><button class="button-29" role="button">View Questions</button></a>
                         <a href="/" class="text-decoration-none col-12 col-md-2 col-lg-2"><button class="button-29" role="button">Yo-Bot</button></a>
                     </div>
-                    <div class="card" style="background: transparent; border:0px;">
+                    <div class="card position-relative" style="background: transparent; border:0px;">
+                        <div class="card-header">
 
-                        <div class="card-head my-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">
+                        </div>
+                        <div class="card-header my-auto px-2" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">
                             <h5 class="card-title text-center text-light py-2 my-auto">Question-Answer Generator</h5>
+                            <ul class="nav nav-tabs card-header-tabs nav-justified" id="tabs">
+                                <li class="nav-item d-flex justify-content-center align-items-center">
+                                    <a class="active nav-link py-2 active h-100 d-flex align-items-center justify-content-center p-0 text-dark" href="#questionAnswers" data-bs-toggle="tab">Question-Answer</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-center align-items-center">
+                                    <a class="nav-link py-2 text-dark h-100 d-flex align-items-center justify-content-center p-0" href="#onlyAnswers" data-bs-toggle="tab">Only Answers</a>
+                                </li>
+                                <li class="nav-item d-flex justify-content-center align-items-center">
+                                    <a class="nav-link py-2 text-dark h-100 d-flex align-items-center justify-content-center p-0" href="#paragraph" data-bs-toggle="tab">Paragraph</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="card-body p-0 m-0">
-                            <form method="post" id="question"> {% csrf_token %}
+                        <div class="card-body p-0">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="questionAnswers">
+                                    <div class="card-body p-0 m-0">
+                                        <form method="post" id="questionAnswersForm"> {% csrf_token %}
 
-                                <textarea class="form-control m-0 question" placeholder="Enter Your Data Here" id="questions" rows="12" name="inputText"></textarea>
-                                <div class="text-center p-0">
-                                    <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                            <textarea class="form-control m-0 question" placeholder="Enter Question-Answer Here" id="questions" rows="12" name="inputText"></textarea>
+                                            <div class="text-center p-0">
+                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="tab-pane" id="onlyAnswers">
+                                    <div class="card-body p-0 m-0">
+                                        <form method="post" id="onlyAnswersForm"> {% csrf_token %}
+                                            <textarea class="form-control m-0 question" placeholder="Enter Answer Here" id="questions" rows="12" name="inputText"></textarea>
+                                            <div class="text-center p-0">
+                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="paragraph">
+                                    <div class="card-body p-0 m-0">
+                                        <form method="post" id="paragraphForm"> {% csrf_token %}
+                                            <textarea class="form-control m-0 question" placeholder="Enter Your Paragraph Here" id="questions" rows="12" name="inputText"></textarea>
+                                            <div class="text-center p-0">
+                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- <div class="card-body">
+                            <div class="tab-pane container active p-0" id="home">
+                                <div class="card-body p-0 m-0">
+                                    <form method="post" id="questionAnswers"> {% csrf_token %}
+
+                                        <textarea class="form-control m-0 question" placeholder="Enter Question-Answer Here" id="questions" rows="12" name="inputText"></textarea>
+                                        <div class="text-center p-0">
+                                            <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane container fade" id="menu1">
+                                <div class="card-body p-0 m-0">
+                                    <form method="post" id="onlyAnswers"> {% csrf_token %}
+                                        <textarea class="form-control m-0 question" placeholder="Enter Question-Answer Here" id="questions" rows="12" name="inputText"></textarea>
+                                        <div class="text-center p-0">
+                                            <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane container fade" id="menu2">
+                                <div class="card-body p-0 m-0">
+                                    <form method="post" id="paragraph"> {% csrf_token %}
+                                        <textarea class="form-control m-0 question" placeholder="Enter Your Paragraph Here" id="questions" rows="12" name="inputText"></textarea>
+                                        <div class="text-center p-0">
+                                            <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
-            </div>
         </main>
-    </div>
+        </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{% static 'AIC_APP/js/gsap.min.js' %}"></script>

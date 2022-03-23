@@ -315,7 +315,7 @@ text-decoration:underline;
 }
 
 .questionGeneration {
-    width: 40vw !important;
+    width: 50vw !important;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -333,7 +333,6 @@ text-decoration:underline;
     }
 }
 
-.bg-que{
-
+.bg-que {
     background-color: #2d476c !important;
 }

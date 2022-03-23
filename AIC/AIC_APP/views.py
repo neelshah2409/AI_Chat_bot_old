@@ -159,6 +159,7 @@ def runcombine():
 # for handling the data given by the company xyz
 def fetchInputTextArea(request):
     inputText = request.POST.get('inputText', 'default')
+    print(inputText)
     file = open(f'{os.getcwd()}{os.sep}inputText.txt', 'a')
     file.writelines(inputText)
     file.close()
@@ -226,5 +227,16 @@ def updateJson(request):
     intentsfile.write(jsonData)
     print(jsonData)
     return HttpResponse("success")
+
+def onlyAnswersData(request):
+    answers = request.POST.get("inputText","default")
+    print(answers)
+    return HttpResponse("success")
+
+def questionAnswerData(request):
+    questionAnswer = request.POST.get("inputText","default")
+    print(questionAnswer)
+    return HttpResponse("success")
+
 if __name__ == '__main__':
     runcombine()

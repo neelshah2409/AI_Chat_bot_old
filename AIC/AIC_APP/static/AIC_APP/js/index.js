@@ -109,8 +109,7 @@ $(document).ready(function() {
             url: "/improveFeatures",
             data: { messege: input },
             success: function(response) {
-                if(response=="success")
-                {
+                if (response == "success") {
                     $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
                                        <div class="icon col-2">
                                            ${chatbot}
@@ -124,8 +123,7 @@ $(document).ready(function() {
                     $("#etext").prop('disabled', false);
                     feedback = false;
                 }
-                if(response=="failed")
-                {
+                if (response == "failed") {
                     $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
                                            <div class="icon col-2">
                                                ${chatbot}
@@ -157,10 +155,87 @@ $(document).ready(function() {
         });
     })
 
-    $(document).on("submit", "#question", function(e) {
+    $(document).on("submit", "#questionAnswersForm", function(e) {
         e.preventDefault();
         $(".processing").html("Processing").attr("x", "325");
-        let input = $("#questions").val();
+        let input = $($(this).children()[1]).val();
+        let questions = []
+        let answers = []
+        for (let i in input.split("\n\n")) {
+            let temp = input.split("\n\n")[i].split("\n");
+            if (temp.length != 2) {
+                alert("Your input is not in Proper Format");
+                break;
+            }
+            questions.push(temp[0]);
+            answers.push(temp[1]);
+        }
+        let questionAnswersList = { "questions": questions, "answers": answers };
+        if (input == "") {
+            alert("Please Provide Some Input")
+        } else {
+            $(".loadingBox").fadeIn();
+            $.ajax({
+                type: "POST",
+                url: "/questionAnswerData",
+                data: { 'inputText': JSON.stringify(questionAnswersList) },
+                success: function(response) {
+                    if (response == "success") {
+                        $(".loadingBox").fadeOut();
+                        window.location.href = "QueShow";
+                    }
+                    if (response == "failed") {
+                        alert("Failed");
+                        $(".loadingBox").fadeOut();
+                        window.location.href = "QueShow";
+                    }
+                },
+                error: function(error) {
+                    alert("Process Failed");
+                    $(".loadingBox").fadeOut();
+                }
+            });
+        }
+    })
+
+    $(document).on("submit", "#onlyAnswersForm", function(e) {
+        e.preventDefault();
+        $(".processing").html("Processing").attr("x", "325");
+        let input = $($(this).children()[1]).val();
+        let answersList = {
+            "answers": input.split("\n\n")
+        };
+        if (input == "") {
+            alert("Please Provide Some Input")
+        } else {
+            $(".loadingBox").fadeIn();
+            $.ajax({
+                type: "POST",
+                url: "/onlyAnswersData",
+                data: { 'inputText': JSON.stringify(answersList) },
+                success: function(response) {
+                    if (response == "success") {
+                        $(".loadingBox").fadeOut();
+                        window.location.href = "QueShow";
+                    }
+                    if (response == "failed") {
+                        alert("Failed");
+                        $(".loadingBox").fadeOut();
+                        window.location.href = "QueShow";
+                    }
+                },
+                error: function(error) {
+                    alert("Process Failed");
+                    $(".loadingBox").fadeOut();
+                }
+            });
+        }
+    })
+
+    $(document).on("submit", "#paragraphForm", function(e) {
+        e.preventDefault();
+        $(".processing").html("Processing").attr("x", "325");
+        let input = $($(this).children()[1]).val();
         if (input == "") {
             alert("Please Provide Some Input")
         } else {
