@@ -1,0 +1,53 @@
+{
+    "intents": [
+        {
+            "tag": "md-0",
+            "patterns": [
+                "Maintenance of safe working environment for female employees at workplace."
+            ],
+            "responses": "Tuesday, March 22, 2022\n\nMaintenance of safe working environment for female employees at workplace.\nCircular\nhttps://www.aicte-india.org/sites/default/files/Circular-%20Maintenance%20of%20safe%20working%20environment%20of%20femal%20employees%20at%20workplace..pdf\n"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                " Displaying the Mandatory Disclosure on Portal"
+            ],
+            "responses": "Thursday, March 10, 2022\n\n Displaying the Mandatory Disclosure on Portal\nCircular\nhttps://www.aicte-india.org/sites/default/files/MANDATORY%20DISCLOSURE%20REGARDING%2007.03.2022_20220307_0001.pdf\n"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "Revised Academic Calendar for Academic year 2022-23"
+            ],
+            "responses": "Tuesday, March 22, 2022\n\n            Revised Academic Calendar for Academic year 2022-23\nCircular\nhttps://www.aicte-india.org/sites/default/files/Circular%20Academic%20Calendar%202022-23.pdf\n"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "Admission in B.Tech/BE course through Lateral Entry to 2nd year"
+            ],
+            "responses": "Tuesday, March 8, 2022\n\n            Admission in B.Tech/BE course through Lateral Entry to 2nd year\nCircular\nhttps://www.aicte-india.org/sites/default/files/Circular%20%281%29_2.PDF"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "Essential Requirements for Technical Institutions\n"
+            ],
+            "responses": "Tuesday, March 8, 2022\n\n Essential Requirements for Technical Institutions\nCircular\nhttps://www.aicte-india.org/sites/default/files/Circular%20-%20Essential%20Requirements%20-%2008-03-2022.pdf"
+        },
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What is the fastest developing discipline in the world?"
+            ],
+            "responses": "<pad> Computer engineering"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "            Institutes not applying on portal for past 6 years for Affiliating University\n"
+            ],
+            "responses": "Friday, March 4, 2022\n\n Institutes not applying on portal for past 6 years for Affiliating University\nCircular\nhttps://www.aicte-india.org/sites/default/files/Letter%20to%20affiliating%20University-Govt-DTE%20-%20%2004-03-2022%20along%20with%20list%20of%20Institute.pdf\n"
+        }
+    ]
+}
