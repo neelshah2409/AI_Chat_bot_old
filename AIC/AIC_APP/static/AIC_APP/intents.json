@@ -1,6 +1,5 @@
 {
-    "intents": [
-        {
+    "intents": [{
             "tag": "Data-1",
             "patterns": [
                 "What is the name of the reputed institute of state?",
