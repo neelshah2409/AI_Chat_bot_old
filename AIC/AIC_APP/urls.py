@@ -14,6 +14,7 @@ urlpatterns = [
     path('updateJson', views.updateJson, name="updateJson"),
     path('onlyAnswersData', views.onlyAnswersData, name="onlyAnswersData"),
     path('questionAnswerData', views.questionAnswerData, name="questionAnswerData"),
+    # path('getSuggestions', views.getSuggestions, name="getSuggestions"),
     path('improveFeatures', views.improveFeatures, name="improveFeatures")
 
 ]

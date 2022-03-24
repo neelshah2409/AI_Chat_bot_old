@@ -419,6 +419,52 @@
         "What are the Oppertunities for students?"
       ],
       "responses": "Available Oppertunities Are : INAE 4th INAE Youth Conclave scheduled on September 24, 2021 jointly with IIT Bombay; NITIE, Mumbai and ICT, Mumbai, Reservation of Seats in Degree Level technical courses for States/ UTs lacking in such facilities for academic sessions 2021-22, The Drum x Adobe: Creativity finds a way, Know Your College (KYC), Books At Special Price, ISG-UBU Invites Indian-Mekong Scholars to Join the Project, Grand Challenge for design & development for Mobile accessories products based on Li-ion Cells- seeking participation, National Apprenticeship Training Scheme (NATS), FOSSEE Summer Fellowship 2021 Online, Internship & Project Training for Diploma/UG/PG Students of Engineering/Finance/Management/Law stream at ALTTC, BSNL, Ghaziabad\n"
+    },
+    {
+      "tag": "Data-0",
+      "patterns": [
+        "'Allo",
+        "'Allo 'Allo",
+        "Aye oop",
+        "Ay up",
+        "Ahoy",
+        "G'day",
+        "Greetings",
+        "Hello",
+        "Hey there",
+        "Hey",
+        "Hi there",
+        "Hi",
+        "Hiya",
+        "How are things",
+        "How are ya",
+        "How ya doin'",
+        "How's it goin'",
+        "How's it going",
+        "How's life",
+        "Howdy",
+        "Sup",
+        "What's new",
+        "What's up",
+        "Yo"
+      ],
+      "responses": "<bold>Hello ! I'm Yo bot</bold>I'm Here to Help You, You can Ask me Anything"
+    },
+    {
+      "tag": "Data-0",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "good bye",
+        "see you later",
+        "see you",
+        "Thank you",
+        "I'm going",
+        "I'm off",
+        "it's over",
+        "take care"
+      ],
+      "responses": "<bold>Good Bye !</bold>I hope I was able to help you, You can use me anytime"
     }
   ]
 }
