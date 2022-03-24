@@ -125,7 +125,7 @@ text-decoration:underline;
 }
 
 .box::-webkit-scrollbar {
-
+    display: none;
 }
 
 .wrapper .box .item {

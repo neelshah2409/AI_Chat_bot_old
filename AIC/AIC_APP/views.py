@@ -247,6 +247,15 @@ def questionAnswerData(request):
     parafromqueans(anslist, quelist)
     print("Sucessfully paraphrasing done in json file")
     return HttpResponse("success")
+#
+# def getSuggestions(request):
+#     suggestionString = request.POST.get("messege", "default")
+#     print("SELECT * FROM aic_app_question_ans WHERE questions LIKE '"+suggestionString+"%' LIMIT 3")
+#     fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans WHERE questions LIKE 'Wh%' LIMIT 3")
+#     suggest = []
+#     for i in fetch:
+#         suggest.append(i.questions[:])
+#     return HttpResponse(str({"suggestions":suggest}))
 
 if __name__ == '__main__':
     runcombine()

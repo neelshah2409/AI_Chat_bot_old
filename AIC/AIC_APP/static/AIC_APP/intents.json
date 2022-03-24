@@ -1,36 +1,51 @@
 {
-    "intents": [
-        {
-            "tag": "Data-1",
-            "patterns": [
-                "What are the General Guidelines for all FDC Schemes?",
-                "What are guidelines for all fdc schemes?",
-                "What is the General Guidelines of the FDC Scheme?",
-                "What are general guidelines for FDC Scheme?",
-                "What are the general guidelines for all FDC Schemes?",
-                "What are general guidelines for Selected FDC Schemes?",
-                "What are the general guidelines for FDC Schemes?",
-                "What are the rules and general guidance for FDC Schemes?",
-                "What is General guidelines for FDC Schemes? What are the concepts?",
-                "What are the general guidelines of all the FDC schemes Schemes?"
-            ],
-            "responses": "General Guidelines for All FDC Schemes<br/>General Guidelines Applicable to all Faculty Development Schemes of AICTE.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf\">Click Here For More</a>"
-        },
-        {
-            "tag": "Data-1",
-            "patterns": [
-                "What are the General Guidelines for all FDC Schemes?",
-                "What are guidelines for all fdc schemes?",
-                "What is the General Guidelines of the FDC Scheme?",
-                "What are general guidelines for FDC Scheme?",
-                "What are the general guidelines for all FDC Schemes?",
-                "What are general guidelines for Selected FDC Schemes?",
-                "What are the general guidelines for FDC Schemes?",
-                "What are the rules and general guidance for FDC Schemes?",
-                "What is General guidelines for FDC Schemes? What are the concepts?",
-                "What are the general guidelines of all the FDC schemes Schemes?"
-            ],
-            "responses": "General Guidelines for All FDC Schemes<br/>General Guidelines Applicable to all Faculty Development Schemes of AICTE.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf\">Click Here For More</a>"
-        }
-    ]
+  "intents": [
+    {
+      "tag": "Data-1",
+      "patterns": [
+        "What are the General Guidelines for all FDC Schemes?",
+        "What are guidelines for all fdc schemes?",
+        "What is the General Guidelines of the FDC Scheme?",
+        "What are general guidelines for FDC Scheme?",
+        "What are the general guidelines for all FDC Schemes?",
+        "What are general guidelines for Selected FDC Schemes?",
+        "What are the general guidelines for FDC Schemes?",
+        "What are the rules and general guidance for FDC Schemes?",
+        "What is General guidelines for FDC Schemes? What are the concepts?",
+        "What are the general guidelines of all the FDC schemes Schemes?"
+      ],
+      "responses": "General Guidelines for All FDC Schemes<br/>General Guidelines Applicable to all Faculty Development Schemes of AICTE.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf\">Click Here For More</a>"
+    },
+    {
+      "tag": "Data-2",
+      "patterns": [
+        "What is AICTE STIPP Santuary Scheme?",
+        "What is STTP/SFURTI?",
+        "What is SCHEME AICTE STTP/SURTI?",
+        "What is the STTP-SFURTI SCHEME of AICTE?",
+        "What is the AICTE STTP-SFURTI PURTS SCHEME?",
+        "What is the AICTE STTP-SFURTI scheme? How can I follow it?",
+        "What is the AICTE STTP and Furti SECHEME?",
+        "What is the AICTE STTP-SFURTI SCHEME?",
+        "What is the AICTE STTP-SFURTI scheme?"
+      ],
+      "responses": "AICTE STTP-SFURTI<br/>STTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/sfurti/STTP_SFURTIschemedocamndedon10dec2021.pdf\">Click Here For More</a>"
+    },
+    {
+      "tag": "Data-3",
+      "patterns": [
+        "What is the aim of AICTE-ISTE Induction/ Refresher Programmes?",
+        "What is the funding of the AICTE-ISTE Orientation/ Refresher Programme?",
+        "What is the funding for the AICTE-ISTE Orientation/ Refresher Programme?"
+      ],
+      "responses": "AICTE – ISTE Orientation/ Refresher Programme<br/>The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/SchemeDocumentAICTEinduction-refresherSchemeDocument.pdf\">Click Here For More</a>"
+    },
+    {
+      "tag": "Data-4",
+      "patterns": [
+        "What is the name of the book that promotes the use of 'Scheduled Regional Language' in Technical Education?"
+      ],
+      "responses": "AICTE-Technical Book Writing & Translation<br/>To promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/PAC.pdf\">Click Here For More</a>"
+    }
+  ]
 }
