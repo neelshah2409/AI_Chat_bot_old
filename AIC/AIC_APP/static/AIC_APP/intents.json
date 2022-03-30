@@ -1,7 +1,294 @@
 {
   "intents": [
     {
-      "tag": "Data-1",
+      "tag": "Data-2",
+      "patterns": [
+        "Is AICTE allowing Arts and Science course in Institutions offering Engineering Course?",
+        "Does AICTE allow physics and mathematics courses in an institution offering engineering courses?",
+        "What is admission process of AICTE for Arts and Science Courses in Engineering courses?",
+        "Can I earn Msc Arts and Science in engineering course?",
+        "Does AICTE allow arts and science in institutions..?",
+        "Is there any overlap in AICTE's arts and sciences classes?",
+        "Does AICTE permit arts and science in an Institution offering engineering courses?",
+        "Does AICTE allows science and arts and science in an institution offering engineering courses?",
+        "Does AICTE allow arts and science studies in Institute offering Engineering Courses?",
+        "Does AICTE allow arts and science course in institutions offering engineering course?"
+      ],
+      "responses": "A: If an Institution offering Courses in Engineering and Technology has excess Built-up area<br/>after fulfilling the norms as per Approval Process Handbook, the same may be utilized for<br/>running a separate Arts and Science College in the same location, fulfilling all the<br/>requirements of Arts and Science as demanded by the respective University. Permitting to<br/>run Arts and Science Courses does not mean reduction in Engineering Faculty or<br/>Infrastructure. Students of different disciplines need to mingle with each other to create<br/>innovative new products acceptable in the Society. The Engineers from such Institution shall<br/>have holistic values towards Society and Nation. They are complementary to each other, not<br/>one at the cost of the other.<br/>Though AICTE is not insisting on a boundary wall separating the Arts College and<br/>Engineering Institution, both the Institutions have to function as two different Institutions.<br/>The Common Amenities such as Administrative Infrastructure, Canteen, Auditorium,<br/>Playground, Parking, etc. may be shared, provided it caters to all the students of all the<br/>Programmes.<br/>Refer Chapter VII of APH 2020-21. The Institutions may conduct Courses using the existing<br/>facilities, or by creating additional facilities as per the provisions laid down in the norms and<br/>standards of the respective Regulatory Bodies without affecting the quality of education<br/>prescribed by both the Regulatory Bodies after taking NOC from the Council."
+    },
+    {
+      "tag": "Data-3",
+      "patterns": [
+        "Where can I send my queries related to portal and approval related issues for the approval process?",
+        "Where can I send the queries related to portal and approval related questions for the approval related issue for the portal?",
+        "What is the process of sending the same for the approval related queries?",
+        "Where can I send my request about portal issues for approval of approval application?",
+        "Which is the best website for general queries for online reauthorization of portal issues or in-house approval. Q : Where can I send the queries?",
+        "Where can I send my queries related to portal and approval related issues?",
+        "How can I send the query about approval related issues for approvals?",
+        "Where can I send my queries on portal and approval related issues.?",
+        "Where can I send all my queries related to portal and approval related issues for the approval?",
+        "Where can I send the query related to portal and approval related issues for the approval of a document?"
+      ],
+      "responses": "process 2020-21?<br/>A : Send portal related queries to: helpdesk1@aicte-india.org<br/>Send APH related queries to: helpdeskab@aicte-india.org"
+    },
+    {
+      "tag": "Data-4",
+      "patterns": [
+        "Is it mandatory for an institution offering Courses in Architecture to obtain recognition from RFIs?",
+        "Is it mandatory for Institutions offering Courses in Architecture to obtain recognition from IIS or an IRB?",
+        "Is it mandatory for an institution offering courses in architecture to obtain recognition from a recognized organisation?",
+        "Is it mandatory for an institution offering Courses in Architecture to obtain recognition from the AICTE (University of Edinburgh) for academic excellence in building building?",
+        "Is it mandatory for an Institution offering Courses in Architecture to obtain recognition from an institute in India?",
+        "Is it mandatory for an institute offering Courses in Architecture to obtain recognition from a board or a commission?",
+        "Is it mandatory to institute offering course in architecture to obtain recognition from the Indian Government?",
+        "How l must an institute offering courses in architecture get recognition from the IAS/IIT/IAE?",
+        "Does an institutions offering courses in architecture need recognition from institutes offering courses in Architecture?",
+        "Is it mandatory for an institution offering course in architecture to get recognition from an Institution (Program for Axis)?"
+      ],
+      "responses": "AICTE?<br/>A : In compliance to the order dated 08.11.2019 passed by the Hon’ble Supreme Court of India<br/>in CA No.364/ 2005, for the existing Institutions offering Courses in Architecture<br/>Programme, approval by the Council of Architecture is mandatory, however interested<br/>Institutions may apply to the AICTE for approval."
+    },
+    {
+      "tag": "Data-5",
+      "patterns": [
+        "Whether establishment of a new technical institution to offer courses in Engineering and Mechanical Engineering?",
+        "What will be the effect of Institution of Technical Education on BPO and Indian Railways on the engineering and the management of industries in India?",
+        "What shall be the reason of the establishment of new technical institutes for engineering and engineering engineering?",
+        "How will the SME to get new technical institutes to offer courses in engineering and engineering engineering and how may this be beneficial for the academics in the US?",
+        "Should we have a Technical Institution or not and if not, what are its reasons for formation of new Course in Engineering and ICT?",
+        "Which shall be the best technical institutes for engineering and engineering course?",
+        "How can the new technical institute for engineering and tech develop into a well-developed business?",
+        "How can I start a new technical institute for engineering and science?",
+        "Q: Whether establishment of new Technical Institution to offer Courses in Engineering and Design Engineering?",
+        "Are there any proposals for an engineering institute to provide courses to students who are interested in engineering and technology?"
+      ],
+      "responses": "Technology is permissible in Academic Year 2020-21?<br/>A : The Council shall not grant approval to the new Technical Institutions at the Diploma/ Under<br/>Graduate/ Post Graduate Level in Engineering and Technology in line with the<br/>recommendations of the Committee set up by AICTE to provide the National Perspective Plan<br/>for Technical Programmes. However, establishment of new Technical Institutions in<br/>Engineering and Technology shall be permitted only in cases specified in APH 2020-21."
+    },
+    {
+      "tag": "Data-6",
+      "patterns": [
+        "Is there any new institute for offering Pharmacy courses?",
+        "What will be the effect of this new Technical institution on pharmacy?",
+        "What shall be the reason of the establishment of new technical institute in pharmacy or not?",
+        "Is it possible to set up new technical institutes to offer pharmacy courses?",
+        "Should we have any new Technical Institutions to offer pharmacology?",
+        "Is there a new institute in India to offer courses in pharmacy?",
+        "How can the new Pharmacy institute help improve the course of Pharmacy?",
+        "How l should establish a new and new Institute of Pharmacy?",
+        "Q: Whether establishment of new Technical Institution to offer Courses in Pharmacy is necessary?",
+        "Are there any proposals for an institute to open a new pharmacy course?"
+      ],
+      "responses": "permissible in Academic Year 2020-21?<br/>A : Establishment of New Pharmacy Institutions for offering Diploma/ Degree Courses in<br/>Pharmacy shall not be permitted for a period of Two years beginning from the Academic Year<br/>2020-21. However, establishment of new Technical Institutions in Pharmacy shall be<br/>permitted only in cases specified in APH 2020-21."
+    },
+    {
+      "tag": "Data-7",
+      "patterns": [
+        "Is there any procedure for MCA/MBA from Department of Arts and Science College for AICTE?",
+        "Can I prepare for AICTE MCA or MBA in department of arts and science college for engineering?",
+        "Is admission by Department of Arts and Science College for MBA is available or not?",
+        "Can I become MCA/ MBA Department of Arts and Science College and apply for AICTE AICTE?",
+        "Whether MCA/ MBA department of arts and science is eligible to apply for AICTE?",
+        "Is there any eligibility criteria for applying for AICTE P.C?",
+        "How can I apply to AICTE (Autonomous Combined TEAM)?",
+        "How can MCA/ MBA Department of Arts and Science College is eligible to apply for AICTE exam?",
+        "Q. if MCA/ MBA Department of Arts and Science College is eligible to apply for AICTE.",
+        "Are MCA and MBA Department of Arts and Science College considered eligible for AICTE (Program for Undergrad) examination?"
+      ],
+      "responses": "approval?<br/>A: Yes. Refer Clause 1.3.5 of APH 2020-21. In case of non-Technical Institutions seeking<br/>approval for conducting MCA/ MBA and University Departments/ Constituent Colleges<br/>seeking approval for conducting MCA/ MBA/ M.Pharm./ M.Tech. Programmes apart from<br/>their existing Courses, separate building and Principal are not required. However, in such<br/>cases all other norms (as per APH 2020-21) such as separate Head of the Department,<br/>Faculty, Infrastructure, Built-Up area, etc. should be fulfilled."
+    },
+    {
+      "tag": "Data-8",
+      "patterns": [
+        "What is the difference between LoI and LoA?",
+        "What is difference between a LoI and an LoA?",
+        "What is LoI and LoA?",
+        "What's the difference between LoI and LoA?",
+        "What is the difference between an LI and a LAA?",
+        "What's the difference between a LoI and LoA?",
+        "What is the difference between a LoI and a LoA?",
+        "What is the difference between loI and loA?",
+        "What is the difference between an LI and a LOA?"
+      ],
+      "responses": "A : Letter of Intent (LoI) is the provisional approval given to the applicant to start a new<br/>Technical Institution, if the documents are found in order (based on Scrutiny Committee).<br/>On receipt of LoI, the Infrastructure facilities may be developed and the same shall be<br/>informed to AICTE. EVC will be conducted to verify the fulfillment of the norms specified in<br/>APH 2020-21 to issue Letter of Approval (LoA), only then, the Institutions are eligible to<br/>admit the students, fulfilling the norms of affiliating body (as applicable). Validity of LoI as<br/>well as LoA is two years."
+    },
+    {
+      "tag": "Data-9",
+      "patterns": [
+        "Can I open a new institution and apply for closure at the same time?",
+        "Can I open a new Institution and apply for closure of existing Institutions at the same time?",
+        "Q : Can I open new institution and apply for closure at same time?",
+        "Can I open a new institution after closing of existing institution?",
+        "Can I open a new Institution at the same time as dissolution of existing Institution or insolvency of existing Institution?",
+        "Can I apply for closure of the existing institute and open a new institution at same time?",
+        "How can I open a new institution at the same time as closing the existing one?",
+        "How can I close my existing institution and open new one by the same institution?",
+        "Q: Can I apply for closure of existing institution and open a new institution?",
+        "Q : Can I apply for the closure of the existing institution and open a new institution at the same time?"
+      ],
+      "responses": "premises?<br/>A : Yes. If the Scrutiny Committee found the application for closure is in order and recommend<br/>for the closure of the existing Programme(s), then the processing for new Institution for the<br/>new Programme (except Engineering and Technology/ Pharmacy) shall be considered."
+    },
+    {
+      "tag": "Data-10",
+      "patterns": [
+        "Q. Whether the new institution is obligated to appoint the principal at the time of the election of the new Professor?",
+        "Q: Is the new Institution required to appoint the Principal and the Faculty at the time the faculty is elected?",
+        "Q : Whether the new institution is obligated to appoint the Principal and the Faculty at the time of the University.",
+        "Q : Is it required for the new institution to appoint the principal at the time or not?",
+        "Whether the new institution is obligated to appoint the Principal and the Faculty at the time. Q : Is the new Institution obligated to recruit the Principal and the Faculty?",
+        "Q : Whether the new Institution is obligated to appoint the Principal and the Faculty for the purpose of governance at the time when the new Institution is forming or not?",
+        "Whether the new Institution is obligated to appoint the Principal and the Faculty at the time of the institution appointment?",
+        "Q : Whether the new Institution is obligated to appoint the Principal and the Faculty at the time?",
+        "Q: Whether the new institution is obligated to appoint the Principal and the Faculty at the time of the new Institution is cited by POTUS nr / FIA or UTILITY TO COVER THE PROJECT OF TAUGHT. If PT. (Faculty + Chairman) would also replace with A(Director)/Evaluator (Appoint Dean). at the time of resigning/denying the vacancy the Principal would be retained by the newly",
+        "Q : Whether the new institution is obligated to appoint the Principal and the Faculty at the time of appointment?"
+      ],
+      "responses": "of application for approval or subsequent to approval before commencement of the Course?<br/>Whether the Faculty to be appointed are for the First Year of the Course or for the entire<br/>period of the Course?<br/>A: The new Institution is obligated to appoint the Principal and the Faculty before the<br/>commencement of the Course. The Faculty to be appointed are for the First Year of the Course<br/>and it will be progressively done each year so that when an Expert Visit Committee conducted any<br/>time before the first batch of students has passed out, the availability of the facilities of<br/>an Institution as per the norms in Approval Process Handbook shall be verified."
+    },
+    {
+      "tag": "Data-11",
+      "patterns": [
+        "Q. We have been granted LoI in 2019-20 and LoA was rejected. How can we get LoA this year?",
+        "What is the best way to get LoA next year?",
+        "What shall we do if we can not get any other LTI or AO this year?",
+        "How do I apply for LoI for next year 2018/2019?",
+        "Should I have got an LLI in 2019 and a LoA?",
+        "How can I get a LOI this year?",
+        "How can I get a fair amount of LoI as a graduate in 2019-20?",
+        "We have been granted LOI in 2019-20 and LoA was rejected. How can we get LoA this year?",
+        "Q: We have been granted LoI in 2019-20 and LoA was rejected. How can we get LoA this year?",
+        "We have been granted a LIR from 2019-20. How is the process of applying for this?"
+      ],
+      "responses": "A : Applicants issued Letter of Intent (LoI) but rejected after the Expert Visit Committee shall<br/>inform the Council about their readiness of infrastructure after making the payment of TER<br/>Charges as per Clause 1.4.2 of APH 2020-21 through online for the conduct of another<br/>Expert Visit Committee."
+    },
+    {
+      "tag": "Data-12",
+      "patterns": [
+        "Q. We have got the first approval for our Institution in 2019-20. But we had not admitted. Q. The first approval we got in 2019-20.",
+        "Q: We get the first approval for our institution in 2019-20. But we had not admitted our institution the period of 2022. How will we know our institution is still there?",
+        "Q: We got approval of the first colleges in 2019-20. But we had not admitted the first students. We will give full acknowledgement.",
+        "Q : We have got the first approval for our Institution in 2019-20. But we had not admitted or denied in other universities yet. By that time, I gave an indication for admissions under our department.",
+        ": Since it is our Institution opening in 2019, we have received the first approval in 2019-2018. But we had not admitted. A : We get the first approval in 2019.",
+        "Q: We have got the first approval for our Institution in 2019-20. But we had not admitted into our institution. We wanted to be in India when our students got approved?",
+        "We have got the first approval for our Institution in 2019-20, but we had not admitted. Q : We got the first approval for our Institution in 2019-20.",
+        "We got first approval for our Institution in 2019-20. But we had not admitted.",
+        "Q: We have got the first approval for our institution in 2019-20. But we had not admitted before last.",
+        "We have got the first approval for the institution in 2019-20. But we had not admitted to any field. Q : We have got the initial approval for our Institution."
+      ],
+      "responses": "students due the delay in getting affiliation. Do we need to apply for EoA?<br/>A : ALL the applicants issued LoA for starting the New Technical Institutions shall apply on<br/>AICTE Web-Portal for Extension of Approval as specified in the Approval Process Handbook<br/>from the next Academic Year onwards, irrespective of the admission of the students."
+    },
+    {
+      "tag": "Data-13",
+      "patterns": [
+        "Q. We had 25 years of live lease at the time of our approval for establishment of new technical support service for The Boeing 777. Q. We have 2 years of live lease at the time of our approval for Establishing new Technical Support Services, but the majority of the lease is term one. Our agreement did not terminate, and we are resolving an issue.",
+        "Q: We had 25 years of Live Lease at the time of our approval for Establishing a new Technical Center. I intend to remove the old Technical Center and the facility after we move to the higher end and expand it.",
+        "Q : We had 25 years of live lease at the time of our approval for establishment of new Technical Department. (Arrivals and changes coming in 2019).",
+        "Had 20 years of live lease at the time of our approval for establishment of new technical firm at 12:07am on 3rd March 2019.",
+        "When we approved the establishment of the new Technical Information Facility, we had 25 years of Live Lease at the time of our approval for the construction of the facility. After this agreement, we got an additional 15 years of leased by the Company. Q : We had 25 years of Live Lease at the time of our approval for establish of new Technical Information Facility.",
+        "Q : We had 25 years of live lease at the time of our approval for establishment of new Technical Technical office. We wanted to develop it into an office and then launch it as a technology company?",
+        "We had 25 years of live lease at the time of our approval for our Establishment of New Technical Associates Development. We were looking for 100 year lease.",
+        "We had 25 years of live lease at the time of our approval for establishment of new Technical Service Offices. A : When was our approval for new Technical Services Officer?",
+        "Q: We had 25 years of live lease at the time of our approval for establishment of new Technical Support Services. We had a 20 year lease that we had established.",
+        "We had 15 years of live lease at the time of our approval for the establishment of new Technical Equipment for Axis. Q : We had 25 years of live lease at the time of our approval for establishment of new Technical Equipment for Axis."
+      ],
+      "responses": "Institution, currently our Live Lease is 5 years. What should we do to get the EoA?<br/>A : In case of Institutions having Lease agreement for Land, the Council shall not issue EoA from<br/>the Year in which the Live Lease is equal to the number of years of the Course having the<br/>maximum duration. However, if such Institutions submit the Lease extended for further 30<br/>years with atleast 25 years of Live Lease, EoA shall be considered."
+    },
+    {
+      "tag": "Data-14",
+      "patterns": [
+        "Our Institution was given Withdrawal of Approval in 2018-19. We are not able to apply for The Department of Energy until 30 September 2019.",
+        "Q: Our institution has been given Withdrawal of Approval in 2018-19. We are not able to apply in 2018.",
+        "Q : Our institution was given Withdrawal of Approval in 2018-19. We are not able to apply under that condition.",
+        "Why our institution was given Withdrawal from Approval in 2018-19? Can we apply anywhere in the world?",
+        ": Our institution was given Withdrawal of Approval in 2018-19. We are not able to apply for the IAS grant in 2018-20. Q : Our Institution was given Withdrawal of Approval in 2018-20. We do not have any decision.",
+        "Our institution was given Withdrawal of Approval in 2018-19. We are not able to apply for it now.",
+        "Our institution was given Withdrawal of Approval in 2018-19. We are not able to apply for the National Scholarships in Assam in 2019.",
+        "Our institution was given Withdrawal of Approval in 2018-19. We are not able to apply. Q: When can you apply?",
+        "Q: Our Institution was given Withdrawal of Approval in 2018-19. We are not able to apply for the new admissions. But we have accepted the new Admissions –Withdrawal form.?",
+        "We were granted Withdrawal of Approval, but we are not able to apply again for Axis.Fake Films (Furthermore) 2018-19. Can we apply in batches?"
+      ],
+      "responses": "under 2020-21 application.<br/>A : You have to apply as a New Institution in 2020-21"
+    },
+    {
+      "tag": "Data-15",
+      "patterns": [
+        "Our intake was reduced to 50% due to the enrollment less than 30% in the past 5 years. How : Our Intake was reduced to 46% due to 23% in the past 5 years.",
+        "Q: Our Intake was reduced to 50% due to the enrollment less than 30% in the past 5 years. The enrollment was less than 30% in the past 5 years. The latest study indicates that the higher number is indicative of the lower enrollment rate.",
+        "Q : Our Intake was reduced to 50% due to enrollment less than 30% in the past 5 years. A : A : An F is in account. Our enrollment was 50% due to registration less than 30% in the past 5 years.",
+        "Why our Intake was reduced to 50% due to enrollment less than 30% in the past 5 years?",
+        ": Our enrollment were less than 30% in the last 5 years, and our Intake was reduced to 50%. Q : Our Intake is still an issue.",
+        "Our enrollment for the last five years was less than 30%. Q : Our Intake was reduced to 50% because the enrollment less than 30% in the past 5 years.",
+        "How can the enrollment to a college decrease to 50% as compared to the enrollment of 40% in the past 5 years?",
+        "Our Intake was reduced to 50% due to enrollment less than 30% in the last 5 years. Q : Our enrollment was lower than 60% in the past 5 years.",
+        "Q: Our intake was reduced to 50% due to the enrollment less than 30% in the past 5 years. Tough choice for enrolling every year. But we were not able to satisfy enrollment requirement in last 2 years.?",
+        "We had zero enrollments in the last five years, the enrollment is less than 10% (2018-19), Amount being 50% (2017-17), Admissions being 15%, TITLE being 50% etc. Amount: An average of 50% of the total enrollment is 30% of the total enrollment in the past 5 years, Withdrawal = 50% of enrollment. Q: What did it mean?"
+      ],
+      "responses": "consecutively. The student admission this year is more than 30%. Should we have to apply<br/>for Restoration in 2020-21?<br/>A : The Institution falling under this category need not apply for restoration and the Intake shall<br/>be automatically reinstated by the Council, if the enrolment becomes more than 30% based<br/>on the student enrolment data provided by the Institution."
+    },
+    {
+      "tag": "Data-16",
+      "patterns": [
+        "Can we apply for conversion of two diploma courses only into 1 Diploma course?",
+        "Can I apply for conversion of 4 diploma courses only into Diploma Courses?",
+        "Q : We have 5 diploma courses, Can we apply for conversion of two diploma courses only into one Diploma course (Arabia)?",
+        "Can I apply for conversion of 2 diploma courses into one course?",
+        "Should we have 5 Diploma courses? How can we apply only for conversion of 2 diploma courses in one masters course?",
+        "Can we apply for conversion of two diploma courses only into one course?",
+        "We have 5 Diploma Courses, Can we apply for conversion of two Diploma Courses only?",
+        "We have 5 diploma courses, Can we apply for conversion of two diploma courses only into 2 degree courses?",
+        "Q: We have 5 diploma courses, Can we apply for conversion of two diploma courses only into one?",
+        "We have 5 Diploma Courses, Can we apply for conversion of two Diploma Courses only to 6 Diploma Courses?"
+      ],
+      "responses": "Degree Courses?<br/>A : No. Partial conversion of Levels is not permitted."
+    },
+    {
+      "tag": "Data-17",
+      "patterns": [
+        "Q. We are having UG and PG Courses in Engineering and Technology. We would like to apply for conversion of our Under Graduate Courses into Diploma Level? Should we have to apply.",
+        "What is the procedure to apply for convert the Under Graduate Diploma into a PG Course?",
+        "What shall be the reason of the UG and PG Courses in Engineering and Technology is that they are divided into two undergraduation courses. Should we have to apply for conversion to Diploma level?",
+        "Can I apply undergraduate to get a Diploma Level course?",
+        "Should we have to change our Under Graduate Course and PG Courses?",
+        "I'm having UG and PG course in engineering and technology. Would like to apply for conversion of our Under Graduate Courses into diploma level? Should I have to apply?",
+        "We are having UG and PG Courses in Engineering and Technology. We would like to apply for conversion of our Under Graduate Courses into Diploma level? Should we have to apply for GST or does that mean your applications will not be considered?",
+        "We are having UG and PG Courses in Engineering and Technology. We would like to apply for conversion of our Under Graduate Courses into Diploma Level? Should we have to apply by 15th of June?",
+        "Q: We are having UG and PG Courses in Engineering and Technology. We would like to apply for conversion of our Under Graduate Courses into Diploma Level? Should we have to apply for a PG Diploma?",
+        "We are having UG and PG course in Engineering and Technology. We would like to apply for conversion of our under graduate courses into diploma level? Should we have to apply?"
+      ],
+      "responses": "for closure of PG Courses?<br/>A : PG Courses in Engineering and Technology should be applied for closure."
+    },
+    {
+      "tag": "Data-18",
+      "patterns": [
+        "Can we convert the UG course into a Diploma course?",
+        "Can I prepare to do a diploma course or not?",
+        "What shall be the reason of the deposon of the UG diploma course?",
+        "Can I apply for a change of UG Degree course?",
+        "Should we have to change our UG Degree and if not, would we want to do it?",
+        "I'm a student in my institute and I want to take UG course in our Diploma course in India. How I go about it and when should I apply for it?",
+        "How can I convert UG diploma course (for my students)?",
+        "We wish to apply for conversion of UG Degree Courses into diploma Courses. What are the merits?",
+        "Q: We would like to apply for conversion of our UG course into diploma course, but cannot do so. We have already received admissions for that.",
+        "We would like to apply for conversion of our UG Degree Courses into Diploma Courses, but would like to apply for use of existing certificate courses (cvs. P.F.I). How?"
+      ],
+      "responses": "we don’t find the nomenclature of certain Courses in Annexure 3. How can we apply?<br/>A : You have to continue at the same Level or may opt for the closure of the Course(s)."
+    },
+    {
+      "tag": "Data-19",
+      "patterns": [
+        "Q. The existing institution seeking approvation to start new Programme shall be permitted to apply for approval if there is a decision that they will not have any problems with the current application process.",
+        "Q: The existing Institution seeking approval to start new Programme shall be allowed to apply for the permanent institution but the institutional shall have to apply before the new Programme could be launched.",
+        "Q : The existing institution seeking approval to start new programme shall be permitted to apply.",
+        "Can I start new programme via My Education System?",
+        "Should existing Institution seeking approval to start new programme shall be permitted to apply and do so on account of substantial financial or material disadvantages.",
+        "Which institution would you review in order to start new programme?",
+        "How can the existing Institution applying for approval to start new programme shall be permitted to apply for.",
+        "Q : The existing institution seeking approval to start new programme shall be permitted to apply using the previous Application Form.",
+        "Q: The existing Institution seeking Approval to start new Programme shall be allowed to apply for and are considered.",
+        "Q. The existing Institution seeking approval to start new Programme shall be permitted to apply (appears upon application) after satisfactory certification."
+      ],
+      "responses": "for the same only after one batch of students pass out. We started Diploma in Pharmacy from<br/>academic year 2019-20 and we would like to apply for B. Pharmacy from 2020-21. Is it<br/>possible to apply for that? Please kindly guide us.<br/>A: The existing Institutions offering Diploma in Pharmacy shall ONLY be permitted to start<br/>Degree in Pharmacy and vice-versa in the same Institution provided that the Built-up area,<br/>Faculty: Student ratio and other requirements shall be fulfiled as specified in the Approval<br/>Process Handbook. Refer Clause 2.12 of APH 2020-21."
+    },
+    {
+      "tag": "Data-20",
       "patterns": [
         "What are the General Guidelines for all FDC Schemes?",
         "What are guidelines for all fdc schemes?",
@@ -17,7 +304,7 @@
       "responses": "General Guidelines for All FDC Schemes<br/>General Guidelines Applicable to all Faculty Development Schemes of AICTE.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf\">Click Here For More</a>"
     },
     {
-      "tag": "Data-2",
+      "tag": "Data-21",
       "patterns": [
         "What is AICTE STIPP Santuary Scheme?",
         "What is STTP/SFURTI?",
@@ -32,21 +319,67 @@
       "responses": "AICTE STTP-SFURTI<br/>STTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/sfurti/STTP_SFURTIschemedocamndedon10dec2021.pdf\">Click Here For More</a>"
     },
     {
-      "tag": "Data-3",
+      "tag": "Data-22",
       "patterns": [
-        "What is the aim of AICTE-ISTE Induction/ Refresher Programmes?",
-        "What is the funding of the AICTE-ISTE Orientation/ Refresher Programme?",
-        "What is the funding for the AICTE-ISTE Orientation/ Refresher Programme?"
+        "What is AICTE- NITTT – National Institute of Technical Training (AICTE - NITTT) SCHEME?",
+        "What is AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
+        "What is AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE-NITTT) SCHEME?",
+        "What is the SCHEME of AICTE NITTT (AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING)?",
+        "What is the AICTE-National Institute of TECHNICAL TEACHERS (AICTE-NITTT) list?",
+        "Which institute for preparing teachers in AICTE - NITTT? Which institute for NITTT for general education?",
+        "What is the AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE- NITTT) SCHEME?",
+        "What is the AICTE national initiative for technical training?",
+        "What is the AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT) syllabus?",
+        "What is the AICTE/ NITTT system?"
       ],
-      "responses": "AICTE – ISTE Orientation/ Refresher Programme<br/>The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/SchemeDocumentAICTEinduction-refresherSchemeDocument.pdf\">Click Here For More</a>"
+      "responses": "AICTE- NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT)<br/>In order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase).<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/NITTT%20Scheme%20document.pdf\">Click Here For More</a>"
     },
     {
-      "tag": "Data-4",
+      "tag": "Data-23",
       "patterns": [
-        "What is the name of the book that promotes the use of 'Scheduled Regional Language' in Technical Education?"
+        "What is AICTE-best teachers awards (Visvesvaraya best teachers award and Pritam Singh foundation awards) scheme?",
+        "What is AICTE -best teachers award schedule?",
+        "What is AICTE-Best Teachers Award? (Visvesvaraya Best Teachers Award and Pritam Singh Foundation Award)",
+        "What is SCHEME of AICTE AICTE BEST TEACHERS 2014?",
+        "What is the AICTE-Best teachers and pritam Singh Foundation Award (2012) Schedule?",
+        "Which SCHEME is Selected by AICTE-Best Teachers Award?",
+        "What is the AICTE-Best Teachers Award schedule?",
+        "What is the AICTE-Best Teachers Award (Visvesvaraya Best Teachers Award and Pritam Singh Foundation Award) SCHEME?",
+        "What is the AICTE's BEST TEACHER award (Visvesvaraya Best Teachers Award) selection?"
       ],
-      "responses": "AICTE-Technical Book Writing & Translation<br/>To promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/PAC.pdf\">Click Here For More</a>"
+      "responses": "AICTE-Best Teachers Award (Visvesvaraya Best Teachers Award and Pritam Singh Foundation Award)<br/>This scheme is aimed to recognize the meritorious faculties on Teachers Day i.e. 5th September every year at National level and encourage them to update themselves to the ever changing needs of higher education at global level and thereby becoming an effective contributor towards the society.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fds/VBTAschemedocumentjune3.pdf\">Click Here For More</a>"
+    },
+    {
+      "tag": "Data-24",
+      "patterns": [
+        "What is AICTE Quality Improvement program SCHEME?",
+        "What is the AICTE Quality Improvement program?",
+        "What is quality improvement scheme of AICTE?",
+        "What is the SCHEME of AICTE Quality Improvement?",
+        "What is quality improvement program? What is the syllabus?",
+        "What is the AICTE quality improvement program description?",
+        "What is the AICTE Quality Improvement (QA) programme?",
+        "What is the Quality Improvement Program of AICTE?",
+        "What is the Quality Improvement program?",
+        "What is the quality improvement program of the AICTE?"
+      ],
+      "responses": "AICTE-Quality Improvement program<br/>The main objective of the programme is to upgrade the qualification of the faculty members of the degree and polytechnic level institutions in the country. Financial assistance  @Rs. 15000/-PM and Rs. 5000/ PM are given to Ph.D/ M.Tech Scholars. Presently 114 QIP centers are operational throughout the country.<br/>For More Information : htt ps://www.aicte-india.org/sites/default/files/QIPSchemeDocumentNovember2020.pdf"
+    },
+    {
+      "tag": "Data-25",
+      "patterns": [
+        "What is AICTE-RESEARCH PROMOTION SCHEME?",
+        "What is AICTE RESEARCH PROMOTION SCHEME (RPS) SCHEME?",
+        "What is AICTE-RESEARCH PROMOTION SCHEME (RPS)?",
+        "What is the AICTE Research Professions Scheme (RPS)? How is it related?",
+        "What is the AICTE Research Promotion Scheme and what is its purpose?",
+        "What is the AICTE RESEARCH PROMOTION SCHEME (RPS)?",
+        "What is the AICTE search promotion scheme (RPS)?",
+        "What is the AICTE-RESEARCH PROMOTION SCHEME (RPS) schedule?",
+        "What is the AICTE Search Professions Committee (AICTE)?",
+        "What is the AICTE Recruitment Promotion Scheme, the RPS Scheme for India (ASEAN)?"
+      ],
+      "responses": "AICTE-RESEARCH PROMOTION SCHEME (RPS)<br/>This scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master’s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/RPSSchemeDocument_Nov2020.pdf\">Click Here For More</a>"
     }
   ]
 }
-
