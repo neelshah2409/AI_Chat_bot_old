@@ -41,7 +41,8 @@ except Exception as e:
 
 try:
     from question_generation.paraphrase import run_main, parafromqueans
-except:
+except Exception as e:
+    print(e)
     print("Run main load failed")
 
 
