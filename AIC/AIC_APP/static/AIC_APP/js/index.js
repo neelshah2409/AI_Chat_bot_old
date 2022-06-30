@@ -1,7 +1,6 @@
 $(document).ready(function() {
     let feedback = false,
         suggest = false;
-    let audio = new Audio(sound);
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -41,7 +40,6 @@ $(document).ready(function() {
             },
 
             success: function(data) {
-                audio.play();
                 let temp = $(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
                                 <div class="icon col-2">
                                     ${chatbot}
@@ -64,7 +62,7 @@ $(document).ready(function() {
             error: function(data) {
                 $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
                                    <div class="icon col-2">
-                                       <i class="fa fa-user"></i>
+                                       ${chatbot}
                                    </div>
                                    <div class="msg text-start">
                                        <p>sorry!! we can not help you</p>
@@ -115,7 +113,6 @@ $(document).ready(function() {
             data: { messege: input },
             success: function(response) {
                 if (response == "success") {
-                    audio.play();
                     $(".box").append(`<div class="item left d-flex justify-content-start gap-2 align-items-center m-3 col-10">
                                        <div class="icon col-2">
                                            ${chatbot}
@@ -251,7 +248,6 @@ $(document).ready(function() {
                     if (response == "failed") {
                         alert("Failed");
                         $(".loadingBox").fadeOut();
-                        window.location.href = "QueShow";
                     }
                 },
                 error: function(error) {
@@ -355,4 +351,74 @@ $(document).ready(function() {
 
 
     // })
+
+    $(document).on("submit", "#linkForm", function(e) {
+        e.preventDefault();
+        $(".processing").html("Processing").attr("x", "325");
+        let input = $("#siteLink").val();
+        $(".loadingBox").fadeIn();
+        $.ajax({
+            type: "POST",
+            url: "/linkSubmit",
+            data: { link: input },
+            success: function(response) {
+                if (response == "success") {
+                    $(".loadingBox").fadeOut();
+                    window.location.href = "QueShow";
+                }
+                if (response == "failed") {
+                    alert("Failed");
+                    $(".loadingBox").fadeOut();
+                }
+            },
+            error: function(error) {
+                alert("Process Failed");
+                $(".loadingBox").fadeOut();
+            }
+        });
+    })
+
+    $(document).on("submit", "#csvUpload", function(e) {
+        e.preventDefault();
+        console.log(this);
+        // fd.append('file',this.files[0]);
+        // console.log($($($($(this).children()[0]).children()[0]).children()[0]).children()[0].val())
+        console.log();
+        let fd = new FormData();
+        fd.append('file', $('#choose_file').val());
+        // var props=$('#choose_file').prop('files'),
+        //     file=props[0]
+        // alert(file.name)
+        // alert(file.size)
+        // alert(file.type)
+        $(".processing").html("Processing").attr("x", "325");
+        // let input = $($(this).children()[1]).val();
+        $(".loadingBox").fadeIn();
+        $.ajax({
+            type: "POST",
+            method: "POST",
+            url: "/convertCsv",
+            data: fd,
+            cache: false,
+            contentType: false,
+            processData: false,
+            enctype: 'multipart/form-data',
+            success: function(response) {
+                if (response == "success") {
+                    $(".loadingBox").fadeOut();
+                    window.location.href = "QueShow";
+                }
+                if (response == "failed") {
+                    alert("Failed");
+                    $(".loadingBox").fadeOut();
+                }
+            },
+            error: function(error) {
+                alert("Process Failed");
+                $(".loadingBox").fadeOut();
+            }
+        });
+    })
+
+
 })

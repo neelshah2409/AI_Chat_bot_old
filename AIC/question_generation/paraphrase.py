@@ -104,10 +104,11 @@ def parafromqueans(anslist, quelist):
     with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
         data = json.load(json_file)
         temp = data["intents"]
-        iterate = 0
+        iterate = 1
+        length = len(temp)
         for i in MainParaQueList:
             print(i)
-            y = {"tag": f"Data-{str(iterate + 1)}", "patterns": i[0], "responses": anslist[iterate]}
+            y = {"tag": f"Data-{str(iterate + length)}", "patterns": i[0], "responses": anslist[iterate-1]}
             temp.append(y)
             iterate+=1
         write_json(data)

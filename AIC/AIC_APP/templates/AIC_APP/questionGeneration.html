@@ -23,24 +23,7 @@
 </head>
 
 <body class="position-relative">
-    <section class="position-absolute w-100 h-100 text-center top-0 loadingBox" style="z-index: 1111!important;display: none;">
-        <div class="background"></div>
-        <div class="h-100 w-100 d-flex align-items-center overflow-hidden">
-            <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" class="w-100" style="transform:scale(1.2) translateY(-15%);">
-                <defs>
-                
-                 <line class="mark" x1="0" y1="0" x2="0" y2="0" fill="none" stroke="#5BB4D8" stroke-miterlimit="10" stroke-linecap="none" stroke-width="12"/>
-                  
-                 </defs>
-               <g class="container1"/>
-               <g class="container2"/>
-               <text x="325" y="450" letter-spacing="4" class="processing">Processing</text>
-              </svg>
-        </div>
-    </section>
-    <div class="row m-0 p-0">
-        <section class="col-12 col-sm-12 col-md-8 overflow-hidden">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="371.16px" height="310.94px" style="overflow:visible; position:absolute; max-width:100%; height:100%; left:-4%;" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="371.16px" height="310.94px" style="overflow:visible; position:absolute; max-width:100%; height:100%; left:-4%;" xml:space="preserve">
                 <g style="transform: scale(2.7);">
                     <g>
                     <g>
@@ -641,60 +624,42 @@
 
 
             </svg>
-        </section>
-        <div class="modal fade" id="csvmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="csvmodalLabel">Upload CSV file</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="choose_file">
-                                        <label class="custom-file-label" for="choose_file">Choose file</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text" id="upload">Upload</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Submit</button>
-                    </div>
-                </div>
-            </div>
+    <section class="position-absolute w-100 h-100 text-center top-0 loadingBox" style="z-index: 1111!important;display: none;">
+        <div class="background"></div>
+        <div class="h-100 w-100 d-flex align-items-center overflow-hidden">
+            <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" class="w-100" style="transform:scale(1.2) translateY(-15%);">
+                <defs>
+                
+                 <line class="mark" x1="0" y1="0" x2="0" y2="0" fill="none" stroke="#5BB4D8" stroke-miterlimit="10" stroke-linecap="none" stroke-width="12"/>
+                  
+                 </defs>
+               <g class="container1"/>
+               <g class="container2"/>
+               <text x="325" y="450" letter-spacing="4" class="processing">Processing</text>
+              </svg>
         </div>
+    </section>
+    <div class="row m-0 p-0">
+        <section class="col-12 col-sm-12 col-md-8 overflow-hidden">
+
+        </section>
         <div class="modal fade" id="linkmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="linkModalLabel">Give your link</h5>
+                        <h5 class="modal-title" id="linkModalLabel">Provide Link For Question Generation</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="linkForm">
                             <div class="form-group">
-                                <label for="link-name" class="col-form-label">Link:</label>
-                                <input type="text" class="form-control" id="link-name">
+                                <label for="link-name" class="col-form-label">Link :</label>
+                                <input type="text" class="form-control" id="siteLink">
                             </div>
-
+                            <button type="submit" class="btn btn-primary d-block ms-auto">Submit</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </div>
@@ -704,8 +669,7 @@
             <div class="d-flex justify-content-center justify-content-md-end align-items-center" style="height: 100vh;" id="temp">
                 <div id="chatbox" class="questionGeneration">
                     <div class="d-flex justify-content-end flex-wrap gap-3">
-                        <button type="button" class="btn btn-primary button-29" data-toggle="modal" data-target="#linkmodal" data-whatever="@mdo">linkmodal</button>
-                        <button type="button" class="btn btn-primary button-29" data-toggle="modal" data-target="#csvmodal" data-whatever="@fat">csvmodal</button>
+                        <button type="button" class="btn btn-primary button-29" data-toggle="modal" data-target="#linkmodal" data-whatever="@mdo">Link</button>
 
 
                         <!-- <div class="modal fade" id="linkmodal" tabindex="-1" role="dialog" aria-labelledby="linkmodal" aria-hidden="true">
@@ -786,12 +750,9 @@
                         <a href="/" class="text-decoration-none col-12 col-md-2 col-lg-2"><button class="button-29" role="button">Yo-Bot</button></a>
                     </div>
                     <div class="card position-relative" style="background: transparent; border:0px;">
-                        <div class="card-header">
-
-                        </div>
-                        <div class="card-header my-auto px-2" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">
+                        <div class="card-header my-auto p-2" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">
                             <h5 class="card-title text-center text-light py-2 my-auto">Question-Answer Generator</h5>
-                            <ul class="nav nav-tabs card-header-tabs nav-justified" id="tabs">
+                            <ul class="nav nav-tabs card-header-tabs nav-justified mt-2" id="tabs">
                                 <li class="nav-item d-flex justify-content-center align-items-center">
                                     <a class="active nav-link py-2 active h-100 d-flex align-items-center justify-content-center p-0 text-dark" href="#questionAnswers" data-bs-toggle="tab">Question-Answer</a>
                                 </li>
@@ -890,6 +851,8 @@
 <script src="{% static 'AIC_APP/js/question.js' %}"></script>
 <script src="{% static 'AIC_APP/js/TweenMax.min.js' %}"></script>
 <script src="{% static 'AIC_APP/js/loading.js' %}"></script>
-
+<script>
+    let sound = null;
+</script>
 
 </html>

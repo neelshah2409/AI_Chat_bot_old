@@ -15,6 +15,8 @@ urlpatterns = [
     path('onlyAnswersData', views.onlyAnswersData, name="onlyAnswersData"),
     path('questionAnswerData', views.questionAnswerData, name="questionAnswerData"),
     # path('getSuggestions', views.getSuggestions, name="getSuggestions"),
-    path('improveFeatures', views.improveFeatures, name="improveFeatures")
+    path('linkSubmit', views.linkSubmit, name="linkSubmit"),
+    path('convertCsv', views.convertCsv, name="convertCsv"),
+    path('improveFeatures', views.improveFeatures, name="improveFeatures"),
 
 ]

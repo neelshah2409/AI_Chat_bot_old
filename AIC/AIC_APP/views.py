@@ -41,7 +41,8 @@ except Exception as e:
 
 try:
     from question_generation.paraphrase import run_main, parafromqueans
-except:
+except Exception as e:
+    print(e)
     print("Run main load failed")
 
 
@@ -256,6 +257,27 @@ def questionAnswerData(request):
 #     for i in fetch:
 #         suggest.append(i.questions[:])
 #     return HttpResponse(str({"suggestions":suggest}))
+
+def linkSubmit(request):
+    from AIC_APP.training.Scrap import getData
+    data = request.POST.get("link", "default")
+    siteData = getData(data)
+    print(siteData)
+    file = open(f'{os.getcwd()}{os.sep}siteData.txt', 'a')
+    file.writelines(siteData)
+    file.close()
+    runcombine()
+    return HttpResponse("success")
+
+def convertCsv(request):
+    # csvPath = request.POST.get("file","default")
+    csvPathFile = request.FILES('file')
+    print(csvPathFile)
+    # from AIC_APP.training.convertCSV import csvData
+    # siteData = csvData(csvPath)
+    # print(siteData)
+
+    return HttpResponse("success")
 
 if __name__ == '__main__':
     runcombine()
