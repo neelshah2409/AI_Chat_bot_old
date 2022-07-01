@@ -16,7 +16,8 @@ urlpatterns = [
     path('questionAnswerData', views.questionAnswerData, name="questionAnswerData"),
     # path('getSuggestions', views.getSuggestions, name="getSuggestions"),
     path('linkSubmit', views.linkSubmit, name="linkSubmit"),
-    path('convertCsv', views.convertCsv, name="convertCsv"),
+    # path('convertCsv', views.convertCsv, name="convertCsv"),
+    path('csvSubmit', views.csvSubmit, name="csvSubmit"),
     path('improveFeatures', views.improveFeatures, name="improveFeatures"),
 
 ]
