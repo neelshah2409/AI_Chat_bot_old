@@ -420,5 +420,30 @@ $(document).ready(function() {
         });
     })
 
+    $(document).on("submit", "#csvForm", (e)=>{
+        e.preventDefault();
+        $(".processing").html("Uploading File").attr("x", "306");
+        $(".loadingBox").fadeIn();
+        let form = $("#csvForm");
+        let formData = new FormData(form[0]);
+        $.ajax({
+            type: "POST",
+            url: "/csvSubmit",
+            data: formData,
+            processData:false,
+            contentType:false,
+            MimeType:"multipart/form-data",
+            success:(response)=> {
+                $(".loadingBox").fadeOut();
+                window.location.href = "QueShow";
+            },
+            error: (e)=>{
+                $(".loadingBox").fadeOut();
+                alert("Error")
+            }
+        });
+
+    })
+
 
 })

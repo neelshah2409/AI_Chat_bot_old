@@ -8,6 +8,9 @@ from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
 from django.db import connection
+from django.core.files.storage import FileSystemStorage
+from AIC_APP.training.convertCSV import csvData
+
 
 # This is for db connection you should use this as a db insertion and updation
 from .models import Question_ans
@@ -98,7 +101,7 @@ def get_response(intent_list, intent_json):
 
 
 def index(request):
-    return render(request, 'AIC_APP/background.html')
+    return render(request, 'AIC_APP/index.html')
 
 
 def takeOutputdp(request):
@@ -269,15 +272,23 @@ def linkSubmit(request):
     runcombine()
     return HttpResponse("success")
 
-def convertCsv(request):
-    # csvPath = request.POST.get("file","default")
-    csvPathFile = request.FILES('file')
-    print(csvPathFile)
-    # from AIC_APP.training.convertCSV import csvData
-    # siteData = csvData(csvPath)
-    # print(siteData)
+# def convertCsv(request):
+#     # csvPath = request.POST.get("file","default")
+#     csvPathFile = request.FILES('file')
+#     print(csvPathFile)
+#     # siteData = csvData(csvPath)
+#     # print(siteData)
+#
+#     return HttpResponse("success")
 
-    return HttpResponse("success")
+
+def csvSubmit(request):
+    file = request.FILES.get("csvfile")
+    fs = FileSystemStorage()
+    fname = fs.save(file.name,file)
+    siteData = csvData(fs.url(fname))
+    return HttpResponse(fs.url(fname))
 
 if __name__ == '__main__':
     runcombine()
+
