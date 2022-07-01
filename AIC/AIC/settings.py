@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-yzl-7%j@-npa!c+vugr@5v#36$qfw75#-&m+wg)$&w2mlz2int
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1",".herokuapp.com"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -96,12 +96,12 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'manager',
+        'PASSWORD': '',
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -148,5 +148,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-WHITENOISE_USE_FINDERS = True
-STATICFILES_STORAGE = 'whitenoise.storage.ComprassedManifestStaticFilesStorage'
+# WHITENOISE_USE_FINDERS = True
+# STATICFILES_STORAGE = 'whitenoise.storage.ComprassedManifestStaticFilesStorage'
