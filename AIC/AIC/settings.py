@@ -14,6 +14,8 @@ import  os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import dj_database_url
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -26,8 +28,7 @@ SECRET_KEY = 'django-insecure-yzl-7%j@-npa!c+vugr@5v#36$qfw75#-&m+wg)$&w2mlz2int
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["127.0.0.1",".herokuapp.com"]
 
 # Application definition
 
@@ -59,7 +60,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'AIC.urls'
 
-print(os.path.join(BASE_DIR, '/AIC_APP/templates'))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -100,7 +100,8 @@ DATABASES = {
     }
 }
 
-
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -146,3 +147,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+WHITENOISE_USE_FINDERS = True
+STATICFILES_STORAGE = 'whitenoise.storage.ComprassedManifestStaticFilesStorage'

@@ -287,7 +287,6 @@ def csvSubmit(request):
     fs = FileSystemStorage()
     fname = fs.save(file.name,file)
     siteData = csvData(fs.url(fname))
-    print(siteData)
     return HttpResponse(fs.url(fname))
 
 if __name__ == '__main__':
