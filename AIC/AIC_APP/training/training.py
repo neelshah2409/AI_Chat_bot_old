@@ -6,7 +6,8 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
-from keras.optimizers import SGD
+# from tensorflow.keras.optimizers import SGD
+from keras.optimizers import gradient_descent_v2
 import os
 
 # nltk.download('punkt')
@@ -65,7 +66,7 @@ def trainTheChatBot():
     model.add(Dense(64, activation="relu"))
     model.add(Dropout(0.5))
     model.add(Dense(len(train_y[0]), activation='softmax'))
-    sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+    sgd = gradient_descent_v2.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
     hist = model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
