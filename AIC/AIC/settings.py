@@ -63,7 +63,7 @@ ROOT_URLCONF = 'AIC.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'/AIC_APP/templates')],
+        'DIRS': [os.path.join(BASE_DIR,'/AIC_APP/templates'),os.path.join(BASE_DIR,'/AIC_APP/training/modelData')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
