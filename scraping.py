@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 import requests as r
 
 
@@ -79,18 +80,19 @@ i = 0
 
 # Faculty Development Scheme
 ##########################################################
-html_page = requests.get("https://www.aicte-india.org/schemes/staff-development-schemes").text
+html_page = requests.get("https://internship.aicte-india.org").text
 
 scrap = BeautifulSoup(html_page,"lxml")
 
-student_schemes = scrap.find("div",class_="schemes_html lzt_html")
+student_schemes = scrap.find("div",class_="state")
 temp=""
 queans=[]
+que=[]
+ans=[]
 # i=0
 for schemes in student_schemes.find_all("div"):
     with open('scrap.txt','a') as f:
         f.writelines(f"What is {schemes.h5.text.strip()} SCHEME?\n")
-        print(f"What is {schemes.h5.text.strip()} SCHEME?")
         if temp != "":
             temp = temp+f", {schemes.h5.text.strip()}"
         else:
@@ -98,38 +100,45 @@ for schemes in student_schemes.find_all("div"):
 
         text = temp = schemes.p.text.strip().replace('\n',' ')
         if schemes.ul is not None:
-            tempDict = {"tag": f"Data-{i}", "patterns": [
-                f"What is {schemes.h5.text.strip()}?"
-            ],
-                        "responses": f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : <a href = '{schemes.ul.li.a['href'].replace(' ', '')}'>{schemes.ul.li.a.text.strip()}</a>"}
-            f.writelines(f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : {schemes.ul.li.a['href'].replace(' ','')}\n")
+            # tempDict = {"tag": f"Data-{i}", "patterns": [
+            #     f"What is {schemes.h5.text.strip()}?"
+            # ],
+            #             "responses": f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : <a href = '{schemes.ul.li.a['href'].replace(' ', '')}'>{schemes.ul.li.a.text.strip()}</a>"}
+            # f.writelines(f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : {schemes.ul.li.a['href'].replace(' ','')}\n")
+            que.append(f"What is {schemes.h5.text.strip()}?") #NEW
+            ans.append(f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : <a href = '{schemes.ul.li.a['href'].replace(' ', '')}'>{schemes.ul.li.a.text.strip()}</a>") #NEW
 
         else:
-            tempDict = {"tag": f"Data-{i}", "patterns": [
-                f"What is {schemes.h5.text.strip()}?"
-            ], "responses": f"{schemes.h5.text.strip()} {schemes.p.text.strip()}"}
-            f.writelines(f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : {schemes.ul.li.a['href'].replace(' ', '')}\n")
+            # tempDict = {"tag": f"Data-{i}", "patterns": [
+            #     f"What is {schemes.h5.text.strip()}?"
+            # ], "responses": f"{schemes.h5.text.strip()} {schemes.p.text.strip()}"}
+            # f.writelines(f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : {schemes.ul.li.a['href'].replace(' ', '')}\n")
+            que.append(f"What is {schemes.h5.text.strip()}?") #NEW
+            ans.append(f"{schemes.h5.text.strip()}\n{temp}\nFor More Information : {schemes.ul.li.a['href'].replace(' ', '')}\n") #NEW
         i += 1
         f.writelines("\n")
-        queans.append(tempDict)
+        # queans.append(tempDict)
 
 
-with open('scrap.txt','a') as f:
-    f.writelines(f"What are the available schemes for student ?\n")
-    f.writelines(f"Available Schemes Are : {temp}")
-    # tempDict = {"tag": f"Data-{i}", "patterns": [
-    #             f"What are the available schemes for student ?"
-    #         ], "responses": f"Available Schemes Are : {temp}"}
-    f.writelines("\n")
+# with open('scrap.txt','a') as f:
+#     f.writelines(f"What are the available schemes for student ?\n")
+#     f.writelines(f"Available Schemes Are : {temp}")
+#     # tempDict = {"tag": f"Data-{i}", "patterns": [
+#     #             f"What are the available schemes for student ?"
+#     #         ], "responses": f"Available Schemes Are : {temp}"}
+#     f.writelines("\n")
 
 i += 1
-queans.append(tempDict)
+# queans.append(tempDict)
 
 # print(queans)
 
 
+csvData = {"que" : que, "ans" : ans}
 
+df = pd.DataFrame(csvData)
 
+print(df.to_csv("events.csv",index=False))
 
 
 
