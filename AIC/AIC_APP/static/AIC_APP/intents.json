@@ -1,12 +1,36 @@
 {
-  "intents": [
-    {
-      "tag": "Data-2",
-      "patterns": [
-        "What is LDCE? What is its function?",
-        "What is the LDCE?"
-      ],
-      "responses": "LDCE is a College"
-    }
-  ]
+    "intents": [
+        {
+            "tag": "Data-0",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "hiii",
+                "hey",
+                "heya",
+                "hola",
+                "how are you?",
+                "helloo"
+            ],
+            "responses": "Welcome to Yo-Bot"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is mango? How does it differ from other fruits?",
+                "What's mango?",
+                "What's a mango?",
+                "What is mango and how is it made?",
+                "What is mango in a scientific perspective?"
+            ],
+            "responses": "It is fruit"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "Who is a helpful and careful boy?"
+            ],
+            "responses": "Harshil is a helpful and carefull boy."
+        }
+    ]
 }
