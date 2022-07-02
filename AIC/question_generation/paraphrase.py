@@ -7,7 +7,11 @@ import os
 intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
+# for removing the warning of the torch.cuda .....(added)
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 model = model.to(device)
 
 
@@ -112,13 +116,6 @@ def parafromqueans(anslist, quelist):
             temp.append(y)
             iterate+=1
         write_json(data)
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':

@@ -5,7 +5,10 @@
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/intents.json" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/classes.pkl" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/intents.json" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/signin.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/signup.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/templates/AIC_APP/words.pkl" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/AIC/AIC_APP/tokens.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/training/classes.pkl" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/training/intents.json" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/AIC_APP/training/words.pkl" charset="windows-1252" />
@@ -13,5 +16,7 @@
     <file url="file://$PROJECT_DIR$/AIC/OneQueToManyQues/intents.json" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/inputText.txt" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/AIC/intents.json" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/AIC/siteData.txt" charset="US-ASCII" />
+    <file url="PROJECT" charset="windows-1252" />
   </component>
 </project>
