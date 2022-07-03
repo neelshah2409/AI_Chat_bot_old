@@ -135,9 +135,11 @@ def takeOutputdp(request):
     return HttpResponse(res)
 
 
-def linkingAllFunc():
-    with open(f'{os.getcwd()}{os.sep}inputText.txt', 'r') as file:
+def linkingAllFunc(filename):
+    print("ahiaaaaaa")
+    with open(f'{os.getcwd()}{os.sep}{filename}', 'r') as file:
         data = file.read().replace('\n', '')
+        print(f"this is data {data}")
 
     if data:
         intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
@@ -153,15 +155,15 @@ def linkingAllFunc():
                             }''')
         intentsfile.close()
         print("Question is generating now...")
-        runnow()
+        runnow(filename)
         return True
     else:
         return False
 
 
-def runcombine():
+def runcombine(filename):
     new_data = []
-    resutlLink = linkingAllFunc()
+    resutlLink = linkingAllFunc(filename)
     if (resutlLink):
         new_data = []
         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
@@ -170,7 +172,6 @@ def runcombine():
         i = 0
         for entry in temp:
             if i == 0:
-                pass
                 i += 1
             else:
                 new_data.append(entry)
@@ -189,10 +190,11 @@ def runcombine():
 def fetchInputTextArea(request):
     inputText = request.POST.get('inputText', 'default')
     print(inputText)
-    file = open(f'{os.getcwd()}{os.sep}inputText.txt', 'a')
+    file = open(f'{os.getcwd()}{os.sep}inputText', 'a')
     file.writelines(inputText)
     file.close()
-    runcombine()
+    print("this file is done")
+    runcombine('inputText')
     return HttpResponse("success")
 
 
@@ -211,7 +213,7 @@ def improveFeatures(request):
         file.close()
         return HttpResponse("success")
     except Exception as e:
-        return HttpResponse("failed")
+        return HttpResponse(f"failed")
 
 
 
@@ -290,10 +292,13 @@ def linkSubmit(request):
     data = request.POST.get("link", "default")
     siteData = getData(data)
     print(siteData)
-    file = open(f'{os.getcwd()}{os.sep}siteData.txt', 'a')
-    file.writelines(siteData)
-    file.close()
-    runcombine()
+    # file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
+    # file.writelines(siteData)
+    # file.close()
+
+
+
+    runcombine('sitedata')
     return HttpResponse("success")
 
 # def convertCsv(request):
@@ -312,6 +317,15 @@ def csvSubmit(request):
     fname = fs.save(file.name, file)
     siteData = csvData(fs.url(fname))
     print(siteData)
+    # {'questions': ['que1', 'que2', 'que3', 'que4', 'que5', 'que6', 'que7', 'que8', 'que9', 'que10',
+    # 'que11', 'que12', 'que13', 'que14', 'que15'], 'answers': ['ans1', 'ans2', 'ans3', 'ans4',
+    # 'ans5', 'ans6', 'ans7', 'ans8', 'ans9', 'ans10', 'ans11', 'ans12', 'ans13', 'ans14', 'ans15']}
+    anslistfromcsv = siteData['answers']
+    quelistfromcsv = siteData['questions']
+    if (len(anslistfromcsv) == len(quelistfromcsv)):
+        parafromqueans(anslistfromcsv, quelistfromcsv)
+    else:
+        return (HttpResponse("Csv File contain unstructured data please check the again"))
     return HttpResponse(fs.url(fname))
 
 
