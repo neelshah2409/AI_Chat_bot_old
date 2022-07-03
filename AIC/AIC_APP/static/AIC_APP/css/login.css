@@ -1,0 +1,210 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDEE9;
+    background-size: contain;
+    background-image: linear-gradient(225deg, #B5FFFC 0%, #FFDEE9 100%);
+}
+.authentication_box{
+    width: 60vw;
+    box-shadow: 4px 4px 7px 2px rgba(47, 47, 47, 0.461);
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: 500px;
+    position: relative;
+}
+@media (max-width:850px) {
+    .authentication_box{
+        width: 100vw;
+    }
+}
+
+.login,.signup{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.login{
+    z-index: 2;
+}
+
+.signup{
+    z-index: 2;
+}
+
+.loginForm, .signupForm{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login h1,.signup h1{
+    font-weight: bold;
+    font-family: Chalkboard SE;
+}
+
+.login p,
+.signup p{
+    font-family: "Devanagari Sangam MN";
+    text-align: center;
+    color: rgb(135, 135, 135);
+    font-size: 15px;
+}
+
+.login input::placeholder,
+.signup input::placeholder{
+    padding: 0.1rem;
+    color: rgb(122, 122, 122);
+}
+
+.login input,
+.signup input{
+    background-color: rgb(227, 227, 227);
+    border-radius: 0.2rem;
+    outline:none;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0rem;
+    width: 75%;
+}
+
+.login a,
+.signup a{
+    font-family: "Devanagari Sangam MN";
+    text-align: center;
+    color: rgb(135, 135, 135);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.signinBtn,.signupBtn{
+    background: none;
+    border: none;
+    border-radius: 2rem;
+    background-color: #d94a2f;
+    padding: 0.4rem 3rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Kohinoor Gujarati';
+    font-size: 14px;
+}
+
+.overlay{
+    position: relative;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    transition: 1s ease;
+    z-index: 10 !important;
+}
+
+.overlay-left,.overlay-right{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    transition: 1s ease;
+}
+.overlay-left{
+    z-index: 2 !important;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-size: cover;
+}
+.overlay-right{
+    z-index: 1 !important;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    background-size: 200%;
+}
+
+.left-content,
+.right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.right-content h1,
+.left-content h1
+{
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.login-active .signup{
+    transform: translateX(0%) !important;
+    z-index: -1!important;
+}
+.left-active .login{
+    transform: translateX(0%) !important;
+    z-index: 6!important;
+}
+.right-active .login{
+    transform: translateX(100%) !important;
+    z-index: -1!important;
+}
+.right-active .signup{
+    transform: translateX(100%) !important;
+    z-index: 6!important;
+}
+
+.overlay-right-active{
+    left: 50%;
+}
+.overlay-left-active{
+    left: 0%;
+}
+
+.overlay-right-active .overlay-left{
+    transform: translateX(100%) !important;
+    z-index: -1 !important;
+}
+.overlay-right-active .overlay-right{
+    transform: translateX(100%) !important;
+    background-position: 50% 0%;
+    z-index: 4 !important;
+}
+
+.overlay-left-active .overlay-left{
+    transform: translateX(100%) !important;
+    z-index: 4 !important;
+}
+.overlay-left-active .overlay-right{
+    transform: translateX(100%) !important;
+    z-index: -1 !important;
+}
+
+.toogle-btn{
+    background: none;
+    background: transparent;
+    border : 1px solid #d92f69;
+    border-radius: 2rem;
+    background-color: transparent;
+    padding: 0.4rem 3rem;
+    color: #d92f69;
+    font-weight: bold;
+    font-family: 'Kohinoor Gujarati';
+    font-size: 14px;
+    transition: 0.4s ease;
+}
+
+.toogle-btn:hover{
+    background-color: #d92f69;
+    border: 1px solid #d92f69;
+
+    color: aliceblue;
+}

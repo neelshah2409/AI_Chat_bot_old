@@ -21,8 +21,9 @@
 
 <body style="background-image: linear-gradient(225deg, #B5FFFC 0%, #B5FFFC 100%);">
     {% include 'AIC_APP/loading.html' %}
-    <div class="d-flex justify-content-around flex-wrap w-75 mx-auto my-2">
-        <span id="trainModel" class="text-decoration-none ms-auto"><button class="button-29" role="button">Train Your Model</button></span>
+    <div class="d-flex justify-content-between mx-auto col-9 mt-4">
+        <span id="backButton" class="text-decoration-none"><a href="/QueGenerator" class="button-29 text-light rounded-circle" style="height:50px; width:50px;" role="button"><i class="bi bi-arrow-left fs-1"></i></a></span>
+        <span id="trainModel" class="text-decoration-none"><button class="button-29" role="button">Train Your Model</button></span>
     </div>
     <div id="questionGenerationdisplay" class="d-flex justify-content-center flex-column align-items-center"></div>
 </body>

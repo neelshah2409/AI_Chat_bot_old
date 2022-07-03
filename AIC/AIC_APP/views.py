@@ -309,7 +309,7 @@ def linkSubmit(request):
 def csvSubmit(request):
     file = request.FILES.get("csvfile")
     fs = FileSystemStorage()
-    fname = fs.save(file.name,file)
+    fname = fs.save(file.name, file)
     siteData = csvData(fs.url(fname))
     print(siteData)
     return HttpResponse(fs.url(fname))
@@ -331,7 +331,7 @@ def convertCsv(request):
 
 
 def Gotoauth(request):
-    return render(request, "AIC_APP/authentication.html")
+    return render(request, "AIC_APP/login.html")
 
 
 def signup(request):
@@ -369,8 +369,7 @@ def signup(request):
         # myuser.is_active = False
         myuser.is_active = False
         myuser.save()
-        messages.success(request,
-                         "Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
+        messages.success(request,"Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
 
         # # Welcome Email
         # subject = "Welcome to GFG- Django Login!!"
@@ -398,9 +397,9 @@ def signup(request):
         # email.fail_silently = True
         # email.send()
 
-        return redirect('signin')
+        return redirect('login')
 
-    return render(request, "AIC_APP/signup.html")
+    return render(request, "AIC_APP/login.html?signup=true")
 
 
 def activate(request, uidb64, token):
@@ -416,12 +415,12 @@ def activate(request, uidb64, token):
         myuser.save()
         login(request, myuser)
         messages.success(request, "Your Account has been activated!!")
-        return redirect('signin')
+        return redirect('login')
     else:
         return render(request, 'activation_failed.html')
 
 
-def signin(request):
+def login(request):
     if request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
@@ -436,9 +435,9 @@ def signin(request):
             return redirect('Home')
         else:
             messages.error(request, "Bad Credentials!!")
-            return render(request, "AIC_APP/signin.html")
+            return render(request, "AIC_APP/login.html")
 
-    return render(request, "AIC_APP/signin.html")
+    return render(request, "AIC_APP/login.html")
 
 
 def signout(request):
