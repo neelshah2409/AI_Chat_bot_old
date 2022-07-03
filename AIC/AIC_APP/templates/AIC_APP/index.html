@@ -18,13 +18,15 @@
         }
     </style>
     <link rel="stylesheet" href="{% static 'AIC_APP/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'AIC_APP/css/navbar.css' %}">
 
 </head>
 
 <body>
+    {% include 'AIC_APP/navbar.html' %}
     {% if user.is_authenticated %}
     <div class="row m-0 p-0">
-        <section class="col-12 col-sm-12 col-md-8 overflow-hidden">
+        <section class="col-12 col-sm-12 col-md-8 overflow-hidden" style="opacity: 1">
             {% include 'AIC_APP/background.html' %}
         </section>
         <main class="col-12" style="z-index:1!important">
