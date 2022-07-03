@@ -431,6 +431,7 @@ def signin(request):
             login(request, user)
             fname = user.first_name
             print(fname)
+            request.session['username']=username
             # messages.success(request, "Logged In Sucessfully!!")
             return redirect('Home')
         else:

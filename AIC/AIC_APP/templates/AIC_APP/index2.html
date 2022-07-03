@@ -1,16 +1,21 @@
-<!--<button class="btn" id="QuestionGeneration">Question-Generation</button>-->
-<!--<button type="button" class="btn btn-primary" id="QuestionGeneration"><a href="#">Question-Generation</a></button>-->
-
-<!-- HTML !-->
-
-
-
 <div class="wrapper text-end">
     <a href="/QueGenerator" class="text-decoration-none"><button class="button-29" role="button">Question-Generation</button></a>
         <a href="/signout" class="text-decoration-none"><button class="button-29" role="button">LogOut</button></a>
 
-    <div class="title">Yo Bot
-        <a href="#" class="position-absolute" style="left: 90%; top:0;" id="feedback">
+    <div class="title sticky-top d-flex justify-content-around align-items-center">
+        <div class="dropdown">
+            <button class="btn p-0 dropdown-toggle text-light" style="outline:none !important; box-shadow:none!important;" dropdown-toggle="dropdown" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" id="user">
+                <i class="bi bi-person-circle text-light fs-4 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Feedback"></i>
+            </button>
+            <ul class="dropdown-menu profile-menu dropdown-menu-dark dropdown-menu-sm dropend">
+              <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p class="col-8 m-0">{{request.session.username}}</p></a></li>
+              <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+            </ul>
+        </div>
+        <div class="mx-4"></div>
+        Yo Bot
+        <div class="mx-4"></div>
+        <a href="#" id="feedback">
             <i class="fa fa-commenting text-light position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Feedback"></i>
         </a>
     </div>
