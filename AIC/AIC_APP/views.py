@@ -397,7 +397,7 @@ def signup(request):
         # email.fail_silently = True
         # email.send()
 
-        return redirect('login')
+        return render(request, "AIC_APP/login.html")
 
     return render(request, "AIC_APP/login.html?signup=true")
 
