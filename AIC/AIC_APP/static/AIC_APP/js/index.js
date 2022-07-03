@@ -299,7 +299,7 @@ $(document).ready(function() {
             success: function(response) {
                 if (response == "success") {
                     $(".loadingBox").fadeOut();
-                    window.location.href = "/";
+                    window.location.href = "/home";
                 }
                 if (response == "failed") {
                     alert("Training Failed");

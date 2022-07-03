@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('home', views.index, name="Home"),
-    path('', views.login, name="login"), #login first page
+    path('', views.signin, name="signin"), #login first page
     path('fetchInputTextArea', views.fetchInputTextArea, name="fetchInputTextArea"),
     path('QueGenerator', views.QueGenerator, name="QueGenerator"),
     path('takeOutputdp', views.takeOutputdp, name="takeOutput"),
@@ -21,7 +21,7 @@ urlpatterns = [
     path('improveFeatures', views.improveFeatures, name="improveFeatures"),
     path('signup', views.signup, name='signup'),
     path('activate/<uidb64>/<token>', views.activate, name='activate'),
-    path('login', views.login, name='login'), #login sign in page
+    path('signin', views.signin, name='signin'), #login sign in page
     path('signout', views.signout, name='signout'),#login sign out page
     path('login', views.Gotoauth, name='Gotoauth'), #login authentication page
 

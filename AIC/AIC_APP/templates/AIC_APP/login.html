@@ -11,6 +11,11 @@
     <!-- CSS only -->
 </head>
 <body>
+    {% if user.is_authenticated %}
+    <script>
+        window.location.href = "/home";
+    </script>
+    {% else %}
     <div class="authentication_box bg-light d-flex left-active overflow-hidden" id="auth_box">
         <div class="login bg-light d-flex justify-content-center align-items-center">
             <div class="w-100">
@@ -58,6 +63,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
 </body>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

@@ -14,7 +14,7 @@ import  os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import dj_database_url
+# import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -96,7 +96,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'manager',
     }
 }
 

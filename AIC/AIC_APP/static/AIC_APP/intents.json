@@ -31,6 +31,32 @@
                 "Who is a helpful and careful boy?"
             ],
             "responses": "Harshil is a helpful and carefull boy."
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What is called rishi?",
+                "What is Sri Jishu?",
+                "What is rishi as in what?",
+                "What's called rishi?",
+                "What is rishi? How can we remeber it?",
+                "Which Indian religion is referred to as rishi?",
+                "What is Rishi?",
+                "What is a rishi and how?",
+                "What is Raji?",
+                "What is a rishi?"
+            ],
+            "responses": "rishi is not what"
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "What types of dummy text does Lorem Ipsum mean?",
+                "What is the name of the industry's standard dummy text since the 1500s?",
+                "How long has Lorem Ipsum survived?",
+                "What was the name of the desktop publishing software that included Lorem Ip?"
+            ],
+            "responses": "imply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ip"
         }
     ]
 }

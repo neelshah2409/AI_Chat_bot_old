@@ -420,7 +420,7 @@ def activate(request, uidb64, token):
         return render(request, 'activation_failed.html')
 
 
-def login(request):
+def signin(request):
     if request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
