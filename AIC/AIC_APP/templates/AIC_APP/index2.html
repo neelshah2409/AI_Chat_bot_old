@@ -5,11 +5,11 @@
     <div class="title sticky-top d-flex justify-content-around align-items-center">
         <div class="dropdown">
             <button class="btn p-0 dropdown-toggle text-light" style="outline:none !important; box-shadow:none!important;" dropdown-toggle="dropdown" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" id="user">
-                <i class="bi bi-person-circle text-light fs-4 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Feedback"></i>
+                <i class="bi bi-person-circle text-light fs-4 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
             </button>
-            <ul class="dropdown-menu profile-menu dropdown-menu-dark dropdown-menu-sm dropend">
-              <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p class="col-8 m-0">{{request.session.username}}</p></a></li>
-              <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+            <ul style="background-color: #0093E9;" class="dropdown-menu profile-menu dropdown-menu-dark dropdown-menu-sm dropend">
+              <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p style="text-align:left;" class="col-8 m-0">{{request.session.username}}</p></a></li>
+              <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p style="text-align:left;" class="col-8 m-0">Logout</p></a></li>
             </ul>
         </div>
         <div class="mx-4"></div>
