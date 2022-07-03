@@ -84,7 +84,7 @@ $(document).ready(function() {
                                 <div class="msg p-2">
                                     <form class="m-0 text-center" method="post" id="feedbackForm">
                                         <h4 class="text-light m-0 text-center py-2 rounded-2">Feedback</h4>
-                                        <textarea name="improvementFeatures" placeholder="Enter Your Feedback" rows="4" class="form-control"></textarea>
+                                        <textarea name="improvementFeatures" placeholder="Enter Your Feedback" id="feedbackInput" rows="4" class="form-control"></textarea>
                                         <button type="submit" class="btn text-light">Submit</button>
                                     </form>
                                 </div>
@@ -99,13 +99,13 @@ $(document).ready(function() {
 
     $(document).on("submit", "#feedbackForm", function(e) {
         e.preventDefault();
+        let input = $('#feedbackInput').val();
         $(".right:last-child").html(`<div class="icon col-2">
                                     <i class="bi bi-person-fill"></i>
                                 </div>
                                 <div class="msg text-start px-2">
                                     <p>Feedback Submitted</p>
                                 </div>`);
-        let input = $('#etext').val();
         $('#etext').val('');
         $.ajax({
             type: "POST",
