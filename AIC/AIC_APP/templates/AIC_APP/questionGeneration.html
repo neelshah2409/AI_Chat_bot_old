@@ -7,23 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yo Bot</title>
     {% load static %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <style>
-        @font-face {
-            font-family: "Android";
-            src: url("{% static 'AIC_APP/css/Android.ttf' %}");
-        }
-    </style>
-    <link rel="stylesheet" href="{% static 'AIC_APP/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'AIC_APP/css/background.css' %}">
-    <link rel="stylesheet" href="{% static 'AIC_APP/css/loading.css' %}">
+    {% include 'AIC_APP/header.html' %}
 </head>
 
 <body class="position-relative">
     {% if user.is_authenticated %}
+    {% include 'AIC_APP/navbar.html'%}
     {% include 'AIC_APP/background.html'%}
     <div class="row m-0 p-0">
         {% include 'AIC_APP/loading.html' %}
@@ -72,28 +61,24 @@
         </div>
 
         <main class="col-12 text-end" style="z-index:1!important">
-            <div class="d-flex justify-content-center justify-content-md-end align-items-center" style="height: 100vh;" id="temp">
+            <div class="d-flex justify-content-center justify-content-md-end align-items-center" style="height: 88.6vh;" id="temp">
                 <div id="chatbox" class="questionGeneration">
-                    <div class="d-flex justify-content-end flex-wrap gap-3">
-                        <button type="button" class="btn btn-primary button-29" data-toggle="modal" data-target="#csvmodal" data-whatever="@mdo">CSV</button>
-                        <button type="button" class="btn btn-primary button-29" data-toggle="modal" data-target="#linkmodal" data-whatever="@mdo">Link</button>
-                        <a href="/QueShow" class="text-decoration-none col-12 col-md-4 col-lg-4"><button class="button-29" role="button">View Questions</button></a>
-                                <a href="/signout" class="text-decoration-none"><button class="button-29" role="button">LogOut</button></a>
-
-                        <a href="home" class="text-decoration-none col-12 col-md-2 col-lg-2"><button class="button-29" role="button">Yo-Bot</button></a>
+                    <div class="d-flex justify-content-end flex-wrap col-11 gap-4 ms-4">
+                        <button type="button" class="btn btn-dark btn-md my-2 px-4" data-toggle="modal" data-target="#csvmodal" data-whatever="@mdo">CSV</button>
+                        <button type="button" class="btn btn-dark btn-md my-2 px-4" data-toggle="modal" data-target="#linkmodal" data-whatever="@mdo">Link</button>
                     </div>
-                    <div class="card position-relative" style="background: transparent; border:0px;">
-                        <div class="card-header my-auto p-2" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">
+                    <div class="card position-relative wrapper" style="background: transparent; border:0px;">
+                        <div class="card-header my-auto p-2 title">
                             <h5 class="card-title text-center text-light py-2 my-auto">Question-Answer Generator</h5>
-                            <ul class="nav nav-tabs card-header-tabs nav-justified mt-2" id="tabs">
+                            <ul class="nav nav-tabs card-header-tabs tab-style nav-justified mt-2 tex" id="tabs">
                                 <li class="nav-item d-flex justify-content-center align-items-center">
-                                    <a class="active nav-link py-2 active h-100 d-flex align-items-center justify-content-center p-0 text-dark" href="#questionAnswers" data-bs-toggle="tab">Question-Answer</a>
+                                    <a class="active nav-link py-2 active h-100 d-flex align-items-center justify-content-center p-0 text-secondary" href="#questionAnswers" data-bs-toggle="tab">Question-Answer</a>
                                 </li>
                                 <li class="nav-item d-flex justify-content-center align-items-center">
-                                    <a class="nav-link py-2 text-dark h-100 d-flex align-items-center justify-content-center p-0" href="#onlyAnswers" data-bs-toggle="tab">Only Answers</a>
+                                    <a class="nav-link py-2 h-100 d-flex align-items-center justify-content-center p-0 text-secondary" href="#onlyAnswers" data-bs-toggle="tab">Only Answers</a>
                                 </li>
                                 <li class="nav-item d-flex justify-content-center align-items-center">
-                                    <a class="nav-link py-2 text-dark h-100 d-flex align-items-center justify-content-center p-0" href="#paragraph" data-bs-toggle="tab">Paragraph</a>
+                                    <a class="nav-link py-2 h-100 d-flex align-items-center justify-content-center p-0 text-secondary" href="#paragraph" data-bs-toggle="tab">Paragraph</a>
                                 </li>
                             </ul>
                         </div>
@@ -104,7 +89,7 @@
                                         <form method="post" id="questionAnswersForm"> {% csrf_token %}
                                             <textarea class="form-control m-0 question" placeholder="Enter Question-Answer Here" id="questions" rows="12" name="inputText"></textarea>
                                             <div class="text-center p-0">
-                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto">Submit</button>
                                             </div>
                                         </form>
                                     </div>
@@ -124,7 +109,7 @@
                                         <form method="post" id="paragraphForm"> {% csrf_token %}
                                             <textarea class="form-control m-0 question" placeholder="Enter Your Paragraph Here" id="questions" rows="12" name="inputText"></textarea>
                                             <div class="text-center p-0">
-                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto" style="background-color: #0093E9 !important;background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%) !important;">Submit</button>
+                                                <button type="submit" name="questionSubmit" value="submit" class="btn btn-submit w-100 text-light py-2 mx-auto">Submit</button>
                                             </div>
                                         </form>
                                     </div>

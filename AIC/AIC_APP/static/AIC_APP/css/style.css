@@ -15,9 +15,12 @@ body {
     justify-content: center;
     align-items: center;
     /* min-height: 100vh; */
-    background-color: #FFDEE9;
-    background-size: contain;
-    background-image: linear-gradient(225deg, #B5FFFC 0%, #FFDEE9 100%);
+    /* background: radial-gradient(rgba(90, 92, 106, 1), rgb(33, 44, 58) 79.41%, rgba(32, 45, 58, 1) 81.3%) */
+   background: url("bg.jpg");
+    background-size: cover;  /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  !* Chrome 10-25, Safari 5.1-6 *!*/
+/*background: linear-gradient(to right, #D7DDE8, #757F9A); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
 }
 
 
@@ -92,11 +95,11 @@ text-decoration:underline;
 
 .box .bg {
     background-color: transparent;
-    /*background-image: linear-gradient(225deg, #B5FFFC 0%, #FFDEE9 100%);*/
+    background-image: linear-gradient(106deg, rgb(33, 44, 58) 44.12%,rgba(90, 92, 106, 1));
     top: 0;
     left: 0;
     opacity: 0.5;
-    z-index: -1;
+    z-index: -11111!important;
     padding: 0;
     min-width: 400px;
     min-height: 400px;
@@ -108,8 +111,7 @@ text-decoration:underline;
 }
 
 .wrapper .title {
-    background-color: #0093E9;
-    background-image: linear-gradient(209deg, #80D0C7 0%, #0093E9 100%);
+    background-image: repeating-conic-gradient(rgba(90, 92, 106, 1), rgb(33, 44, 58) 79.41%, rgba(32, 45, 58, 1) 81.3%);
     color: white;
     line-height: 2.5;
     border-radius: 5px 5px 0 0;
@@ -136,7 +138,7 @@ text-decoration:underline;
 }
 
 .wrapper .box .left .icon {
-    background: #9c7ad9;
+    background: #3A6073;
     color: white;
     width: 40px;
     height: 40px;
@@ -146,7 +148,7 @@ text-decoration:underline;
 }
 
 .wrapper .box .right .icon {
-    background: #0097CE;
+    background: #485563;
     color: white;
     width: 40px;
     height: 40px;
@@ -171,7 +173,7 @@ text-decoration:underline;
     border-radius: 10px;
     /* width: 150px; */
     margin-left: 10px;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgb(186 147 233) 0%, rgba(116, 182, 247, 1) 90%);
+    background-image: linear-gradient(to right, #16222A,#3A6073)
 }
 
 .wrapper .box .item .msg p {
@@ -192,8 +194,11 @@ text-decoration:underline;
 .wrapper .box .item.right .msg {
     /*background: #0097CE;*/
     color: #fff;
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 .wrapper .typing-area {
@@ -205,8 +210,7 @@ text-decoration:underline;
     align-items: center;
     padding: 10px;
     border: 0.5px solid rgb(0 0 0 / 25%);
-    background-color: #FFDEE9;
-    background-image: linear-gradient(225deg, #B5FFFC 0%, #e8fcfc 100%);
+    background-image: linear-gradient(106deg, rgb(33, 44, 58) 44.12%,rgba(90, 92, 106, 1));
 }
 
 .wrapper .typing-area .input-field {
@@ -218,14 +222,14 @@ text-decoration:underline;
     width: 100%;
     padding: 10px;
     border: 0px solid transparent;
+    color: lavender;
     border-radius: 3px;
     outline: none;
     padding-right: 70px;
     font-family: 'Poppins', sans-serif;
     transition: 0.3s all ease;
     /*background-color: #efefef !important;*/
-    background-color: #FFDEE9;
-    background-image: linear-gradient(225deg, #B5FFFC 0%, #e8fcfc 100%);
+   background-image: linear-gradient(106deg, rgb(33, 44, 58) 44.12%,rgba(90, 92, 106, 1));
 }
 
 .wrapper .typing-area .input-field input:focus {

@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <form action="uploadCsv" method="post" enctype="multipart/form-data">
+<form action="uploadCsv" method="post" enctype="multipart/form-data">
 {% csrf_token %}
   <label for="file">CSV upload</label>
   <input type="file" id="file" name="CSVfile"><br><br>
   <input type="submit" value="Submit">
 </form>
-</body>
-</html>

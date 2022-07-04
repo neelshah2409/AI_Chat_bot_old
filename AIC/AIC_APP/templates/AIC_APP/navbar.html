@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" style="z-index: 1000!important;">
+  <div class="container-fluid col-10">
+    <a class="navbar-brand logo" href="/">Yo Bot</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="mx-4"></div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+            <a class="nav-link" href="#">API</a>
+          </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="/QueGenerator">Get Started</a>
+        </li>
+        <li class="nav-item mx-2 dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More    
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/QueShow">Train Model</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Default dropup button -->
+        <!-- <div class="btn-group dropup">
+            
+            <div class="dropdown-menu">
+                <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p class="col-8 m-0">{{request.session.username}}</p></a></li>
+                <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+            </div>
+        </div>
+      <div class="dropleft">
+        <button class="" style="outline:none !important; box-shadow:none!important;" dropdown-toggle="dropdown" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" id="user">
+            <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Feedback"></i>
+        </button>
+        <ul class="">
+          
+        </ul> -->
+
+        <div class="btn-group dropdown">
+            <button type="button" class="btn p-0 dropdown-toggle text-light gap-1 d-flex justify-content-center align-items-center" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
+            </button>
+          <ul class="dropdown-menu dropdown-menu-dark dropleft">
+            <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p class="col-8 m-0">{{request.session.username}}</p></a></li>
+          <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+          </ul>
+        </div>
+    </div>
+    </div>
+  </div>
+</nav>
