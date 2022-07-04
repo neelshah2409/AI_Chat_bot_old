@@ -1,9 +1,125 @@
 {
-                              "intents": [
-                                {
-                                  "tag": "Data-0",
-                                  "patterns": [],
-                                  "responses": ""
-                                }
-                              ]
-                            }
+    "intents": [
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What are the major technical areas in computer engineering?",
+                "What are some of the major technical areas in computer engineering?",
+                "What are the major fields of technical computer engineering and what are some of them?",
+                "Which are the major technical areas in computer engineering?",
+                "What are the main technical areas of computer engineering?",
+                "What are the main technical areas in computer engineering?",
+                "What are the major technical areas in computer engineering? What are the concepts and solutions?",
+                "What are the major technical areas in the field of computer engineering?",
+                "What are the major technical areas of Computer Engineering?"
+            ],
+            "responses": " The major technical areas of Computer Engineering are : Cybersecurity, Networking, Database Handling, Artificial Intelligence, Design Automation, Computer software, Embedded Systems."
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What are the future of computing?",
+                "What are the opportunities in this field?",
+                "What are some opportunities in this field?",
+                "What are the future opportunities in industry?",
+                "What are the future opportunities in this field?",
+                "What are some of the opportunities in this field?",
+                "What are the future opportunities in this domain?",
+                "What are opportunities in the field of information and communications?",
+                "Are there any future opportunities in this field?",
+                "What are future opportunities in this field?"
+            ],
+            "responses": " Future opportunities in this field are beyond boundaries."
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What is the fastest developing discipline in the world?",
+                "What is the fastest developing discipline of the world?",
+                "What's the fastest developing discipline in the world, and why?",
+                "Which is the fastest developing discipline?",
+                "Which is the fastest growing science in the world?",
+                "Which discipline is fastest developing?",
+                "Which is the fastest developing discipline in the world?"
+            ],
+            "responses": "Computer engineering is the fastest developing discipline in the world."
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "Computer engineering incorporates several different areas of what to develop computer hardware and software?",
+                "Computer engineering incorporates several different fields of what to develop computer hardware and software.",
+                "Computer engineering incorporates numerous different fields of what to develop software?",
+                "Computer engineering incorporates several different fields of what to develop computer hardware and software?"
+            ],
+            "responses": " It integrates several fields of electrical engineering and computer science required to develop computer hardware and software."
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "Which is the fastest developing discipline in the world?",
+                "What is the fastest developing discipline of the world?",
+                "What's the fastest developing discipline in the world, and why?",
+                "Which is the fastest developing discipline?",
+                "Which is the fastest growing science discipline in world?",
+                "What is the fastest developing discipline in the world?"
+            ],
+            "responses": "Computer engineering is the fastest developing discipline in the world."
+        },
+        {
+            "tag": "Data-6",
+            "patterns": [
+                "Computer engineering incorporates several different fields of what to develop computer hardware and software?",
+                "Computer engineering integrates several fields of what to develop a computer hardware and software?",
+                "Computer engineering incorporates several fields of what to develop computer hardware and software?",
+                "Computer engineering integrates several fields of what to develop computer hardware and software?"
+            ],
+            "responses": " It integrates several fields of electrical engineering and computer science required to develop computer hardware and software."
+        },
+        {
+            "tag": "Data-7",
+            "patterns": [
+                "What does a computer engineer do when it is not possible to transfer data?",
+                "What is computer engineering?",
+                "How do computers handle information?",
+                "What do computer engineers do?",
+                "How do computer engineers transfer data?",
+                "How do computer engineers to transmit and transfer data?",
+                "How do software engineers transfer data?",
+                "What do computer engineers do to transfer data?"
+            ],
+            "responses": " Computer engineers embed computers in other machines and systems, build networks to transfer data and develop ways to make computers, faster, smaller and more capable."
+        },
+        {
+            "tag": "Data-8",
+            "patterns": [
+                "What are the major technical areas in computer engineering?",
+                "What are some of the major technical areas in computer engineering?",
+                "What are the major fields of technical computer engineering and what are some of them?",
+                "Which are the major technical areas in computer engineering?",
+                "What are the main technical areas of computer engineering?",
+                "What are the main technical areas in computer engineering?",
+                "What are the major technical areas in computer engineering? What are the concepts and solutions?",
+                "What are the major technical areas in the field of computer engineering?",
+                "What are the major technical areas of Computer Engineering?"
+            ],
+            "responses": " The major technical areas of Computer Engineering are : Cybersecurity, Networking, Database Handling, Artificial Intelligence, Design Automation, Computer software, Embedded Systems."
+        },
+        {
+            "tag": "Data-9",
+            "patterns": [
+                "What are the future of computing?",
+                "What are the opportunities in this field?",
+                "What are some opportunities in this field?",
+                "What are the future opportunities in industry?",
+                "What are the future opportunities in this field?",
+                "What are some of the opportunities in this field?",
+                "What are the future opportunities in this domain?",
+                "What are opportunities in the field of information and communications?",
+                "Are there any future opportunities in this field?",
+                "What are future opportunities in this field?"
+            ],
+            "responses": " Future opportunities in this field are beyond boundaries."
+        }
+    ]
+}
