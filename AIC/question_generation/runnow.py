@@ -1,6 +1,7 @@
 # from AIC.question_generation.pipelines import pipeline
 import json
 import os
+import re
 try:
     from question_generation.pipelines import pipeline
 except Exception as e:
@@ -14,7 +15,7 @@ def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.se
         json.dump(data, f, indent=4)
 
 
-def runnow(filename):
+def runnow():
     try:
         from question_generation.pipelines import pipeline
     except Exception as e:
@@ -24,7 +25,7 @@ def runnow(filename):
     intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
     # nlp = pipeline("multitask-qa-qg")
-    nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
+    nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl", qg_format="prepend")
 
 
     # to generate questions simply pass the text
@@ -33,9 +34,11 @@ def runnow(filename):
     #  It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
     #   which, theoretically at least''')
 
-    with open(f'{os.getcwd()}/{filename}', 'r') as file:
+    with open(f'{os.getcwd()}/inputText', 'r') as file:
         data = file.read().replace('\n', '')
+        # print("data is:", data, type(data))
     ans = nlp(data)
+    print(f"something{ans}")
 
     # format of the generation
     # {'answer': 'Twinkal', 'question':'Who is telented", 'answer': 'heuwiehish', 'question':'rhishi, }
@@ -43,10 +46,19 @@ def runnow(filename):
 
     anslist = [qa.get('answer') for qa in ans]
     quelist = [qa.get('question') for qa in ans]
+    print("heyy", anslist)
+    
+    sentences = data.split(".")
+    full_ans = []
+    for i in sentences:
+        for j in anslist:
+	        # if j.replace("<pad> ","") in i:
+            full_ans.append(i+".") if j.replace("<pad> ","") in i else ""
+    print("full ans:: ", full_ans)
 
     iterate = 0
     for intent in intentsfile['intents']:
-        for answer in anslist:
+        for answer in full_ans:
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
             list.append(quelist[iterate])

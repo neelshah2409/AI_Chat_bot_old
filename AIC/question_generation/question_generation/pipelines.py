@@ -80,7 +80,7 @@ class QGPipeline:
     def _extract_answers(self, context):
         sents, inputs = self._prepare_inputs_for_ans_extraction(context)
         inputs = self._tokenize(inputs, padding=True, truncation=True)
-
+        print(f"this is input:{inputs}")
         outs = self.ans_model.generate(
             input_ids=inputs['input_ids'].to(self.device), 
             attention_mask=inputs['attention_mask'].to(self.device), 
@@ -90,6 +90,7 @@ class QGPipeline:
         dec = [self.ans_tokenizer.decode(ids, skip_special_tokens=False) for ids in outs]
         answers = [item.split('<sep>') for item in dec]
         answers = [i[:-1] for i in answers]
+
         
         return sents, answers
     
@@ -307,10 +308,10 @@ SUPPORTED_TASKS = {
 
 def pipeline(
     task: str,
-    model: Optional = None,
+    model: Optional[str] = None,
     tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
     qg_format: Optional[str] = "highlight",
-    ans_model: Optional = None,
+    ans_model: Optional[str] = None,
     ans_tokenizer: Optional[Union[str, PreTrainedTokenizer]] = None,
     use_cuda: Optional[bool] = True,
     **kwargs,
@@ -347,7 +348,8 @@ def pipeline(
     
     # Instantiate model if needed
     if isinstance(model, str):
-        model = AutoModelForSeq2SeqLM.from_pretrained(model)
+        pass
+        # model = AutoModelForSeq2SeqLM.from_pretrained(model)
     
     if task == "question-generation":
         if ans_model is None:
@@ -378,9 +380,12 @@ def pipeline(
             if isinstance(ans_model, str):
                 ans_model = AutoModelForSeq2SeqLM.from_pretrained(ans_model)
     
-    if task == "e2e-qg":
-        return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
-    elif task == "question-generation":
-        return task_class(model=model, tokenizer=tokenizer, ans_model=ans_model, ans_tokenizer=ans_tokenizer, qg_format=qg_format, use_cuda=use_cuda)
-    else:
-        return task_class(model=model, tokenizer=tokenizer, ans_model=model, ans_tokenizer=tokenizer, qg_format=qg_format, use_cuda=use_cuda)
+    # if task == "e2e-qg":
+    #     return task_class(model=model, tokenizer=tokenizer, use_cuda=use_cuda)
+    # elif task == "question-generation":
+    model = AutoModelForSeq2SeqLM.from_pretrained(model)
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer)
+    ans_model = AutoModelForSeq2SeqLM.from_pretrained(ans_model)
+    return task_class(model=model, tokenizer=tokenizer, ans_model=ans_model, ans_tokenizer=ans_tokenizer, qg_format=qg_format, use_cuda=use_cuda)
+    # else:
+    #     return task_class(model=model, tokenizer=tokenizer, ans_model=model, ans_tokenizer=tokenizer, qg_format=qg_format, use_cuda=use_cuda)
