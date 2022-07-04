@@ -155,7 +155,7 @@ def linkingAllFunc(filename):
                             }''')
         intentsfile.close()
         print("Question is generating now...")
-        runnow(filename)
+        runnow()
         return True
     else:
         return False

@@ -52,13 +52,13 @@ def runnow():
     full_ans = []
     for i in sentences:
         for j in anslist:
-	        # if j.replace("<pad> ","") in i:
             full_ans.append(i+".") if j.replace("<pad> ","") in i else ""
     print("full ans:: ", full_ans)
 
     iterate = 0
     for intent in intentsfile['intents']:
         for answer in full_ans:
+            print(iterate,len(quelist),len(full_ans))
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
             list.append(quelist[iterate])
