@@ -15,7 +15,7 @@ def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.se
         json.dump(data, f, indent=4)
 
 
-def runnow():
+def runnow(filename):
     try:
         from question_generation.pipelines import pipeline
     except Exception as e:
@@ -34,7 +34,7 @@ def runnow():
     #  It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
     #   which, theoretically at least''')
 
-    with open(f'{os.getcwd()}/inputText', 'r') as file:
+    with open(f'{os.getcwd()}/{filename}', 'r') as file:
         data = file.read().replace('\n', '')
         # print("data is:", data, type(data))
     ans = nlp(data)

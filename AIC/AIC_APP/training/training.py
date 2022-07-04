@@ -69,7 +69,7 @@ def trainTheChatBot():
     sgd = gradient_descent_v2.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-    hist = model.fit(np.array(train_x), np.array(train_y), epochs=10000, batch_size=5, verbose=1)
+    hist = model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
     curr = os.getcwd()
     model.save(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5", hist)
     print("Sucess File Updated")

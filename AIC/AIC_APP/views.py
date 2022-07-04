@@ -155,7 +155,7 @@ def linkingAllFunc(filename):
                             }''')
         intentsfile.close()
         print("Question is generating now...")
-        runnow()
+        runnow(filename)
         return True
     else:
         return False
@@ -190,7 +190,7 @@ def runcombine(filename):
 def fetchInputTextArea(request):
     inputText = request.POST.get('inputText', 'default')
     print(inputText)
-    file = open(f'{os.getcwd()}{os.sep}inputText', 'a')
+    file = open(f'{os.getcwd()}{os.sep}inputText', 'w')
     file.writelines(inputText)
     file.close()
     print("this file is done")
@@ -208,7 +208,7 @@ def QueGenerator(request):
 def improveFeatures(request):
     try:
         messege = request.POST.get('messege', 'default')
-        file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement.txt', 'a')
+        file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement', 'a')
         file.writelines(messege)
         file.close()
         return HttpResponse("success")
@@ -292,9 +292,9 @@ def linkSubmit(request):
     data = request.POST.get("link", "default")
     siteData = getData(data)
     print(siteData)
-    # file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
-    # file.writelines(siteData)
-    # file.close()
+    file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
+    file.writelines(siteData)
+    file.close()
 
 
 
