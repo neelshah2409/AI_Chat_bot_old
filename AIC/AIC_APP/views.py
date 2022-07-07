@@ -266,6 +266,9 @@ def onlyAnswersData(request):
     print(answers)
     anslist = [ans for ans in answers['answers']]
     finalQuelist = generatefromOnlyAns(anslist)
+    # finalQuelist = [f for f in finalQuelist]
+    finalQuelist = [x for xs in finalQuelist for x in xs]
+    print(f"this is finalque list {finalQuelist}")
     parafromqueans(anslist, finalQuelist)
     print("Sucessfully answering done in json file")
     return HttpResponse("success")
