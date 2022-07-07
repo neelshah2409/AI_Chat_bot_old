@@ -87,19 +87,21 @@ def generatefromOnlyAns(Big_anslist):
         quelist = [q.get('question') for q in ans]
         updatedQuestionBigList.append(quelist)
 
-    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
-        data = json.load(json_file)
-        temp = data["intents"]
-        iterate = 1
-        length = len(temp)
-        for i in updatedQuestionBigList:
-            print(i)
-            print(i[0])
-            y = {"tag": f"Data-{iterate + length}", "patterns": i, "responses": Big_anslist[iterate-1]}
-            temp.append(y)
-            iterate+=1
-        write_json(data)
+    # with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
+    #     data = json.load(json_file)
+    #     temp = data["intents"]
+    #     iterate = 1
+    #     length = len(temp)
+    #     for i in updatedQuestionBigList:
+    #         print(i)
+    #         print(i[0])
+    #         y = {"tag": f"Data-{iterate + length}", "patterns": i, "responses": Big_anslist[iterate-1]}
+    #         temp.append(y)
+    #         iterate+=1
+    #     write_json(data)
+
     print("From OnlyAnser question is generated and updated json file")
+    return updatedQuestionBigList
 
 
 

@@ -1,3 +1,4 @@
+from django.views.decorators.cache import cache_page
 import json
 import pickle
 import nltk
@@ -119,14 +120,13 @@ def get_response(intent_list, intent_json):
         if i['tag'] == tag:
             result = (i['responses'])
             break
-
     return result
 
 
 def index(request):
     return render(request, 'AIC_APP/index.html')
 
-
+@cache_page(60 * 15)
 def takeOutputdp(request):
     intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
     message = request.POST.get('message', 'hey')
@@ -265,7 +265,8 @@ def onlyAnswersData(request):
     # {'answers': ['I am rishi patel', 'i am patel rishi']}
     print(answers)
     anslist = [ans for ans in answers['answers']]
-    generatefromOnlyAns(anslist)
+    finalQuelist = generatefromOnlyAns(anslist)
+    parafromqueans(anslist, finalQuelist)
     print("Sucessfully answering done in json file")
     return HttpResponse("success")
 
