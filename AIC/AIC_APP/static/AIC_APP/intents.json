@@ -3,61 +3,18 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "What is the name of the child who died through Covid-193?",
-                "What was the name of a child who died due to COVI-193?",
-                "What's the name of the child who died due to Covid-193?",
-                "What was the name of a child who died owing to CAVID-193 in India?",
-                "Which child died during Covid 193?",
-                "What is the father's name of child who died as a result of Covid-193.?",
-                "Who is the child who died in Covid-193?",
-                "What is the name of the child who dies due to Covid-193?",
-                "What is the name of the child who died due to Covid-193?"
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name?",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name?",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name?",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name?",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name?",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name.",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name.",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name. (On the basis of the name of the name of the name is what is the name of a name that does not have the name).",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name of the name for the name of the name.",
+                "What is the name of the name of the name of the name of the name of the name of the name of the name of the name of the name"
             ],
-            "responses": " Orphan            2."
-        },
-        {
-            "tag": "Data-2",
-            "patterns": [
-                "What are the names of the parents who died through cause or accident?",
-                "What was the name of a family who died due to neglect?",
-                "What is the name of parents who died due to?",
-                "What's the name of the parents who died due to?",
-                "Which are some of the parents whose parents died due to something?",
-                "What is the father's name?",
-                "Who are the parents who died in a car crash?",
-                "What was the name of family members who die?",
-                "What was the name of the parents who died due to?"
-            ],
-            "responses": " 50,000/- per annum for every year of study."
-        },
-        {
-            "tag": "Data-3",
-            "patterns": [
-                "What are the causes of death of parents?",
-                "What was the cause of a father's death?",
-                "What is the main reason of the death of two parents?",
-                "Why did 2 parents die?",
-                "What was the cause of death? How did it all happen?",
-                "Which causes deaths of two parents?",
-                "What is the reason to death of parents?",
-                "What is the cause of death of two parents?",
-                "What is the cause of death of the two parents?",
-                "What was the cause of the death of two parents?"
-            ],
-            "responses": " 12,400/- PM/ student."
-        },
-        {
-            "tag": "Data-4",
-            "patterns": [
-                "What is the support of Wards of Armed Forces and Central Paramilitary Forces?",
-                "What is the support of Ward of Armed Forces?",
-                "What is the financial support to Wards of Armed Forces and Central Paramilitary Forces?",
-                "What is the financial support of Wards of Armed Forces?",
-                "Which organisations are providing financial support to Wards of Armed Forces?",
-                "How much of the support do Wards and Central forces have received?",
-                "What is the financial support of Wards of Armed Forces and Central Paramilitary Forces?"
-            ],
-            "responses": " Total 10000 scholarship are given @ Rs 50000 as incidentals each year."
+            "responses": "hey"
         }
     ]
 }

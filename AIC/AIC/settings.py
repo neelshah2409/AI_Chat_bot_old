@@ -94,9 +94,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'yobot',
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '3307',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Shreya@412',
     }
 }
 
