@@ -13,7 +13,7 @@
 <body>
     {% if user.is_authenticated %}
     <script>
-        window.location.href = "/home";
+        window.location.href = "/AIC";
     </script>
     {% else %}
     <div class="authentication_box bg-light d-flex left-active overflow-hidden" id="auth_box">
@@ -21,7 +21,7 @@
             <div class="w-100">
                 <h1 class="text-center my-4">Sign in</h1>
                 <p>Enter Your Credentials</p>
-                <form method="post" action="/signin" class="loginForm">
+                <form method="post" action="" class="loginForm">
                     {% csrf_token %}
                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter Your Username" Required>
                     <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Enter Your Password" Required>
