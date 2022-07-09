@@ -1,9 +1,0 @@
-{
-  "intents": [
-    {
-            "tag": "Data-0",
-            "patterns": ["Hi","Hello","hiii","hey","heya","hola","how are you?","helloo"],
-            "responses": "Welcome to Yo-Bot"
-        }
-  ]
-}

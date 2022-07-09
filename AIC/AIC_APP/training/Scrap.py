@@ -31,6 +31,6 @@ def getData(data):
     #             pass
 
     data = ""
-    for i in soup.find_all(['h1','h2','h3','h4','h5','h6','h7','p']):
+    for i in soup.find_all(['p']):
         data += i.text.strip()
     return data

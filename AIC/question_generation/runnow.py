@@ -1,5 +1,6 @@
 # from AIC.question_generation.pipelines import pipeline
 import json
+from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktParameters
 import os
 import re
 try:
@@ -46,14 +47,25 @@ def runnow(filename):
 
     anslist = [qa.get('answer') for qa in ans]
     quelist = [qa.get('question') for qa in ans]
-    print("heyy", anslist)
     
-    sentences = data.split(".")
+    punkt_para = PunktParameters()
+    punkt_para.abbrev_types = set(re.findall('\\b[A-Z](?:[\\.&]?[A-Z]){1,7}\\b', data))
+    tokenizer = PunktSentenceTokenizer(punkt_para)
+    sentences = tokenizer.tokenize(data)
+    # sentences = data.split(".")
     full_ans = []
     for i in sentences:
         for j in anslist:
-            full_ans.append(i+".") if j.replace("<pad> ","") in i else ""
+            full_ans.append(i) if j.replace("<pad> ","") in i else ""
     print("full ans:: ", full_ans)
+    # generatefromOnlyAns(full_ans)
+    # updatedQueBigList = []
+    # for k in full_ans:
+    #     k = nlp(k)
+    #     quelist = [q.get('question') for q in ans]
+    #     updatedQueBigList.append(quelist)
+
+
 
     iterate = 0
     for intent in intentsfile['intents']:
