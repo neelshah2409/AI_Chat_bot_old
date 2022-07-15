@@ -420,6 +420,7 @@ $(document).ready(function() {
     })
 
     $(document).on("submit", "#csvForm", (e)=>{
+        
         e.preventDefault();
         $(".processing").html("Uploading File").attr("x", "306");
         $(".loadingBox").fadeIn();

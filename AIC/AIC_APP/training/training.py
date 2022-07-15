@@ -14,7 +14,7 @@ import os
 # nltk.download('wordnet')
 # nltk.download('omw-1.4')
 
-def trainTheChatBot():
+def trainTheChatBot(id):
     lemmatizer = WordNetLemmatizer()
     intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
 
@@ -37,8 +37,8 @@ def trainTheChatBot():
 
     classes = sorted(set(classes))
 
-    pickle.dump(words, open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'wb'))
-    pickle.dump(classes, open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'wb'))
+    pickle.dump(words, open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words{id}.pkl", 'wb'))
+    pickle.dump(classes, open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes{id}.pkl", 'wb'))
 
     training = []
     output_empty = [0] * len(classes)
@@ -71,7 +71,7 @@ def trainTheChatBot():
 
     hist = model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
     curr = os.getcwd()
-    model.save(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5", hist)
+    model.save(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel{id}.h5", hist)
     print("Sucess File Updated")
 
 if __name__ == '__main__':

@@ -1,8 +1,10 @@
+from django.core.serializers.json import DjangoJSONEncoder
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.cache import cache_page
 import json
+from django.core.serializers import serialize
 import pickle
 import nltk
 import numpy as np
@@ -14,8 +16,8 @@ import os
 from django.db import connection
 from django.core.files.storage import FileSystemStorage
 # from AIC_APP.training.convertCSV import csvData
-
-from django.contrib.auth.models import User
+from AIC_APP.models import Yobotuser
+# from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import EmailMessage, send_mail
 # from geeksforgeeks import settings
@@ -33,19 +35,38 @@ def index(request):
 
 def signin(request):
     if request.method == 'POST':
-        username = request.POST['username']
+        Email = request.POST['Email']
         pass1 = request.POST['pass1']
+        user = Yobotuser.objects.filter(Email=Email, Password=pass1)
+        str_data = serialize('json', user, cls=DjangoJSONEncoder)  # Or you don't need to provide the `cls` here because by default cls is DjangoJSONEncoder
 
-        user = authenticate(username=username, password=pass1)
+        user = json.loads(str_data)
+        # user = Yobotuser.objects.all()
         print(user)
-        if user is not None:
-            login(request, user)
-            fname = user.first_name
-            print(fname)
-            request.session['username']=username
+        # user = authenticate(Email=Email, Password=pass1)
+        print(f"this is user {user}")
+        if (user is not None) and len(user)>0:
+            # ""
+            # [{'model': 'AIC_APP.yobotuser', 'pk': 6, 'fields': {'Name': 'rishirishirishirishi', 'Password': 'rishirishirishirishi',
+            #  'Email': 'rishi@mama.com', 'CompanyName': 'rishirishirishirishi', 'PhoneNum': 5678904311,
+            #  'ChatBotName': 'rishirishirishirishi'}}]"
+            #
+
+
+            # login(request, user)
+            # fname = user.Name
+            print(user)
+            # userid = Yobotuser.get(UserId)
+            request.session['Email']=user[0]['fields']['Email']
+            request.session['Id']=user[0]['pk']
+            request.session["Name"]=user[0]['fields']['Name']
+            request.session['loggedin'] = True
+            # request.session['id'] = user.Userid
             # messages.success(request, "Logged In Sucessfully!!")
+
             return redirect('AIC')
         else:
+            request.session['loggedin'] = False
             messages.error(request, "Bad Credentials!!")
             return render(request, "AIC_APP/login.html")
 
@@ -53,6 +74,7 @@ def signin(request):
 
 
 def signout(request):
+    # request.session['loggedin'] = False
     logout(request)
     messages.success(request, "Logged Out Successfully!!")
     return redirect('signin')
@@ -60,18 +82,19 @@ def signout(request):
 
 def signup(request):
     if request.method == "POST":
-        username = request.POST['username']
-        fname = request.POST['fname']
-        lname = request.POST['lname']
-        email = request.POST['email']
-        pass1 = request.POST['pass1']
-        pass2 = request.POST['pass2']
+        username = request.POST['Name']
+        fname = request.POST['ChatBotName']
+        lname = request.POST['PhoneNum']
+        email = request.POST['Email']
+        pass1 = request.POST['Password']
+        pass2 = request.POST['Password2']
+        companyName = request.POST['CompanyName']
 
-        if User.objects.filter(username=username):
+        if Yobotuser.objects.filter(Name=username):
             messages.error(request, "Username already exist! Please try some other username.")
             return redirect('signin')
 
-        if User.objects.filter(email=email).exists():
+        if Yobotuser.objects.filter(Email=email).exists():
             messages.error(request, "Email Already Registered!!")
             return redirect('signin')
 
@@ -87,11 +110,11 @@ def signup(request):
             messages.error(request, "Username must be Alpha-Numeric!!")
             return redirect('signin')
 
-        myuser = User.objects.create_user(username, email, pass1)
-        myuser.first_name = fname
-        myuser.last_name = lname
+        myuser = Yobotuser(Name=username,Password=pass1,Email=email,CompanyName=companyName,PhoneNum=lname,ChatBotName=fname )
+        # myuser.first_name = fname
+        # myuser.last_name = lname
         # myuser.is_active = False
-        myuser.is_active = False
+        # myuser.is_active = False
         myuser.save()
         messages.success(request,"Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
 
@@ -121,6 +144,6 @@ def signup(request):
         # email.fail_silently = True
         # email.send()
 
-        return render(request, "AIC_APP/login.html")
+        return redirect('signin')
 
     return render(request, "AIC_APP/login.html?signup=true")

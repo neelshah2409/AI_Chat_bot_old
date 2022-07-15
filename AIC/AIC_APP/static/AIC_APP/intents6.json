@@ -1,0 +1,32 @@
+{
+    "intents": [
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "Which is the fastest developing discipline in the world?",
+                "What is the fastest developing discipline of the world?",
+                "What's the fastest developing discipline in the world, and why?",
+                "Which is the fastest developing discipline?",
+                "Which is the fastest growing science discipline in world?",
+                "What is the fastest developing discipline in the world?"
+            ],
+            "responses": "Computer engineering is the fastest developing discipline in the world."
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What fields do computer engineering integrate to develop computer hardware and software?",
+                "What fields does computer engineering integrate to develop computer software and hardware?",
+                "What is computer engineering? What areas can we integrate to develop computer products or systems?",
+                "What kinds of fields does computer engineering integrate to develop computer hardware and software?",
+                "What fields do computer engineers work together to develop and assemble computer hardware and software?",
+                "Which fields for computer engineering integrate to develop computer hardware and software?",
+                "What fields of IT engineering do computer scientists and hackers integrate to develop computer hardware and software?",
+                "What fields does computer engineering integrate to build computers hardware and software?",
+                "What fields does computer engineering integrate to develop software?",
+                "What fields does computer engineering integrate to develop computer hardware and software?"
+            ],
+            "responses": "It integrates several fields of electrical engineering and computer science required to develop computer hardware and software."
+        }
+    ]
+}

@@ -11,19 +11,20 @@ except Exception as e:
 
 # intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 
-def write_json(data, filename=f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json"):
+def write_json(data,id):
+    filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json"
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
 
-def runnow(filename):
+def runnow(data,id):
     try:
         from question_generation.pipelines import pipeline
     except Exception as e:
         print("pipeline errr")
     import json
 
-    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json').read())
 
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl", qg_format="prepend")
@@ -35,11 +36,11 @@ def runnow(filename):
     #  It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
     #   which, theoretically at least''')
 
-    with open(f'{os.getcwd()}/{filename}', 'r') as file:
-        data = file.read().replace('\n', '')
+    # with open(f'{os.getcwd()}/{filename}', 'r') as file:
+    #     data = file.read().replace('\n', '')
         # print("data is:", data, type(data))
     ans = nlp(data)
-    print(f"something{ans}")
+    # print(f"something{ans}")
 
     # format of the generation
     # {'answer': 'Twinkal', 'question':'Who is telented", 'answer': 'heuwiehish', 'question':'rhishi, }
@@ -57,7 +58,7 @@ def runnow(filename):
     for i in sentences:
         for j in anslist:
             full_ans.append(i) if j.replace("<pad> ","") in i else ""
-    print("full ans:: ", full_ans)
+    # print("full ans:: ", full_ans)
     # generatefromOnlyAns(full_ans)
     # updatedQueBigList = []
     # for k in full_ans:
@@ -70,17 +71,22 @@ def runnow(filename):
     iterate = 0
     for intent in intentsfile['intents']:
         for answer in full_ans:
-            print(iterate,len(quelist),len(full_ans))
+            # print(iterate,len(quelist),len(full_ans))
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
-            list.append(quelist[iterate])
-            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents.json') as json_file:
+            try:
+                list.append(quelist[iterate])
+            except:
+                pass
+
+            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents{id}.json') as json_file:
                 data = json.load(json_file)
                 temp = data["intents"]
                 y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
                 temp.append(y)
             iterate += 1
-            write_json(data)
+            print("upperpart of json written")
+            write_json(data,id)
             print("json data Written ..")
 
 def generatefromOnlyAns(Big_anslist):
@@ -97,8 +103,8 @@ def generatefromOnlyAns(Big_anslist):
     for ans in Big_anslist:
         ans = nlp(ans)
         quelist = [q.get('question') for q in ans]
-        updatedQuestionBigList.append(quelist)
-
+        updatedQuestionBigList.append(quelist[0])
+    # print(f"this is {updatedQuestionBigList}")
     # with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
     #     data = json.load(json_file)
     #     temp = data["intents"]

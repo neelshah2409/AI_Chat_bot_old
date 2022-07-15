@@ -221,7 +221,7 @@ console.log(mainlist)
 <script src="{% static 'AIC_APP/js/loading.js' %}"></script>
 <script>
     $(document).ready(function() {
-        var temp = "{% static 'AIC_APP/intents.json' %}";
+        var temp = "{% static 'AIC_APP/intents2.json' %}";
         let temp1 = "";
         let iterate = 0;
         $.getJSON(temp, function(jd) {
@@ -246,7 +246,7 @@ console.log(mainlist)
         $(document).on("click", "#deleteQuestionSet", function() {
             $(this).parent().parent().parent().hide("fold", 700);
             let deleteIndex = $(this).attr("name");
-            var temp = "{% static 'AIC_APP/intents.json' %}";
+            var temp = "{% static 'AIC_APP/intents2.json' %}";
             setTimeout(function() {
                 $.getJSON(temp, function(jd) {
                     jd["intents"].splice(deleteIndex, 1);

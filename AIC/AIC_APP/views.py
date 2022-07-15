@@ -23,8 +23,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth import authenticate, login, logout
 from .tokens import generate_token
-
-
+from .predict import *
 
 
 
@@ -67,7 +66,7 @@ except Exception as e:
     print("Run main load failed")
 
 
-lemmatizer = WordNetLemmatizer()
+# lemmatizer = WordNetLemmatizer()
 
 # try:
 #     words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
@@ -76,73 +75,170 @@ lemmatizer = WordNetLemmatizer()
 # except Exception as e:
 #     print(f"Error In import Files Views.py{e}")
 
-
-def mainPage(request):
-    return render(request, 'AIC_APP/mainPage.html')
-
-def clean_up_sentence(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
-    return sentence_words
+from .models import Yobotuser
 
 
-def bag_of_words(sentence):
-    words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
-
-    sentence_words = clean_up_sentence(sentence)
-    bag = [0] * len(words)
-    for w in sentence_words:
-        for i, word in enumerate(words):
-            if word == w:
-                bag[i] = 1
-    return np.array(bag)
 
 
-def predict_class(sentence):
-    classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
-    model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
-    bow = bag_of_words(sentence)
-    res = model.predict(np.array([bow]))[0]
-    ERROR_THRESHOLD = 0.25
-    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
-    results.sort(key=lambda x: x[1], reverse=True)
-    return_list = []
-    for r in results:
-        print(r)
-        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
-    return return_list
 
+# def mainPage(request):
+#     return render(request, 'AIC_APP/mainPage.html')
 
-def get_response(intent_list, intent_json):
-    tag = intent_list[0]['intent']
-    list_of_intent = intent_json['intents']
-    for i in list_of_intent:
-        if i['tag'] == tag:
-            result = (i['responses'])
-            break
-    return result
+# def clean_up_sentence(sentence):
+#     sentence_words = nltk.word_tokenize(sentence)
+#     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
+#     return sentence_words
+#
+# def bag_of_words(sentence):
+#     words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words.pkl", 'rb'))
+#
+#     sentence_words = clean_up_sentence(sentence)
+#     bag = [0] * len(words)
+#     for w in sentence_words:
+#         for i, word in enumerate(words):
+#             if word == w:
+#                 bag[i] = 1
+#     return np.array(bag)
+#
+# def predict_class(sentence):
+#     classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes.pkl", 'rb'))
+#     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel.h5")
+#     bow = bag_of_words(sentence)
+#     res = model.predict(np.array([bow]))[0]
+#     ERROR_THRESHOLD = 0.25
+#     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
+#     results.sort(key=lambda x: x[1], reverse=True)
+#     return_list = []
+#     for r in results:
+#         print(r)
+#         return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
+#     return return_list
+#
+#
+# def get_response(intent_list, intent_json):
+#     tag = intent_list[0]['intent']
+#     list_of_intent = intent_json['intents']
+#     for i in list_of_intent:
+#         if i['tag'] == tag:
+#             result = (i['responses'])
+#             break
+#     return result
 
 
 def index(request):
-    return render(request, 'AIC_APP/index.html')
 
-@cache_page(60 * 15)
-def takeOutputdp(request):
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
-    message = request.POST.get('message', 'hey')
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    return HttpResponse(res)
+    print(request.session['Id'])
+    print(request.session['loggedin'])
+    if (request.session['loggedin'] and request.session['Id']):
+        return render(request, 'AIC_APP/index.html')
+    else:
+        return redirect('signin')
 
 
-def linkingAllFunc(filename):
-    print("ahiaaaaaa")
-    with open(f'{os.getcwd()}{os.sep}{filename}', 'r') as file:
-        data = file.read().replace('\n', '')
-        print(f"this is data {data}")
+# for handling the data given by the company xyz
+def fetchInputTextArea(request):
+    id = request.session['Id']
+    inputText = request.POST.get('inputText', 'default')
+    print(inputText)
+    # file = open(f'{os.getcwd()}{os.sep}inputText', 'w')
+    # file.writelines(inputText)
+    # file.close()
+    # print("this file is done")
+    runcombine(inputText,id)
+    return HttpResponse("success")
+
+
+def linkSubmit(request):
+    from AIC_APP.training.Scrap import getData
+    data = request.POST.get("link", "default")
+    siteData = getData(data)
+    print(siteData)
+    # file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
+    # file.writelines(siteData)
+    # file.close()
+    runcombine(siteData)
+    return HttpResponse("success")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def questionAnswerData(request):
+    questionAnswer = request.POST.get("inputText","default")
+    jsonquesans = json.loads(questionAnswer)
+    anslist = [ans for ans in jsonquesans['answers']]
+    quelist = [que for que in jsonquesans['questions']]
+    parafromqueans(anslist, quelist)
+    print("Sucessfully paraphrasing done in json file")
+    return HttpResponse("success")
+
+def csvSubmit(request):
+    id = request.session['Id']
+    file = request.FILES.get("csvfile")
+    fs = FileSystemStorage()
+    fname = fs.save(id, file)
+    siteData = csvData(fs.url(fname))
+    print(siteData)
+    # {'questions': ['que1', 'que2', 'que3', 'que4', 'que5', 'que6', 'que7', 'que8', 'que9', 'que10',
+    # 'que11', 'que12', 'que13', 'que14', 'que15'], 'answers': ['ans1', 'ans2', 'ans3', 'ans4',
+    # 'ans5', 'ans6', 'ans7', 'ans8', 'ans9', 'ans10', 'ans11', 'ans12', 'ans13', 'ans14', 'ans15']}
+    anslistfromcsv = siteData['answers']
+    quelistfromcsv = siteData['questions']
+    if (len(anslistfromcsv) == len(quelistfromcsv)):
+        parafromqueans(anslistfromcsv, quelistfromcsv,id)
+    else:
+        return (HttpResponse("Csv File contain unstructured data please check the again"))
+    return HttpResponse(fs.url(fname))
+
+
+def onlyAnswersData(request):
+    id = request.session['Id']
+    answers = request.POST.get("inputText","default")
+    answers = json.loads(answers)
+    print(type(answers))
+    # {'answers': ['I am rishi patel', 'i am patel rishi']}
+    print(answers)
+    anslist = [ans for ans in answers['answers']]
+    finalQuelist = generatefromOnlyAns(anslist)
+    # finalQuelist = [f for f in finalQuelist]
+    # finalQuelist = [x for xs in finalQuelist for x in xs]
+    # print(f"this is finalque list {finalQuelist}")
+    parafromqueans(anslist, finalQuelist,id)
+    print("Sucessfully answering done in json file")
+    return HttpResponse("success")
+
+
+
+
+
+
+
+
+
+
+def linkingAllFunc(data,id):
+    # print("ahiaaaaaa")
+    # with open(f'{os.getcwd()}{os.sep}{filename}', 'r') as file:
+    #     data = file.read().replace('\n', '')
+    #     print(f"this is data {data}")
 
     if data:
-        intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
+        intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json', 'w')
 
         intentsfile.write('''{
                               "intents": [
@@ -155,19 +251,23 @@ def linkingAllFunc(filename):
                             }''')
         intentsfile.close()
         print("Question is generating now...")
-        runnow(filename)
+        runnow(data,id)
         return True
     else:
         return False
 
 
-def runcombine(filename):
+
+def runcombine(data,id):
+
     new_data = []
-    resutlLink = linkingAllFunc(filename)
+    resutlLink = linkingAllFunc(data,id)
+
     if (resutlLink):
         new_data = []
-        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json') as json_file:
+        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json') as json_file:
             data = json.load(json_file)
+            print(f"this is mhaa data------------{data}")
             temp = data["intents"]
         i = 0
         for entry in temp:
@@ -177,34 +277,94 @@ def runcombine(filename):
                 new_data.append(entry)
                 i += 1
         new_dict = {"intents": new_data}
-        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', "w") as f:
+        print(f"this is new dict --------------------------------------------------------{new_dict}")
+        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json', "w") as f:
             json.dump(new_dict, f, indent=4)
 
-        run_main()
+        run_main(id)
         print("Intent Json file is completely updated..")
     else:
         print("Question Generation is failed")
 
 
-# for handling the data given by the company xyz
-def fetchInputTextArea(request):
-    inputText = request.POST.get('inputText', 'default')
-    print(inputText)
-    file = open(f'{os.getcwd()}{os.sep}inputText', 'w')
-    file.writelines(inputText)
-    file.close()
-    print("this file is done")
-    runcombine('inputText')
+
+
+
+
+
+
+
+
+
+
+# Question Ans show
+def QueShow(request):
+    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+
+# Train model
+def trainModel(request):
+    # try:
+    id = request.session['Id']
+    trainTheChatBot(id)
     return HttpResponse("success")
-
-
-def QueGenerator(request):
-    return render(request, 'AIC_APP/questionGeneration.html')
-
+    # except Exception as e:
+    #     return HttpResponse(f"failed {e}")
 
 
 
+# predict ans from input
+def takeOutputdp(request):
+    id = request.session['Id']
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json").read())
+    message = request.POST.get('message', 'hey')
+    ints = predict_class(message,id)
+    res = get_response(ints, intents)
+    return HttpResponse(res)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Feedback
 def improveFeatures(request):
     try:
         messege = request.POST.get('messege', 'default')
@@ -216,71 +376,43 @@ def improveFeatures(request):
         return HttpResponse(f"failed")
 
 
+def QueGenerator(request):
+    return render(request, 'AIC_APP/questionGeneration.html')
 
 
-def QueShow(request):
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
 
 
-def trainModel(request):
-    # try:
-    trainTheChatBot()
-    return HttpResponse("success")
-    # except Exception as e:
-    #     return HttpResponse(f"failed {e}")
 
-def Showdatafromdb(request):
-    # section_id = 1
-    # fetch = Question_ans.objects.all()
-    # fetch = Question_ans.objects.get(questions = "what is this?")
-    new_question = "Is is my connection is complete or not?"
-    query = f'''INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ("{new_question}");'''
-    # query = f'''(Insert into aic_app_question_ans values(%s, %s)",['{1}','{new_question}']);'''
-    # fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
-    # try:
-    #     Question_ans.objects.raw(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
-    #     fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
-    #     print(fetch)
-    #     # print(fetch[0].answers)
-    #     # print(fetch[0].questions)
-    #     # ans_que = [(fetch.questions) for fetch in fetch]
-    #     # print(ans_que)
-    # except:
-    #     print("error now")
+# def Showdatafromdb(request):
+#     # section_id = 1
+#     # fetch = Question_ans.objects.all()
+#     # fetch = Question_ans.objects.get(questions = "what is this?")
+#     new_question = "Is is my connection is complete or not?"
+#     query = f'''INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ("{new_question}");'''
+#     # query = f'''(Insert into aic_app_question_ans values(%s, %s)",['{1}','{new_question}']);'''
+#     # fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
+#     # try:
+#     #     Question_ans.objects.raw(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
+#     #     fetch = Question_ans.objects.raw("SELECT * FROM aic_app_question_ans")
+#     #     print(fetch)
+#     #     # print(fetch[0].answers)
+#     #     # print(fetch[0].questions)
+#     #     # ans_que = [(fetch.questions) for fetch in fetch]
+#     #     # print(ans_que)
+#     # except:
+#     #     print("error now")
+#
+#     with connection.cursor() as cursor:
+#         cursor.execute(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
+#     return HttpResponse("yeah")
 
-    with connection.cursor() as cursor:
-        cursor.execute(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
-    return HttpResponse("yeah")
+# def updateJson(request):
+#
+#     jsonData = request.POST.get("updateData","default")
+#     intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
+#     intentsfile.write(jsonData)
+#     return HttpResponse("success")
 
-def updateJson(request):
-    jsonData = request.POST.get("updateData","default")
-    intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
-    intentsfile.write(jsonData)
-    return HttpResponse("success")
-
-def onlyAnswersData(request):
-    answers = request.POST.get("inputText","default")
-    answers = json.loads(answers)
-    print(type(answers))
-    # {'answers': ['I am rishi patel', 'i am patel rishi']}
-    print(answers)
-    anslist = [ans for ans in answers['answers']]
-    finalQuelist = generatefromOnlyAns(anslist)
-    # finalQuelist = [f for f in finalQuelist]
-    finalQuelist = [x for xs in finalQuelist for x in xs]
-    print(f"this is finalque list {finalQuelist}")
-    parafromqueans(anslist, finalQuelist)
-    print("Sucessfully answering done in json file")
-    return HttpResponse("success")
-
-def questionAnswerData(request):
-    questionAnswer = request.POST.get("inputText","default")
-    jsonquesans = json.loads(questionAnswer)
-    anslist = [ans for ans in jsonquesans['answers']]
-    quelist = [que for que in jsonquesans['questions']]
-    parafromqueans(anslist, quelist)
-    print("Sucessfully paraphrasing done in json file")
-    return HttpResponse("success")
 #
 # def getSuggestions(request):
 #     suggestionString = request.POST.get("messege", "default")
@@ -291,19 +423,6 @@ def questionAnswerData(request):
 #         suggest.append(i.questions[:])
 #     return HttpResponse(str({"suggestions":suggest}))
 
-def linkSubmit(request):
-    from AIC_APP.training.Scrap import getData
-    data = request.POST.get("link", "default")
-    siteData = getData(data)
-    print(siteData)
-    file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
-    file.writelines(siteData)
-    file.close()
-
-
-
-    runcombine('sitedata')
-    return HttpResponse("success")
 
 # def convertCsv(request):
 #     # csvPath = request.POST.get("file","default")
@@ -315,41 +434,24 @@ def linkSubmit(request):
 #     return HttpResponse("success")
 
 
-def csvSubmit(request):
-    file = request.FILES.get("csvfile")
-    fs = FileSystemStorage()
-    fname = fs.save(file.name, file)
-    siteData = csvData(fs.url(fname))
-    print(siteData)
-    # {'questions': ['que1', 'que2', 'que3', 'que4', 'que5', 'que6', 'que7', 'que8', 'que9', 'que10',
-    # 'que11', 'que12', 'que13', 'que14', 'que15'], 'answers': ['ans1', 'ans2', 'ans3', 'ans4',
-    # 'ans5', 'ans6', 'ans7', 'ans8', 'ans9', 'ans10', 'ans11', 'ans12', 'ans13', 'ans14', 'ans15']}
-    anslistfromcsv = siteData['answers']
-    quelistfromcsv = siteData['questions']
-    if (len(anslistfromcsv) == len(quelistfromcsv)):
-        parafromqueans(anslistfromcsv, quelistfromcsv)
-    else:
-        return (HttpResponse("Csv File contain unstructured data please check the again"))
-    return HttpResponse(fs.url(fname))
 
 
-
-def convertCsv(request):
-    # csvPath = request.POST.get("file","default")
-    # csvPathFile = request.FILES('file')
-    # print(csvPathFile)
-    # # from AIC_APP.training.convertCSV import csvData
-    # # siteData = csvData(csvPath)
-    # # print(siteData)
-    #
-    # return HttpResponse("success")
-    return render(request,  'AIC_APP/csv_upload.html')
+# def convertCsv(request):
+#     # csvPath = request.POST.get("file","default")
+#     # csvPathFile = request.FILES('file')
+#     # print(csvPathFile)
+#     # # from AIC_APP.training.convertCSV import csvData
+#     # # siteData = csvData(csvPath)
+#     # # print(siteData)
+#     #
+#     # return HttpResponse("success")
+#     return render(request,  'AIC_APP/csv_upload.html')
 
 
 
 
-def Gotoauth(request):
-    return render(request, "AIC_APP/login.html")
+# def Gotoauth(request):
+#     return render(request, "AIC_APP/login.html")
 
 
 # def signup(request):
@@ -420,22 +522,22 @@ def Gotoauth(request):
 #     return render(request, "AIC_APP/login.html?signup=true")
 
 
-def activate(request, uidb64, token):
-    try:
-        uid = force_str(urlsafe_base64_decode(uidb64))
-        myuser = User.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        myuser = None
-
-    if myuser is not None and generate_token.check_token(myuser, token):
-        myuser.is_active = True
-        # user.profile.signup_confirmation = True
-        myuser.save()
-        login(request, myuser)
-        messages.success(request, "Your Account has been activated!!")
-        return redirect('login')
-    else:
-        return render(request, 'activation_failed.html')
+# def activate(request, uidb64, token):
+#     try:
+#         uid = force_str(urlsafe_base64_decode(uidb64))
+#         myuser = User.objects.get(pk=uid)
+#     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+#         myuser = None
+#
+#     if myuser is not None and generate_token.check_token(myuser, token):
+#         myuser.is_active = True
+#         # user.profile.signup_confirmation = True
+#         myuser.save()
+#         login(request, myuser)
+#         messages.success(request, "Your Account has been activated!!")
+#         return redirect('login')
+#     else:
+#         return render(request, 'activation_failed.html')
 
 
 # def signin(request):
@@ -463,6 +565,8 @@ def activate(request, uidb64, token):
 #     logout(request)
 #     messages.success(request, "Logged Out Successfully!!")
 #     return redirect('Gotoauth')
+
+
 
 if __name__ == '__main__':
     runcombine()
