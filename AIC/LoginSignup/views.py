@@ -1,33 +1,17 @@
 from django.core.serializers.json import DjangoJSONEncoder
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.shortcuts import render, redirect
-from django.views.decorators.cache import cache_page
+
 import json
 from django.core.serializers import serialize
-import pickle
-import nltk
-import numpy as np
+
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from keras.models import load_model
-from nltk.stem import WordNetLemmatizer
-import os
-from django.db import connection
-from django.core.files.storage import FileSystemStorage
-# from AIC_APP.training.convertCSV import csvData
+
 from AIC_APP.models import Yobotuser
-# from django.contrib.auth.models import User
 from django.contrib import messages
-from django.core.mail import EmailMessage, send_mail
-# from geeksforgeeks import settings
-# from AIC.AIC import settings
-from django.contrib.sites.shortcuts import get_current_site
-from django.template.loader import render_to_string
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from django.utils.encoding import force_bytes, force_str
+
+
 from django.contrib.auth import authenticate, login, logout
-# from .tokens import generate_token
+
 
 # Create your views here.
 def index(request):
@@ -46,35 +30,21 @@ def signin(request):
         # user = authenticate(Email=Email, Password=pass1)
         print(f"this is user {user}")
         if (user is not None) and len(user)>0:
-            # ""
-            # [{'model': 'AIC_APP.yobotuser', 'pk': 6, 'fields': {'Name': 'rishirishirishirishi', 'Password': 'rishirishirishirishi',
-            #  'Email': 'rishi@mama.com', 'CompanyName': 'rishirishirishirishi', 'PhoneNum': 5678904311,
-            #  'ChatBotName': 'rishirishirishirishi'}}]"
-            #
-
-
-            # login(request, user)
-            # fname = user.Name
             print(user)
-            # userid = Yobotuser.get(UserId)
             request.session['Email']=user[0]['fields']['Email']
             request.session['Id']=user[0]['pk']
             request.session["Name"]=user[0]['fields']['Name']
             request.session['loggedin'] = True
-            # request.session['id'] = user.Userid
-            # messages.success(request, "Logged In Sucessfully!!")
-
             return redirect('AIC')
         else:
             request.session['loggedin'] = False
             messages.error(request, "Bad Credentials!!")
             return render(request, "AIC_APP/login.html")
-
     return render(request, "AIC_APP/login.html")
 
 
 def signout(request):
-    # request.session['loggedin'] = False
+    request.session['loggedin'] = False
     logout(request)
     messages.success(request, "Logged Out Successfully!!")
     return redirect('signin')
@@ -111,10 +81,6 @@ def signup(request):
             return redirect('signin')
 
         myuser = Yobotuser(Name=username,Password=pass1,Email=email,CompanyName=companyName,PhoneNum=lname,ChatBotName=fname )
-        # myuser.first_name = fname
-        # myuser.last_name = lname
-        # myuser.is_active = False
-        # myuser.is_active = False
         myuser.save()
         messages.success(request,"Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
 
