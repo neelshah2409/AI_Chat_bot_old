@@ -1,4 +1,4 @@
-# from AIC.question_generation.pipelines import pipeline
+
 import json
 from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktParameters
 import os
@@ -9,10 +9,8 @@ except Exception as e:
     print(f"Import pipeline error {e}")
 
 
-# intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
-
 def write_json(data,id):
-    filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json"
+    filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json"
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
@@ -24,7 +22,7 @@ def runnow(data,id):
         print("pipeline errr")
     import json
 
-    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json').read())
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json').read())
 
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl", qg_format="prepend")
@@ -36,15 +34,10 @@ def runnow(data,id):
     #  It provides a means of lessening the state’s fiscal responsibilities by encouraging the development of private alternatives
     #   which, theoretically at least''')
 
-    # with open(f'{os.getcwd()}/{filename}', 'r') as file:
-    #     data = file.read().replace('\n', '')
-        # print("data is:", data, type(data))
     ans = nlp(data)
-    # print(f"something{ans}")
 
     # format of the generation
     # {'answer': 'Twinkal', 'question':'Who is telented", 'answer': 'heuwiehish', 'question':'rhishi, }
-    # print(ans)
 
     anslist = [qa.get('answer') for qa in ans]
     quelist = [qa.get('question') for qa in ans]
@@ -53,25 +46,18 @@ def runnow(data,id):
     punkt_para.abbrev_types = set(re.findall('\\b[A-Z](?:[\\.&]?[A-Z]){1,7}\\b', data))
     tokenizer = PunktSentenceTokenizer(punkt_para)
     sentences = tokenizer.tokenize(data)
-    # sentences = data.split(".")
     full_ans = []
     for i in sentences:
         for j in anslist:
             full_ans.append(i) if j.replace("<pad> ","") in i else ""
-    # print("full ans:: ", full_ans)
-    # generatefromOnlyAns(full_ans)
-    # updatedQueBigList = []
-    # for k in full_ans:
-    #     k = nlp(k)
-    #     quelist = [q.get('question') for q in ans]
-    #     updatedQueBigList.append(quelist)
+
 
 
 
     iterate = 0
     for intent in intentsfile['intents']:
         for answer in full_ans:
-            # print(iterate,len(quelist),len(full_ans))
+
             list = []
             intent['tag'] = f"Data-{str(iterate + 1)}"
             try:
@@ -79,7 +65,7 @@ def runnow(data,id):
             except:
                 pass
 
-            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents{id}.json') as json_file:
+            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents/intents{id}.json') as json_file:
                 data = json.load(json_file)
                 temp = data["intents"]
                 y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
@@ -94,7 +80,6 @@ def generatefromOnlyAns(Big_anslist):
         from question_generation.pipelines import pipeline
     except Exception as e:
         print("pipeline errr")
-    import json
 
 
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
