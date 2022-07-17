@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Android";
+    src: url("../../fonts/Android.ttf");
+}
+@font-face {
+    font-family: "Android";
+    src: url("../fonts/Android.ttf");
+}
+@font-face {
+    font-family: "Chalkboard SE";
+    src: url("../../fonts/ChalkboardSE.otf");
+}
+@font-face {
+    font-family: "Chalkboard SE";
+    src: url("../fonts/ChalkboardSE.otf");
+}
+
+:root{
+    --card-bg-dark:#212529!important;
+    --text-light:#fff;
+    --color-text: hsl(248, 10%, 40%);
+    --color-text-muted: hsl(248, 10%, 40%);
+    --color-purple: slateblue;
+    --main-color:#0f1149;
+    --text-dark:#212529!important;
+    --tags-bg:rgb(190, 190, 190);
+    --input-shadow:rgb(181, 179, 184);
+}
