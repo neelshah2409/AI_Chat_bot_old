@@ -424,12 +424,13 @@ def paragraph(request):
 #         cursor.execute(f"INSERT INTO `yobot`.`aic_app_question_ans`(`questions`) VALUES ('{new_question}');")
 #     return HttpResponse("yeah")
 
-# def updateJson(request):
-#
-#     jsonData = request.POST.get("updateData","default")
-#     intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json', 'w')
-#     intentsfile.write(jsonData)
-#     return HttpResponse("success")
+def updateJson(request):
+
+    jsonData = request.POST.get("updateData","default")
+    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents6.json', 'w', encoding="utf-8") as f:
+        f.write(jsonData)
+    print(jsonData)
+    return HttpResponse("success")
 
 #
 # def getSuggestions(request):
