@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answer Generator</title>
+    {% load static %}
+    {% include "AIC_APP/modules/moduleHeader.html" %}
+</head>
+<body>
+    {% include "AIC_APP/navbar.html" %}
+    {% include 'AIC_APP/loading.html' %}
+    <section class="content row mx-0 my-md-5 py-md-4">
+        <div class="col-12 col-sm-12 col-md-5 d-flex flex-column justify-content-center align-items-center">
+            <h1>Description</h1>
+            <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} alt="" srcset="" class="img-fluid" style="height: 400px;width: auto;">
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 d-flex justify-content-center flex-wrap">
+            <div class="card bg-dark text-light col-sm-12 col-12" id="questionAnswerInputContainer">
+                <form action="#" method="post" id="questionAnswersForm">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between">Enter Question Answers Here </h5>
+                        <div class="form-control questionAnswerDisplayContainer">
+                            <div class="questionAnswerDisplay py-2" id="questionAnswerDisplay"></div>
+                            <h5 id="questionAnswerInputLabel">Type Your Question Here :</h5>
+                            <textarea name="questionAnswerInput" id="questionAnswerInput" class="questionAnswerInput p-0" cols="30" rows="5" placeholder="Type Your Question-Answers Here"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary text-light mb-2 w-100" id="submitBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+{% include "AIC_APP/modules/moduleScript.html" %}
+</html>

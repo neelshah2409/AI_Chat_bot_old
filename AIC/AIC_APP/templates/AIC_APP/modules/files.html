@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generator From Only Answer</title>
+    {% load static %}
+    {% include "AIC_APP/modules/moduleHeader.html" %}
+</head>
+<body>
+    {% include "AIC_APP/navbar.html" %}
+    {% include 'AIC_APP/loading.html' %}
+    <section class="content row mx-0 my-md-5 py-md-4">
+        <div class="col-12 col-sm-12 col-md-5 d-flex flex-column justify-content-center align-items-center">
+            <h1>Description</h1>
+            <img src={%  static "AIC_APP/images/description-carousel/1.jpg" %} alt="" srcset="" class="img-fluid" style="height: 400px;width: auto;">
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 d-flex justify-content-center flex-wrap">
+            <form action="#" method="post" id="fileForm" class="w-100" enctype="multipart/form-data">
+                <div class="card bg-dark text-light col-sm-12 col-12" id="fileInputContainer">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between">Submit Your file Here</h5>       
+                        <div class="form-control fileDisplayContainer">
+                            <h5 id="fileInputLabel">Submit Your File Here :</h5>
+                            <select name="fileType" class="form-select form-control my-2" id="fileType">
+                                <option value="none" selected>Select Your File Type</option>
+                                <option value="text">Plain Text (.txt)</option>
+                                <option value="csv">CSV</option>
+                                <option value="docx">DOCX</option>
+                            </select>
+                            <input name="fileInput" type="file" id="fileInput" class="form-control bg-secondary text-light my-4" data-bs-toggle="tooltip" title="Please Choose File Type First" accept=".csv" disabled="true" required/>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary text-light mb-2" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+{% include "AIC_APP/modules/moduleScript.html" %}
+</html>

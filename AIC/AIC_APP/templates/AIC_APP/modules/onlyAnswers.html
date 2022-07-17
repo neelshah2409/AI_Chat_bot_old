@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generator From Only Answer</title>
+    {% load static %}
+    {% include "AIC_APP/modules/moduleHeader.html" %}
+</head>
+<body>
+    {% include "AIC_APP/navbar.html" %}
+    {% include 'AIC_APP/loading.html' %}
+    <section class="content row mx-0 my-md-5 py-md-4">
+        <div class="col-12 col-sm-12 col-md-5 d-flex flex-column justify-content-center align-items-center">
+            <h1>Description</h1>
+            <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} alt="" srcset="" class="img-fluid" style="height: 400px;width: auto;">
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 d-flex justify-content-center flex-wrap">
+            <form action="#" method="post" id="onlyAnswersForm" class="w-100">
+                <div class="card bg-dark text-light col-sm-12 col-12" id="onlyAnswerInputContainer">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-between">Enter Answers Here </h5>
+                        <div class="form-control onlyAnswerDisplayContainer">
+                            <div class="onlyAnswerDisplay py-2" id="onlyAnswerDisplay"></div>
+                            <h5 id="onlyAnswerInputLabel">Type Your Answers Here :</h5>
+                            <textarea name="onlyAnswerInput" id="onlyAnswerInput" class="onlyAnswerInput p-0" cols="30" rows="5" placeholder="Type Your Answers Here"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary text-light mb-2" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+{% include "AIC_APP/modules/moduleScript.html" %}
+</html>

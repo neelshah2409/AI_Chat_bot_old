@@ -1,0 +1,16 @@
+body{
+    height: 100vh;
+}
+
+.getStarted{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.card-holder{
+    height: auto;
+    /* transform: translateY(-90%); */
+    z-index: 1!important;
+}

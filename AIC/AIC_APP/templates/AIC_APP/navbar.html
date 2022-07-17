@@ -1,5 +1,4 @@
-{% load cache %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" style="z-index: 1000!important;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
   <div class="container-fluid col-10">
     <a class="navbar-brand logo" href="/">Yo Bot</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,51 +6,50 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="mx-4"></div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-2">
-          <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item mx-2">
-            <a class="nav-link" href="#">API</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-2">
+            <a class="nav-link active fw-bold" aria-current="page" href="/"><i class="fa-solid fa-house-chimney"></i> Home</a>
           </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link" href="/QueGenerator">Get Started</a>
-        </li>
-        <li class="nav-item mx-2 dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            More    
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/QueShow">Train Model</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Default dropup button -->
-        <!-- <div class="btn-group dropup">
-            
-            <div class="dropdown-menu">
-                <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p class="col-8 m-0">{{request.session.username}}</p></a></li>
-                <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+          <li class="nav-item mx-2">
+              <a class="nav-link" href="#"><i class="fa-solid fa-key"></i> API</a>
+            </li>
+          <li class="nav-item mx-2 generateFAQs">
+            <a class="nav-link" href="/generateFAQs"><i class="fa-solid fa-gears"></i> Generate FAQs</a>
+            <div class="generateFAQOptions">
+              <div class="list-group">
+                <a href="/questionAnswers" class="list-group-item list-group-item-action">
+                  Using Question-Answers
+                </a>
+                <a href="/onlyAnswers" class="list-group-item list-group-item-action">
+                  Using Only Answers
+                </a>
+                <a href="/filesInput" class="list-group-item list-group-item-action">
+                  Using File
+                </a>
+                <a href="/paragraph" class="list-group-item list-group-item-action">
+                  Using Paragraph
+                </a>
+                <a href="/linkInput" class="list-group-item list-group-item-action">
+                  Using Site Link
+                </a>
+              </div>
             </div>
-        </div>
-      <div class="dropleft">
-        <button class="" style="outline:none !important; box-shadow:none!important;" dropdown-toggle="dropdown" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" id="user">
-            <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Feedback"></i>
-        </button>
-        <ul class="">
-          
-        </ul> -->
-
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/chatAssistant"><i class="fa-regular fa-comments"></i> Chat Assistant</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/QueShow"><i class="fa-solid fa-hammer"></i> View Questions</a>
+          </li>
+        </ul>
         <div class="btn-group dropdown">
-            <button type="button" class="btn p-0 dropdown-toggle text-light gap-1 d-flex justify-content-center align-items-center" id="dropdownMenuButton" data-bs-toggle="dropdown">
+            <button type="button" class="btn p-0 dropdown-toggle text-light d-flex justify-content-center align-items-center" id="dropdownMenuButton" data-bs-toggle="dropdown">
                 <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
             </button>
           <ul class="dropdown-menu dropdown-menu-dark dropleft">
-            <li><a class="dropdown-item text-center profile-item" href="#"><i class="fa fa-user col-4 text-start" aria-hidden="true"></i> <p class="col-8 m-0">{{request.session.Name}}</p></a></li>
-          <li><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">Root</p></a></li>
+            <!-- {{request.session.username}} -->
+          <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
           </ul>
         </div>
     </div>

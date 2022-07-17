@@ -1,9 +1,42 @@
 .logo{
-    font-family: Android;
+    font-family: "Android";
     font-size: 1.5rem;
 }
 
-.user-profile{
-    font-family: Android;
-    word-spacing: 7px;
+.nav-link i{
+    transition: 0.5s ease;
+    margin-right: 5px;
+}
+
+.nav-link:hover i{
+    transform: scale(1.4);  
+}
+
+.profile-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    font-family: 'Chalkboard SE' !important;
+    font-size:15px !important;
+    line-height: 1 !important;
+}
+.generateFAQs{
+    position:relative !important;
+}
+.generateFAQOptions{
+    position: absolute;
+    opacity: 1;
+    top:100%;
+    left: -20%;
+    width: 250px !important;
+    transform: scale(0);
+    transform-origin: 50% 0%;
+    transition: 0.2s ease;
+    z-index: 1111!important;
+}
+
+.generateFAQs:hover>.generateFAQOptions{
+    opacity: 1;
+    transform: scale(1);
 }
