@@ -1,44 +1,263 @@
-{% load cache %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yo Bot</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
     {% load static %}
     {% include 'AIC_APP/header.html' %}
-
+  <title>YO-BOT</title>
 </head>
 
 <body>
-    {% include 'AIC_APP/navbar.html' %}
 
-    <div class="row m-0 p-0">
-        <section class="col-12 col-sm-12 col-md-8 overflow-hidden" style="opacity: 1">
-            {% include 'AIC_APP/background.html' %}
-        </section>
-        <main class="col-12" style="z-index:1!important">
-            <div class="d-flex justify-content-center justify-content-md-end align-items-center" style="height: 90.8vh;" id="temp">
-                <div id="chatbox">
-                    {% include 'AIC_APP/index2.html' %}
-                </div>
-            </div>
-        </main>
+{% include "AIC_APP/navbar.html" %}
+
+<!-- main page first  -->
+  <div class="section1">
+    <div class="content1 row m-0">
+      <div class="top-main col-lg-6 col-md-6 col-sm-12">
+        <div class="title">Conversations that Increase Conversions</div>
+        <div class="description">A Chatbot for your Website</div>
+        <button type="button" class="btn bg-color btn-outline-us text-light mt-5">Get Started</button>
+      </div>
+      <div class="img-chatbot col-lg-6 col-md-6 col-sm-12">
+        <img src={% static "AIC_APP/images/home/chatbot.png" %} alt="chatbot">
+      </div>
     </div>
+  </div>
 
 
+
+  <!-- steps  -->
+  <div style="background-color: #f2f2f2;">
+    <h2 class="text-center" style=" padding-top: 3%;">How to use?</h2>
+
+  <div class="steps" id="steps">
+    <button data-step="1" class="active">1</button>
+    <div></div>
+
+    <button data-step="2">2</button>
+    <div></div>
+    <button data-step="3">3</button>
+  </div>
+
+  <div class="contents" id="contents">
+    <div class="content active" data-step="1">
+      <div class="content__box mb-3">
+        <div class="text-center">
+        <div>
+          <img src={% static "AIC_APP/images/home/Video Call-01@2x.png" %} style="width: 50%;"alt="">
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rem accusamus repudiandae, iure libero nostrum praesentium dolorum quo cum quis!
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="content" data-step="2">
+      <div class="content__box">
+        <div class="text-center">
+          <div>
+            <img src={% static "AIC_APP/images/home/Video Call-01@2x.png" %} style="width: 50%;"alt="">
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rem accusamus repudiandae, iure libero nostrum praesentium dolorum quo cum quis!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" data-step="3">
+      <div class="content__box">
+        <div class="text-center">
+          <div>
+            <img src={% static "AIC_APP/images/home/Video Call-01@2x.png" %} style="width: 50%;"alt="">
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rem accusamus repudiandae, iure libero nostrum praesentium dolorum quo cum quis!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- features  -->
+
+  <div class="features">
+    <div class="heading">
+
+      <h2>Key Features</h2>
+    </div>
+    <div class="sectionInside">
+      <div class="main2 justify-content-around ">
+        <div class="card" id="card1" style="width: 16rem; height: 16rem;" onmouseover="change(this)"
+          onmouseout="chnageAgain(this)">
+          <img src={% static "AIC_APP/images/home/conference1@2x.png" %} class="card-img-top imgsize2" alt="... ">
+          <div class="hoverText" style="display: none;">
+            <h4>Group video call</h4>
+            <p>Multiple Users Can Join The Video Call And They Can Try Jewellery.</p>
+          </div>
+
+
+        </div>
+        <div class="card" id="card1" style="width: 16rem; height: 16rem;" onmouseover="change(this)"
+          onmouseout="chnageAgain(this)">
+          <img src={% static "AIC_APP/images/home/dashboard@2x.png" %} class="card-img-top imgsize2" alt="... ">
+          <div class="hoverText" style="display: none;">
+            <h4>Group video call</h4>
+            <p>Multiple Users Can Join The Video Call And They Can Try Jewellery.</p>
+        </div>
+        </div>
+        <div class="card" id="card1" style="width: 16rem; height: 16rem;" onmouseover="change(this)"
+          onmouseout="chnageAgain(this)">
+          <img src={% static "AIC_APP/images/home/upload1@2x.png" %} class="card-img-top imgsize2" alt="... ">
+          <div class="hoverText" style="display: none;">
+            <h4>Group video call</h4>
+            <p>Multiple Users Can Join The Video Call And They Can Try Jewellery.</p>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="main2 justify-content-around ">
+        <div class="card" id="card1" style="width: 16rem; height: 16rem;" onmouseover="change(this)"
+          onmouseout="chnageAgain(this)">
+          <img src={% static "AIC_APP/images/home/24-hours-support1@2x.png" %} class="card-img-top imgsize2" alt="... ">
+          <div class="hoverText" style="display: none;">
+            <h4>Group video call</h4>
+            <p>Multiple Users Can Join The Video Call And They Can Try Jewellery.</p>
+          </div>
+
+
+        </div>
+        <div class="card" id="card1" style="width: 16rem; height: 16rem;" onmouseover="change(this)"
+          onmouseout="chnageAgain(this)">
+          <img src={% static "AIC_APP/images/home/data-security1@2x.png" %} class="card-img-top imgsize2" alt="... ">
+          <div class="hoverText" style="display: none;">
+            <h4>Group video call</h4>
+            <p>Multiple Users Can Join The Video Call And They Can Try Jewellery.</p>
+          </div>
+
+
+        </div>
+        <div class="card" id="card1" style="width: 16rem; height: 16rem;" onmouseover="change(this)"
+          onmouseout="chnageAgain(this)">
+          <img src={% static "AIC_APP/images/home/bg remover1@2x.png" %} class="card-img-top imgsize2" alt="... ">
+          <div class="hoverText" style="display: none;">
+            <h4>Group video call</h4>
+            <p>Multiple Users Can Join The Video Call And They Can Try Jewellery.</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- benefits  -->
+   <div class=" container wrapper-home">
+    <h2 class="mb-4 mt-3">Benefits</h2>
+        <div class="carousel">
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <img src={% static "AIC_APP/images/home/order-01@2x.png" %}>
+              </div>
+              <div class="card-body">
+                <div class="card-content text-center">
+                  <div class="card-title">Generate more sales
+                  </div>
+                  <div class="card-text mt-3">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                      the industry's standard dummy text ever since .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <img src={% static "AIC_APP/images/home/order-01@2x.png" %}>
+              </div>
+              <div class="card-body">
+                <div class="card-content text-center">
+                  <div class="card-title">Generate more sales
+                  </div>
+                  <div class="card-text mt-3">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                      the industry's standard dummy text ever since .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <img src={% static "AIC_APP/images/home/order-01@2x.png" %}>
+              </div>
+              <div class="card-body">
+                <div class="card-content text-center">
+                  <div class="card-title">Generate more sales
+                  </div>
+                  <div class="card-text mt-3">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                      the industry's standard dummy text ever since .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <img src={% static "AIC_APP/images/home/order-01@2x.png" %}>
+              </div>
+              <div class="card-body">
+                <div class="card-content text-center">
+                  <div class="card-title">Generate more sales
+                  </div>
+                  <div class="card-text mt-3">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                      the industry's standard dummy text ever since .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <img src={% static "AIC_APP/images/home/order-01@2x.png" %}>
+              </div>
+              <div class="card-body">
+                <div class="card-content text-center">
+                  <div class="card-title">Generate more sales
+                  </div>
+                  <div class="card-text mt-3">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                      the industry's standard dummy text ever since .</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        
+  </div> 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="{% static 'AIC_APP/js/gsap.min.js' %}"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-<script src="{% static 'AIC_APP/js/bganimation.js' %}"></script>
+<!-- Optional JavaScript; choose one of the two! -->
 
-{% csrf_token %}
-<script>
-    let sound = "{% static 'AIC_APP/js/notification.mp3' %}";
-</script>
-<script src="{% static 'AIC_APP/js/index.js' %}"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  {% include 'AIC_APP/script.html' %}
 </html>

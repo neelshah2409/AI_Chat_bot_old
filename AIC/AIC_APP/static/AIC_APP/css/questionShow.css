@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+.accordion {
+  width: 90vw;
+  padding: 1.2rem 0;
+  border-radius: 1rem;
+  /* background: white; */
+/*   box-shadow: 0 0 5rem lightgrey; */
+}
+
+.accordion__heading {
+  margin-bottom: 1rem;
+  padding: 0 1.4rem;
+}
+
+.accordion__item:not(:last-child) {
+  border-bottom: 1px solid hsl(200deg 82% 98%);
+}
+
+.accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: white;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.accordion__item--active .accordion__btn:hover {
+  /* color: #0f1149;
+  background: hsl(248, 53%, 97%); */
+  /* background-color:#0f1149 ; */
+  /* color: white; */
+}
+
+.accordion__item--active .accordion__btn {
+  color: #0f1149;
+  /* border-bottom: 2px solid #0f1149; */
+  /* background: hsl(248, 53%, 97%); */
+  background-color: #e3f5fc5c;
+}
+
+.fa-lightbulb {
+  padding-right: 1rem;
+}
+.accordion__icon {
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  opacity: 0.9;
+}
+.accordion__item--active .accordion__icon {
+  transform: rotate(135deg);
+}
+
+.accordion__content {
+  font-weight: 300;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* color: var(--color-text-muted); */
+  color: black;
+  transform: translateX(16px);
+  transition: max-height 0.5s ease, opacity 0.5s, transform 0.5s;
+}
+.accordion__content p {
+  padding: 1rem 1.8rem;
+}
+
+.accordion__item--active .accordion__content {
+  opacity: 1;
+  transform: translateX(0px);
+  max-height: 100vh;
+}
+
+#openall,#closeall{
+    background-color: #0f1149;
+    color: white;
+}
+.float-right{
+    float: right;
+}
+
+.searchbar{
+  border: none;
+  width: 92%;
+  margin: auto;
+  display: flex;
+  height: 44px;
+  border-radius: 5px;
+  padding: 5px 10px 5px 5px ;
+  margin-top: 80px;
+  box-shadow: 0 1px 5px 0 rgb(32 33 36 / 58%);
+}
+.searchbar img{
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px grey;
+}
+#searchBox{
+  width: 100%;
+  border: none;
+  outline: 0;
+  padding: 0px 0px 0px 10px ;
+  margin-left: 5px;
+  background: white;
+  font-size: 17px;
+}
+#search{
+  width: 40px;
+  background: white;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+.selectColor {
+  padding: 10px;
+  border: none;
+ 
+  border-radius: 4px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}

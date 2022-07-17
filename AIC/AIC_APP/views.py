@@ -150,7 +150,10 @@ def fetchInputTextArea(request):
 
 def linkSubmit(request):
     from AIC_APP.training.Scrap import getData
+
     data = request.POST.get("link", "default")
+    questionClass = request.POST.get("questionClass", "")
+    answerClass = request.POST.get("answerClass","")
     siteData = getData(data)
     print(siteData)
     # file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
@@ -187,11 +190,12 @@ def questionAnswerData(request):
     print("Sucessfully paraphrasing done in json file")
     return HttpResponse("success")
 
-def csvSubmit(request):
+def fileSubmit(request):
     id = request.session['Id']
-    file = request.FILES.get("csvfile")
+    file = request.FILES.get("fileInput")
+    print(file)
     fs = FileSystemStorage()
-    fname = fs.save(id, file)
+    fname = fs.save(str(id), file)
     siteData = csvData(fs.url(fname))
     print(siteData)
     # {'questions': ['que1', 'que2', 'que3', 'que4', 'que5', 'que6', 'que7', 'que8', 'que9', 'que10',
@@ -287,19 +291,9 @@ def runcombine(data,id):
         print("Question Generation is failed")
 
 
-
-
-
-
-
-
-
-
-
-
 # Question Ans show
 def QueShow(request):
-    return render(request, 'AIC_APP/questionGenerationdisplay.html')
+    return render(request, 'AIC_APP/questionShow.html')
 
 # Train model
 def trainModel(request):
@@ -321,6 +315,9 @@ def takeOutputdp(request):
     res = get_response(ints, intents)
     return HttpResponse(res)
 
+
+def generateFAQs(request):
+    return render(request,"AIC_APP/generateFAQs.html")
 
 
 
@@ -378,6 +375,26 @@ def improveFeatures(request):
 
 def QueGenerator(request):
     return render(request, 'AIC_APP/questionGeneration.html')
+
+def chatAssistant(request):
+    return render(request, 'AIC_APP/chatAssistant.html')
+
+def questionAnswers(request):
+    return render(request, 'AIC_APP/modules/questionAnswers.html')
+
+def onlyAnswers(request):
+    return render(request, 'AIC_APP/modules/onlyAnswers.html')
+
+def linkInput(request):
+    return render(request, 'AIC_APP/modules/link.html')
+
+def filesInput(request):
+    return render(request, 'AIC_APP/modules/files.html')
+
+def paragraph(request):
+    return render(request, 'AIC_APP/modules/paragraph.html')
+
+
 
 
 
