@@ -4,7 +4,6 @@ import json
 import os
 
 
-# intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json').read())
 model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
 tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
 
@@ -16,7 +15,7 @@ model = model.to(device)
 
 
 def write_json(data,id ):
-    filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json"
+    filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json"
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
@@ -29,7 +28,7 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 def updatejson(intent):
-    a_file = open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json", "a")
+    a_file = open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json", "a")
     json.dump(intent ,a_file)
     a_file.write(',')
     a_file.close()
@@ -66,7 +65,7 @@ def run_main(id):
     from transformers import T5ForConditionalGeneration, T5Tokenizer
     import json
     intentsfile = json.loads(
-        open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json').read())
+        open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json').read())
 
     model = T5ForConditionalGeneration.from_pretrained('ramsrigouthamg/t5_paraphraser')
     tokenizer = T5Tokenizer.from_pretrained('ramsrigouthamg/t5_paraphraser')
@@ -84,7 +83,7 @@ def run_main(id):
         ques.append(intent.get('patterns')[0])
         answer = intent.get('responses')
 
-        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json') as json_file:
+        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json') as json_file:
             data = json.load(json_file)
             temp = data["intents"]
             y = {"tag": f"Data-{str(iterate + 1)}", "patterns": ques, "responses": answer}
@@ -107,7 +106,7 @@ def parafromqueans(anslist, quelist,id):
         paraquelist.append(updatePatterns(i))
         MainParaQueList.append(paraquelist)
         iterate += 1
-    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json') as json_file:
+    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json') as json_file:
         data = json.load(json_file)
         temp = data["intents"]
         iterate = 1

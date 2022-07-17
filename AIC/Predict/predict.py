@@ -1,10 +1,7 @@
-from django.views.decorators.cache import cache_page
-import json
+
 import pickle
 import nltk
 import numpy as np
-from django.http import HttpResponse
-from django.shortcuts import render, redirect
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 import os
@@ -18,7 +15,7 @@ def clean_up_sentence(sentence):
     return sentence_words
 
 def bag_of_words(sentence,id):
-    words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words{id}.pkl", 'rb'))
+    words = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words{os.sep}words{id}.pkl", 'rb'))
 
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)
@@ -29,7 +26,7 @@ def bag_of_words(sentence,id):
     return np.array(bag)
 
 def predict_class(sentence,id):
-    classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes{id}.pkl", 'rb'))
+    classes = pickle.load(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes{os.sep}classes{id}.pkl", 'rb'))
     model = load_model(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel{id}.h5")
     bow = bag_of_words(sentence,id)
     res = model.predict(np.array([bow]))[0]
