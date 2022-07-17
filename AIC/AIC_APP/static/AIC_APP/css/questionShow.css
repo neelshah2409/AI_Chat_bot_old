@@ -83,8 +83,15 @@
     background-color: #0f1149;
     color: white;
 }
+.closeall{
+ background-color: #0f1149;
+    color: white;
+}
 .float-right{
     float: right;
+}
+.btn:hover{
+color:white !important;
 }
 
 .searchbar{
