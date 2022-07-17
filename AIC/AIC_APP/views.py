@@ -150,7 +150,7 @@ def fetchInputTextArea(request):
 
 def linkSubmit(request):
     from AIC_APP.training.Scrap import getData
-
+    id = request.session["Id"]
     data = request.POST.get("link", "default")
     questionClass = request.POST.get("questionClass", "")
     answerClass = request.POST.get("answerClass","")
@@ -159,7 +159,7 @@ def linkSubmit(request):
     # file = open(f'{os.getcwd()}{os.sep}sitedata', 'a')
     # file.writelines(siteData)
     # file.close()
-    runcombine(siteData)
+    runcombine(siteData,id)
     return HttpResponse("success")
 
 
@@ -182,11 +182,12 @@ def linkSubmit(request):
 
 
 def questionAnswerData(request):
+    id = request.session['Id']
     questionAnswer = request.POST.get("inputText","default")
     jsonquesans = json.loads(questionAnswer)
     anslist = [ans for ans in jsonquesans['answers']]
     quelist = [que for que in jsonquesans['questions']]
-    parafromqueans(anslist, quelist)
+    parafromqueans(anslist, quelist,id)
     print("Sucessfully paraphrasing done in json file")
     return HttpResponse("success")
 

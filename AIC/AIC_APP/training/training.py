@@ -16,7 +16,7 @@ import os
 
 def trainTheChatBot(id):
     lemmatizer = WordNetLemmatizer()
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents.json").read())
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{id}.json").read())
 
 
     words = []
