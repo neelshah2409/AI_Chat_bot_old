@@ -16,7 +16,6 @@ def txtData(data):
         questions = []
         answers = []
         for i in f.read().split("\n\n"):
-            print(question)
             if question:
                 questions.append(i)
                 question = not question
@@ -35,7 +34,6 @@ def docxData(data):
     questions = []
     answers = []
     for i in list(doc.paragraphs)[0].text.split("\n\n"):
-        print(question)
         if question:
             questions.append(i)
             question = not question

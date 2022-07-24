@@ -3,7 +3,7 @@ import json
 import os
 
 from django.core.files.storage import FileSystemStorage
-from AIC_APP.training.convertCSV import csvData, txtData, docxData
+from AIC_APP.training.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
 from AIC_APP.training.Scrap import getData,getDataWithClass
 from django.http import HttpResponse, request
@@ -351,7 +351,7 @@ def updateJson(request):
 #     return HttpResponse(str({"suggestions":suggest}))
 
 
-# def convertCsv(request):
+# def filesConvert(request):
 #     # csvPath = request.POST.get("file","default")
 #     csvPathFile = request.FILES('file')
 #     print(csvPathFile)
@@ -363,11 +363,11 @@ def updateJson(request):
 
 
 
-# def convertCsv(request):
+# def filesConvert(request):
 #     # csvPath = request.POST.get("file","default")
 #     # csvPathFile = request.FILES('file')
 #     # print(csvPathFile)
-#     # # from AIC_APP.training.convertCSV import csvData
+#     # # from AIC_APP.training.filesConvert import csvData
 #     # # siteData = csvData(csvPath)
 #     # # print(siteData)
 #     #
