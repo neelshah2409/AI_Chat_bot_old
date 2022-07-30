@@ -42,16 +42,27 @@
             <a class="nav-link" href="/QueShow"><i class="fa-solid fa-hammer"></i> View Questions</a>
           </li>
         </ul>
+        {% if request.session.Name %}
         <div class="btn-group dropdown">
             <button type="button" class="btn p-0 dropdown-toggle text-light d-flex justify-content-center align-items-center" id="dropdownMenuButton" data-bs-toggle="dropdown">
                 <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
             </button>
           <ul class="dropdown-menu dropdown-menu-dark dropleft">
             <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">{{ request.session.Name }}</p></a></li>
-            <!-- {{request.session.username}} -->
-          <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+
           </ul>
         </div>
+        {% else %}
+        <div class="d-flex justify-content-between gap-4">
+            <a href="/" class="btn btn-primary bg-primary px-2 py-2 text-light d-flex justify-content-center align-items-center">
+                Log in
+            </a>
+            <a href="/?signup=true" class="btn btn-success btn-outline px-2 py-2 text-light d-flex justify-content-center align-items-center">
+                Sign Up
+            </a>
+        </div>
+        {% endif %}
     </div>
     </div>
   </div>
