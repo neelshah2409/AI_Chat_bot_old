@@ -65,7 +65,7 @@ $(document).ready(()=>{
     }
 
     const displayAnswers = (value,i)=>{
-        $("#onlyAnswerDisplay").append(`<div class='answersDisplayInput'><span class="fw-bold">Answer : </span><textarea id="${i}" class="displayOnlyAnswerInput" data-bs-toggle="tooltip" title="Click Here To Edit" cols="30" rows="1">${value}</textarea></div>`);
+        $("#onlyAnswerDisplay").append(`<div class='answersDisplayInput'><span class="fw-bold">Answer: </span><textarea id="${i}" class="displayOnlyAnswerInput" data-bs-toggle="tooltip" title="Click Here To Edit" cols="50" rows="1">${value}</textarea></div>`);
     }
 
     function urlify(text) {

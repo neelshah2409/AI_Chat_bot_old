@@ -1,5 +1,9 @@
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark py-3">
-  <div class="container-fluid col-11">
+    {% if request.session.Name %}
+    <div class="container-fluid col-10">
+    {% else %}
+    <div class="container-fluid col-11">
+    {% endif %}
     <a class="navbar-brand logo" href="/">YourBot</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,18 +46,18 @@
             <a class="nav-link" href="/QueShow"><i class="fa-solid fa-hammer"></i> View Questions</a>
           </li>
         </ul>
-{#        {% if request.session.Name %}#}
-{#        <div class="btn-group dropdown">#}
-{#            <button type="button" class="btn p-0 dropdown-toggle text-light d-flex justify-content-center align-items-center" id="dropdownMenuButton" data-bs-toggle="dropdown">#}
-{#                <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>#}
-{#            </button>#}
-{#          <ul class="dropdown-menu dropdown-menu-dark dropleft">#}
-{#            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">{{ request.session.Name }}</p></a></li>#}
-{#            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>#}
-{##}
-{#          </ul>#}
-{#        </div>#}
-{#        {% else %}#}
+        {% if request.session.Name %}
+        <div class="btn-group dropdown">
+            <button type="button" class="btn p-0 dropdown-toggle text-light d-flex justify-content-center align-items-center" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
+            </button>
+          <ul class="dropdown-menu dropdown-menu-dark dropleft">
+            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">{{ request.session.Name }}</p></a></li>
+            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
+
+          </ul>
+        </div>
+        {% else %}
         <div class="d-flex justify-content-start justify-content-xl-between gap-4 ms-auto">
             <a href="/" class="btn btn-primary bg-primary px-4 py-2 text-light d-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-arrow-right-to-bracket me-2"></i> Log in
@@ -62,7 +66,7 @@
                 <i class="fa-solid fa-user-plus me-2"></i> Sign Up
             </a>
         </div>
-{#        {% endif %}#}
+        {% endif %}
     </div>
     </div>
   </div>

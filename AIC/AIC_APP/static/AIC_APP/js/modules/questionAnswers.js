@@ -76,12 +76,12 @@ $(document).ready(()=>{
         }
 
         const displayQuestion = (value,i)=>{
-            $("#questionAnswerDisplay").append(`<div class='questionAnswersDisplayInput'><span class="fw-bold">Question : </span><textarea id="${i}" class="displayQuestionAnswerInput" data-bs-toggle="tooltip" title="Click Here To Edit" cols="30" rows="1">${value}</textarea></div>`);
+            $("#questionAnswerDisplay").append(`<div class='questionAnswersDisplayInput'><span class="fw-bold">Question: </span><textarea id="${i}" class="displayQuestionAnswerInput" data-bs-toggle="tooltip" title="Click Here To Edit" cols="50" rows="1">${value}</textarea></div>`);
             $("#questionAnswerInputLabel").html("Type Your Answer Here :")
         }
 
         const displayAnswers = (value,i)=>{
-            $("#questionAnswerDisplay").append(`<div class='questionAnswersDisplayInput'><span class="fw-bold">Answer : </span><textarea id="${i}" class="displayQuestionAnswerInput" data-bs-toggle="tooltip" title="Click Here To Edit" cols="30" rows="1">${value}</textarea></div>`);
+            $("#questionAnswerDisplay").append(`<div class='questionAnswersDisplayInput'><span class="fw-bold">Answer: </span><textarea id="${i}" class="displayQuestionAnswerInput" data-bs-toggle="tooltip" title="Click Here To Edit" cols="50" rows="1">${value}</textarea></div>`);
             $("#questionAnswerInputLabel").html("Type Your Question Here :")
         }
 
