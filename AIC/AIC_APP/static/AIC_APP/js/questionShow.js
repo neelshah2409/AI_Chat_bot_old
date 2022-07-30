@@ -2,7 +2,7 @@
 
 
 $(document).ready(function () {
-  var temp = "static/AIC_APP/intents6.json";
+  var temp = `static/AIC_APP/intents/intents${id}.json`;
   let temp1 = "";
   let iterate = 0;
   $.getJSON(temp, function (jd) {
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
   $('#searchBox').on('keyup', function () {
     var ip = $('#searchBox').val();
-    var temp = "static/AIC_APP/intents6.json";
+    var temp = `static/AIC_APP/intents/intents${id}.json`;
     let temp1 = "";
     let iterate = 0;
     $.getJSON(temp, function (jd) {
@@ -63,7 +63,7 @@ $(document).ready(function () {
     console.log($(this));
     $(this).parent().hide("fold", 700);
     let deleteIndex = $(this).attr("name");
-    var temp = "static/AIC_APP/intents6.json";
+    var temp = `static/AIC_APP/intents/intents${id}.json`;
     setTimeout(function () {
       $.getJSON(temp, function (jd) {
         jd["intents"].splice(deleteIndex, 1);
@@ -91,8 +91,7 @@ $(document).ready(function () {
           data: {
             updateData: JSON.stringify(jd)
           },
-          success: function (data) {
-            alert("success");
+          success: function (data) {;
             $('#questionGenerationdisplay').html(temp1);
           },
           error: function (data) {

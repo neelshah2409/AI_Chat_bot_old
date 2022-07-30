@@ -47,7 +47,7 @@
                 <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
             </button>
           <ul class="dropdown-menu dropdown-menu-dark dropleft">
-            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">Root</p></a></li>
+            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">{{ request.session.Name }}</p></a></li>
             <!-- {{request.session.username}} -->
           <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
           </ul>

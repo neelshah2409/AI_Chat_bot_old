@@ -18,8 +18,9 @@ $(document).ready(()=>{
         e.preventDefault();
         $(".processing").html("Uploading File").attr("x", "306");
         $(".loadingBox").fadeIn();
-        let form = $("#fileForm");
+        const form = $("#fileForm");
         let formData = new FormData(form[0]);
+        console.log(form[0])
         console.log(formData)
         $.ajax({
             type: "POST",

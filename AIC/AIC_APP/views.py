@@ -1,11 +1,11 @@
 # djngo server when run so it will accept this pass so ignore the error
 import json
+import os
 
 from django.core.files.storage import FileSystemStorage
-from AIC_APP.training.convertCSV import csvData
+from AIC_APP.training.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
-
-
+from AIC_APP.training.Scrap import getData,getDataWithClass
 from django.http import HttpResponse, request
 
 
@@ -51,14 +51,19 @@ def fetchInputTextArea(request):
 
 # for handling the data(by link) given by the company xyz
 def linkSubmit(request):
-    from AIC_APP.training.Scrap import getData
     id = request.session["Id"]
     data = request.POST.get("link", "default")
+    baseClass = request.POST.get("baseClass","")
     questionClass = request.POST.get("questionClass", "")
     answerClass = request.POST.get("answerClass","")
-    siteData = getData(data)
-    print(siteData)
-    runcombine(siteData, id)
+    if(baseClass!=""):
+        quelist,anslist = getDataWithClass(data,baseClass,questionClass,answerClass)
+        parafromqueans(anslist, quelist, id)
+    else:
+        siteData = getData(data)
+        finalQuelist = generatefromOnlyAns(siteData)
+        parafromqueans(siteData, finalQuelist, id)
+    print("Sucessfully answering done in json file")
     return HttpResponse("success")
 
 
@@ -95,15 +100,31 @@ def questionAnswerData(request):
 def fileSubmit(request):
     id = request.session['Id']
     file = request.FILES.get("fileInput")
-    print(file)
-    fs = FileSystemStorage()
-    fname = fs.save(str(id), file)
-    siteData = csvData(fs.url(fname))
-    print(siteData)
-    anslistfromcsv = siteData['answers']
-    quelistfromcsv = siteData['questions']
-    if (len(anslistfromcsv) == len(quelistfromcsv)):
-        parafromqueans(anslistfromcsv, quelistfromcsv,id)
+    type = request.POST.get("fileType")
+    print(type)
+    if(type == "csv"):
+        fs = FileSystemStorage()
+        fname = fs.save(str(id), file)
+        fileData = csvData(fs.url(fname))
+        fs.delete(str(id))
+    elif(type == "txt"):
+        fs = FileSystemStorage()
+        fname = fs.save(str(id), file)
+        fileData = txtData(fs.url(fname))
+        fs.delete(str(id))
+    elif(type == "docx"):
+        fs = FileSystemStorage()
+        fname = fs.save(str(id), file)
+        fileData = docxData(fs.url(fname))
+        fs.delete(str(id))
+    else:
+        return HttpResponse("error")
+    print("done")
+    anslist = fileData['answers']
+    quelist = fileData['questions']
+    if (len(quelist) == len(anslist)):
+        print("done1")
+        parafromqueans(anslist, quelist,id)
     else:
         return (HttpResponse("Csv File contain unstructured data please check the again"))
     return HttpResponse(fs.url(fname))
@@ -330,7 +351,7 @@ def updateJson(request):
 #     return HttpResponse(str({"suggestions":suggest}))
 
 
-# def convertCsv(request):
+# def filesConvert(request):
 #     # csvPath = request.POST.get("file","default")
 #     csvPathFile = request.FILES('file')
 #     print(csvPathFile)
@@ -342,11 +363,11 @@ def updateJson(request):
 
 
 
-# def convertCsv(request):
+# def filesConvert(request):
 #     # csvPath = request.POST.get("file","default")
 #     # csvPathFile = request.FILES('file')
 #     # print(csvPathFile)
-#     # # from AIC_APP.training.convertCSV import csvData
+#     # # from AIC_APP.training.filesConvert import csvData
 #     # # siteData = csvData(csvPath)
 #     # # print(siteData)
 #     #
