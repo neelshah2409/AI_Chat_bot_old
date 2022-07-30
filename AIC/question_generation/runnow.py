@@ -11,7 +11,7 @@ except Exception as e:
 
 def write_json(data,id):
     filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json"
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf8") as f:
         json.dump(data, f, indent=4)
 
 
