@@ -12,16 +12,153 @@
     {% include "AIC_APP/navbar.html" %}
     <section class="getStarted">
         <div class="description-carousel">
-            <div class="item"><img src={% static "AIC_APP/images/description-carousel/1.jpg" %} class="img-fluid"/></div>
-            <div class="item"><img src={% static "AIC_APP/images/description-carousel/2.jpg" %} class="img-fluid"/></div>
-            <div class="item"><img src={% static "AIC_APP/images/description-carousel/3.jpg" %} class="img-fluid"/></div>
-            <div class="item"><img src={% static "AIC_APP/images/description-carousel/4.jpg" %} class="img-fluid"/></div>
-            <div class="item"><img src={% static "AIC_APP/images/description-carousel/5.jpg" %} class="img-fluid"/></div>
+            <div>
+                <div class="col-8 content-display">
+                    <h3>
+                        User Guide
+                    </h3>
+                    <h4>
+                        When To Use ?
+                    </h4>
+                    <div class="guide-list">
+                        <p class="fs-4">
+                            This module is useful if you already have structured FAQs in the form of multiple Questions-Answers pair. 
+                        </p>
+                        <p class="fs-4">
+                            After submitting FAQs, our model will paraphrase each questions to the different forms in which end user can ask one single FAQ.
+                        </p>
+                        <p class="fs-4">
+                            You will be given chance to evaluate paraphrased FAQs with answers once. You can even download this as a file and then preview it. One can even delete FAQs if he/she finds it irrelevant.
+                        </p>
+                        <p class="fs-4">
+                            After evaluating paraphrased FAQs, one can train the ML model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-8 content-display">
+                    <h3>
+                        User Guide
+                    </h3>
+                    <h4>
+                        When To Use ?
+                    </h4>
+                    <div class="guide-list">
+                        <p class="fs-4">
+                            If one already has content prepared in the form of answers but lack questions of FAQs, then this module is the best suitable module for them.
+                        </p>
+                        <p class="fs-4">
+                            Just enter your answers separated with new line and submit it.
+                        </p>
+                        <p class="fs-4">
+                            Our algorithm will generate FAQs based on the answers provided.
+                        </p>
+                        <p class="fs-4">
+                            Our model will then paraphrase each questions to the different forms in which end user can ask one single FAQ. 
+                        </p>
+                        <p class="fs-4">
+                            You will be given chance to evaluate paraphrased FAQs with answers once. You can even download this as a file and then preview it. One can even delete FAQs if he/she finds it irrelevant.
+                        </p>
+                        <p class="fs-4">
+                            After evaluating paraphrased FAQs, one can train the ML model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-8 content-display">
+                    <h3>
+                        User Guide
+                    </h3>
+                    <h4>
+                        When To Use ?
+                    </h4>
+                    <div class="guide-list">
+                        <p class="fs-4">
+                            This module is useful if you have a formatted CSV file consisting FAQs.
+                        </p>
+                        <p class="fs-4">
+                            After submitting CSV file, our algorithm will extract FAQs from CSV file.
+                        </p>
+                        <p class="fs-4">
+                            The model will then paraphrase each questions to the different forms in which end user can ask one single FAQ. 
+                        </p>
+                        <p class="fs-4">
+                            You will be given chance to evaluate paraphrased FAQs with answers once. You can even download this as a file and then preview it. One can even delete FAQs if he/she finds it irrelevant.
+                        </p>
+                        <p class="fs-4">
+                            After evaluating paraphrased FAQs, one can train the ML model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-8 content-display">
+                    <h3>
+                        User Guide
+                    </h3>
+                    <h4>
+                        When To Use ?
+                    </h4>
+                    <div class="guide-list">
+                        <p class="fs-4">
+                            If you have some data in the form of text which contains content separated with paragraph then our algorithm will generate FAQs on it's own by receiving text data.
+                        </p>
+                        <p class="fs-4">
+                            After submitting data as a textual input, our model will paraphrase each questions to the different forms in which end user can ask one single FAQ. 
+                        </p>
+                        <p class="fs-4">
+                            You will be given chance to evaluate paraphrased FAQs with answers once. You can even download this as a file and then preview it. One can even delete FAQs if he/she finds it irrelevant.
+                        </p>
+                        <p class="fs-4">
+                            After evaluating paraphrased FAQs, one can train the ML model.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-8 content-display">
+                    <h3>
+                        User Guide
+                    </h3>
+                    <h4>
+                        When To Use ?
+                    </h4>
+                    <div class="guide-list">
+                        <p class="fs-5">
+                            Say, one doesn't have formatted FAQs; rather he/she has link which contains information from which they want FAQs to be generated.
+                        </p>
+                        <p class="fs-5">
+                            Our algorithm is capable of finding FAQs on it's own if you provide some information like 
+                            <br/>
+                            <code>
+                                a. The URL of the website<br/>
+                            </code>
+                            <code>
+                                b. The header class (optional)<br/>
+                            </code>
+                            <code>
+                                c. The &lt;p&gt; tag class (optional)<br/>
+                            </code>
+                        </p>
+                        <p class="fs-5">
+                            The generated FAQs will be then paraphrased, i.e. it will paraphrase each questions to the different forms in which end user can ask one single FAQ.
+                        </p>
+                        <p class="fs-5">
+                            You will be given chance to evaluate paraphrased FAQs with answers once. You can even download this as a file and then preview it. One can even delete FAQs if he/she finds it irrelevant.
+                        </p>
+                        <p class="fs-5">
+                            After evaluating paraphrased FAQs, one can train the ML model. 
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="card-holder">
         <div class="card-carousel">
-            <div class="item">
+            <div>
                 <div class="card" style="width: 18rem; height: 22rem;">
                     <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} class="card-img-top" alt="...">
                     <div class="card-body">
@@ -31,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div>
                 <div class="card" style="width: 18rem; height: 22rem;">
                     <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} class="card-img-top" alt="...">
                     <div class="card-body">
@@ -41,7 +178,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div>
                 <div class="card" style="width: 18rem; height: 22rem;">
                     <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} class="card-img-top" alt="...">
                     <div class="card-body">
@@ -52,7 +189,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div>
                 <div class="card" style="width: 18rem; height: 22rem;">
                     <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} class="card-img-top" alt="...">
                     <div class="card-body">
@@ -62,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div>
                 <div class="card" style="width: 16rem; height: 22rem;">
                     <img src={% static "AIC_APP/images/description-carousel/1.jpg" %} class="card-img-top" alt="...">
                     <div class="card-body">

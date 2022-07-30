@@ -1,5 +1,9 @@
 body{
     height: 100vh;
+    background-image: url('https://res.cloudinary.com/sih2022/image/upload/v1659005475/home-1-min_hawroc.png');
+    background-repeat: no-repeat;
+    background-size:100vw 200vh;
+    background-position: center;
 }
 
 .getStarted{
@@ -9,8 +13,14 @@ body{
     z-index: -1;
 }
 
-.card-holder{
-    height: auto;
-    /* transform: translateY(-90%); */
-    z-index: 1!important;
+.description-carousel .item{
+    height: 10vh;
+}
+
+.guide-list{
+    margin: 1rem;
+}
+
+.content-display{
+    margin: 2rem;
 }

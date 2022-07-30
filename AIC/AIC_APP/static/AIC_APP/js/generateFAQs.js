@@ -73,22 +73,142 @@
 
 
 $(document).ready(function () {
-    $('.description-carousel').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.card-carousel',
-        
-      });
-      $('.card-carousel').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.description-carousel',
-        dots: true,
-        arrows: false,
-        centerMode: true,
-        focusOnSelect: true,
-      });
-                      
+  $('.description-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.card-carousel',
+      centerMode: true,
+      centerPadding:'50px'
+      
+    });
+    $('.card-carousel').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.description-carousel',
+      dots: true,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '170px',
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1700,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '210px',
+            dots: true
+          }
+        },
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '140px',
+            dots: true
+          }
+        },
+        {
+          breakpoint: 1224,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '70px',
+            dots: true
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '40px',
+            dots: true
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '250px',
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '220px',
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '170px',
+          }
+        },
+        {
+          breakpoint: 650,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '150px',
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '120px',
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true  ,
+            centerPadding: '40px',
+          }
+        },
+        {
+          breakpoint: 400,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding:'7px'
+          }
+        },
+        {
+          breakpoint: 300,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+          }
+        }
+      ]
+    });
+                    
 });
