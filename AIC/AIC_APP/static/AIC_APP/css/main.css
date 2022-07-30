@@ -13,7 +13,7 @@ body{
     letter-spacing: 1px;
 }
 .section1{
-    background-image: url('../../images/home/home-1-min.png');
+    background-image: url('https://res.cloudinary.com/sih2022/image/upload/v1659005475/home-1-min_hawroc.png');
     background-repeat: repeat-y;
 }
 .content1{
