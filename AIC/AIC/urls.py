@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from AIC_API.views import ChatAssistantView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('signin',  include("LoginSignup.urls")),
     path('sign',  include("LoginSignup.urls")),
     path('', include("AIC_APP.urls")),
-
-
+    path('AIC/api/chat_assistant/', ChatAssistantView.as_view(), name="chatAssistantApi"),
 ]
