@@ -83,6 +83,14 @@
     background-color: #0f1149;
     color: white;
 }
+#trainmodelbutton{
+  background-color: #0f1149;
+    color: white;
+}
+#resetbutton{
+  background-color: #0f1149;
+  color: white;
+}
 .closeall{
  background-color: #0f1149;
     color: white;
@@ -102,7 +110,7 @@ color:white !important;
   height: 44px;
   border-radius: 5px;
   padding: 5px 10px 5px 5px ;
-  margin-top: 80px;
+  margin-top: 40px;
   box-shadow: 0 1px 5px 0 rgb(32 33 36 / 58%);
 }
 .searchbar img{
