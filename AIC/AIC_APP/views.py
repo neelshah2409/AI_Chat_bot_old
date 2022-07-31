@@ -333,9 +333,9 @@ def paragraph(request):
 #     return HttpResponse("yeah")
 
 def updateJson(request):
-
+    id = request.session["Id"]
     jsonData = request.POST.get("updateData","default")
-    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents1.json', 'w', encoding="utf-8") as f:
+    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json', 'w', encoding="utf-8") as f:
         f.write(jsonData)
     print(jsonData)
     return HttpResponse("success")
@@ -494,7 +494,8 @@ def updateJson(request):
 #     return redirect('Gotoauth')
 
 def resetAll(request):
-    with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents1.json",'w') as f:
+    id=request.session['Id']
+    with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'w') as f:
         f.write('{"intents": []}')
         return redirect('QueShow')
 

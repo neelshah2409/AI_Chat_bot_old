@@ -1,0 +1,21 @@
+{
+    "intents": [
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "I am called siddhi; if I am, how do I get different?",
+                "What is siddhi?",
+                "I am siddhi what?",
+                "I'm SIDDDHI. I am what?",
+                "Is Siddhi right for me if not my god?",
+                "I'm Siddhi Who do you think I am?",
+                "I am Siddhi, and I am what?",
+                "How do I know if I am siddhi?",
+                "I am Siddhi, what is it?",
+                "I am siddhi the girl?",
+                "I am siddhi i am what?"
+            ],
+            "responses": "i am siddhi\ni am rishi"
+        }
+    ]
+}

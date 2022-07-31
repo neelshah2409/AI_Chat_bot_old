@@ -8,9 +8,10 @@ $(document).ready(function () {
 // obj[name] = val;
 
 // ary.push(obj);
-  var temp = `static/AIC_APP/intents${id}.json`;
+  var temp = `static/AIC_APP/intents/intents${id}.json`;
   let temp1 = "";
   var temp2d="";
+  var temp6='';
 var qcount=0;
   let iterate = 0;
   $.getJSON(temp, function (jd) {
@@ -38,8 +39,9 @@ var qcount=0;
         iterate++;
         temp2d+=`Answer : ${jd[i][j]['responses']}\n\n`;
         temp4=jd[i][j]['responses'];
+        temp6=temp4.replace("\n", " ");
         // obj[temp3] = temp4;
-        nary.push( {"que":[...temp5],"ans": temp4} );
+        nary.push( {"que":[...temp5],"ans": temp6} );
         qcount++;
         
         
