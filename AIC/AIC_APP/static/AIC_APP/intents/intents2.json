@@ -647,6 +647,261 @@
                 "Why does the paradise highway use less the path?"
             ],
             "responses": "\u2018Paradise Highway\u2019 chooses the road less taken, but doesn\u2019t quite make the trip worthwhile for its audience."
+        },
+        {
+            "tag": "Data-43",
+            "patterns": [
+                "Who is called the rishi of India?",
+                "Who is Sri Jishua?",
+                "What is a Rishi?",
+                "Who is SISHI?",
+                "Who is Shirji? How can we remeber it?",
+                "Who is a rishi?",
+                "Who is Raishi?",
+                "Who is a rishi and why?",
+                "Who is Raji?"
+            ],
+            "responses": "rishi is champion"
+        },
+        {
+            "tag": "Data-44",
+            "patterns": [
+                "What is the name of the phrase that is used to describe something?",
+                "What is the name of a phrase used to describe what?",
+                "What is the name of the phrase that describes something?",
+                "What's the name of the phrase \"what\"?",
+                "What is the name of a phrase to describe a thing?",
+                "Which is the name of the phrase used to describe what?",
+                "What is the name of the phrase used to describe what?",
+                "What is the name of a phrase used to describe something?"
+            ],
+            "responses": "More"
+        },
+        {
+            "tag": "Data-45",
+            "patterns": [
+                "When was the All India Council for technical education formed?",
+                "What is the process of creating the All India Technical Council? How was it set up?",
+                "When did All India Council for Technical Education was established?",
+                "When was the All India Technical Education Council established and what is its purpose?",
+                "When did the All India Council for Technical Education start?",
+                "How and Why was the All India Council for Technical Education established?",
+                "When was the All India Council for Technical Education founded?",
+                "When was the all India council for the technical education, established?"
+            ],
+            "responses": "All India Council for Technical Education (AICTE) was set up in November 1945 as a national-level Apex Advisory Body to conduct a survey on the facilities available for technical education and to promote development in the country in a coordinated and integrated manner."
+        },
+        {
+            "tag": "Data-46",
+            "patterns": [
+                "What year did the PMSSS form filling start?",
+                "What year did PMSSS Registration start?",
+                "What year did the PMSSSS start?",
+                "How did the registration for PMSSS begin?",
+                "When was the registration of PMSSSS start and what is the cost of registration?",
+                "Which year did PMSSS registration start?",
+                "How and when was PMSSS registration effective?",
+                "How li jim ye vagr li krrss on jan 14 2017?",
+                "In what year was the PMSSS registration started?",
+                "When did PMSSS Registration start?"
+            ],
+            "responses": "PMSSS Registration 2022-23"
+        },
+        {
+            "tag": "Data-47",
+            "patterns": [
+                "What is the name of the phrase that is used to describe something?",
+                "What is the name of a phrase used to describe what?",
+                "What is the name of the phrase that describes something?",
+                "What's the name of the phrase \"what\"?",
+                "What is the name of a phrase to describe a thing?",
+                "Which is the name of the phrase used to describe what?",
+                "What is the name of the phrase used to describe what?",
+                "What is the name of a phrase used to describe something?"
+            ],
+            "responses": "More"
+        },
+        {
+            "tag": "Data-48",
+            "patterns": [
+                "What are Bureaus and Cells?",
+                "What is a simple overview of Bureaus and Cells?",
+                "What is Bureaus and Cells? What is the overview?",
+                "What's an overview of Bureaus and Cells?",
+                "What's a brief overview of Bureaus and Cells?",
+                "What is the breakdown of Bureaus and Cells?",
+                "What is the classification of bureaus and cell?",
+                "What is the overview of Bureaus and Cells?",
+                "What is Bureau of Investigation and Cellular Services?"
+            ],
+            "responses": "An Overview of Bureaus and Cells."
+        },
+        {
+            "tag": "Data-49",
+            "patterns": [
+                "What is called the study?",
+                "What is the name of a study?",
+                "What's the name of the study?",
+                "Which is the name of study?",
+                "What is the name of study?"
+            ],
+            "responses": "Learn More"
+        },
+        {
+            "tag": "Data-50",
+            "patterns": [
+                "What is the term of Education, Research, and Training in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy, and Applied Arts?",
+                "What is the term for educational, research, and training in engineering and technology, architecture, Town Planning, Management, Pharmacy, and Applied Arts?",
+                "What is the term for programmes of Education, Research, and Training in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy, and Applied Arts?",
+                "What is the term for programmes of Education, Research, and training in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy, and Applied Arts. What is the term for programmes of Education, Research, and Training in Landscape Architecture? What is the term for Programmes in Architecture and Technology in Landscape Architecture and Landscape Planning?",
+                "What is the term for courses in education, research, and training in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy, Applied Arts?",
+                "What is the term to carry out training programmes in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy and Applied Arts?",
+                "What is the term for programmes of education, research, and training in engineering and technology, architecture, Town Planning, Management, Pharmacy, and Applied Arts?",
+                "What is the term for programmes of Education, Research, Training in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy, and Applied Arts?"
+            ],
+            "responses": "As defined in the AICTE act 1987, Technical Education means programmes of Education, Research, and training in Engineering and Technology, Architecture, Town Planning, Management, Pharmacy, and Applied Arts and Crafts, and such other programmes or areas as the Central Government may in consultation with the Council, by notification in the official gazette declare."
+        },
+        {
+            "tag": "Data-51",
+            "patterns": [
+                "What is called the study?",
+                "What is the name of a study?",
+                "What's the name of the study?",
+                "Which is the name of study?",
+                "What is the name of study?"
+            ],
+            "responses": "Learn More"
+        },
+        {
+            "tag": "Data-52",
+            "patterns": [
+                "What is the name of forming policy about academics?",
+                "What is the name of the planing and framing of policies related to Academics?",
+                "Which is the name of planning and framing of policies related to Academics?"
+            ],
+            "responses": "Planning and framing of policies related to Academics for strengthening and improving quality of Technical Education"
+        },
+        {
+            "tag": "Data-53",
+            "patterns": [
+                "What is called the study?",
+                "What is the name of a study?",
+                "What's the name of the study?",
+                "Which is the name of study?",
+                "What is the name of study?"
+            ],
+            "responses": "Learn More"
+        },
+        {
+            "tag": "Data-54",
+            "patterns": [
+                "What is administration? How does it differ from ordinary governance?",
+                "What's administration?",
+                "What does administration usually consist of?",
+                "What is the administration?",
+                "What is administration in general?",
+                "What is administration?",
+                "What does administration consist?"
+            ],
+            "responses": "Administration consists of the performance or management of business operations and thus the making or implementing of major decisions. Administration can be defined as the universal process of organizing people and resources efficiently so as to direct activities toward common goals and objectives."
+        },
+        {
+            "tag": "Data-55",
+            "patterns": [
+                "What is called the study?",
+                "What is the name of a study?",
+                "What's the name of the study?",
+                "Which is the name of study?",
+                "What is the name of study?"
+            ],
+            "responses": "Learn More"
+        },
+        {
+            "tag": "Data-56",
+            "patterns": [
+                "What is the name of the organization that manages financials?",
+                "What is the name of a company that manages the finances?",
+                "What is the name of the organisation that manages finance?",
+                "What's the name of the organization that manages finance?",
+                "What is the name of an organization that manages a finance company?",
+                "Which organisation manage finance?",
+                "What is the name of the organization that manage finances?",
+                "What is the name of the organization that manages finance?",
+                "What is the name of an organization that manage finances?"
+            ],
+            "responses": "Finance Bureau has been mandated to manage Finances (Funds) efficiently and effectively in such a manner as to accomplish the objectives of the organization by planning, monitoring, organizing, and controlling of the monetary resources of an organization."
+        },
+        {
+            "tag": "Data-57",
+            "patterns": [
+                "What is called the study?",
+                "What is the name of a study?",
+                "What's the name of the study?",
+                "Which is the name of study?",
+                "What is the name of study?"
+            ],
+            "responses": "Learn More"
+        },
+        {
+            "tag": "Data-58",
+            "patterns": [
+                "What are the best online scholarships for students in India?",
+                "What is one stop solution for students seeking several scholarships?",
+                "What is the one stop solution for scholarship?",
+                "How do I apply for scholarships?",
+                "What is the best one stop solution for students and preparing for scholarships?",
+                "Which is the best one-stop solution to get scholarships?",
+                "How can I find scholarships through site?",
+                "How can I help my fellow students with scholarships?",
+                "What is the one stop solution to help students seek various scholarships?",
+                "How can one utilize a one-stop solution to get more scholarships for an MBA or an MS in various fields?"
+            ],
+            "responses": "National e-Scholarship is the one-stop solution to help students seek various scholarships."
+        },
+        {
+            "tag": "Data-59",
+            "patterns": [
+                "What is the best online portal for student loans?",
+                "What is the first internet based student loan portal?",
+                "What is the first online education loan portal?",
+                "What's the first educational loan portal for students looking to obtain financial loans?",
+                "What is the best online tutoring portal for university students?",
+                "Which is the best educational loan portal?",
+                "What is the first online portal for college loans?",
+                "How can I request online educational loans?",
+                "What is the best online portal for student loan?",
+                "What is the first online portal for the study loans, a student loan, and a PhD?"
+            ],
+            "responses": "Vidya Lakshmi is a first-of-its-kind portal for students seeking educational loan."
+        },
+        {
+            "tag": "Data-60",
+            "patterns": [
+                "What is the name of the scholarship given to girls under Pragati scheme?",
+                "What is the name of pragati scholarship scheme for girls?",
+                "What is Pragati Scholarship as a girls policy?",
+                "What's the name of the scholarship for girls under Pragati Scheme?",
+                "What is the name of the scholarship for girls under pragati scheme?",
+                "Which scholarship for women is in pragati scheme?",
+                "What is the name of the scholarship scheme PRATATI available to girls in India?",
+                "What is the name of the scholarship scheme for girls under the Pragati scheme?",
+                "What is the name of Pragati Scheme? What is the scholarship for girls?",
+                "What is the Name of Scholarship for the girl under the Pragati Scheme?"
+            ],
+            "responses": "Scholarship for girls under the Pragati Scheme and scholarship for differently-abled students under Saksham Scheme."
+        },
+        {
+            "tag": "Data-61",
+            "patterns": [
+                "Who really promoted the biggest innovation challenge in India?",
+                "Who was behind the creation of India's biggest innovation challenge?",
+                "What is India's biggest innovation challenges?",
+                "Who promoted India's biggest innovations challenge?",
+                "Which Indian firm promoted innovations in India?",
+                "Who promoted the biggest innovation challenge in India?",
+                "Who promoted India's biggest innovation challenges and how?"
+            ],
+            "responses": "India's largest innovation challenges jointly promoted by the CII and Department of Science & Technology."
         }
     ]
 }

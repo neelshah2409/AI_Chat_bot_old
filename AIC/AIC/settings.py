@@ -97,8 +97,10 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'manager',
     }
+
+
 }
 
 # db_from_env = dj_database_url.config(conn_max_age=500)

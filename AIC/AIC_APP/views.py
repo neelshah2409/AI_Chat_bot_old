@@ -29,13 +29,16 @@ except Exception as e:
 
 # Landing page of website
 def index(request):
-    try:
-        print(request.session['id'])
-        print(request.session['loggedin'])
-        if request.session['id']:
-            return render(request, 'AIC_APP/index.html')
-    except Exception as e:
-        return redirect('signin')
+    if request.method == 'GET':
+        return render(request, 'AIC_APP/index.html')
+    elif request.method == 'POST':
+        try:
+            print(request.session['Id'])
+            print(request.session['loggedin'])
+            if request.session['Id']:
+                return render(request, 'AIC_APP/index.html')
+        except Exception as e:
+            return redirect('signin')
 
 
 
@@ -206,7 +209,7 @@ def runcombine(data, id):
 # Question Ans show
 def QueShow(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/questionShow.html')
     except Exception as e:
         return redirect('signin')
@@ -232,7 +235,7 @@ def takeOutputdp(request):
 # this will redirect the page of question generations
 def generateFAQs(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request,"AIC_APP/generateFAQs.html")
     except Exception as e:
         return redirect('signin')
@@ -294,7 +297,7 @@ def improveFeatures(request):
 
 def QueGenerator(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/questionGeneration.html')
     except Exception as e:
         return redirect('signin')
@@ -302,7 +305,7 @@ def QueGenerator(request):
 
 def chatAssistant(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/chatAssistant.html')
     except Exception as e:
         return redirect('signin')
@@ -310,7 +313,7 @@ def chatAssistant(request):
 
 def questionAnswers(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/modules/questionAnswers.html')
     except Exception as e:
         return redirect('signin')
@@ -318,7 +321,7 @@ def questionAnswers(request):
 
 def onlyAnswers(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/modules/onlyAnswers.html')
     except Exception as e:
         return redirect('signin')
@@ -326,7 +329,7 @@ def onlyAnswers(request):
 
 def linkInput(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/modules/link.html')
     except Exception as e:
         return redirect('signin')
@@ -334,7 +337,7 @@ def linkInput(request):
 
 def filesInput(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/modules/files.html')    
     except Exception as e:
         return redirect('signin')
@@ -342,7 +345,7 @@ def filesInput(request):
 
 def paragraph(request):
     try:
-        if request.session['id']:
+        if request.session['Id']:
             return render(request, 'AIC_APP/modules/paragraph.html')
     except Exception as e:
         return redirect('signin')
