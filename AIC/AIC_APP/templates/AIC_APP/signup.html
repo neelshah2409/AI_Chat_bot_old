@@ -17,7 +17,9 @@
   </button>
     </div>
     {% endfor %}
-
+    {% for msg in Errmsg %}
+    {{msg}}
+    {% endfor %}
     <h3>Create your account!</h3>
     <form method="post" action="/signup">
         {% csrf_token %}

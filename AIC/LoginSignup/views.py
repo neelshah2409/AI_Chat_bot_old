@@ -69,23 +69,33 @@ def signup(request):
 
                 if Yobotuser.objects.filter(Name=username):
                     messages.error(request, "Username already exist! Please try some other username.")
-                    return redirect('signin')
+                    msg = "Username already exist! Please try some other username."
+                    context = {"Errmsg":msg}
+                    return redirect('signin',context)
 
                 if Yobotuser.objects.filter(Email=email).exists():
                     messages.error(request, "Email Already Registered!!")
-                    return redirect('signin')
+                    msg =  "Email Already Registered!!"
+                    context = {"Errmsg": msg}
+                    return redirect('signin',context)
 
                 if len(username) > 20:
                     messages.error(request, "Username must be under 20 charcters!!")
-                    return redirect('signin')
+                    msg =  "Username must be under 20 charcters!!"
+                    context = {"Errmsg": msg}
+                    return redirect('signin',context)
 
                 if pass1 != pass2:
                     messages.error(request, "Passwords didn't matched!!")
-                    return redirect('signin')
+                    msg =  "Passwords didn't matched!!"
+                    context = {"Errmsg": msg}
+                    return redirect('signin',context)
 
                 if not username.isalnum():
                     messages.error(request, "Username must be Alpha-Numeric!!")
-                    return redirect('signin')
+                    msg = "Username must be Alpha-Numeric!!"
+                    context = {"Errmsg": msg}
+                    return redirect('signin',context)
 
                 myuser = Yobotuser(Name=username,Password=pass1,Email=email,CompanyName=companyName,PhoneNum=lname,ChatBotName=fname )
                 myuser.save()

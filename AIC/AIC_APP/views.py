@@ -6,7 +6,7 @@ from django.core.files.storage import FileSystemStorage
 from AIC_APP.training.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
 from AIC_APP.training.Scrap import getData,getDataWithClass
-from django.http import HttpResponse, request
+from django.http import HttpResponse, request,JsonResponse
 
 
 try:
@@ -14,6 +14,7 @@ try:
     from question_generation.runnow import runnow,generatefromOnlyAns
     from AIC_APP.training.training import trainTheChatBot
     from Predict.predict import *
+    from AIC_API.models import Api
 except Exception as e:
     print(f"Error In import Section Views.py{e}")
 
@@ -287,9 +288,12 @@ def generateFAQs(request):
 def improveFeatures(request):
     try:
         messege = request.POST.get('messege', 'default')
-        file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement', 'a')
-        file.writelines(messege)
-        file.close()
+        improvementData = Api.objects.filter(api_key='rishi').values()
+        context = {"improvementData": improvementData}
+        # file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement', 'a')
+        # file.writelines(messege)
+        # file.close()
+        print("this is improvdata",improvementData,context)
         return HttpResponse("success")
     except Exception as e:
         return HttpResponse(f"failed")
@@ -550,7 +554,16 @@ def resetAll(request):
     except Exception as e:
         return redirect('signin')
     
+def getIntentsData(request):
 
+    if 'Id' not in request.session:
+        return redirect('signin')
+    else:
+        id = request.session['Id']
+        with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'r') as f:
+            data = f.read()
+            f.close()
+        return JsonResponse({"data": data})
 if __name__ == '__main__':
     runcombine()
 

@@ -26,6 +26,7 @@ urlpatterns = [
     path('filesInput', views.filesInput, name="filesInput"),
     path('paragraph', views.paragraph, name="paragraph"),
     path('resetAll', views.resetAll, name="resetAll"),
+    path('getIntentsData', views.getIntentsData, name="getIntentsData")
     # path('signup', views.signup, name='signup'),
     # path('activate/<uidb64>/<token>', views.activate, name='activate'),
     # path('signin', views.signin, name='signin'), #login sign in page

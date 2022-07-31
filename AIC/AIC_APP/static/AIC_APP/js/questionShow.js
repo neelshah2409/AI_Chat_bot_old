@@ -14,22 +14,23 @@ $(document).ready(function () {
   var temp6='';
 var qcount=0;
   let iterate = 0;
-  $.getJSON(temp, function (jd) {
-    // console.log(jd);
-    for (let i in jd) {
-      // console.log(jd[i]);
-     
-      for (let j = 0; j < jd[i].length; j++) {
-      let temp5=[];
-      var qc=0
-        temp1 += `<div class="accordion__item accordion__item--active">`;
-        for (n in jd[i][j]['patterns']) {
-          temp1 += `<button class="accordion__btn">
-            <span class="accordion__caption"><i class="far fa-lightbulb"></i>${jd[i][j]['patterns'][n]}</span>
-          </button>`;
-          temp2d+=`Question${qcount} : ${jd[i][j]['patterns'][n]}\n`;
-          temp5.push(jd[i][j]['patterns'][n]);
-          qc++;
+  $.ajax({
+    type:"GET",
+    url:"/getIntentsData",
+    success:(result)=>{
+        jd=JSON.parse(result.data);
+        for (let i in jd) {
+            for (let j = 0; j < jd[i].length; j++) {
+              let temp5=[];
+              var qc=0
+                temp1 += `<div class="accordion__item accordion__item--active">`;
+                    for (n in jd[i][j]['patterns']) {
+                      temp1 += `<button class="accordion__btn">
+                        <span class="accordion__caption"><i class="far fa-lightbulb"></i>${jd[i][j]['patterns'][n]}</span>
+                      </button>`;
+                      temp2d+=`Question${qcount} : ${jd[i][j]['patterns'][n]}\n`;
+                      temp5.push(jd[i][j]['patterns'][n]);
+                      qc++;
         }
 
         temp1 += `<div class="accordion__content">
@@ -43,15 +44,21 @@ var qcount=0;
         // obj[temp3] = temp4;
         nary.push( {"que":[...temp5],"ans": temp6} );
         qcount++;
-        
-        
+
+
 
       }
     }
     console.log(nary);
     $('#questionGenerationdisplay').html(temp1);
     $('#temp2d').html(temp2d);
-  });
+    },
+    error:(error)=>{
+        alert(error);
+    }
+
+  })
+
 
 
       document.getElementById('textfile').onclick = function(code) 
