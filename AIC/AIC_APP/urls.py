@@ -1,4 +1,3 @@
-from django.urls import path
 
 from . import views
 from django.urls import path, include
@@ -7,8 +6,6 @@ from django.urls import path, include
 urlpatterns = [
 
     path('', views.index, name="AIC"),
-    # path('', views.signin, name="signin"), #login first page
-    # path('', include("LoginSignup.urls"), name="signin"), #login first page
     path('fetchInputTextArea', views.fetchInputTextArea, name="fetchInputTextArea"),
     path('QueGenerator', views.QueGenerator, name="QueGenerator"),
     path('generateFAQs', views.generateFAQs, name="generateFAQs"),
@@ -20,9 +17,7 @@ urlpatterns = [
     path('updateJson', views.updateJson, name="updateJson"),
     path('onlyAnswersData', views.onlyAnswersData, name="onlyAnswersData"),
     path('questionAnswerData', views.questionAnswerData, name="questionAnswerData"),
-    # path('getSuggestions', views.getSuggestions, name="getSuggestions"),
     path('linkSubmit', views.linkSubmit, name="linkSubmit"),
-    # path('convertCsv', views.convertCsv, name="convertCsv"),
     path('fileSubmit', views.fileSubmit, name="csvSubmit"),
     path('improveFeatures', views.improveFeatures, name="improveFeatures"),
     path('questionAnswers', views.questionAnswers, name="questionAnswers"),

@@ -135,9 +135,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-MEDIA_URL = '/AIC_APP/csv_files/'
+MEDIA_URL = '/AIC_APP/files/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'AIC_APP/csv_files')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'AIC_APP/files')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

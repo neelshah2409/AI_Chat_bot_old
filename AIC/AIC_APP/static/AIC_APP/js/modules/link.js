@@ -3,11 +3,13 @@ $(document).ready(()=>{
     $("#advanceEnable").on("change",(e)=>{
         if($("#advanceEnable").is(":checked"))
         {
+            $("#linkBaseClassInput").prop("disabled",false)
             $("#linkQuestionClassInput").prop("disabled",false)
             $("#linkAnswerClassInput").prop("disabled",false)
         }
         else
         {
+            $("#linkBaseClassInput").prop("disabled",true)
             $("#linkQuestionClassInput").prop("disabled",true)
             $("#linkAnswerClassInput").prop("disabled",true)
         }
@@ -29,13 +31,24 @@ $(document).ready(()=>{
         console.log()
         $(".processing").html("Processing").attr("x", "325");
         const input = $("#linkInput").val();
-        const questionClass =  $("#linkQuestionClassInput").val();
-        const answerClass =  $("#linkAnswerClassInput").val();
+        let query;
+        if($("#advanceEnable").is(":checked"))
+        {
+            const baseClass =  $("#linkBaseClassInput").val();
+            const questionClass =  $("#linkQuestionClassInput").val();
+            const answerClass =  $("#linkAnswerClassInput").val();
+            query = {link:input,baseClass,questionClass,answerClass};
+        }
+        else
+        {
+            query = {link:input};
+        }
+        console.log(query);
         $(".loadingBox").fadeIn();
         $.ajax({
             type: "POST",
             url: "/linkSubmit",
-            data: { link: input, questionClass,answerClass },
+            data: query,
             success: function(response) {
                 if (response == "success") {
                     $(".loadingBox").fadeOut();

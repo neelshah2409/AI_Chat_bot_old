@@ -1,0 +1,652 @@
+{
+    "intents": [
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What are some good examples of how to achieve a better quality of life?",
+                "What is the best information for a student?",
+                "What is your opinion on what you can do?",
+                "What's the aim of \u201cWhat is your life\u201d?",
+                "What is life like?",
+                "What's the meaning of 'what do you mean by?'?",
+                "What is the meaning of 'We Believe'?",
+                "What is the key terminology around which a non-English speaker should speak?",
+                "What is the importance of telling a story?",
+                "What is the main purpose of this article?"
+            ],
+            "responses": "rishi"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is the name of the rishi pattel?",
+                "What was Sri Raji pradesh?",
+                "What is the name of Krishna Patel?",
+                "What's the name of Raishi Patel?",
+                "What was the name of Rishi Patel and ashok patel?",
+                "Which is the name of Sishi Patel?",
+                "What is the name of Rajishi Patti?",
+                "Who is the Rishi Patel and what is his name?",
+                "What is the name of Shival Patel?",
+                "What is the Name of Rishi Patel, the Hindi god?"
+            ],
+            "responses": "rishi patel"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "Que1:",
+                "Que1: What do you think about quora?",
+                "What is Que1?",
+                "Why is Que1 in the Top 10 list?",
+                "Que1A.QuikA4.QuikA.Qulla1A3.QuL0fh9f30o1rbq.quh0in3y h3qa1e1i6u2'ntxirmp3ffqgqqfqqqzwfqxqqqdiqqqxiqptxuB9sa0hsiqyeqqh0t6v",
+                "Que1: What's the best thing to do as a Canadian citizen?",
+                "Que1: What is your thoughts on Que1?",
+                "Que1: What are some good options to buy?",
+                "Que1. What is que1 the longest?"
+            ],
+            "responses": "ans1"
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "Que2:",
+                "Que2e2e4 | Que2e4 | Que2e4 | Que2e4 | Que2e4 | Que2e4 | Que2e4 | Que2e3 | Que2e4 | Que2e4 | Que2E4 | Que3E4 | Que2E4 | Que2e4 | Que2e4 | Que2E4 | Que2e4 | Que2E4 | Noq4 | Noo3 | Noo! What is the difference?",
+                "What is Que2?",
+                "Why do people called Q2&A better than qui2?",
+                "Que2d.js? How can we!",
+                "Que2: What's the difference between le2 and que4?",
+                "Que2: What is que2?",
+                "Que2: What are some examples of que2?",
+                "Que2O2N2=[1-,2]4d]4p& [3]."
+            ],
+            "responses": "ans2"
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "Que3:",
+                "Que3ed: Who is Quora and why are they doing this?",
+                "What is Que3?",
+                "Why do people called Qau3?",
+                "Que3d.js? How can we!",
+                "Que 3: What's the difference between le0o, ca3n and ca3n?",
+                "Que3: What is your thoughts on quora?",
+                "Que3: What are some good options to buy on Quora?",
+                "Que3O is a little quiet. how else can I get the npa?"
+            ],
+            "responses": "ans3"
+        },
+        {
+            "tag": "Data-6",
+            "patterns": [
+                "Que4:",
+                "Que4ed: Who is Quora and why are they doing this?",
+                "What is Que4?",
+                "Why do people called Q4&A?",
+                "Que4d.js? How can we!",
+                "Que4evo4evo4b7@gmail.com",
+                "Que4: What is your Que4 and why?",
+                "Que4is (Fone): What is it all about?",
+                "Que4.com  Quora  Quora Quora  Quora Que4>"
+            ],
+            "responses": "ans4"
+        },
+        {
+            "tag": "Data-7",
+            "patterns": [
+                "Que5:",
+                "Que5: What do you think about quora?",
+                "What is Que5?",
+                "Why do people called Q5?",
+                "Que5: What were some examples?",
+                "Que5: What's the best thing to do with a server?",
+                "Que5: What is your Que5 and why?",
+                "Que5: What are some good options to answer on Quora?",
+                "Que5. What is que5 the longest?"
+            ],
+            "responses": "ans5"
+        },
+        {
+            "tag": "Data-8",
+            "patterns": [
+                "Que6:",
+                "Que6: What do you think about quash 6?",
+                "What is Que6?",
+                "Why do people called Q6?",
+                "Que6: What were some examples?",
+                "Que6: What's the difference between le8o, ca6& que9?",
+                "Que6: What is que6?",
+                "Que6. (Fonelt)",
+                "Que6. What is que6 the longest?"
+            ],
+            "responses": "ans6"
+        },
+        {
+            "tag": "Data-9",
+            "patterns": [
+                "Que7:",
+                "Que7e7e7 | Quora & Que7e7e7 | For more info, please consult Quora's answer.",
+                "What is Que7?",
+                "Why do people called Qing Qing Qing, and asked Qing about our services?",
+                "Que7: What were your views on Quora?",
+                "Que7tQ4Sync7@gmail.com",
+                "Que7: What is your thoughts on Que7?",
+                "Que7.watltqQdtg6Nj?",
+                "Que7.0?"
+            ],
+            "responses": "ans7"
+        },
+        {
+            "tag": "Data-10",
+            "patterns": [
+                "Que8:",
+                "Que8: What do you think about quora?",
+                "What is Que8?",
+                "Why do people called Q8?",
+                "Que8: what were your views on Quora?",
+                "Que8: What's the difference between le8o, and que8()?",
+                "Que8: What is your thoughts on Que8?",
+                "Que8. (Fonelt)",
+                "Que8.com = que8 = que8d = que8d = que8d = que8d = que8d = que8d = que8d = que8*"
+            ],
+            "responses": "ans8"
+        },
+        {
+            "tag": "Data-11",
+            "patterns": [
+                "Que9:",
+                "Que9: What do you think about qubinu9?",
+                "What is Que9?",
+                "Why do people called Q9?",
+                "Que9: What were some examples?",
+                "Que9t114 ydb7@osc.ce09.au qq9t11u@uq9u@osc?id=1120sn=1,099_sn=6+2>@iq9=1.x_yd=3*9&q=0&q=0&t=0 andq==1 #xl>. Que9T10 |_&mf___x=3 + qu9",
+                "Quora: What do you think about quora 9?",
+                "Que9: What are some good options to buy on Quora?",
+                "Que9.com?"
+            ],
+            "responses": "ans9"
+        },
+        {
+            "tag": "Data-12",
+            "patterns": [
+                "Que10:",
+                "Que10: What do you think about quora?",
+                "What is Que10?",
+                "Why do people called Qing Qing \"que10\"?",
+                "Que10: What were your views on Quora?",
+                "Que10: What's the best thing to do as a student?",
+                "How can I ask my boss Que10 and he is correct?",
+                "Que10: What are some good tips to improve your post-work experience?",
+                "Que10.0?"
+            ],
+            "responses": "ans10"
+        },
+        {
+            "tag": "Data-13",
+            "patterns": [
+                "Que11:",
+                "Que11: What do you think about quora?",
+                "What is Que11?",
+                "Why do people called Qau11 Qau11, and asked about their job offers, questions and comment or whatever, always liked the answer?",
+                "Que11: What were your views on Quora?",
+                "Que11: What's the best thing to do as a que11?",
+                "Que11: What is your thoughts on Que11?",
+                "Que11: What are some good tips to improve your post-work experience?",
+                "Que11. What is que11 the longest list, and why is the Que11 called Que11?"
+            ],
+            "responses": "ans11"
+        },
+        {
+            "tag": "Data-14",
+            "patterns": [
+                "Que 12:",
+                "Que12: What do you think about quora?",
+                "What is Que12?",
+                "Why do people called Q12?",
+                "Que12: What were some examples?",
+                "Que12: What's the difference between le0 and ch12?",
+                "Que12: What is your thoughts on Que12?",
+                "Que12: What are some examples of que12?",
+                "Que12. What is que12 the longest?"
+            ],
+            "responses": "ans12"
+        },
+        {
+            "tag": "Data-15",
+            "patterns": [
+                "Que13:",
+                "Que14: What do you think about quora?",
+                "What is Que13?",
+                "Can I become the QEC 13 administrator?",
+                "Que13: What were your views on Quora?",
+                "Que13: What's the difference between le0os and que13?",
+                "Que13: What is your thoughts on quora?",
+                "Que13. (Fonelt)",
+                "Que13.0?"
+            ],
+            "responses": "ans13"
+        },
+        {
+            "tag": "Data-16",
+            "patterns": [
+                "Que14:",
+                "Que14: What do you think about quora?",
+                "What is Que14?",
+                "Why Is Lenore not speaking French, and why are people about to leave questions like que14?",
+                "Que14: What were your views on Quora?",
+                "Que14: What's the best thing to do as a Canadian citizen?",
+                "Que14: What is your thoughts on quora?",
+                "Que14. (Fonelt)",
+                "Que14. What is que14 the longest?"
+            ],
+            "responses": "ans14"
+        },
+        {
+            "tag": "Data-17",
+            "patterns": [
+                "Que15:",
+                "Que14: What do you think about quora?",
+                "What is Que15?",
+                "Can I become the first to get a position in Quora?",
+                "Que15: What were your views on Quora?",
+                "Que15-Q4-15 CS (Quartos):",
+                "Que15: What is your Que15 and why?",
+                "Que15. (Fonelt)",
+                "Que15.0?"
+            ],
+            "responses": "ans15"
+        },
+        {
+            "tag": "Data-18",
+            "patterns": [
+                "What are the General Guidelines for all FDC Schemes?",
+                "What are guidelines for all fdc schemes?",
+                "What is the General Guidelines of the FDC Scheme?",
+                "What are general guidelines for FDC Scheme?",
+                "What are the general guidelines for all FDC Schemes?",
+                "What are general guidelines for Selected FDC Schemes?",
+                "What are the general guidelines for FDC Schemes?",
+                "What are the rules and general guidance for FDC Schemes?",
+                "What is General guidelines for FDC Schemes? What are the concepts?",
+                "What are the general guidelines of all the FDC schemes Schemes?"
+            ],
+            "responses": "General Guidelines for All FDC Schemes\nGeneral Guidelines Applicable to all Faculty Development Schemes of AICTE.\nFor More Information : https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf"
+        },
+        {
+            "tag": "Data-19",
+            "patterns": [
+                "What is AICTE STIPP Santuary Scheme?",
+                "What is STTP/SFURTI?",
+                "What is SCHEME AICTE STTP/SURTI?",
+                "What is the STTP-SFURTI SCHEME of AICTE?",
+                "What is the AICTE STTP-SFURTI PURTS SCHEME?",
+                "What is the AICTE STTP-SFURTI scheme? How can I follow it?",
+                "What is the AICTE STTP and Furti SECHEME?",
+                "What is the AICTE STTP-SFURTI SCHEME?",
+                "What is the AICTE STTP-SFURTI scheme?"
+            ],
+            "responses": "AICTE STTP-SFURTI\nSTTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation.\nFor More Information : https://www.aicte-india.org/sites/default/files/sfurti/STTP_SFURTIschemedocamndedon10dec2021.pdf"
+        },
+        {
+            "tag": "Data-20",
+            "patterns": [
+                "What is AICTE- NITTT \u2013 National Institute of Technical Training (AICTE - NITTT) SCHEME?",
+                "What is AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
+                "What is AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE-NITTT) SCHEME?",
+                "What is the SCHEME of AICTE NITTT (AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING)?",
+                "What is the AICTE-National Institute of TECHNICAL TEACHERS (AICTE-NITTT) list?",
+                "Which institute for preparing teachers in AICTE - NITTT? Which institute for NITTT for general education?",
+                "What is the AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE- NITTT) SCHEME?",
+                "What is the AICTE national initiative for technical training?",
+                "What is the AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT) syllabus?",
+                "What is the AICTE/ NITTT system?"
+            ],
+            "responses": "AICTE- NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT)\nIn order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase).\nFor More Information : https://www.aicte-india.org/sites/default/files/NITTT%20Scheme%20document.pdf"
+        },
+        {
+            "tag": "Data-21",
+            "patterns": [
+                "What is AICTE Quality Improvement program SCHEME?",
+                "What is the AICTE Quality Improvement program?",
+                "What is quality improvement scheme of AICTE?",
+                "What is the SCHEME of AICTE Quality Improvement?",
+                "What is quality improvement program? What is the syllabus?",
+                "What is the AICTE quality improvement program description?",
+                "What is the AICTE Quality Improvement (QA) programme?",
+                "What is the Quality Improvement Program of AICTE?",
+                "What is the Quality Improvement program?",
+                "What is the quality improvement program of the AICTE?"
+            ],
+            "responses": "AICTE-Quality Improvement program\nThe Government of India launched the Quality Improvement Programme in the year 1970. One of the main objectives of the programme is to upgrade the expertise and capabilities of the faculty members of the degree level institutions in the country..\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/QIPguidelines.pdf"
+        },
+        {
+            "tag": "Data-22",
+            "patterns": [
+                "What is AICTE-RESEARCH PROMOTION SCHEME?",
+                "What is AICTE RESEARCH PROMOTION SCHEME (RPS) SCHEME?",
+                "What is AICTE-RESEARCH PROMOTION SCHEME (RPS)?",
+                "What is the AICTE Research Professions Scheme (RPS)? How is it related?",
+                "What is the AICTE Research Promotion Scheme and what is its purpose?",
+                "What is the AICTE RESEARCH PROMOTION SCHEME (RPS)?",
+                "What is the AICTE search promotion scheme (RPS)?",
+                "What is the AICTE-RESEARCH PROMOTION SCHEME (RPS) schedule?",
+                "What is the AICTE Search Professions Committee (AICTE)?",
+                "What is the AICTE Recruitment Promotion Scheme, the RPS Scheme for India (ASEAN)?"
+            ],
+            "responses": "AICTE-RESEARCH PROMOTION SCHEME (RPS)\nThis scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master\u2019s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years.\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/RPSSchemeDocument_Nov2020.pdf"
+        },
+        {
+            "tag": "Data-23",
+            "patterns": [
+                "What are the General Guidelines for all FDC Schemes?",
+                "What are guidelines for all fdc schemes?",
+                "What is the General Guidelines of the FDC Scheme?",
+                "What are general guidelines for FDC Scheme?",
+                "What are the general guidelines for all FDC Schemes?",
+                "What are general guidelines for Selected FDC Schemes?",
+                "What are the general guidelines for FDC Schemes?",
+                "What are the rules and general guidance for FDC Schemes?",
+                "What is General guidelines for FDC Schemes? What are the concepts?",
+                "What are the general guidelines of all the FDC schemes Schemes?"
+            ],
+            "responses": "General Guidelines for All FDC Schemes\nGeneral Guidelines Applicable to all Faculty Development Schemes of AICTE.\nFor More Information : https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf"
+        },
+        {
+            "tag": "Data-24",
+            "patterns": [
+                "What is AICTE STIPP Santuary Scheme?",
+                "What is STTP/SFURTI?",
+                "What is SCHEME AICTE STTP/SURTI?",
+                "What is the STTP-SFURTI SCHEME of AICTE?",
+                "What is the AICTE STTP-SFURTI PURTS SCHEME?",
+                "What is the AICTE STTP-SFURTI scheme? How can I follow it?",
+                "What is the AICTE STTP and Furti SECHEME?",
+                "What is the AICTE STTP-SFURTI SCHEME?",
+                "What is the AICTE STTP-SFURTI scheme?"
+            ],
+            "responses": "AICTE STTP-SFURTI\nSTTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation.\nFor More Information : https://www.aicte-india.org/sites/default/files/sfurti/STTP_SFURTIschemedocamndedon10dec2021.pdf"
+        },
+        {
+            "tag": "Data-25",
+            "patterns": [
+                "What is AICTE- NITTT \u2013 National Institute of Technical Training (AICTE - NITTT) SCHEME?",
+                "What is AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
+                "What is AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE-NITTT) SCHEME?",
+                "What is the SCHEME of AICTE NITTT (AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING)?",
+                "What is the AICTE-National Institute of TECHNICAL TEACHERS (AICTE-NITTT) list?",
+                "Which institute for preparing teachers in AICTE - NITTT? Which institute for NITTT for general education?",
+                "What is the AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE- NITTT) SCHEME?",
+                "What is the AICTE national initiative for technical training?",
+                "What is the AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT) syllabus?",
+                "What is the AICTE/ NITTT system?"
+            ],
+            "responses": "AICTE- NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT)\nIn order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase).\nFor More Information : https://www.aicte-india.org/sites/default/files/NITTT%20Scheme%20document.pdf"
+        },
+        {
+            "tag": "Data-26",
+            "patterns": [
+                "What is AICTE Quality Improvement program SCHEME?",
+                "What is the AICTE Quality Improvement program?",
+                "What is quality improvement scheme of AICTE?",
+                "What is the SCHEME of AICTE Quality Improvement?",
+                "What is quality improvement program? What is the syllabus?",
+                "What is the AICTE quality improvement program description?",
+                "What is the AICTE Quality Improvement (QA) programme?",
+                "What is the Quality Improvement Program of AICTE?",
+                "What is the Quality Improvement program?",
+                "What is the quality improvement program of the AICTE?"
+            ],
+            "responses": "AICTE-Quality Improvement program\nThe Government of India launched the Quality Improvement Programme in the year 1970. One of the main objectives of the programme is to upgrade the expertise and capabilities of the faculty members of the degree level institutions in the country..\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/QIPguidelines.pdf"
+        },
+        {
+            "tag": "Data-27",
+            "patterns": [
+                "What is AICTE-RESEARCH PROMOTION SCHEME?",
+                "What is AICTE RESEARCH PROMOTION SCHEME (RPS) SCHEME?",
+                "What is AICTE-RESEARCH PROMOTION SCHEME (RPS)?",
+                "What is the AICTE Research Professions Scheme (RPS)? How is it related?",
+                "What is the AICTE Research Promotion Scheme and what is its purpose?",
+                "What is the AICTE RESEARCH PROMOTION SCHEME (RPS)?",
+                "What is the AICTE search promotion scheme (RPS)?",
+                "What is the AICTE-RESEARCH PROMOTION SCHEME (RPS) schedule?",
+                "What is the AICTE Search Professions Committee (AICTE)?",
+                "What is the AICTE Recruitment Promotion Scheme, the RPS Scheme for India (ASEAN)?"
+            ],
+            "responses": "AICTE-RESEARCH PROMOTION SCHEME (RPS)\nThis scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master\u2019s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years.\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/RPSSchemeDocument_Nov2020.pdf"
+        },
+        {
+            "tag": "Data-28",
+            "patterns": [
+                "What is AICTE Quality Improvement Programme (FOREIGN UNIVERSITY) Schedule?",
+                "What is AICTE / Quality Improvement Programme / Priority University (FOREIGN)?",
+                "What is quality improvement scheme of the AICTE (FOREIGN UNIVERSITY)?",
+                "What is the Qualifications Improvement Program (QIP) of AICTE? How is it related to different university?",
+                "What is the quality improvement program? How can it be implemented in my college?",
+                "What is the AICTE quality improvement programme (FOREIGN UNIVERSITY) SCHEME for general education?",
+                "What is the AICTE Quality Improvement (Quality Improvement) Scheme (FOREIGN UNIVERSITY)?",
+                "What is the Quality Improvement Programme AICTE?",
+                "What is the AICTE Quality Improvement Scheme (FOREIGN UNIVERSITY)?",
+                "What is the quality improvement of AICTE-quality improvement programme (FLUE) Scheme?"
+            ],
+            "responses": "AICTE-Quality Improvement Programme (FOREIGN UNIVERSITY)\nScheme provides scholarships to the faculty who fulfils eligibility criteria and obtains admission in the Doctoral Degree programme leading to award of PhD degree in any of the enlisted top 500 universities/institutes (based on the QS ranking, the Times ranking and the Shanghai ranking) in the world.\nFor More Information : https://www.aicte-india.org/sites/default/files/fds/QIPForeignschemedocument(1).pdf"
+        },
+        {
+            "tag": "Data-29",
+            "patterns": [
+                "What is AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) SCHEME?",
+                "What is the AICTE FACILITY DEVELOPMENT PROGRAMME (FDP)?",
+                "What is FDP's curriculum in AICTE?",
+                "What is the SCHEME OF AICTE FACILTY DEVELOPMENT PROGRAMM?",
+                "What is the AICTE-FAC and FFDP programming?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) syllabus?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) SCHEME?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) schedule?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) CHEME?",
+                "What is the skill development and skills development programme?"
+            ],
+            "responses": "AICTE-FACULTY DEVELOPMENT PROGRAMME (FDP)\nThe scheme is intended to Institutions   for   induction training to   teachers employed in AICTE approved Technical Institutions to facilitate up-gradation of knowledge and skill. Rs 5-7 Lakh are granted for the 2 weeks FDP.\nFor More Information : https://www.aicte-india.org/sites/default/files/SchemeDocumentFDP.pdf"
+        },
+        {
+            "tag": "Data-30",
+            "patterns": [
+                "What is AICTE-Short Term Training Programme (STTP) (UT-J&K,Ladakh and NER) schedule?",
+                "What is AICTE SLTP (UT-J&K,Ladakh and NER)?",
+                "What is AICTE Short Term Training Program (STTP) (UT-Jensi & Kavir)?",
+                "What is SCHEME AICTE Short Term Training Programme (STTP)? What Is It Mean?",
+                "What is the AICTE-Short term training programme (STTP) (UT-J&K, Ladakh and NER)?",
+                "What is short Term training programme AICTE STTP (UT-J&K,Ladakh and NER)?",
+                "What is the AICTE short term training programme (STTP) (UT-J&K,Ladakh and NER) SCHEME?",
+                "What is short term training programme AICTE?",
+                "What is AICTE Short Term Training Programme (STTP) (UT J&K,Ladakh and NER) scheme?",
+                "What is AICTE's Short Term Training Program (STTP) (UT J&K, Ladakh and NER)?"
+            ],
+            "responses": "AICTE-Short Term Training Programme (STTP) (UT-J&K,Ladakh and NER)\nShort Term Training Program (STTP) intends to conduct faculty trainings through financial assistance from AICTE to enable faculty members in the field of technical education to introspect and learn techniques that can help prepare students for active and successful participants in a knowledge society.\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/STTPSchemeDocumentNERandJ&K2020-21.pdf"
+        },
+        {
+            "tag": "Data-31",
+            "patterns": [
+                "What are AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SCHEME?",
+                "What is AICTE-Training PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT GAMES TEACHERS/DIRECTOR OF SCHEME?",
+                "What is AICTE-Training Program for PHYSICAL EDUCATION TRAINERS/SPORT GAMES TEACHERS/Director of SCHEME?",
+                "What are the AICTE Training Programs for Athletics?",
+                "What is AICTE training program for sports and ice sports?",
+                "Which are the AICTE-Training Programs for PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SCHEME?",
+                "What is the AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/Director of SCHEME?",
+                "What is AICTE Training PROGRAMS for PHYSICAL EDUCATION TRAINERS?",
+                "What is AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TEACHERS/DIRECTOR OF SCHEME?",
+                "What is AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SCHEME?"
+            ],
+            "responses": "AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SPORTS\nTo Develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity through recreation.\nFor More Information : https://aicte-india.org/sites/default/files/SchemeDocumentSpprtTeacherProgramme.pdf"
+        },
+        {
+            "tag": "Data-32",
+            "patterns": [
+                "What are AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS SCHEME?",
+                "What is AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS?",
+                "What are the jobs in AICTE- AICTE-ETC job training courses? What are the vocational training opportunities at these universities?",
+                "What are the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS?",
+                "Which are the AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS SCHEME?",
+                "What is the AICTE TECHNICAL UNIVERSITY Joint Training Program?",
+                "What is the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS SCHEME?",
+                "What is AICTE- Technical UNIVERSITY JOINT TRAINING PROGRAMM WITH TEACHER SCHEME?",
+                "What is AICTE's Joint Training Program, the most important for an IT ( IT) student?"
+            ],
+            "responses": "AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS\nThe objective of the AICTE \u2013 University training programs is to conduct training for faculty members to prepare them for being successful in a knowledge society.\nFor More Information : https://aicte-india.org/sites/default/files/fds/Scheme%20Document%20TU%20teach-converted.pdf"
+        },
+        {
+            "tag": "Data-33",
+            "patterns": [
+                "What are AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS SCHEME?",
+                "What is AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
+                "What is AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LABORIANS SCHEME?",
+                "What are the jobs in AICTE-TECHNICAL UNIVERSITY JOINT training programs for Brazilians?",
+                "What are the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
+                "Which are the AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
+                "What are the AICTE TECHNICAL UNIVERSITY Joint Training Programs?",
+                "What is AICTE's TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS SCHEME?",
+                "What is AICTE- Technical UNIVERSITY JOINT TRAINING PROGRAMM WITH LIBRARIANS?",
+                "What is AICTE's TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?"
+            ],
+            "responses": "AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS\nThe objective, of AICTE \u2013 Technical University Training program for Librarians, is to conduct training for Librarians to prepare them for being successful and affective in a knowledge society.  It provide a dynamic and quality user centered library and information services that enhance teaching, learning and research while inculcating life-long learning skills and fostering human development.\nFor More Information : https://www.aicte-india.org/sites/default/files/fds/Scheme%20Document%20Librarians.pdf"
+        },
+        {
+            "tag": "Data-34",
+            "patterns": [
+                "What is AICTE-Professional Development Scheme?",
+                "What is AICTE \u2013 Professional Development Scheme Scheme?",
+                "What is AICTE Professional Development Scheme?",
+                "What is the SCHEME TO AICTE PROFESSIONAL SUGGESTION? What Is It Mean?",
+                "What is the AICTE Professional Development Scheme and what is its purpose?",
+                "What is PDS (professional development) scheme of AICTE?",
+                "What is the AICTE Professional Development Scheme (APDS)?",
+                "What is the AICTE professional development scheme?",
+                "What is the AICTE Professional Development Scheme? What is the eligibility criteria for AICTE?"
+            ],
+            "responses": "AICTE-Professional Development Scheme\nThe scheme enables meritorious faculty to interact at International Level Conferences, both within and outside India, Seminars, and Symposia.\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/sCHEMEDOC21OCT2021.pdf"
+        },
+        {
+            "tag": "Data-35",
+            "patterns": [
+                "What is AICTE-INAEDISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is AICTE INTERNAE distaluishable stde viziten profile?",
+                "What is AICTE-INAE DISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
+                "What is the SCHEME TO AICTE INDIA?",
+                "What is the AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
+                "What is the AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is the AICTE-INAE-DISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is AICTE-INAE DISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is AICTE-INAE Distinguished VISITING PROFESSORSHIP SCHEME?",
+                "What is AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME?"
+            ],
+            "responses": "AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME\nAICTE and INAE distinguished visiting Professor scheme envisages promotion of industry-institute interaction.\nFor More Information : https://www.aicte-india.org/sites/default/files/Application%20Form.pdf"
+        },
+        {
+            "tag": "Data-36",
+            "patterns": [
+                "What is AICTE ISTE Orientation/ Refresher programme?",
+                "What is ISTE Orientation/ Refresher programme for ICTE?",
+                "What is the AICTE \u2013 ISTE Orientation/ Refresher Programming Schedule?",
+                "What is the SCHEME of AICTE ISTE Orientation/ Refresher Programme (BY AICTE)?",
+                "What is the AICTE - ISTE Orientation/ Refresher Programme schedule?",
+                "What is the AICTE \u2013 ISTE Orientation/Refresher Programme ECHEM?",
+                "What is the AICTE ISTE Orientation/ Refresher programme information?",
+                "What is the AICTE ISTE Orientation/ Refresher Programme/Scheme?",
+                "What is the AICTE - ISTE training syllabus?",
+                "What is the AICTE/ISTE Orientation/Refresher program (2018-19)?"
+            ],
+            "responses": "AICTE \u2013 ISTE Orientation/ Refresher Programme\nThe objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme.\nFor More Information : https://www.aicte-india.org/sites/default/files/SchemeDocumentAICTEinduction-refresherSchemeDocument.pdf"
+        },
+        {
+            "tag": "Data-37",
+            "patterns": [
+                "What is AICTE TECHNOLOGICAL BOOK WRITING & TRADING SCHEME?",
+                "What is the AICTE technical writing & translations program?",
+                "What is the SCHEME TO AICTE Technical Book Writing & Translation?",
+                "What is the AICTE Technical Book Writing and Translation module?",
+                "What is the AICTE Technical Book Writing & Translation Scheme?",
+                "What is the AICTE Technical Book Writing & Translation scheme?",
+                "What is the AICTE-Technical book writing and translation section?",
+                "What is the AICTE Technical book writing & translation SCHEME?",
+                "What is the AICTE's Technical Book Writing & Translations section?"
+            ],
+            "responses": "AICTE-Technical Book Writing & Translation\nTo promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators.\nFor More Information : https://www.aicte-india.org/sites/default/files/fdc/PAC.pdf"
+        },
+        {
+            "tag": "Data-38",
+            "patterns": [
+                "What is AICTE DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE Division Chairs?",
+                "What's the AICTE-DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE Divinguish DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What's the AICTE Committee Chair Professions?",
+                "What is the AICTE DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE-DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE distinguishing housekeeping system?"
+            ],
+            "responses": "AICTE-DISTINGUISHED CHAIR PROFESSOR\nThe Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of highly qualified and experienced superannuated Engineers who have made undoubtable, unchallengeable, unparalleled and exceptional contribution to the society in their respective fields in any discipline in engineering for the benefit of students/faculty of host institutes & of institutes located in the adjoining areas.\nFor More Information : https://www.aicte-india.org/sites/default/files/fds/SchemeDocumentDCPUpdated.pdf"
+        },
+        {
+            "tag": "Data-39",
+            "patterns": [
+                "What are the schemes of paying for a graduate?",
+                "What are the schemes available for students?",
+                "What are some schemes for studying as a fresher?",
+                "What are the best schemes to get admission into universities?",
+                "What are the available schemes for students?",
+                "Which are some schemes for student?",
+                "What are the available schemes in India?",
+                "What are some schemes for students?",
+                "What are the available schemes for undergraduate student?",
+                "What are the different schemes of student employment?"
+            ],
+            "responses": "Available Schemes Are : The Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of highly qualified and experienced superannuated Engineers who have made undoubtable, unchallengeable, unparalleled and exceptional contribution to the society in their respective fields in any discipline in engineering for the benefit of students/faculty of host institutes & of institutes located in the adjoining areas."
+        },
+        {
+            "tag": "Data-40",
+            "patterns": [
+                "What does Ek Villain Return do?",
+                "What is Ek Villain Return?",
+                "What does Ek Villain Return dish out plenty of twists and turns but doesn\u2019t make you cheer for any of the characters?",
+                "What does Ek Villain Return dish out plenty of twists and turns, but doesn\u2019t make you cheer for any characters or the story?",
+                "What does Ek Villain Return dish out plenty of twists and turns?",
+                "What does Ek Villain Return has there but doesn't get the same quality?",
+                "What does Ek Villain Return do and don't make you cheer for any of the characters?",
+                "What does Ek Villain return throw out plenty of twists and turns but doesn't make you cheer for any of the characters or the story?"
+            ],
+            "responses": "Ek Villain Returns dishes out plenty of twists and turns but doesn\u2019t make you emotionally cheer for any of the characters or the story, though you wish the situation was different."
+        },
+        {
+            "tag": "Data-41",
+            "patterns": [
+                "Would the show have been better if Jerry was shorter?",
+                "What would have happened if Jerry wanted to be a little shorter?",
+                "What would have been perfect fare if Jerry was taller?",
+                "Would Jerry Schroeder have been better off if he was shorter?",
+                "What kind of fare would have been perfect if Jerry was a little shorter?",
+                "If Jerry was a little taller, what kind of fare would have been good with him if he wasn't shorter?",
+                "What would have happened to me if Jerry Smith had become a bit shorter?",
+                "Would JC be a better singer and songwriter if Jerry would have been shorter?",
+                "If Jerry was taller, how would the show look?",
+                "Would fare have become better had Jerry not been shorter?"
+            ],
+            "responses": "Good Luck Jerry is a hilarious and entertaining fare that would have been perfect if it were a tad shorter."
+        },
+        {
+            "tag": "Data-42",
+            "patterns": [
+                "Why does the landscape of the Pacific Highway choose the road less taken?",
+                "What does \"Paradise Highway\" choose the road less taken?",
+                "What is found by the Paradise Highway and how is it chosen - less traveled or not?",
+                "Why do parks chosen in the name of \"Paradise highway\" go on less taken roads or less taken roads?",
+                "What does Paradise Highway choose the road less taken?",
+                "Which road would you pick less used on 'Paradise Highway'?",
+                "What does the \"Paradise Highway\" mean by choosing the road less taken?",
+                "What does the 'Paradise Highway' choose the road less taken?",
+                "What does the paths of the paradise highway choose less taken?",
+                "Why does the paradise highway use less the path?"
+            ],
+            "responses": "\u2018Paradise Highway\u2019 chooses the road less taken, but doesn\u2019t quite make the trip worthwhile for its audience."
+        }
+    ]
+}
