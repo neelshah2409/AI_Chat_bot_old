@@ -427,7 +427,7 @@ def paragraph(request):
 def updateJson(request):
 
     jsonData = request.POST.get("updateData","default")
-    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents6.json', 'w', encoding="utf-8") as f:
+    with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents1.json', 'w', encoding="utf-8") as f:
         f.write(jsonData)
     print(jsonData)
     return HttpResponse("success")
@@ -585,7 +585,10 @@ def updateJson(request):
 #     messages.success(request, "Logged Out Successfully!!")
 #     return redirect('Gotoauth')
 
-
+def resetAll(request):
+    with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents1.json",'w') as f:
+        f.write('{"intents": []}')
+        return redirect('QueShow')
 
 if __name__ == '__main__':
     runcombine()
