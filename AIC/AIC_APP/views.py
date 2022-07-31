@@ -29,11 +29,12 @@ except Exception as e:
 
 # Landing page of website
 def index(request):
-    print(request.session['Id'])
-    print(request.session['loggedin'])
-    if (request.session['loggedin'] and request.session['Id']):
-        return render(request, 'AIC_APP/index.html')
-    else:
+    try:
+        print(request.session['id'])
+        print(request.session['loggedin'])
+        if request.session['id']:
+            return render(request, 'AIC_APP/index.html')
+    except Exception as e:
         return redirect('signin')
 
 
@@ -204,8 +205,12 @@ def runcombine(data, id):
 
 # Question Ans show
 def QueShow(request):
-    return render(request, 'AIC_APP/questionShow.html')
-
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/questionShow.html')
+    except Exception as e:
+        return redirect('signin')
+    
 # Train model
 def trainModel(request):
     # try:
@@ -226,7 +231,12 @@ def takeOutputdp(request):
 
 # this will redirect the page of question generations
 def generateFAQs(request):
-    return render(request,"AIC_APP/generateFAQs.html")
+    try:
+        if request.session['id']:
+            return render(request,"AIC_APP/generateFAQs.html")
+    except Exception as e:
+        return redirect('signin')
+    
 
 
 
@@ -283,25 +293,60 @@ def improveFeatures(request):
 
 
 def QueGenerator(request):
-    return render(request, 'AIC_APP/questionGeneration.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/questionGeneration.html')
+    except Exception as e:
+        return redirect('signin')
+    
 
 def chatAssistant(request):
-    return render(request, 'AIC_APP/chatAssistant.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/chatAssistant.html')
+    except Exception as e:
+        return redirect('signin')
+    
 
 def questionAnswers(request):
-    return render(request, 'AIC_APP/modules/questionAnswers.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/modules/questionAnswers.html')
+    except Exception as e:
+        return redirect('signin')
+    
 
 def onlyAnswers(request):
-    return render(request, 'AIC_APP/modules/onlyAnswers.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/modules/onlyAnswers.html')
+    except Exception as e:
+        return redirect('signin')
+    
 
 def linkInput(request):
-    return render(request, 'AIC_APP/modules/link.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/modules/link.html')
+    except Exception as e:
+        return redirect('signin')
+    
 
 def filesInput(request):
-    return render(request, 'AIC_APP/modules/files.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/modules/files.html')    
+    except Exception as e:
+        return redirect('signin')
+    
 
 def paragraph(request):
-    return render(request, 'AIC_APP/modules/paragraph.html')
+    try:
+        if request.session['id']:
+            return render(request, 'AIC_APP/modules/paragraph.html')
+    except Exception as e:
+        return redirect('signin')
+    
 
 
 
@@ -494,10 +539,14 @@ def updateJson(request):
 #     return redirect('Gotoauth')
 
 def resetAll(request):
-    id=request.session['Id']
-    with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'w') as f:
-        f.write('{"intents": []}')
-        return redirect('QueShow')
+    try:
+        id=request.session['Id']
+        with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'w') as f:
+            f.write('{"intents": []}')
+            return redirect('QueShow')
+    except Exception as e:
+        return redirect('signin')
+    
 
 if __name__ == '__main__':
     runcombine()
