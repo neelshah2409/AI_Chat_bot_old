@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from AIC_API.views import ChatAssistantView
+from AIC_API.views import ChatAssistantView, ApiKeyView, manageApiKeys
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +23,6 @@ urlpatterns = [
     path('sign',  include("LoginSignup.urls")),
     path('', include("AIC_APP.urls")),
     path('AIC/api/chat_assistant/', ChatAssistantView.as_view(), name="chatAssistantApi"),
+    path('AIC/me/api/keys/', ApiKeyView.as_view(), name="apiKeys"),
+    path('AIC/me/api/keys/<str:api>', manageApiKeys, name="manageApiKeys"),
 ]
