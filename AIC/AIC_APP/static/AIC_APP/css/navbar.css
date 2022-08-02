@@ -17,7 +17,6 @@
     justify-content: space-around;
     align-items: center;
     padding: 10px 10px;
-    font-family: 'Chalkboard SE' !important;
     font-size:15px !important;
     line-height: 1 !important;
 }
@@ -39,4 +38,12 @@
 .generateFAQs:hover>.generateFAQOptions{
     opacity: 1;
     transform: scale(1);
+}
+
+.profile input{
+    background-color: rgb(227, 227, 227);
+    border-radius: 0.2rem;
+    outline:none;
+    border: none;
+    margin: 0.5rem 0rem;
 }

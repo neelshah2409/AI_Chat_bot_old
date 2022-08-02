@@ -7,7 +7,7 @@ from AIC_APP.training.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
 from AIC_APP.training.Scrap import getData,getDataWithClass
 from django.http import HttpResponse, request,JsonResponse
-
+from rest_framework.parsers import JSONParser
 
 try:
     # djngo server when run so it will accept this pass so ignore the error
@@ -564,6 +564,35 @@ def getIntentsData(request):
             data = f.read()
             f.close()
         return JsonResponse({"data": data})
+
+def getUserData(request):
+    if "Id" not in request.session.keys():
+        return redirect('signin')
+    else:
+        from .models import Yobotuser
+        from .serializers import YobotuserSerialize
+        user = Yobotuser.objects.get(id=request.session["Id"])
+        serialize = YobotuserSerialize(user, many=False)
+        return JsonResponse({"status":"success","data": serialize.data})
+
+def updateUserData(request):
+    if "Id" not in request.session.keys():
+        return redirect('signin')
+    else:
+        from .models import Yobotuser
+        from .serializers import YobotuserSerialize
+        data = JSONParser().parse(request)
+        user = Yobotuser.objects.get(id=request.session["Id"])
+        user.Name = data["name"]
+        user.Email = data["email"]
+        user.CompanyName = data["organization"]
+        user.PhoneNum = data["mobile"]
+        user.save()
+        request.session["Name"] = data["name"]
+        serializer = YobotuserSerialize(user, many=False)
+        return JsonResponse({"status":"success","data": serializer.data})
+
+
 if __name__ == '__main__':
     runcombine()
 
