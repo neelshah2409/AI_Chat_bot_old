@@ -19,7 +19,6 @@ from AIC_API.views import ChatAssistantView, ApiKeyView, manageApiKeys
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('signin',  include("LoginSignup.urls")),
     path('sign',  include("LoginSignup.urls")),
     path('', include("AIC_APP.urls")),
     path('AIC/api/chat_assistant/', ChatAssistantView.as_view(), name="chatAssistantApi"),

@@ -29,7 +29,7 @@ def txtData(data):
 
 
 def docxData(data):
-    doc = docx.Document(os.getcwd()+data)
+    doc = docx.Document(os.getcwd()+data, encoding = "utf-8")
     question = True
     questions = []
     answers = []

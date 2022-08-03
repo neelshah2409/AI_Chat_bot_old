@@ -203,7 +203,7 @@ var qcount=0;
       success: function (response) {
         if (response == "success") {
           $(".loadingBox").fadeOut();
-          window.location.href = "/home";
+          window.location.href = "/chatAssistant";
         }
         if (response == "failed") {
           alert("Training Failed");

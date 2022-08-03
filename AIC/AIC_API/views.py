@@ -10,17 +10,20 @@ from AIC_APP.models import Yobotuser
 import json
 import os
 
-
+#answering query via api
 class ChatAssistantView(APIView):
+
     def get(self, request, *args, **kwargs):
         if request.GET.get("query",None)!=None:
             if request.GET.get("api",None)!=None:
+
+
                 try:
                     api = Api.objects.get(api_key=request.GET.get("api"))
                     serializer = ApiSerialize(api,many=False)
                     if api.active==True:
                         id = serializer.data['user_id']
-                        intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read())
+                        intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read(), encoding="utf8")
                         message = request.POST.get('message', 'hey')
                         ints = predict_class(message, id)
                         res = get_response(ints, intents)
@@ -28,28 +31,35 @@ class ChatAssistantView(APIView):
                             "status":"Success",
                             "message":res
                         })
+
                     else:
                         return Response({
                             "status": "Failed",
                             "message": "API Key Error"
                         })
+
+
                 except Exception as e:
                     print(Exception)
                     return Response({
                         "status": "Failed",
                         "message": "API Key Authorization Failed"
                     })
+
+
             else:
                 return Response({
                     "status": "Please Provide Active API Key"
                 })
+
+
         else:
             return Response({
                 "status": "failed",
                 "message": "Query is Required"
             })
 
-
+#create your API key
 class ApiKeyView(APIView):
     def get(self, request, *args, **kwargs):
         if "Id" in request.session.keys():
@@ -80,6 +90,7 @@ class ApiKeyView(APIView):
                 "message": "Please Login First"
             })
 
+# for managing api keys: update and delete
 @api_view(["PUT","DELETE"])
 def manageApiKeys(request, api):
     if request.method=="PUT":
