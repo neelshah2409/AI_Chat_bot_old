@@ -3,16 +3,16 @@ import json
 import os
 
 from django.core.files.storage import FileSystemStorage
-from AIC_APP.training.filesConvert import csvData, txtData, docxData
+from Files.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
-from AIC_APP.training.Scrap import getData,getDataWithClass
+from Scraping.Scrap import getData,getDataWithClass
 from django.http import HttpResponse, request,JsonResponse
 from rest_framework.parsers import JSONParser
 
 try:
     # djngo server when run so it will accept this pass so ignore the error
     from question_generation.runnow import runnow,generatefromOnlyAns
-    from AIC_APP.training.training import trainTheChatBot
+    from Training.training import trainTheChatBot
     from Predict.predict import *
     from AIC_API.models import Api
 except Exception as e:
