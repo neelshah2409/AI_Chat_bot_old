@@ -4,6 +4,46 @@
     {% else %}
     <div class="container-fluid col-11">
     {% endif %}
+    
+    <div class="modal fade modal-fullscreen-sm-down" id="profileModal">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light">
+          <form class="profile text-dark" id="profileForm">
+            <div class="modal-header">
+              <h5 class="modal-title text-light" id="staticBackdropLabel">Welcome {{request.session.Name}} ! <span id="profileMessage" class="mx-2"></span></h5>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                  <label for="name">Name</label>
+                </div>
+                <div class="d-flex flex-wrap">
+                  <div class="form-floating col-12 col-md-6 mb-1">
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address">
+                    <label for="email">Email address</label>
+                  </div>
+                  <div class="form-floating col-12 col-md-5 ms-auto mb-1">
+                    <input type="mobile" class="form-control" id="mobile" placeholder="Enter Your Mobile">
+                    <label for="mobile">Mobile</label>
+                  </div>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="organization" placeholder="Enter Your Organization's Name">
+                  <label for="organization">Organization</label>
+                </div>
+                <div class="text-end">
+                  <a href="#" class="text-decoration-none fw-bold w-100 "><i class="fa-solid fa-key"></i> Manage API</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <a class="navbar-brand logo" href="/">YourBot</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -52,7 +92,7 @@
                 <i class="bi bi-person-circle text-light fs-2 position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Profile"></i>
             </button>
           <ul class="dropdown-menu dropdown-menu-dark dropleft">
-            <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item w-100" href="#"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">{{ request.session.Name }}</p></a></li>
+            <li class="d-flex justify-content-around" data-bs-toggle="modal" data-bs-target="#profileModal"><a class="dropdown-item text-center profile-item w-100" href="#" id="userProfile"><i class="fa fa-user col-4 text-start"></i> <p class="col-8 m-0">{{ request.session.Name }}</p></a></li>
             <li class="d-flex justify-content-around"><a class="dropdown-item text-center profile-item logout" href="/signout"><i class="bi bi-box-arrow-in-left col-4 text-start"></i> <p class="col-8 m-0">Logout</p></a></li>
 
           </ul>
