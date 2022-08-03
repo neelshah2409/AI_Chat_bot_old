@@ -97,9 +97,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'yobot',
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '3307',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Shreya@412',
     }
 
 
@@ -147,6 +147,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'AIC_APP/files')
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

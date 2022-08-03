@@ -22,7 +22,7 @@ def runnow(data,id):
         print("pipeline errr")
     import json
 
-    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json').read())
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json').read(), encoding="utf8")
 
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl", qg_format="prepend")
@@ -65,7 +65,7 @@ def runnow(data,id):
             except:
                 pass
 
-            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents/intents{id}.json') as json_file:
+            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents/intents{id}.json', encoding="utf8") as json_file:
                 data = json.load(json_file)
                 temp = data["intents"]
                 y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}
