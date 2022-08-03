@@ -3,400 +3,194 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "What is the purpose of emeritus professor fellowship?",
-                "What is the purpose of Emeritus Professor Fellowship?",
-                "What's the aim of an Emeritus Professor Fellowship?",
-                "What is the Emeritus Professor Fellowship and what is its purpose?",
-                "What's the purpose of emeritus professor fellowship?",
-                "What is the Emeritus Professor Fellowship?",
-                "What is the purpose of Emeritus professor Fellowship?",
-                "What is the purpose of an Emeritus Professor Fellowship?",
-                "What is the purpose of the Emeritus Professor Fellowship?"
+                "Who gives special scholarships for technical education?",
+                "Who manages the scholarship for technical education?",
+                "What is special scholarship to promote technical education?",
+                "Who runs special scholarship in advance of Technical Education?",
+                "Which category of scholarship is dedicated to creating technical and interdisciplinary scholarships?",
+                "Which institutes offer a scholarship to promote technical education?",
+                "Who runs the scholarship to help promote technical education?",
+                "Who organizes a scholarship to promote technical education?",
+                "Who establishes a specific scholarship to promote technical education?"
             ],
-            "responses": "The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions."
+            "responses": "Explore various, schemes and special scholarship run by AICTE to promote technical education"
         },
         {
-            "tag": "Data-12",
+            "tag": "Data-2",
             "patterns": [
-                "What is Pragati Scholarship? How can we apply it?",
-                "What is the Pragati Scholarship?"
+                "What is purpose of a scheme for foster cross-border partnership?",
+                "What is the purpose of cross-border partnerships?",
+                "What's the aim of sharing cross-border partnerships?",
+                "What is the purpose of creating cross-border partnerships?",
+                "What's the purpose of a scheme to promote cross-border partnerships?",
+                "What is the purpose of building cross-border partnerships?",
+                "What is the purpose of raising money for trans-border partnerships?"
+            ],
+            "responses": "Scheme to foster cross-border partnerships focussed on creating a platform that opens the path for collaborative research between Canada and India to a wider pool of student talent in India."
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What are AICTE child approved by its neophytes?",
+                "What has AICTE approved for children from any category?",
+                "What shall be the reason of the AICTE acceptance for children from any one of the following categories?",
+                "What has AICTE approved for children from all categories of children?",
+                "What category have AICTE approved for children and whose parents?",
+                "Which category for children is approved by AICTE?",
+                "What have the AICTE approved for children from any one of the following categories?",
+                "What is AICTE approved for children from any one of the following categories?",
+                "What has AICTE approved for the child from any one of the following categories?"
+            ],
+            "responses": "AICTE has approved 'AICTE \u2013 SWANATH SCHOLARSHIP SCHEME' for children from any one of the following categories:<br/>           1. Orphan <br/>           2. Either or both parents died due to Covid-19 <br/>           3. Wards of Armed Forces and Central Paramilitary Forces martyred in action (Shaheed) <br/>            to provide them financial support of Rs. 50,000/- per annum for every year of study."
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What is the name of AICTE Study Tour Scheme for Himachal Pradesh?",
+                "What is the name of the AICTE Study Tours in Himachal Pradesh?",
+                "What is the name of the AICTE Scheme for study tour of Atal Nilgiri (Mumbai)?",
+                "What is the name of the AICTE study tour in ATAL TUNNEL in Himachal Pradesh?",
+                "Which institute for AICTE exam is BestATAL-TUNNEL? Which institute was the best?",
+                "What is the AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh?",
+                "What is the name of the AICTE Scheme for study tour of ATAL NNNEL, Himachal Pradesh?",
+                "What is the name of AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh?",
+                "What is the name of the AICTE Scheme, the study tour of ATAL TUNNEL, Himachal Pradesh?"
+            ],
+            "responses": "AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh\u2013 YOUTH UNDERTAKING VISIT FOR ACQUIRING KNOWLEDGE (YUVAK)"
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "What is the theme of the AICTE LILAVATI AWARD-2021-22?",
+                "What is the theme of AICTE's Lillavati Award 2021-22?",
+                "What's the aim of LILAVATI 2018/2019?",
+                "What is the theme of AICTE's LULANATI AWARD-2021-22?",
+                "Which is the theme of ALILAVATI AWARD-2021-22?",
+                "What is the theme of AICTE LILAVATI AWARD-2021-22?",
+                "What is the theme of LILAVATI AWARD-2021-22?",
+                "What is the theme of AICTE's LILAVATI AWARD 2021-22?"
+            ],
+            "responses": "AICTE intends to seek applications for AICTEs LILAVATI AWARD-2021-22 based on the theme \u201cWomen Empowerment\u201d from the eligible teams of AICTE approved institutions, who have undertaken remarkable intervention for the cause and made an impact that showcases their work under eight different sub-themes."
+        },
+        {
+            "tag": "Data-6",
+            "patterns": [
+                "What is the name of the scholarship given to a GATE/GPAT qualified student admitted to a recognized university?",
+                "What is the name of a scholarship awarded to full time GATE/GPAT qualified students admitted to the AICTE approved Institutions/Colleges?",
+                "What is the name of the scholarship awarded to GATE/GPAT qualified students admitted to AICTE approved Institutions/Colleges?",
+                "What is the name of scholarships awarded to GATE / GMAP qualified students admitted to AICTE approved Institutions/Colleges?",
+                "Which scholarship for GATE/GPAT 2019 is best?",
+                "What is the name of the scholarship awarded to non-gate qualified students admitted in AICTE approved institutions/Colleges?"
+            ],
+            "responses": "Scholarship is awarded to full time GATE/GPAT qualified students admitted to M.E./ M. Tech/ M. Arch and M.Pharma courses in AICTE approved Institutions/Colleges @Rs. 12,400/- PM/ student."
+        },
+        {
+            "tag": "Data-7",
+            "patterns": [
+                "Who approves Technical Institutes/University Departments for conducting research in thrust areas?",
+                "What shall be the reason of the approval by Technical Council for conducting research in thrust area?",
+                "Who approved Universities/University departments for conducting research in thrust areas?",
+                "Which Institution have approved Technical Institutes/University Departments for conducting Research in thrust areas in India?",
+                "Which Universities approved the Technical Institutes/University Departments for conducting research in thrust areas?",
+                "Who approved the thrust areas in CS and ES; who approved the Universities and Technical Institutes for research?",
+                "Who approved University Departments and Technical Institutes for conducting research in thrust areas?",
+                "Who approved institutions (universities) for conducting research on thrust areas?",
+                "Who approved Technical Institutes/University Departments, to conduct research in thrust areas (Project field)?"
+            ],
+            "responses": "Admitting full time meritorious research scholars by providing research fellowship who wants to seek admission to Ph.D. in AICTE approved Technical Institutes/University Departments for carrying out research in thrust areas"
+        },
+        {
+            "tag": "Data-8",
+            "patterns": [
+                "What is the name of the scholarship given to meritorious girls taking admission in AICTE approved technical institution?",
+                "What is the name of a scholarship given to incoming students of AICTE approved Technical institution?",
+                "What is the name of the scholarship awarded to girls taking admission in AICTE approved technical institution?",
+                "What's the name of the scholarship awarded for meritorious girls taking admission in AICTE approved Technical Institution?",
+                "What is the name of scholarships given to meritorious girls taking admission in AICTE approved technical colleges?",
+                "Which scholarship for meritorious girls is awarded by AICTE?",
+                "What is the name of the scholarship awarded to meritorious girls taking admission in AICTE approved technical institutions?",
+                "What is the name of the scholarship awarded to meritorious girls taking admission in AICTE approved Technical Institutions?",
+                "What is the Name of Scholarship awarded to meritorious girls taking admission in AICTE approved Technical Institution?"
             ],
             "responses": "Scholarship/Contingency is awarded to meritorious girls taking admission in AICTE approved Technical institution at Degree/ Diploma. Total 10000 scholarship are given @ Rs 50000 as incidentals each year."
         },
         {
-            "tag": "Data-16",
+            "tag": "Data-9",
             "patterns": [
-                "What is AICTE-INAE travel generated?",
-                "What is AICTE INAE TRAVEL GRANT SCHEME?",
-                "What is AICTE-INAE Travel Grants?",
-                "What is the travel gate of AICTE INAE?",
-                "What is the AICTE-INAE travel grad scheme?",
-                "What is the AICTE-INAE travel gate 2019?",
-                "What is the AICTE-INAE travel certificate process?",
-                "What is the AICTE-INAE TRAVEL GRANT SCHEME?",
-                "What is the AICTE-INAE route planning syllabus?",
-                "What is the travel syllabus of AICTE-INAE?"
+                "Who is awarded the scholarship/Contingency?",
+                "Who is awarded the scholarship / contingent?",
+                "What is scholarship at End of the term?",
+                "Who will be awarded a Scholarship or Contingent?",
+                "Who get Scholarships?",
+                "Which one is awarded a Scholarship/Contingency?",
+                "Who is selected in a scholarship?",
+                "Who is awarded a scholarship?",
+                "Who is awarded a Scholarship/Contingency?"
+            ],
+            "responses": "Scholarship/Contingency is awarded  to  Differently  abled students taking admission in AICTE approved Technical institution at Degree/ Diploma. Scholarship given @ Rs 50000 as incidentals each year."
+        },
+        {
+            "tag": "Data-10",
+            "patterns": [
+                "What is the purpose of scheme?",
+                "What is purpose of scheme?",
+                "What's the aim of the Scheme?",
+                "What is the purpose of a scheme?",
+                "What's the purpose of a scheme?",
+                "What is the main purpose of the scheme?"
+            ],
+            "responses": "The objective of the scheme is to provide travel assistance registration fees to a team of minimum 2 to 10 students for attending competition at international level in order to encourage engineering students to improve their field of technical education."
+        },
+        {
+            "tag": "Data-11",
+            "patterns": [
+                "What is Scheme? Why is it created?",
+                "What is purpose of Scheme?",
+                "What's the aim of the Scheme?",
+                "What is the purpose of a scheme?",
+                "What's the purpose of a Scheme?",
+                "What is the main purpose of the Scheme?",
+                "What is the purpose of scheme?"
+            ],
+            "responses": "Objective of the Scheme is to build up capacities in youth of J&K, educate, enable and empowering them to compete in normal course, enhancing and boosting employment potentials in students of J&K. Total 5000 scholarship are given @ Rs. 100000/- as Maintenance Charges and academic fee as Rs. 30000/- to General Degree, Rs. 125000/- to Engineering Degree & Rs. 300000/- to Medical Degree each year."
+        },
+        {
+            "tag": "Data-12",
+            "patterns": [
+                "What is the name of a scheme for engineering students to present papers abroad?",
+                "What's the name of the system for engineering students to present papers abroad?",
+                "Which is the name of the scheme for Engineering Students to present papers abroad?",
+                "What is the name of the scheme for engineering students to prepare papers abroad?",
+                "How can engineering students present papers abroad?"
             ],
             "responses": "An \u201cAICTE-INAE Travel Grant Scheme\u201d for Engineering Students to present papers abroad has been launched for enhancing the quality of engineering education in the country."
         },
         {
-            "tag": "Data-18",
+            "tag": "Data-13",
             "patterns": [
-                "What are M.Tech projects as internship with small and medium enterprises?",
-                "What is an M.Tech as an intern with small and medium businesses (MSMEs)?",
-                "What are M.Tech Projects as an Internship with Small and Medium Enterprises (MSMEs)?",
-                "What is the scope of M.Tech projects as intern with small and medium enterprises(MSMEs)?",
-                "What is the M.Tech Project as Internship with SME's?",
-                "What is a M.Tech project as a small and medium Enterprises (MSMEs)?"
+                "What was the name of a conference held on 1st & 2nd April 2017?",
+                "What's the name of the event that was held on 1st & 2nd April 2017?",
+                "What was the name of an event that took place on 1st and 2nd April 2017?",
+                "Which event was held on 1st - 2nd April?",
+                "What is the name of event that has been held on 1st to 2nd April 2017?",
+                "What is the name of the event that was held on 1st to 2nd April 2017?",
+                "What is the name of event that was held on 1st \u2013 2nd April 2017?"
+            ],
+            "responses": "A unique initiative to identify new and disruptive digital solutions for solving the challenges faced by our country under the program of Smart India Hackathon 2017. This event was held on 1st \u2013 2nd April 2017 for 36 hrs non-stop competition. 9544 technology students, 598 problems statements, 29 different central govt. ministries, 26 different Nodal centres & funding of Rs. 3 Lakh per team for 100 qualified teams."
+        },
+        {
+            "tag": "Data-14",
+            "patterns": [
+                "What is innovation ecosystem? What do you think it would accomplish?",
+                "What is the objective of innovation ecosystem?",
+                "What is the main reason of the Innovation Ecosystem?",
+                "What's the aim of innovation ecosystem?",
+                "What is the purpose of innovation ecosystem?",
+                "What is the main aim of Innovation Ecosystem?",
+                "Who is the main aim of Innovation Ecosystem?",
+                "What is the aim of innovation ecosystem?"
             ],
             "responses": "The main objective of the scheme is to nurture an innovation ecosystem that benefits the technologically deficient MSMEs and technical institutes both. 408 Small and Medium Enterprises have given requirement of 738 Technology students."
-        },
-        {
-            "tag": "Data-19",
-            "patterns": [
-                "What is the name of the course on faculty Development Scheme?",
-                "What is the name of a Faculty development scheme?",
-                "What is the name of Faculty Development Scheme?",
-                "What's the Faculty Development Scheme?",
-                "What is the name of Faculty development scheme?",
-                "What's the name of a Faculty Development Scheme?",
-                "What is the Name of Faculty Development Scheme?"
-            ],
-            "responses": "Learn about the various Faculty\u00a0development schemes and programmes."
-        },
-        {
-            "tag": "Data-20",
-            "patterns": [
-                "What are the annual exams of course on faculty Development Schemes of AICTE?",
-                "What is applicable to all curricular enhancement schemes of AICTE?",
-                "What is applicable to Faculty Development Scheme of AICTE?",
-                "Which framework for preparing SDAs for AICTE is applicable?",
-                "What is applicable to all Faculty Development Scheme of AICTE?",
-                "How is the AICTE Faculty Development Scheme managed?"
-            ],
-            "responses": "General Guidelines Applicable to all Faculty Development Schemes of AICTE."
-        },
-        {
-            "tag": "Data-21",
-            "patterns": [
-                "What shall StTP-SFURTI support?",
-                "Which organization will STTP-SFURTI support?",
-                "Which organisations would you want to support on STTP-SFURTI?",
-                "Who will STTP-SFURTI support?",
-                "What organizations will STTP-SFURTI support?",
-                "Which organizations will STTP Furti support?"
-            ],
-            "responses": "STTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation."
-        },
-        {
-            "tag": "Data-22",
-            "patterns": [
-                "What is the name of the National Institute of Technical Teachers Training?",
-                "What is the name of NITT Technical Training?",
-                "What is the name of the National Initiative for Technical Teacher Training?",
-                "What's the name of National Initiative for Technical Teachers Training?",
-                "What is the name of Technical Teachers Training?",
-                "Which is the name of the National Institute for Technical Teachers Training?",
-                "What is the name of National Initiative for Technical Teachers Training?",
-                "What is the name of the national initiative for technical teacher training?",
-                "What is the name of National Technical Teachers Training? What is the purpose of the National Initiative for Technical Teachers Training, but this is not a formal activity of the company.",
-                "What is the Name of National Initiative for Technical Teachers Training?"
-            ],
-            "responses": "In order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase)."
-        },
-        {
-            "tag": "Data-23",
-            "patterns": [
-                "When was the Quality Improvement Programme born?",
-                "When was the Quality Improvement Programme instituted?",
-                "What is quality improvement?",
-                "When did the Quality Improvement Programme get its first impact?",
-                "When did the Quality Improvement Programme (QIP) start?",
-                "How and when was the Quality Improvement Programme launched?"
-            ],
-            "responses": "The Government of India launched the Quality Improvement Programme in the year 1970. One of the main objectives of the programme is to upgrade the expertise and capabilities of the faculty members of the degree level institutions in the country.."
-        },
-        {
-            "tag": "Data-24",
-            "patterns": [
-                "What does RPS do for thrust areas of technical education?",
-                "What is RPS's thrust area for Technical Education?",
-                "What does RPS promote in categorized thrust areas of technical education?",
-                "What does RPS pursue in identified thrust areas of technical education?",
-                "What does RPS promote in specific thrust areas of Technical education?"
-            ],
-            "responses": "This scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master\u2019s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years."
-        },
-        {
-            "tag": "Data-25",
-            "patterns": [
-                "What is the name of the course that provides scholarships to the faculty who fulfil eligibility criteria?",
-                "What is the name of a programme that grants scholarships to students who meet eligibility criteria?",
-                "What is the name of the programme that provides scholarships to the faculty who fulfill eligibility criteria?",
-                "Which is the programme that provides scholarships to the faculty who fulfil eligibility criteria?",
-                "What is the name of a scheme that provides scholarships to faculty who fulfil eligibility criteria?",
-                "What is the name of the program that provides scholarships to the faculty who fulfil eligibility criteria?"
-            ],
-            "responses": "Scheme provides scholarships to the faculty who fulfils eligibility criteria and obtains admission in the Doctoral Degree programme leading to award of PhD degree in any of the enlisted top 500 universities/institutes (based on the QS ranking, the Times ranking and the Shanghai ranking) in the world."
-        },
-        {
-            "tag": "Data-26",
-            "patterns": [
-                "What types of Training is the scheme intended to provide to teachers employed in AICTE approved Technical Institutions?",
-                "What types of training courses are being offered to teachers employed in AICTE approved Technical Institutions?",
-                "What is the scheme intended to provide to the teachers employed in AICTE approved Technical Institutions?",
-                "What kinds of training is the scheme designed to provide teachers employed in AICTE approved technical institutions?",
-                "Which type of training is the scheme intended to provide to teachers employed in AICTE approved technical institutions?",
-                "What type of training is instituted in POK/AICTE approved Technical Institutions?",
-                "What kind of training is the scheme intended to provide to teachers employed in an AICTE approved Technical Institution?",
-                "What sort of training is intended to the providers of certification to lecturers employed in AICTE approved technical Institutions?"
-            ],
-            "responses": "The scheme is intended to Institutions   for   induction training to   teachers employed in AICTE approved Technical Institutions to facilitate up-gradation of knowledge and skill. Rs 5-7 Lakh are granted for the 2 weeks FDP."
-        },
-        {
-            "tag": "Data-27",
-            "patterns": [
-                "What is purpose of Short Term Training?",
-                "What is the purpose of short term training?",
-                "What's the aim of short term training for engineering students?",
-                "What's the purpose of a short-term training program?",
-                "What is the purpose of short term training programs?",
-                "What is the purpose of short term training and how can I begin?",
-                "What is the purpose of Short term training?"
-            ],
-            "responses": "Short Term Training Program (STTP) intends to conduct faculty trainings through financial assistance from AICTE to enable faculty members in the field of technical education to introspect and learn techniques that can help prepare students for active and successful participants in a knowledge society."
-        },
-        {
-            "tag": "Data-28",
-            "patterns": [
-                "What type of recreation is used to develop the skill of the participants and their participation in the masses in traditional sports/games and fun games for physical activity?",
-                "What type of recreational activity is used to develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity?",
-                "Which type of recreation is used to develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity?",
-                "What type of recreation is used to develop the skill of participants to involve the masses in traditional sports/games and fun games for physical activity?",
-                "What type of recreation is used to develop the skill of the participants to involve mass in traditional sports/games and fun games for physical activity?",
-                "What kind of recreation is used to develop the skill of the participants to involve the masses in the traditional sports/games and fun games for physical activity?"
-            ],
-            "responses": "To Develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity through recreation."
-        },
-        {
-            "tag": "Data-29",
-            "patterns": [
-                "What is purpose of AICTE?",
-                "What is the purpose of AICTE?",
-                "What's the aim of AICTE?",
-                "What's the purpose of AICTE?",
-                "What is the AICTE?",
-                "What is the main purpose of AICTE?"
-            ],
-            "responses": "The objective of the AICTE \u2013 University training programs is to conduct training for faculty members to prepare them for being successful in a knowledge society."
-        },
-        {
-            "tag": "Data-30",
-            "patterns": [
-                "What is the purpose of the course on Digital coding in the AICTE Training?",
-                "What is purpose of AICTE technical training program for librarians?",
-                "What is the purpose of the AICTE Technical University Training program for Librarians?",
-                "Why is the AICTE Training designed for Librarians?",
-                "What is the purpose of Technical University Training for librarians in AICTE?",
-                "What's the purpose of AICTE Technical University Training program?",
-                "What is the purpose of Technical University training (TUT) at AICTE for Librarians?",
-                "What is the purpose of technical training program for librarians by AICTE?",
-                "What is the purpose of AICTE Technical University training program for librarians?",
-                "What is the purpose of AICTE Technical University Training Program for Librarians?"
-            ],
-            "responses": "The objective, of AICTE \u2013 Technical University Training program for Librarians, is to conduct training for Librarians to prepare them for being successful and affective in a knowledge society. <br/>It provide a dynamic and quality user centered library and information services that enhance teaching, learning and research while inculcating life-long learning skills and fostering human development."
-        },
-        {
-            "tag": "Data-31",
-            "patterns": [
-                "What does the faculty interact with through their student scheme?",
-                "What is the scheme allows faculty to interact with?",
-                "What does the scheme allow faculty to interact with and eat?",
-                "How does the scheme allows faculty to interact with faculty?",
-                "What does the module allow teachers to interact with?"
-            ],
-            "responses": "The scheme enables meritorious faculty to interact at International Level Conferences, both within and outside India, Seminars, and Symposia."
-        },
-        {
-            "tag": "Data-32",
-            "patterns": [
-                "What is the purpose of the AICTE & INAE distinguished visiting professor scheme?",
-                "What is the objective of Distinguished visiting professor scheme?",
-                "What is the aim of the distinguished visiting professor scheme?",
-                "What's the aim of the AICTE/INAE distinguished visiting professor scheme?",
-                "What is the aim of AICTE and INAE distinguished visiting professor scheme?",
-                "What's the aim of AICTE and INAE distinguished visiting professor scheme?",
-                "What is the AICTE and INAE distinguished visiting professor scheme? How can I participate?",
-                "What is the purpose of AICTE and INAE distinguished visiting professor scheme?",
-                "What is the aim of AICTE and INAE distinguished visiting Professor scheme?"
-            ],
-            "responses": "AICTE and INAE distinguished visiting Professor scheme envisages promotion of industry-institute interaction."
-        },
-        {
-            "tag": "Data-33",
-            "patterns": [
-                "What is the purpose of a program?",
-                "What is purpose of a program?",
-                "What's the aim of a program?",
-                "What's the purpose of a program?",
-                "What is the main purpose of program?",
-                "What is the purpose of programming?"
-            ],
-            "responses": "The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme."
-        },
-        {
-            "tag": "Data-34",
-            "patterns": [
-                "What is the purpose of promoting the use of technical education?",
-                "What is purpose of promoting use of Technical Education?",
-                "Why should we promote use of technical education?",
-                "What is the purpose of Technical education?",
-                "What's the purpose in promoting the use of in technical education?",
-                "What is the purpose of public use of in technical education?",
-                "What is the purpose of use of the use of in the field of technical education?"
-            ],
-            "responses": "To promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators."
-        },
-        {
-            "tag": "Data-35",
-            "patterns": [
-                "What fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers?",
-                "What fellowship intends to use expertise of highly qualified and experienced superannuated engineers?",
-                "What is the fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers (captains)?",
-                "What Fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers?",
-                "Which fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers?",
-                "How can I apply for a fellowship and how can I use my skills and/or experience as a superannuated engineer?",
-                "What fellowship intends to use the expertise of highly qualified and experienced superannuated engineers?",
-                "What fellowship intends to use the expertise of br/>highly qualified and experienced superannuated Engineers?"
-            ],
-            "responses": "The Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of<br/>highly qualified and experienced superannuated Engineers who have made undoubtable,<br/>unchallengeable, unparalleled and exceptional contribution to the society in their respective fields in<br/>any discipline in engineering for the benefit of students/faculty of host institutes & of institutes located<br/>in the adjoining areas."
-        },
-        {
-            "tag": "Data-37",
-            "patterns": [
-                "What are the major factors which determine the quality of education?",
-                "What factors determine the quality of education?",
-                "What is the main reason of quality education?",
-                "How do we define quality of education?",
-                "What are the factors which affect the quality of education?",
-                "Which factor determines quality education?",
-                "What are the factors to factor in quality of education?",
-                "How can I define best quality education?",
-                "What factors influence the quality of education?"
-            ],
-            "responses": "Examinations play a very important role in deciding the quality of education.This policy attempts to bring out recommendations for reforms in examination system to meet challenges of emerging engineering education landscape.Further to complete the policy for the purposes of implementation, AICTE is presently in the process of compiling the question banks as applicable to various disciplines in the field of Engineering."
-        },
-        {
-            "tag": "Data-38",
-            "patterns": [
-                "What app are intended to benefit Faculty members, Students of institutes recognized by AICTE?",
-                "What is intended to benefit Faculty members, students of institutes recognized by AICTE?",
-                "What app is intended to benefit Faculty members, Students, of institutes recognized by AICTE?",
-                "Which app would you suggest to a student studying at an AICTE?",
-                "What app is intended to benefit Faculty members and Students of institutes recognized by AICTE?",
-                "How can I use my app to help and encourage students of institutions recognized by AICTE?"
-            ],
-            "responses": "360 Degree Feedback is aimed at benefitting the Faculty members, Students of institutes recognized by AICTE in which faculty members are subjected to feedback by management, administrative staff, HODs, students & the society to include (stake holders) on different parameters. 360 Degree Feedback app and a portal has been designed for the institutes, teachers and students. This activity has been made mandatory for the purposes of promotion to all the faculties in AICTE approved institution the AICTE Gazette dated 01 March 2019 and will be a mandatory part for qualification in AICTE - AQIS (financially funded schemes) as also for AICTE Visvesvaraya Best Teachers\u2019 Award."
-        },
-        {
-            "tag": "Data-24",
-            "patterns": [
-                "What is the name of a course I have you covered?",
-                "What's the name of the course \"I've got you covered\"?",
-                "What is the name of a course you have mastered with Climber+ or what is your target Course content?",
-                "Which course I have got you covered?",
-                "What is the name of a course that I have you covered?",
-                "What is the name of the course I have got you covered?"
-            ],
-            "responses": "Confused on which course to take? I have got you covered. Browse courses and find out the best course for you. Its free! Code With Harry is my attempt to teach basics and those coding techniques to people in short time which took me ages to learn."
-        },
-        {
-            "tag": "Data-25",
-            "patterns": [
-                "What is the price of Tailwind CSS Course?",
-                "What is the name of a complete tailwind CSS course?",
-                "What is the name of Tailwind Css course?",
-                "What is the best tailwind CSS course available for beginners and progamers?",
-                "Which is the best Tailwind CSS course?",
-                "Which is the best Tailwind CS Course?",
-                "What is the complete name of Tailwind CSS course?",
-                "What is the name of the course Tailwind CSS?",
-                "What is the name of tailwind CSS course?",
-                "What is the Name of Tailwind CSS course?"
-            ],
-            "responses": "Complete Tailwind CSS Course by CodeWithHarry in Hindi - Learn Tailwind CSS from scratch for free!"
-        },
-        {
-            "tag": "Data-26",
-            "patterns": [
-                "What is the name of the course next.js?",
-                "What is next.js?",
-                "What's the name of Next.js course?",
-                "What is the name of next.js course?",
-                "Which course would you recommend in next.js?",
-                "What is the Name of next.js course?"
-            ],
-            "responses": "Complete Next.js Course by CodeWithHarry in Hindi - Learn Next.js from Scratch."
-        },
-        {
-            "tag": "Data-27",
-            "patterns": [
-                "What is the name of a free and open-source JavaScript library?",
-                "What is free JavaScript based Web API?",
-                "What is the open source project of JavaScript?",
-                "What's the name of an open source JavaScript library?",
-                "What is the name of an open-source and primarily free JavaScript library?",
-                "Which is the name of a free JavaScript library?",
-                "What is the name of a free and open-source front end JavaScript library?",
-                "What is the name of JavaScript libraries?",
-                "What is the name of an open source JavaScript library?"
-            ],
-            "responses": "React is a free and open-source front-end JavaScript library. This series will cover React from starting to the end. We will learn react from the ground up!"
-        },
-        {
-            "tag": "Data-28",
-            "patterns": [
-                "What is the name of the person who has a channel or website?",
-                "What is the name of a person who has this website and a channel in my daily routine?",
-                "What's the name of the person who has this channel and website in my daily routine?",
-                "Which is the person who use this channel everyday and what is my daily routine?",
-                "Which person would you pick in your daily routine?",
-                "What is the name of the person who has this channel and website in our daily routine?",
-                "Who is the person who has this channel and website in my daily routine?"
-            ],
-            "responses": "I don't have words to thank this man, I'm really grateful to have this channel and website in my daily routine. If you're a mere beginner, then you can trust this guy and can put your time into his content. I can assure you that it'll be worth it."
-        },
-        {
-            "tag": "Data-29",
-            "patterns": [
-                "What skills do I need to level up on YINN?",
-                "What skills do I need for this channel?",
-                "What are some skills you want to have to level up for this channel?",
-                "How do I level up to get good at this channel?",
-                "What skills do you need to level up for YouTube?",
-                "Which skill would you want to acquire on my channel?",
-                "How can I level up in CS channel?",
-                "How can I level up on YouTube?",
-                "What skills do I need to level up on Viacom?",
-                "How can I skill up on YouTube?"
-            ],
-            "responses": "For everyone who wants to level up their #Coding and #Dev skills - seriously, this channel is for you! Both basic and advanced stacks are covered on this channel, and one can learn according to his skill levels. And the icing on the cake is, everything is available for free."
-        },
-        {
-            "tag": "Data-30",
-            "patterns": [
-                "What year did the web site acquired copyright?",
-                "What year did CodeWithHarry.com receive copyright license?",
-                "What year does CodeWithHarry.com got its copyright?",
-                "How did CodeWithHarry get its copyright?",
-                "Which year was CodeWithHarry.com and what is copyright?",
-                "Which year CodeWithHarry.com was founded?",
-                "What year did CodeWithHarry.com get copyrights?",
-                "How old was CodeWithHarry.com?",
-                "In what year did CodeWithHarry.com take its Copyright license?",
-                "In what year does CodeWithHarry.com, the website is created?"
-            ],
-            "responses": "Copyright \u00a9 2022 CodeWithHarry.com"
         }
     ]
 }

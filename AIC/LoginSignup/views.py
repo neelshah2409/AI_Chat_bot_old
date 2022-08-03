@@ -55,80 +55,53 @@ def signout(request):
 
 
 def signup(request):
-    try:
-        if request.session['Id'] == None:
+    if "Id" not in request.session:
 
-            if request.method == "POST":
-                username = request.POST['Name']
-                fname = request.POST['ChatBotName']
-                lname = request.POST['PhoneNum']
-                email = request.POST['Email']
-                pass1 = request.POST['Password']
-                pass2 = request.POST['Password2']
-                companyName = request.POST['CompanyName']
+        if request.method == "POST":
+            username = request.POST['Name']
+            fname = request.POST['ChatBotName']
+            lname = request.POST['PhoneNum']
+            email = request.POST['Email']
+            pass1 = request.POST['Password']
+            pass2 = request.POST['Password2']
+            companyName = request.POST['CompanyName']
 
-                if Yobotuser.objects.filter(Name=username):
-                    messages.error(request, "Username already exist! Please try some other username.")
-                    msg = "Username already exist! Please try some other username."
-                    context = {"Errmsg":msg}
-                    return redirect('signin',context)
+            if Yobotuser.objects.filter(Name=username):
+                messages.error(request, "Username already exist! Please try some other username.")
+                msg = "Username already exist! Please try some other username."
+                context = {"Errmsg":msg}
+                return redirect('signin',context)
 
-                if Yobotuser.objects.filter(Email=email).exists():
-                    messages.error(request, "Email Already Registered!!")
-                    msg =  "Email Already Registered!!"
-                    context = {"Errmsg": msg}
-                    return redirect('signin',context)
+            if Yobotuser.objects.filter(Email=email).exists():
+                messages.error(request, "Email Already Registered!!")
+                msg =  "Email Already Registered!!"
+                context = {"Errmsg": msg}
+                return redirect('signin',context)
 
-                if len(username) > 20:
-                    messages.error(request, "Username must be under 20 charcters!!")
-                    msg =  "Username must be under 20 charcters!!"
-                    context = {"Errmsg": msg}
-                    return redirect('signin',context)
+            if len(username) > 20:
+                messages.error(request, "Username must be under 20 charcters!!")
+                msg =  "Username must be under 20 charcters!!"
+                context = {"Errmsg": msg}
+                return redirect('signin',context)
 
-                if pass1 != pass2:
-                    messages.error(request, "Passwords didn't matched!!")
-                    msg =  "Passwords didn't matched!!"
-                    context = {"Errmsg": msg}
-                    return redirect('signin',context)
+            if pass1 != pass2:
+                messages.error(request, "Passwords didn't matched!!")
+                msg =  "Passwords didn't matched!!"
+                context = {"Errmsg": msg}
+                return redirect('signin',context)
 
-                if not username.isalnum():
-                    messages.error(request, "Username must be Alpha-Numeric!!")
-                    msg = "Username must be Alpha-Numeric!!"
-                    context = {"Errmsg": msg}
-                    return redirect('signin',context)
+            if not username.isalnum():
+                messages.error(request, "Username must be Alpha-Numeric!!")
+                msg = "Username must be Alpha-Numeric!!"
+                context = {"Errmsg": msg}
+                return redirect('signin',context)
 
-                myuser = Yobotuser(Name=username,Password=pass1,Email=email,CompanyName=companyName,PhoneNum=lname,ChatBotName=fname )
-                myuser.save()
-                messages.success(request,"Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
+            myuser = Yobotuser(Name=username,Password=pass1,Email=email,CompanyName=companyName,PhoneNum=lname,ChatBotName=fname )
+            myuser.save()
+            messages.success(request,"Your Account has been created succesfully!! Please check your email to confirm your email address in order to activate your account.")
 
-                # # Welcome Email
-                # subject = "Welcome to GFG- Django Login!!"
-                # message = "Hello " + myuser.first_name + "!! \n" + "Welcome to GFG!! \nThank you for visiting our website\n. We have also sent you a confirmation email, please confirm your email address. \n\nThanking You\nAnubhav Madhav"
-                # from_email = settings.EMAIL_HOST_USER
-                # to_list = [myuser.email]
-                # send_mail(subject, message, from_email, to_list, fail_silently=True)
-                #
-                # # Email Address Confirmation Email
-                # current_site = get_current_site(request)
-                # email_subject = "Confirm your Email @ GFG - Django Login!!"
-                # message2 = render_to_string('email_confirmation.html', {
-                #
-                #     'name': myuser.first_name,
-                #     'domain': current_site.domain,
-                #     'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
-                #     'token': generate_token.make_token(myuser)
-                # })
-                # email = EmailMessage(
-                #     email_subject,
-                #     message2,
-                #     settings.EMAIL_HOST_USER,
-                #     [myuser.email],
-                # )
-                # email.fail_silently = True
-                # email.send()
+            return redirect('signin')
 
-                return redirect('signin')
-
-            return render(request, "AIC_APP/login.html?signup=true")
-    except:
+        return render(request, "AIC_APP/login.html?signup=true")
+    else:
         return redirect("AIC")

@@ -16,7 +16,7 @@ import os
 
 def trainTheChatBot(id):
     lemmatizer = WordNetLemmatizer()
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read())
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read(), encoding="utf-8")
 
 
     words = []
@@ -37,8 +37,8 @@ def trainTheChatBot(id):
 
     classes = sorted(set(classes))
 
-    pickle.dump(words, open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}words{os.sep}words{id}.pkl", 'wb'))
-    pickle.dump(classes, open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}classes{os.sep}classes{id}.pkl", 'wb'))
+    pickle.dump(words, open(f"{os.getcwd()}{os.sep}Training{os.sep}words{os.sep}words{id}.pkl", 'wb'))
+    pickle.dump(classes, open(f"{os.getcwd()}{os.sep}Training{os.sep}classes{os.sep}classes{id}.pkl", 'wb'))
 
     training = []
     output_empty = [0] * len(classes)
