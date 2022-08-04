@@ -8,7 +8,8 @@ from django.shortcuts import render, redirect
 from Scraping.Scrap import getData,getDataWithClass
 from django.http import HttpResponse, request,JsonResponse
 from rest_framework.parsers import JSONParser
-
+from googletrans import Translator,LANGUAGES
+translator = Translator(service_urls=['translate.googleapis.com'])
 try:
     # djngo server when run so it will accept this pass so ignore the error
     from question_generation.runnow import runnow,generatefromOnlyAns
@@ -231,6 +232,8 @@ def takeOutputdp(request):
     message = request.POST.get('message', 'hey')
     ints = predict_class(message,id)
     res = get_response(ints, intents)
+    destination = request.POST.get("destination")
+    res = translator.translate(res, src="en", dest=destination).text
     return HttpResponse(res)
 
 # this will redirect the page of question generations
@@ -310,7 +313,7 @@ def QueGenerator(request):
 def chatAssistant(request):
     try:
         if request.session['Id']:
-            return render(request, 'AIC_APP/chatAssistant.html')
+            return render(request, 'AIC_APP/chatAssistant.html',{"languages":LANGUAGES})
     except Exception as e:
         return redirect('signin')
     
@@ -591,6 +594,12 @@ def updateUserData(request):
         request.session["Name"] = data["name"]
         serializer = YobotuserSerialize(user, many=False)
         return JsonResponse({"status":"success","data": serializer.data})
+
+def translate(request):
+    message = request.POST.get("message")
+    source = request.POST.get("source")
+    destination = request.POST.get("destination")
+    return JsonResponse({"status": "success", "message": translator.translate(message, src=source, dest=destination).text})
 
 
 if __name__ == '__main__':
