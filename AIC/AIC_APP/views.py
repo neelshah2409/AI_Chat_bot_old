@@ -605,6 +605,8 @@ def translate(request):
     destination = request.POST.get("destination")
     return JsonResponse({"status": "success", "message": translator.translate(message, src=source, dest=destination).text})
 
+def documentation(request):
+    return render(request,"")
 
 if __name__ == '__main__':
     runcombine()

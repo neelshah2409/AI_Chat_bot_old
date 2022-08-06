@@ -91,9 +91,29 @@ class ApiKeyView(APIView):
             })
 
 # for managing api keys: update and delete
-@api_view(["PUT","DELETE"])
+@api_view(["PUT","DELETE","GET"])
 def manageApiKeys(request, api):
-    if request.method=="PUT":
+    if request.method == "GET":
+        if "Id" in request.session.keys():
+            try:
+                api = Api.objects.get(api_key=api)
+                serializer = ApiSerialize(api, many=False)
+                return Response({
+                    "status": "Success",
+                    "message": {"name":serializer.data["name"],"api_key":serializer.data["api_key"],"active":serializer.data["active"]}
+                })
+            except Exception as e:
+                return Response({
+                    "status": "Failed",
+                    "message": "API Key Doesn't Exist"
+                })
+        else:
+            return Response({
+                "status": "Failed",
+                "message": "Please Login First"
+            })
+
+    if request.method == "PUT":
         if "Id" in request.session.keys():
             try:
                 api = Api.objects.get(api_key=api)
@@ -117,7 +137,7 @@ def manageApiKeys(request, api):
                 "message": "Please Login First"
             })
 
-    if request.method=="DELETE":
+    if request.method == "DELETE":
         if "Id" in request.session.keys():
             try:
                 api = Api.objects.get(api_key=api)
