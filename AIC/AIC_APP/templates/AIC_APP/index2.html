@@ -2,10 +2,30 @@
 <div class="wrapper text-end">
     <div class="title sticky-top d-flex justify-content-around align-items-center" style="box-shadow:2px 2px 10px 2px rgba(203, 200, 200, 0.7)">
         <div>
-            <select name="languages" class="form-control languages" id="languages"></select>
+            <select name="languages" class="form-control languages" id="languages">
+                {% with temp=request.GET.language %}
+                    {% if temp %}
+                        {% for i in languages.items %}
+                            {% if i.0 != temp %}
+                                <option value={{i.0}}>{{i.1}}</option>
+                            {% else %}
+                            <option value={{i.0}} selected>{{i.1}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        {% for i in languages.items %}
+                            {% if i.0 != "en" %}
+                                <option value={{i.0}}>{{i.1}}</option>
+                            {% else %}
+                            <option value={{i.0}} selected>{{i.1}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </select>
         </div>
-        <div class="mx-4"></div>
         YourBot
+        <div class="mx-4"></div>
         <div class="mx-4"></div>
         <a href="#" id="feedback">
             <i class="fa fa-commenting text-light position-relative" aria-hidden="true" data-bs-toggle="tooltip" title="Feedback"></i>

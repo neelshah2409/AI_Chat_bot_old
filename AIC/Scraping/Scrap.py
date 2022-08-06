@@ -21,9 +21,17 @@ def getDataWithClass(data,baseClass,questionClass,answerClass):
     soup = BeautifulSoup(page,'lxml')
     questionsData = []
     answerData = []
-    for i in soup.select(f".{baseClass} {questionClass}"):
+    for i in soup.select(f"{baseClass} {questionClass}"):
         questionsData.append(f"What is {i.text.strip()}?")
-    for i in soup.select(f".{baseClass} {answerClass}"):
+    for i in soup.select(f"{baseClass} {answerClass}"):
         answerData.append(i.text.strip())
 
     return (questionsData,answerData)
+
+def getDataWithAnsClass(data,baseClass,answerClass):
+    page = requests.get(data).text
+    soup = BeautifulSoup(page, 'lxml')
+    answerData = []
+    for i in soup.select(f"{baseClass} {answerClass}"):
+        answerData.append(i.text.strip())
+    return answerData

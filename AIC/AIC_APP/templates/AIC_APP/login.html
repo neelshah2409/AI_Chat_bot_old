@@ -61,30 +61,5 @@
     </div>
 
 </body>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script>
-    const toggleSignUp = document.getElementById("signUp");
-    const toggleSignIn = document.getElementById("signIn");
-    const overlay = document.getElementById("overlay");
-    const authentication_box = document.getElementById("auth_box");
-    toggleSignUp.onclick = ()=>{
-            overlay.classList.remove('overlay-right-active');
-            overlay.classList.add('overlay-left-active');
-            authentication_box.classList.add("right-active");
-            authentication_box.classList.remove("left-active");
-        };
-
-    toggleSignIn.onclick = ()=>{
-        overlay.classList.remove('overlay-left-active');
-        overlay.classList.add('overlay-right-active');
-        authentication_box.classList.add("left-active");
-        authentication_box.classList.remove("right-active");
-    };
-    const params = new URLSearchParams(window.location.search)
-    if(params.has('signup'))
-    {
-        toggleSignUp.click();
-    }
-</script>    
+{% include 'AIC_APP/script.html' %}
 </html>

@@ -23,7 +23,7 @@ class ChatAssistantView(APIView):
                     serializer = ApiSerialize(api,many=False)
                     if api.active==True:
                         id = serializer.data['user_id']
-                        intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read(), encoding="utf8")
+                        intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read())
                         message = request.POST.get('message', 'hey')
                         ints = predict_class(message, id)
                         res = get_response(ints, intents)
@@ -40,10 +40,10 @@ class ChatAssistantView(APIView):
 
 
                 except Exception as e:
-                    print(Exception)
+                    print(e)
                     return Response({
                         "status": "Failed",
-                        "message": "API Key Authorization Failed"
+                        "message": "Sorry We Can't Help You"
                     })
 
 
