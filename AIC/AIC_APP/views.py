@@ -5,7 +5,7 @@ import os
 from django.core.files.storage import FileSystemStorage
 from Files.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
-from Scraping.Scrap import getData,getDataWithClass
+from Scraping.Scrap import getData,getDataWithClass,getDataWithAnsClass
 from django.http import HttpResponse, request,JsonResponse
 from rest_framework.parsers import JSONParser
 from googletrans import Translator,LANGUAGES
@@ -62,9 +62,13 @@ def linkSubmit(request):
     baseClass = request.POST.get("baseClass","")
     questionClass = request.POST.get("questionClass", "")
     answerClass = request.POST.get("answerClass","")
-    if(baseClass!=""):
+    if baseClass!="":
         quelist,anslist = getDataWithClass(data,baseClass,questionClass,answerClass)
         parafromqueans(anslist, quelist, id)
+    elif questionClass=="":
+        anslist =getDataWithAnsClass()
+        finalQuelist = generatefromOnlyAns(anslist)
+        parafromqueans(anslists, finalQuelist, id)
     else:
         siteData = getData(data)
         finalQuelist = generatefromOnlyAns(siteData)

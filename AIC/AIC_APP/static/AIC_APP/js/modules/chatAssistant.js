@@ -18,17 +18,6 @@ $(document).ready(()=>{
         feedback = false;
         let input = $('.box .temp .msg p').text();
         let destination = $("#languages").val();
-        // let temp1 = $(`<div class="item right d-flex justify-content-start gap-2 align-items-center m-3 col-10">
-        //                         <div class="icon col-2">
-        //                             <i class="bi bi-person-fill"></i>
-        //                         </div>
-        //                         <div class="msg px-2 text-start">
-        //                             <p>${input}</p>
-        //                         </div>
-        //                     </div>`);
-        // $(".box").append(temp1);
-        // $(".box").scrollTop(height);
-        // $(".box").animate({ scrollTop: $('.box').prop("scrollHeight") }, 700);
         $(".box .temp").removeClass("temp");
         inputFlag=false;
         $("#etext").prop('disabled', true);
@@ -187,7 +176,14 @@ $(document).ready(()=>{
     $("#etext").on("keyup",async ()=>{
         let input = $('#etext').val();
         let source = $("#languages").val();
-        let data = await translate(input,source);
+        let data=""
+        if(source!="en")
+        {
+            data = await translate(input,source);
+        }
+        else{
+            data = input;
+        }
         if($(".box .temp").length==0 && inputFlag)
         {
             let temp1 = $(`<div class="item right d-flex justify-content-start gap-2 align-items-center m-3 col-10 temp">
@@ -207,7 +203,6 @@ $(document).ready(()=>{
     })
 
     $("#languages").on("change",(e)=>{
-        alert("language Change");
         window.location.href=`/chatAssistant?language=${e.target.value}`;
     })
 })

@@ -2,7 +2,7 @@
     {% if request.session.Name %}
     <div class="container-fluid col-10">
     {% else %}
-    <div class="container-fluid col-11">
+    <div class="container-fluid col-12">
     {% endif %}
     
     <div class="modal fade modal-fullscreen-sm-down" id="profileModal">
@@ -33,7 +33,7 @@
                   <label for="organization">Organization</label>
                 </div>
                 <div class="text-end">
-                  <a href="#" class="text-decoration-none fw-bold w-100 "><i class="fa-solid fa-key"></i> Manage API</a>
+                  <a href="#" class="text-decoration-none fw-bold w-100 "><i class="fa-solid fa-key"></i>Manage API</a>
                 </div>
             </div>
             <div class="modal-footer">
@@ -52,38 +52,42 @@
         <div class="mx-4"></div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item mx-2">
-            <a class="nav-link active fw-bold" aria-current="page" href="/"><i class="fa-solid fa-house-chimney"></i> Home</a>
+            <a class="nav-link active fw-bold" aria-current="page" href="/"><i class="fa-solid fa-house-chimney"></i>Home</a>
           </li>
           <li class="nav-item mx-2">
-              <a class="nav-link" href="#"><i class="fa-solid fa-key"></i> API</a>
+              <a class="nav-link" href="#"><i class="fa-solid fa-key"></i>API</a>
             </li>
           <li class="nav-item mx-2 generateFAQs">
-            <a class="nav-link" href="/generateFAQs"><i class="fa-solid fa-gears"></i> Generate FAQs</a>
-            <div class="generateFAQOptions">
+            <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-gears"></i>Generate FAQs</a>
+            <div class="generateFAQOptions dropdown-menu">
               <div class="list-group">
-                <a href="/questionAnswers" class="list-group-item list-group-item-action">
+                <a href="/questionAnswers" class="dropdown-item">
                   Using Question-Answers
                 </a>
-                <a href="/onlyAnswers" class="list-group-item list-group-item-action">
+                <a href="/onlyAnswers" class="dropdown-item">
                   Using Only Answers
                 </a>
-                <a href="/filesInput" class="list-group-item list-group-item-action">
+                <a href="/filesInput" class="dropdown-item">
                   Using File
                 </a>
-                <a href="/paragraph" class="list-group-item list-group-item-action">
+                <a href="/paragraph" class="dropdown-item">
                   Using Paragraph
                 </a>
-                <a href="/linkInput" class="list-group-item list-group-item-action">
+                <a href="/linkInput" class="dropdown-item">
                   Using Site Link
                 </a>
               </div>
             </div>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="/chatAssistant"><i class="fa-regular fa-comments"></i> Chat Assistant</a>
+            <a class="nav-link" href="/chatAssistant"><i class="fa-regular fa-comments"></i>Chat Assistant</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="/QueShow"><i class="fa-solid fa-hammer"></i> View Questions</a>
+            <a class="nav-link" href="/QueShow"><i class="fa-solid fa-hammer"></i>View Questions</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/howToUse"><i class="fa-solid fa-circle-question"></i>How To Use?</a>
           </li>
         </ul>
         {% if request.session.Name %}

@@ -13,8 +13,10 @@ body{
     align-items: center;
     width: 100%;
 }
-.form-control{
+.form-control,.form-select{
     border: 0 !important;
+    outline: none;
+    box-shadow: none !important;
 }
 
 .form-control:focus{

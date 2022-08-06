@@ -6,12 +6,18 @@ $(document).ready(()=>{
             $("#linkBaseClassInput").prop("disabled",false)
             $("#linkQuestionClassInput").prop("disabled",false)
             $("#linkAnswerClassInput").prop("disabled",false)
+            $("#question").prop("disabled",false)
+            $("#answer").prop("disabled",false)
+            $("#base").prop("disabled",false)
         }
         else
         {
             $("#linkBaseClassInput").prop("disabled",true)
             $("#linkQuestionClassInput").prop("disabled",true)
             $("#linkAnswerClassInput").prop("disabled",true)
+            $("#question").prop("disabled",true)
+            $("#answer").prop("disabled",true)
+            $("#base").prop("disabled",true)
         }
     });
 
@@ -26,6 +32,22 @@ $(document).ready(()=>{
         }
     })
 
+    const convertEquiv = (value)=>{
+        if(value=="tag"){
+            return "";
+        }
+        else if(value=="class"){
+            return ".";
+        }
+        else if(value=="id"){
+            return "#"
+        }
+        else{
+            alert("Error ! Please Enter Valid Input");
+            window.location.href="/linkinput";
+        }
+    }
+
     $(document).on("submit", "#linkForm", function(e) {
         e.preventDefault();
         console.log()
@@ -34,9 +56,9 @@ $(document).ready(()=>{
         let query;
         if($("#advanceEnable").is(":checked"))
         {
-            const baseClass =  $("#linkBaseClassInput").val();
-            const questionClass =  $("#linkQuestionClassInput").val();
-            const answerClass =  $("#linkAnswerClassInput").val();
+            const baseClass =  convertEquiv($("#base").val())+$("#linkBaseClassInput").val();
+            const questionClass =  convertEquiv($("#question").val())+$("#linkQuestionClassInput").val();
+            const answerClass =  convertEquiv($("#answer").val())+$("#linkAnswerClassInput").val();
             query = {link:input,baseClass,questionClass,answerClass};
         }
         else

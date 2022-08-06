@@ -18,10 +18,8 @@
         </div>
         <div class="col-12 col-sm-12 col-md-7 d-flex justify-content-center flex-wrap">
             <form action="#" method="post" id="linkForm" class="w-100">
-                <div class="card bg-dark text-light col-sm-12 col-12" id="linkInputContainer">
+                <div class="card text-light col-sm-12 col-12" id="linkInputContainer">
                     <div class="card-body">
-                        <h5 class="card-title d-flex justify-content-between">Submit Your Link Here </h5>
-                        
                         <div class="form-control linkDisplayContainer">
                             <h5 id="linkInputLabel">Enter Your Link Here :</h5>
                             <input name="linkInput" id="linkInput" class="form-control" placeholder="Paste Your Link Here" />
@@ -37,24 +35,42 @@
                                         <input class="form-check-input" type="checkbox" id="advanceEnable" />
                                     </div>
                                     <div class="card card-body" aria-disabled="">
-                                        <div class="form-floating mb-3">
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text p-0 border-0 outline-0">
+                                              <select id="base" class="form-select" disabled="true">
+                                                  <option value="class" selected>Class</option>
+                                                  <option value="tag">Tag</option>
+                                                  <option value="id">ID</option>
+                                              </select>
+                                          </span>
                                           <input type="text" class="form-control" id="linkBaseClassInput" placeholder="Enter Your Base Class" disabled="true"/>
-                                          <label for="linkBaseClassInput">Base Class Here</label>
                                         </div>
-                                        <div class="form-floating mb-3">
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text p-0 border-0 outline-0">
+                                              <select id="question" class="form-select" disabled="true">
+                                                  <option value="class" selected>Class</option>
+                                                  <option value="tag">Tag</option>
+                                                  <option value="id">ID</option>
+                                              </select>
+                                          </span>
                                           <input type="text" class="form-control" id="linkQuestionClassInput" placeholder="Enter Your Question Class" disabled="true"/>
-                                          <label for="linkQuestionClassInput">Question Class / Tag Here</label>
                                         </div>
-                                        <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="linkAnswerClassInput" placeholder="Enter Your Question Class" disabled="true"/>
-                                            <label for="linkAnswerClassInput">Answer Class / Tag Here</label>
+                                        <div class="input-group mb-3">
+                                          <span class="input-group-text p-0 border-0 outline-0">
+                                              <select id="answer" class="form-select" disabled="true">
+                                                  <option value="class" selected>Class</option>
+                                                  <option value="tag">Tag</option>
+                                                  <option value="id">ID</option>
+                                              </select>
+                                          </span>
+                                          <input type="text" class="form-control" id="linkAnswerClassInput" placeholder="Enter Your Answer Class" disabled="true"/>
                                         </div>
                                     </div>
                                 </div>
                             </span>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-secondary text-light mb-2" id="submitBtn">Submit</button>
+                    <button type="submit" class="btn btn-secondary text-light" id="submitBtn">Submit</button>
                 </div>
             </form>
         </div>

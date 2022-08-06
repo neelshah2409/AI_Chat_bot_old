@@ -71,7 +71,7 @@ def trainTheChatBot(id):
 
     hist = model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
     curr = os.getcwd()
-    model.save(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}training{os.sep}modelData{os.sep}chatbotmodel{id}.h5", hist)
+    model.save(f"{os.getcwd()}{os.sep}Training{os.sep}modelData{os.sep}chatbotmodel{id}.h5", hist)
     print("Sucess File Updated")
 
 if __name__ == '__main__':

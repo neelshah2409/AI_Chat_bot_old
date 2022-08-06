@@ -3,192 +3,433 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "Who gives special scholarships for technical education?",
-                "Who manages the scholarship for technical education?",
-                "What is special scholarship to promote technical education?",
-                "Who runs special scholarship in advance of Technical Education?",
-                "Which category of scholarship is dedicated to creating technical and interdisciplinary scholarships?",
-                "Which institutes offer a scholarship to promote technical education?",
-                "Who runs the scholarship to help promote technical education?",
-                "Who organizes a scholarship to promote technical education?",
-                "Who establishes a specific scholarship to promote technical education?"
+                "What are the General Guidelines for all FDC Schemes?",
+                "What are guidelines for all fdc schemes?",
+                "What is the General Guidelines of the FDC Scheme?",
+                "What are general guidelines for FDC Scheme?",
+                "What are the general guidelines for all FDC Schemes?",
+                "What are general guidelines for Selected FDC Schemes?",
+                "What are the general guidelines for FDC Schemes?",
+                "What are the rules and general guidance for FDC Schemes?",
+                "What is General guidelines for FDC Schemes? What are the concepts?",
+                "What are the general guidelines of all the FDC schemes Schemes?"
             ],
-            "responses": "Explore various, schemes and special scholarship run by AICTE to promote technical education"
+            "responses": "General Guidelines for All FDC Schemes<br/>General Guidelines Applicable to all Faculty Development Schemes of AICTE.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/guidlines%20upload%20website.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-2",
             "patterns": [
-                "What is purpose of a scheme for foster cross-border partnership?",
-                "What is the purpose of cross-border partnerships?",
-                "What's the aim of sharing cross-border partnerships?",
-                "What is the purpose of creating cross-border partnerships?",
-                "What's the purpose of a scheme to promote cross-border partnerships?",
-                "What is the purpose of building cross-border partnerships?",
-                "What is the purpose of raising money for trans-border partnerships?"
+                "What is AICTE STIPP Santuary Scheme?",
+                "What is STTP/SFURTI?",
+                "What is SCHEME AICTE STTP/SURTI?",
+                "What is the STTP-SFURTI SCHEME of AICTE?",
+                "What is the AICTE STTP-SFURTI PURTS SCHEME?",
+                "What is the AICTE STTP-SFURTI scheme? How can I follow it?",
+                "What is the AICTE STTP and Furti SECHEME?",
+                "What is the AICTE STTP-SFURTI SCHEME?",
+                "What is the AICTE STTP-SFURTI scheme?"
             ],
-            "responses": "Scheme to foster cross-border partnerships focussed on creating a platform that opens the path for collaborative research between Canada and India to a wider pool of student talent in India."
+            "responses": "AICTE STTP-SFURTI<br/>STTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/sfurti/STTP_SFURTIschemedocamndedon10dec2021.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-3",
             "patterns": [
-                "What are AICTE child approved by its neophytes?",
-                "What has AICTE approved for children from any category?",
-                "What shall be the reason of the AICTE acceptance for children from any one of the following categories?",
-                "What has AICTE approved for children from all categories of children?",
-                "What category have AICTE approved for children and whose parents?",
-                "Which category for children is approved by AICTE?",
-                "What have the AICTE approved for children from any one of the following categories?",
-                "What is AICTE approved for children from any one of the following categories?",
-                "What has AICTE approved for the child from any one of the following categories?"
+                "What is AICTE- NITTT \u2013 National Institute of Technical Training (AICTE - NITTT) SCHEME?",
+                "What is AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
+                "What is AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE-NITTT) SCHEME?",
+                "What is the SCHEME of AICTE NITTT (AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING)?",
+                "What is the AICTE-National Institute of TECHNICAL TEACHERS (AICTE-NITTT) list?",
+                "Which institute for preparing teachers in AICTE - NITTT? Which institute for NITTT for general education?",
+                "What is the AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE- NITTT) SCHEME?",
+                "What is the AICTE national initiative for technical training?",
+                "What is the AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT) syllabus?",
+                "What is the AICTE/ NITTT system?"
             ],
-            "responses": "AICTE has approved 'AICTE \u2013 SWANATH SCHOLARSHIP SCHEME' for children from any one of the following categories:<br/>           1. Orphan <br/>           2. Either or both parents died due to Covid-19 <br/>           3. Wards of Armed Forces and Central Paramilitary Forces martyred in action (Shaheed) <br/>            to provide them financial support of Rs. 50,000/- per annum for every year of study."
+            "responses": "AICTE- NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE - NITTT)<br/>In order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase).<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/NITTT%20Scheme%20document.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-4",
             "patterns": [
-                "What is the name of AICTE Study Tour Scheme for Himachal Pradesh?",
-                "What is the name of the AICTE Study Tours in Himachal Pradesh?",
-                "What is the name of the AICTE Scheme for study tour of Atal Nilgiri (Mumbai)?",
-                "What is the name of the AICTE study tour in ATAL TUNNEL in Himachal Pradesh?",
-                "Which institute for AICTE exam is BestATAL-TUNNEL? Which institute was the best?",
-                "What is the AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh?",
-                "What is the name of the AICTE Scheme for study tour of ATAL NNNEL, Himachal Pradesh?",
-                "What is the name of AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh?",
-                "What is the name of the AICTE Scheme, the study tour of ATAL TUNNEL, Himachal Pradesh?"
+                "What is AICTE Quality Improvement program SCHEME?",
+                "What is the AICTE Quality Improvement program?",
+                "What is quality improvement scheme of AICTE?",
+                "What is the SCHEME of AICTE Quality Improvement?",
+                "What is quality improvement program? What is the syllabus?",
+                "What is the AICTE quality improvement program description?",
+                "What is the AICTE Quality Improvement (QA) programme?",
+                "What is the Quality Improvement Program of AICTE?",
+                "What is the Quality Improvement program?",
+                "What is the quality improvement program of the AICTE?"
             ],
-            "responses": "AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh\u2013 YOUTH UNDERTAKING VISIT FOR ACQUIRING KNOWLEDGE (YUVAK)"
+            "responses": "AICTE-Quality Improvement program<br/>The Government of India launched the Quality Improvement Programme in the year 1970. One of the main objectives of the programme is to upgrade the expertise and capabilities of the faculty members of the degree level institutions in the country..<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/QIPguidelines.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-5",
             "patterns": [
-                "What is the theme of the AICTE LILAVATI AWARD-2021-22?",
-                "What is the theme of AICTE's Lillavati Award 2021-22?",
-                "What's the aim of LILAVATI 2018/2019?",
-                "What is the theme of AICTE's LULANATI AWARD-2021-22?",
-                "Which is the theme of ALILAVATI AWARD-2021-22?",
-                "What is the theme of AICTE LILAVATI AWARD-2021-22?",
-                "What is the theme of LILAVATI AWARD-2021-22?",
-                "What is the theme of AICTE's LILAVATI AWARD 2021-22?"
+                "What is AICTE-RESEARCH PROMOTION SCHEME?",
+                "What is AICTE RESEARCH PROMOTION SCHEME (RPS) SCHEME?",
+                "What is AICTE-RESEARCH PROMOTION SCHEME (RPS)?",
+                "What is the AICTE Research Professions Scheme (RPS)? How is it related?",
+                "What is the AICTE Research Promotion Scheme and what is its purpose?",
+                "What is the AICTE RESEARCH PROMOTION SCHEME (RPS)?",
+                "What is the AICTE search promotion scheme (RPS)?",
+                "What is the AICTE-RESEARCH PROMOTION SCHEME (RPS) schedule?",
+                "What is the AICTE Search Professions Committee (AICTE)?",
+                "What is the AICTE Recruitment Promotion Scheme, the RPS Scheme for India (ASEAN)?"
             ],
-            "responses": "AICTE intends to seek applications for AICTEs LILAVATI AWARD-2021-22 based on the theme \u201cWomen Empowerment\u201d from the eligible teams of AICTE approved institutions, who have undertaken remarkable intervention for the cause and made an impact that showcases their work under eight different sub-themes."
+            "responses": "AICTE-RESEARCH PROMOTION SCHEME (RPS)<br/>This scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master\u2019s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/RPSSchemeDocument_Nov2020.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-6",
             "patterns": [
-                "What is the name of the scholarship given to a GATE/GPAT qualified student admitted to a recognized university?",
-                "What is the name of a scholarship awarded to full time GATE/GPAT qualified students admitted to the AICTE approved Institutions/Colleges?",
-                "What is the name of the scholarship awarded to GATE/GPAT qualified students admitted to AICTE approved Institutions/Colleges?",
-                "What is the name of scholarships awarded to GATE / GMAP qualified students admitted to AICTE approved Institutions/Colleges?",
-                "Which scholarship for GATE/GPAT 2019 is best?",
-                "What is the name of the scholarship awarded to non-gate qualified students admitted in AICTE approved institutions/Colleges?"
+                "What is AICTE Quality Improvement Programme (FOREIGN UNIVERSITY) Schedule?",
+                "What is AICTE / Quality Improvement Programme / Priority University (FOREIGN)?",
+                "What is quality improvement scheme of the AICTE (FOREIGN UNIVERSITY)?",
+                "What is the Qualifications Improvement Program (QIP) of AICTE? How is it related to different university?",
+                "What is the quality improvement program? How can it be implemented in my college?",
+                "What is the AICTE quality improvement programme (FOREIGN UNIVERSITY) SCHEME for general education?",
+                "What is the AICTE Quality Improvement (Quality Improvement) Scheme (FOREIGN UNIVERSITY)?",
+                "What is the Quality Improvement Programme AICTE?",
+                "What is the AICTE Quality Improvement Scheme (FOREIGN UNIVERSITY)?",
+                "What is the quality improvement of AICTE-quality improvement programme (FLUE) Scheme?"
             ],
-            "responses": "Scholarship is awarded to full time GATE/GPAT qualified students admitted to M.E./ M. Tech/ M. Arch and M.Pharma courses in AICTE approved Institutions/Colleges @Rs. 12,400/- PM/ student."
+            "responses": "AICTE-Quality Improvement Programme (FOREIGN UNIVERSITY)<br/>Scheme provides scholarships to the faculty who fulfils eligibility criteria and obtains admission in the Doctoral Degree programme leading to award of PhD degree in any of the enlisted top 500 universities/institutes (based on the QS ranking, the Times ranking and the Shanghai ranking) in the world.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fds/QIPForeignschemedocument(1).pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-7",
             "patterns": [
-                "Who approves Technical Institutes/University Departments for conducting research in thrust areas?",
-                "What shall be the reason of the approval by Technical Council for conducting research in thrust area?",
-                "Who approved Universities/University departments for conducting research in thrust areas?",
-                "Which Institution have approved Technical Institutes/University Departments for conducting Research in thrust areas in India?",
-                "Which Universities approved the Technical Institutes/University Departments for conducting research in thrust areas?",
-                "Who approved the thrust areas in CS and ES; who approved the Universities and Technical Institutes for research?",
-                "Who approved University Departments and Technical Institutes for conducting research in thrust areas?",
-                "Who approved institutions (universities) for conducting research on thrust areas?",
-                "Who approved Technical Institutes/University Departments, to conduct research in thrust areas (Project field)?"
+                "What is AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) SCHEME?",
+                "What is the AICTE FACILITY DEVELOPMENT PROGRAMME (FDP)?",
+                "What is FDP's curriculum in AICTE?",
+                "What is the SCHEME OF AICTE FACILTY DEVELOPMENT PROGRAMM?",
+                "What is the AICTE-FAC and FFDP programming?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) syllabus?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) SCHEME?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) schedule?",
+                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP) CHEME?",
+                "What is the skill development and skills development programme?"
             ],
-            "responses": "Admitting full time meritorious research scholars by providing research fellowship who wants to seek admission to Ph.D. in AICTE approved Technical Institutes/University Departments for carrying out research in thrust areas"
+            "responses": "AICTE-FACULTY DEVELOPMENT PROGRAMME (FDP)<br/>The scheme is intended to Institutions   for   induction training to   teachers employed in AICTE approved Technical Institutions to facilitate up-gradation of knowledge and skill. Rs 5-7 Lakh are granted for the 2 weeks FDP.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/SchemeDocumentFDP.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-8",
             "patterns": [
-                "What is the name of the scholarship given to meritorious girls taking admission in AICTE approved technical institution?",
-                "What is the name of a scholarship given to incoming students of AICTE approved Technical institution?",
-                "What is the name of the scholarship awarded to girls taking admission in AICTE approved technical institution?",
-                "What's the name of the scholarship awarded for meritorious girls taking admission in AICTE approved Technical Institution?",
-                "What is the name of scholarships given to meritorious girls taking admission in AICTE approved technical colleges?",
-                "Which scholarship for meritorious girls is awarded by AICTE?",
-                "What is the name of the scholarship awarded to meritorious girls taking admission in AICTE approved technical institutions?",
-                "What is the name of the scholarship awarded to meritorious girls taking admission in AICTE approved Technical Institutions?",
-                "What is the Name of Scholarship awarded to meritorious girls taking admission in AICTE approved Technical Institution?"
+                "What is AICTE-Short Term Training Programme (STTP) (UT-J&K,Ladakh and NER) schedule?",
+                "What is AICTE SLTP (UT-J&K,Ladakh and NER)?",
+                "What is AICTE Short Term Training Program (STTP) (UT-Jensi & Kavir)?",
+                "What is SCHEME AICTE Short Term Training Programme (STTP)? What Is It Mean?",
+                "What is the AICTE-Short term training programme (STTP) (UT-J&K, Ladakh and NER)?",
+                "What is short Term training programme AICTE STTP (UT-J&K,Ladakh and NER)?",
+                "What is the AICTE short term training programme (STTP) (UT-J&K,Ladakh and NER) SCHEME?",
+                "What is short term training programme AICTE?",
+                "What is AICTE Short Term Training Programme (STTP) (UT J&K,Ladakh and NER) scheme?",
+                "What is AICTE's Short Term Training Program (STTP) (UT J&K, Ladakh and NER)?"
             ],
-            "responses": "Scholarship/Contingency is awarded to meritorious girls taking admission in AICTE approved Technical institution at Degree/ Diploma. Total 10000 scholarship are given @ Rs 50000 as incidentals each year."
+            "responses": "AICTE-Short Term Training Programme (STTP) (UT-J&K,Ladakh and NER)<br/>Short Term Training Program (STTP) intends to conduct faculty trainings through financial assistance from AICTE to enable faculty members in the field of technical education to introspect and learn techniques that can help prepare students for active and successful participants in a knowledge society.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/STTPSchemeDocumentNERandJ&K2020-21.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-9",
             "patterns": [
-                "Who is awarded the scholarship/Contingency?",
-                "Who is awarded the scholarship / contingent?",
-                "What is scholarship at End of the term?",
-                "Who will be awarded a Scholarship or Contingent?",
-                "Who get Scholarships?",
-                "Which one is awarded a Scholarship/Contingency?",
-                "Who is selected in a scholarship?",
-                "Who is awarded a scholarship?",
-                "Who is awarded a Scholarship/Contingency?"
+                "What are AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SCHEME?",
+                "What is AICTE-Training PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT GAMES TEACHERS/DIRECTOR OF SCHEME?",
+                "What is AICTE-Training Program for PHYSICAL EDUCATION TRAINERS/SPORT GAMES TEACHERS/Director of SCHEME?",
+                "What are the AICTE Training Programs for Athletics?",
+                "What is AICTE training program for sports and ice sports?",
+                "Which are the AICTE-Training Programs for PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SCHEME?",
+                "What is the AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/Director of SCHEME?",
+                "What is AICTE Training PROGRAMS for PHYSICAL EDUCATION TRAINERS?",
+                "What is AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TEACHERS/DIRECTOR OF SCHEME?",
+                "What is AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SCHEME?"
             ],
-            "responses": "Scholarship/Contingency is awarded  to  Differently  abled students taking admission in AICTE approved Technical institution at Degree/ Diploma. Scholarship given @ Rs 50000 as incidentals each year."
+            "responses": "AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SPORTS<br/>To Develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity through recreation.<br/>For More Information : <a href=\"https://aicte-india.org/sites/default/files/SchemeDocumentSpprtTeacherProgramme.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-10",
             "patterns": [
-                "What is the purpose of scheme?",
-                "What is purpose of scheme?",
-                "What's the aim of the Scheme?",
-                "What is the purpose of a scheme?",
-                "What's the purpose of a scheme?",
-                "What is the main purpose of the scheme?"
+                "What are AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS SCHEME?",
+                "What is AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS?",
+                "What are the jobs in AICTE- AICTE-ETC job training courses? What are the vocational training opportunities at these universities?",
+                "What are the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS?",
+                "Which are the AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS SCHEME?",
+                "What is the AICTE TECHNICAL UNIVERSITY Joint Training Program?",
+                "What is the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS SCHEME?",
+                "What is AICTE- Technical UNIVERSITY JOINT TRAINING PROGRAMM WITH TEACHER SCHEME?",
+                "What is AICTE's Joint Training Program, the most important for an IT ( IT) student?"
             ],
-            "responses": "The objective of the scheme is to provide travel assistance registration fees to a team of minimum 2 to 10 students for attending competition at international level in order to encourage engineering students to improve their field of technical education."
+            "responses": "AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS<br/>The objective of the AICTE \u2013 University training programs is to conduct training for faculty members to prepare them for being successful in a knowledge society.<br/>For More Information : <a href=\"https://aicte-india.org/sites/default/files/fds/Scheme%20Document%20TU%20teach-converted.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-11",
             "patterns": [
-                "What is Scheme? Why is it created?",
-                "What is purpose of Scheme?",
-                "What's the aim of the Scheme?",
-                "What is the purpose of a scheme?",
-                "What's the purpose of a Scheme?",
-                "What is the main purpose of the Scheme?",
-                "What is the purpose of scheme?"
+                "What are AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS SCHEME?",
+                "What is AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
+                "What is AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LABORIANS SCHEME?",
+                "What are the jobs in AICTE-TECHNICAL UNIVERSITY JOINT training programs for Brazilians?",
+                "What are the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
+                "Which are the AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
+                "What are the AICTE TECHNICAL UNIVERSITY Joint Training Programs?",
+                "What is AICTE's TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS SCHEME?",
+                "What is AICTE- Technical UNIVERSITY JOINT TRAINING PROGRAMM WITH LIBRARIANS?",
+                "What is AICTE's TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?"
             ],
-            "responses": "Objective of the Scheme is to build up capacities in youth of J&K, educate, enable and empowering them to compete in normal course, enhancing and boosting employment potentials in students of J&K. Total 5000 scholarship are given @ Rs. 100000/- as Maintenance Charges and academic fee as Rs. 30000/- to General Degree, Rs. 125000/- to Engineering Degree & Rs. 300000/- to Medical Degree each year."
+            "responses": "AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS<br/>The objective, of AICTE \u2013 Technical University Training program for Librarians, is to conduct training for Librarians to prepare them for being successful and affective in a knowledge society.  It provide a dynamic and quality user centered library and information services that enhance teaching, learning and research while inculcating life-long learning skills and fostering human development.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fds/Scheme%20Document%20Librarians.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-12",
             "patterns": [
-                "What is the name of a scheme for engineering students to present papers abroad?",
-                "What's the name of the system for engineering students to present papers abroad?",
-                "Which is the name of the scheme for Engineering Students to present papers abroad?",
-                "What is the name of the scheme for engineering students to prepare papers abroad?",
-                "How can engineering students present papers abroad?"
+                "What is AICTE-Professional Development Scheme?",
+                "What is AICTE \u2013 Professional Development Scheme Scheme?",
+                "What is AICTE Professional Development Scheme?",
+                "What is the SCHEME TO AICTE PROFESSIONAL SUGGESTION? What Is It Mean?",
+                "What is the AICTE Professional Development Scheme and what is its purpose?",
+                "What is PDS (professional development) scheme of AICTE?",
+                "What is the AICTE Professional Development Scheme (APDS)?",
+                "What is the AICTE professional development scheme?",
+                "What is the AICTE Professional Development Scheme? What is the eligibility criteria for AICTE?"
             ],
-            "responses": "An \u201cAICTE-INAE Travel Grant Scheme\u201d for Engineering Students to present papers abroad has been launched for enhancing the quality of engineering education in the country."
+            "responses": "AICTE-Professional Development Scheme<br/>The scheme enables meritorious faculty to interact at International Level Conferences, both within and outside India, Seminars, and Symposia.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/sCHEMEDOC21OCT2021.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-13",
             "patterns": [
-                "What was the name of a conference held on 1st & 2nd April 2017?",
-                "What's the name of the event that was held on 1st & 2nd April 2017?",
-                "What was the name of an event that took place on 1st and 2nd April 2017?",
-                "Which event was held on 1st - 2nd April?",
-                "What is the name of event that has been held on 1st to 2nd April 2017?",
-                "What is the name of the event that was held on 1st to 2nd April 2017?",
-                "What is the name of event that was held on 1st \u2013 2nd April 2017?"
+                "What is AICTE-INAEDISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is AICTE INTERNAE distaluishable stde viziten profile?",
+                "What is AICTE-INAE DISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
+                "What is the SCHEME TO AICTE INDIA?",
+                "What is the AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
+                "What is the AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is the AICTE-INAE-DISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is AICTE-INAE DISTINGUISHED VISITING PROFESSORSHIP SCHEME SCHEME?",
+                "What is AICTE-INAE Distinguished VISITING PROFESSORSHIP SCHEME?",
+                "What is AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME?"
             ],
-            "responses": "A unique initiative to identify new and disruptive digital solutions for solving the challenges faced by our country under the program of Smart India Hackathon 2017. This event was held on 1st \u2013 2nd April 2017 for 36 hrs non-stop competition. 9544 technology students, 598 problems statements, 29 different central govt. ministries, 26 different Nodal centres & funding of Rs. 3 Lakh per team for 100 qualified teams."
+            "responses": "AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME<br/>AICTE and INAE distinguished visiting Professor scheme envisages promotion of industry-institute interaction.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/Application%20Form.pdf\">Click Here For More</a>"
         },
         {
             "tag": "Data-14",
             "patterns": [
-                "What is innovation ecosystem? What do you think it would accomplish?",
-                "What is the objective of innovation ecosystem?",
-                "What is the main reason of the Innovation Ecosystem?",
-                "What's the aim of innovation ecosystem?",
-                "What is the purpose of innovation ecosystem?",
-                "What is the main aim of Innovation Ecosystem?",
-                "Who is the main aim of Innovation Ecosystem?",
-                "What is the aim of innovation ecosystem?"
+                "What is AICTE ISTE Orientation/ Refresher programme?",
+                "What is ISTE Orientation/ Refresher programme for ICTE?",
+                "What is the AICTE \u2013 ISTE Orientation/ Refresher Programming Schedule?",
+                "What is the SCHEME of AICTE ISTE Orientation/ Refresher Programme (BY AICTE)?",
+                "What is the AICTE - ISTE Orientation/ Refresher Programme schedule?",
+                "What is the AICTE \u2013 ISTE Orientation/Refresher Programme ECHEM?",
+                "What is the AICTE ISTE Orientation/ Refresher programme information?",
+                "What is the AICTE ISTE Orientation/ Refresher Programme/Scheme?",
+                "What is the AICTE - ISTE training syllabus?",
+                "What is the AICTE/ISTE Orientation/Refresher program (2018-19)?"
+            ],
+            "responses": "AICTE \u2013 ISTE Orientation/ Refresher Programme<br/>The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/SchemeDocumentAICTEinduction-refresherSchemeDocument.pdf\">Click Here For More</a>"
+        },
+        {
+            "tag": "Data-15",
+            "patterns": [
+                "What is AICTE TECHNOLOGICAL BOOK WRITING & TRADING SCHEME?",
+                "What is the AICTE technical writing & translations program?",
+                "What is the SCHEME TO AICTE Technical Book Writing & Translation?",
+                "What is the AICTE Technical Book Writing and Translation module?",
+                "What is the AICTE Technical Book Writing & Translation Scheme?",
+                "What is the AICTE Technical Book Writing & Translation scheme?",
+                "What is the AICTE-Technical book writing and translation section?",
+                "What is the AICTE Technical book writing & translation SCHEME?",
+                "What is the AICTE's Technical Book Writing & Translations section?"
+            ],
+            "responses": "AICTE-Technical Book Writing & Translation<br/>To promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fdc/PAC.pdf\">Click Here For More</a>"
+        },
+        {
+            "tag": "Data-16",
+            "patterns": [
+                "What is AICTE DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE Division Chairs?",
+                "What's the AICTE-DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE Divinguish DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What's the AICTE Committee Chair Professions?",
+                "What is the AICTE DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE-DISTINGUISHED CHAIR PROFESSOR SCHEME?",
+                "What is the AICTE distinguishing housekeeping system?"
+            ],
+            "responses": "AICTE-DISTINGUISHED CHAIR PROFESSOR<br/>The Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of highly qualified and experienced superannuated Engineers who have made undoubtable, unchallengeable, unparalleled and exceptional contribution to the society in their respective fields in any discipline in engineering for the benefit of students/faculty of host institutes & of institutes located in the adjoining areas.<br/>For More Information : <a href=\"https://www.aicte-india.org/sites/default/files/fds/SchemeDocumentDCPUpdated.pdf\">Click Here For More</a>"
+        },
+        {
+            "tag": "Data-17",
+            "patterns": [
+                "What are the schemes of paying for a graduate?",
+                "What are the schemes available for students?",
+                "What are some schemes for studying as a fresher?",
+                "What are the best schemes to get admission into universities?",
+                "What are the available schemes for students?",
+                "Which are some schemes for student?",
+                "What are the available schemes in India?",
+                "What are some schemes for students?",
+                "What are the available schemes for undergraduate student?",
+                "What are the different schemes of student employment?"
+            ],
+            "responses": "Available Schemes Are : The Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of highly qualified and experienced superannuated Engineers who have made undoubtable, unchallengeable, unparalleled and exceptional contribution to the society in their respective fields in any discipline in engineering for the benefit of students/faculty of host institutes & of institutes located in the adjoining areas."
+        },
+        {
+            "tag": "Data-18",
+            "patterns": [
+                "What is Globalink Research Internship Program?",
+                "What is Globalink Research Internship (GRI) Scheme?",
+                "What is Globalink Research Internship?",
+                "What is the AICTE Mitacs Globalink research internship scheme? How is it related?",
+                "What is Globalink Research Internship Scheme and what is its purpose?",
+                "What is Globalink (GRI)?",
+                "What is the AICTE Globalink Research Internship Scheme? How can I participate in this program?",
+                "What is the AICTE-Mitacs Globalink Research Internship (GRI) Scheme?",
+                "What is the AICTE-Mitacs Globalink Research Internships Scheme?",
+                "What is globalink research internship scheme?"
+            ],
+            "responses": "Scheme to foster cross-border partnerships focussed on creating a platform that opens the path for collaborative research between Canada and India to a wider pool of student talent in India."
+        },
+        {
+            "tag": "Data-19",
+            "patterns": [
+                "What is AICTE \u2013 SWANATH academics schedule?",
+                "What is the AICTE \u2018Swant\u2019 Scholarship Scheme?",
+                "What is the AICTE SWANATH school syllabus?",
+                "What is SWANATH studentship system from AICTE?",
+                "What is the syllabus of AICTE for SWANATH school?",
+                "What is the AICTE swanath scholarship?",
+                "What is the AICTE \u2013 SWANATH SCHOLARSHIP SCHEME?",
+                "What is the AICTE-SWANATH schoolhouse syllabus?",
+                "What is the syllabus of AICTE SWANATH?",
+                "What is the skill syllabus of AICTE - SWANATH?"
+            ],
+            "responses": "AICTE has approved 'AICTE \u2013 SWANATH SCHOLARSHIP SCHEME' for children from any one of the following categories:\n           1. Orphan \n           2. Either or both parents died due to Covid-19 \n           3. Wards of Armed Forces and Central Paramilitary Forces martyred in action (Shaheed) \n            to provide them financial support of Rs. 50,000/- per annum for every year of study."
+        },
+        {
+            "tag": "Data-20",
+            "patterns": [
+                "What is AICTE - Young Person Undertaking Visa for Acquiring Knowledge (YUVAK)?",
+                "What is AICTE - Young Entrepreneurship and Knowledge Acquisition Program (YUVAK)?",
+                "What is AICTE Youth Undertaking VISIT FOR ACQUIRING KNOWLEDGE (YUVAK)?",
+                "What is AICTE Youth Undertaking Workshop and YUVAK?",
+                "What is AICTE Youth Undertaking Visit for Knowledge (YUVAK)?",
+                "What is the AICTE - Youth Undertaking VISIT FOR ACQUIRING KNOWLEDGE (YUVAK)?",
+                "What is AICTE's Youth Undertaken Visit for Acquisition of Knowledge (YUVAK)?",
+                "What is AICTE-YUVAK Youth Undertaking Campus (YUVAK)?"
+            ],
+            "responses": "AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh\u2013 YOUTH UNDERTAKING VISIT FOR ACQUIRING KNOWLEDGE (YUVAK)"
+        },
+        {
+            "tag": "Data-21",
+            "patterns": [
+                "What is the AICTE LILAVATI AWARD?",
+                "What is the AICTE LILAVATI Award?",
+                "What is the AICTE LILAVATI award and why are the competitions competitive?",
+                "What is the AICTE LILAVATI Awarded?",
+                "What is the AICTE Lalvatti Award?"
+            ],
+            "responses": "AICTE intends to seek applications for AICTEs LILAVATI AWARD-2021-22 based on the theme \u201cWomen Empowerment\u201d from the eligible teams of AICTE approved institutions, who have undertaken remarkable intervention for the cause and made an impact that showcases their work under eight different sub-themes."
+        },
+        {
+            "tag": "Data-22",
+            "patterns": [
+                "What is a PG Scholarship?",
+                "What is the PG scholarships?",
+                "What's PG Scholarship?",
+                "What is the PG Scholarship?",
+                "What is the Ph.D. Scholarship?"
+            ],
+            "responses": "Scholarship is awarded to full time GATE/GPAT qualified students admitted to M.E./ M. Tech/ M. Arch and M.Pharma courses in AICTE approved Institutions/Colleges @Rs. 12,400/- PM/ student."
+        },
+        {
+            "tag": "Data-23",
+            "patterns": [
+                "What is ADF? What are the main objectives of AICTE Doctoral Fellowship?",
+                "What is AICTE drf (ADF) and how does it works?",
+                "What is AICTE Doctoral Fellowship?",
+                "What is the AICTE doctoral fellowship?",
+                "What is the AICTE doctoral fellowship and what is it?",
+                "What is doctoral fellowship in AICTE?",
+                "What is the AICTE doctoral fellowship (ADF)? How can one participate in this program?",
+                "What is doctoral fellowship of AICTE?"
+            ],
+            "responses": "Admitting full time meritorious research scholars by providing research fellowship who wants to seek admission to Ph.D. in AICTE approved Technical Institutes/University Departments for carrying out research in thrust areas"
+        },
+        {
+            "tag": "Data-24",
+            "patterns": [
+                "What is Pragati Scholarship? How can we apply it?",
+                "What is the Pragati Scholarship?"
+            ],
+            "responses": "Scholarship/Contingency is awarded to meritorious girls taking admission in AICTE approved Technical institution at Degree/ Diploma. Total 10000 scholarship are given @ Rs 50000 as incidentals each year."
+        },
+        {
+            "tag": "Data-25",
+            "patterns": [
+                "What is the Saksham Scholarship?",
+                "What is Saksham Scholarship? How can we get it?",
+                "What's the Saksham scholarship?"
+            ],
+            "responses": "Scholarship/Contingency is awarded  to  Differently  abled students taking admission in AICTE approved Technical institution at Degree/ Diploma. Scholarship given @ Rs 50000 as incidentals each year."
+        },
+        {
+            "tag": "Data-26",
+            "patterns": [
+                "What is Support for Student Participating in Competition Abroad (SSPCA)?",
+                "What is SSPCA to encourage students to participate in competitions abroad?",
+                "What is support to student for participate in competition abroad?",
+                "Which is Support to Students for Participating in Competition Abroad (SSPCA)?",
+                "How is Support to Students for Participating in Competition Abroad (SSPCA)?",
+                "What is Support for Student Participation in Competition Abroad (SSPCA)?"
+            ],
+            "responses": "The objective of the scheme is to provide travel assistance registration fees to a team of minimum 2 to 10 students for attending competition at international level in order to encourage engineering students to improve their field of technical education."
+        },
+        {
+            "tag": "Data-27",
+            "patterns": [
+                "What is Prime Minister\u2019s Special Scholarship Scheme?",
+                "What is Prime Minister\u2019s Special Scholarship Scheme (PMSSS)?",
+                "What is PMSSS?",
+                "What is the Prime Minister\u2019s Special Scholarship Scheme (PMSSS)? How is it used?",
+                "What is Prime Minister\u2019s Special Scholarship Scheme and what is it?",
+                "What is PMSSS/ PMSHs?",
+                "What is the PM's Special Scholarship Scheme (PSS)? How can I participate?",
+                "What is Prime Minister\u2019s Special Scholarship Scheme? What is the eligibility criteria for it?",
+                "What is Prime Ministers Special Scholarship Scheme?"
+            ],
+            "responses": "Objective of the Scheme is to build up capacities in youth of J&K, educate, enable and empowering them to compete in normal course, enhancing and boosting employment potentials in students of J&K. Total 5000 scholarship are given @ Rs. 100000/- as Maintenance Charges and academic fee as Rs. 30000/- to General Degree, Rs. 125000/- to Engineering Degree & Rs. 300000/- to Medical Degree each year."
+        },
+        {
+            "tag": "Data-28",
+            "patterns": [
+                "What is AICTE-INAE travel generated?",
+                "What is AICTE INAE TRAVEL GRANT SCHEME?",
+                "What is AICTE-INAE Travel Grants?",
+                "What is the travel gate of AICTE INAE?",
+                "What is the AICTE-INAE travel grad scheme?",
+                "What is the AICTE-INAE travel gate 2019?",
+                "What is the AICTE-INAE travel certificate process?",
+                "What is the AICTE-INAE TRAVEL GRANT SCHEME?",
+                "What is the AICTE-INAE route planning syllabus?",
+                "What is the travel syllabus of AICTE-INAE?"
+            ],
+            "responses": "An \u201cAICTE-INAE Travel Grant Scheme\u201d for Engineering Students to present papers abroad has been launched for enhancing the quality of engineering education in the country."
+        },
+        {
+            "tag": "Data-29",
+            "patterns": [
+                "What are the Top 10 Smart India Hackathon topics?",
+                "What is Smart India Hackathon?",
+                "What's Smart India Hackathon 2019 all about, and why are the Hackathons so popular in India?",
+                "What is the Smart India Hackathon?",
+                "Which is smart India Hackathon and why?",
+                "What is the Hackathon in India?",
+                "What is Smart India hackathon?"
+            ],
+            "responses": "A unique initiative to identify new and disruptive digital solutions for solving the challenges faced by our country under the program of Smart India Hackathon 2017. This event was held on 1st \u2013 2nd April 2017 for 36 hrs non-stop competition. 9544 technology students, 598 problems statements, 29 different central govt. ministries, 26 different Nodal centres & funding of Rs. 3 Lakh per team for 100 qualified teams."
+        },
+        {
+            "tag": "Data-30",
+            "patterns": [
+                "What are M.Tech projects as internship with small and medium enterprises?",
+                "What is an M.Tech as an intern with small and medium businesses (MSMEs)?",
+                "What are M.Tech Projects as an Internship with Small and Medium Enterprises (MSMEs)?",
+                "What is the scope of M.Tech projects as intern with small and medium enterprises(MSMEs)?",
+                "What is the M.Tech Project as Internship with SME's?",
+                "What is a M.Tech project as a small and medium Enterprises (MSMEs)?"
             ],
             "responses": "The main objective of the scheme is to nurture an innovation ecosystem that benefits the technologically deficient MSMEs and technical institutes both. 408 Small and Medium Enterprises have given requirement of 738 Technology students."
         }
