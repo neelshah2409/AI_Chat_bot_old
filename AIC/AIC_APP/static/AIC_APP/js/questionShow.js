@@ -20,6 +20,7 @@ var qcount=0;
     success:(result)=>{
         jd=JSON.parse(result.data);
         for (let i in jd) {
+          console.log(i)
             for (let j = 0; j < jd[i].length; j++) {
               let temp5=[];
               var qc=0
@@ -36,7 +37,7 @@ var qcount=0;
         temp1 += `<div class="accordion__content">
             <p>${jd[i][j]['responses']}</p>
           </div>
-          <span name='${iterate}' id='deleteQuestionSet' style="cursor: pointer;"><button type="button" class="closeall btn mt-2 mb-2 float-right mb-3">Delete</button></span></div>`;
+          <span name='${iterate}' id='deleteQuestionSet' class="float-right" style="cursor: pointer;"><button type="button" class="closeall btn mt-2 mb-2  mb-3">Delete</button></span></div>`;
         iterate++;
         temp2d+=`Answer : ${jd[i][j]['responses']}\n\n`;
         temp4=jd[i][j]['responses'];

@@ -3,275 +3,56 @@
         {
             "tag": "Data-1",
             "patterns": [
-                "What are the General Guidelines for all FDC Schemes?",
-                "What are guidelines for a FDC?",
-                "What is the General Guidelines of the FDC?",
-                "What are general guidelines for FDC Scheme?",
-                "What are the general guidelines for all FDC schemes?",
-                "What are general guidelines for FDC Schemes?",
-                "What are the general guidelines for FDC Schemes?",
-                "What are the rules and general guidance for FDC schemes?",
-                "What are General guidelines for FDC Schemes? What are the concepts?",
-                "What are the general guidelines of all the FDC schemes?"
+                "What is called the Huhuh?",
+                "What is the name of huhuh?",
+                "What's the name of the huhuh?",
+                "What is the meaning of huhuh and what is its use?",
+                "What's the name of a Huhuh?",
+                "What is the Name of Chinese HuHuh?",
+                "What is the name of the huhuh?"
             ],
-            "responses": "General Guidelines Applicable to all Faculty Development Schemes of AICTE."
+            "responses": "huhuh"
         },
         {
             "tag": "Data-2",
             "patterns": [
-                "What is STTP-SFURTI?",
-                "What is STTP/SFURTI?",
-                "What is STS-SFURTI from AICTE?",
-                "What is STTP / SURTIA AICTE? How can it improve our knowledge?",
-                "What is the AICTE STTP-SFURTI? How is the information provided?",
-                "What is STTP Surti?",
-                "What is AICTE STTP Forti? What is the significance of this?"
+                "What is called a rishi?",
+                "What is a rishi?",
+                "What's the name of a rishi?",
+                "Which is the name of a rishi?",
+                "What is the name of a Rita?"
             ],
-            "responses": "STTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation."
+            "responses": "hey i am rishi"
         },
         {
             "tag": "Data-3",
             "patterns": [
-                "What is AICTE- NITTT?",
-                "What is AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
-                "What is AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING (AICTE-NITTT)?",
-                "What is the aim of AICTE-NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
-                "What is the AICTE-National Institute of TECHNICAL TEACHERS (AICTE-NITTT)?",
-                "What is the AICTE NATIONAL INITIAL PTETS?",
-                "What is the AICTE NATIONAL INITIATIVE FOR TECHNICAL TEACHERS TRAINING?",
-                "What is the AICTE national initiative for technical training?",
-                "What is AICTE- NITTT? What is the purpose of AICTE for training in Technical teachers?",
-                "What is AICTE's NITTT, the national institute for TECHNICAL TEACHERS TRAINING?"
+                "What is the name of the person I am?",
+                "What is the name of a person?",
+                "What is the name of the person that i am?",
+                "What's the name of the person you are, and why are you there?",
+                "What is the name of the person that you are?",
+                "Which is the name of the person I am?",
+                "What is the name of a person (men/girls)?",
+                "What is the name of the person that I am?",
+                "What is the name of the person the person is, the person is the person who called me?"
             ],
-            "responses": "In order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase)."
+            "responses": "hey i am isiddhi"
         },
         {
             "tag": "Data-4",
             "patterns": [
-                "What is AICTE Quality Improvement Program?",
-                "What is AICTE quality improvement program?",
-                "What is quality improvement?",
-                "What is the Qualification Improvement Program?",
-                "What is quality improvement program?",
-                "What's the quality improvement program of AICTE?",
-                "What is the Quality Improvement Program of AICTE?",
-                "What is Quality Improvement?",
-                "What is the quality improvement of AICTE?"
+                "What is called the rutvik?",
+                "What is the name of rutvik?",
+                "What's the name of rutvik?",
+                "What is the meaning of rutvik?",
+                "Which is the name of rutvik?",
+                "What is the name of rutvik (sheomon)?",
+                "What is the name of rutvik and how did it fit?",
+                "What is the name of a Ritvik?",
+                "What is the Name of RUTVIS?"
             ],
-            "responses": "The Government of India launched the Quality Improvement Programme in the year 1970. One of the main objectives of the programme is to upgrade the expertise and capabilities of the faculty members of the degree level institutions in the country.."
-        },
-        {
-            "tag": "Data-5",
-            "patterns": [
-                "What is AICTE-RESEARCH PROMOTION SCHEME?",
-                "What is AICTE RESEARCH PROMOTION SCHEME (RPS)?",
-                "What is the AICTE Research Promeation Scheme (RAS)? How is it used?",
-                "What is the AICTE Research Promotion Scheme and what is its purpose?",
-                "What's the review criteria for AICTE Research Promotion Scheme?",
-                "What is the AICTE search promotion scheme (RPS)? How can I plan my research study?",
-                "What is the AICTE-RESEARCH PROMOTION SCHEME (RPS)?",
-                "What is the AICTE Search Promotion Scheme?",
-                "What is the AICTE Recruitment promotion schedule?"
-            ],
-            "responses": "This scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master\u2019s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years."
-        },
-        {
-            "tag": "Data-6",
-            "patterns": [
-                "What is AICTE Quality Improvement Programme (FOREIGN UNIVERSITY)? How is it used in international work?",
-                "What is AICTE / Quality Improvement Program?",
-                "What is quality improvement scheme of the AICTE (foreign university)?",
-                "What is the Qualifications Improvement Program of Islamic universities (AIPD)?",
-                "What is quality improvement program?",
-                "What is the AICTE quality improvement programme?",
-                "What is the AICTE Quality Improvement (FOREIGN UTM) programme?",
-                "What is the Quality Improvement Programme AICTE?",
-                "What is Quality Improvement Programme?",
-                "What is AICTE's Quality Improvement Programme, the Government of India?"
-            ],
-            "responses": "Scheme provides scholarships to the faculty who fulfils eligibility criteria and obtains admission in the Doctoral Degree programme leading to award of PhD degree in any of the enlisted top 500 universities/institutes (based on the QS ranking, the Times ranking and the Shanghai ranking) in the world."
-        },
-        {
-            "tag": "Data-7",
-            "patterns": [
-                "What is AICTE-FACCE Development Program (FDP)?",
-                "What is the AICTE FACILITY DEVELOPMENT PROGRAMME (FDP)?",
-                "What is FDP?",
-                "What is the FACUTTY DEVELOPMENT PROGRAMME (FDP) of AICTE?",
-                "What is the FACITTY DEVELOPMENT PROGRAMME?",
-                "What is the AICTE-FACILTY DEVELOPMENT PROGRAMME (FDP)?",
-                "What is the AICTE-FDA-FACKET DEVELOPMENT PROGRAMME?",
-                "What is the FACUTTY DEVELOPMENT PROGRAMME (FDP)?",
-                "What is the skill development and skills development programme?"
-            ],
-            "responses": "The scheme is intended to Institutions   for   induction training to   teachers employed in AICTE approved Technical Institutions to facilitate up-gradation of knowledge and skill. Rs 5-7 Lakh are granted for the 2 weeks FDP."
-        },
-        {
-            "tag": "Data-8",
-            "patterns": [
-                "What is AICTE SLTP (UT-J&K,Ladakh and NER)?",
-                "What is short term training of AICTE?",
-                "What is STP in H&M from AICTE?",
-                "What is AICTE short term training programme and NER (UT-J&K,Ladakh)?",
-                "What is short Term training programme AICTE?",
-                "What is short term training institute by AICTE (UT-J&K,Ladakh & NER)?",
-                "What is short term training programme AICTE?",
-                "What is AICTE Short term Training Programme (STTP) (UT-J&K)?",
-                "What is AICTE's Short Term Training Program (STTP) (UT J&K, Ladakh and NER)?"
-            ],
-            "responses": "Short Term Training Program (STTP) intends to conduct faculty trainings through financial assistance from AICTE to enable faculty members in the field of technical education to introspect and learn techniques that can help prepare students for active and successful participants in a knowledge society."
-        },
-        {
-            "tag": "Data-9",
-            "patterns": [
-                "What are AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/DIRECTOR OF SPORTS?",
-                "What is AICTE-Training PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT GAMES TEACHERS/DIRECTOR OF SPORTS?",
-                "What is AICTE-Training Program for PHYSICAL EDUCATION TRAINERS/SPORT GAMES TEACHERS/Director of Sports?",
-                "What are the AICTE Training PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/Director of Sports?",
-                "What are the AICTE training programs for sports educating?",
-                "Which are the AICTE Training Programs for Physical Education Training?",
-                "What is the AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS/Director of SPORTS?",
-                "What is AICTE Training PROGRAMS for PHYSICAL EDUCATION TRAINERS?",
-                "What is AICTE-PHYSICAL EDUCATION TRAINING PROGRAMS for TEACHERS/DIRECTORS OF SPORTS?",
-                "What is AICTE-TRAINING PROGRAMS FOR PHYSICAL EDUCATION TRAINERS/SPORT-GAMES TEACHERS?"
-            ],
-            "responses": "To Develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity through recreation."
-        },
-        {
-            "tag": "Data-10",
-            "patterns": [
-                "What are AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS?",
-                "What are the joint courses for AICTE technical education for trainers?",
-                "What are the jobs in AICTE- AICTE-ETC job training programs? What are the requirements?",
-                "What are the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS?",
-                "What are the AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS?",
-                "What are the AICTE TECHNICAL UNIVERSITY Joint Training Programs?",
-                "What is AICTE- Technical UNIVERSITY JOINT TRAINING PROGRAM for TEACHERS?",
-                "What are the AICTE/TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR TEACHERS?"
-            ],
-            "responses": "The objective of the AICTE \u2013 University training programs is to conduct training for faculty members to prepare them for being successful in a knowledge society."
-        },
-        {
-            "tag": "Data-11",
-            "patterns": [
-                "What are AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
-                "What is AICTE TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
-                "What is AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LABORIANS?",
-                "What are the jobs in AICTE-TECHNICAL UNIVERSITY PHYSICS FOR LIBRARIA?",
-                "What are the AICTE- TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
-                "Which are some of the best TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?",
-                "What are the AICTE TECHNICAL UNIVERSITY Joint Training Programs?",
-                "What is AICTE- Technical UNIVERSITY JOINT TRAINING PROGRAMM WITH LIBRARIANS?",
-                "What are the AICTE/TECHNICAL UNIVERSITY JOINT TRAINING PROGRAMS FOR LIBRARIANS?"
-            ],
-            "responses": "The objective, of AICTE \u2013 Technical University Training program for Librarians, is to conduct training for Librarians to prepare them for being successful and affective in a knowledge society. \nIt provide a dynamic and quality user centered library and information services that enhance teaching, learning and research while inculcating life-long learning skills and fostering human development."
-        },
-        {
-            "tag": "Data-12",
-            "patterns": [
-                "What is AICTE \u2013 Professional Development Scheme?",
-                "What is AICTE Professional Development Scheme?",
-                "What is the AICTE Professional Development Scheme?",
-                "What is the AICTE Professional Development Scheme and what is its purpose?",
-                "What is PDS (professional development) scheme?",
-                "What is the AICTE Professional Development Scheme (APDS)? How can one participate in this program?",
-                "What is the AICTE professional development scheme?",
-                "What is AICTE's Professional Development Scheme?"
-            ],
-            "responses": "The scheme enables meritorious faculty to interact at International Level Conferences, both within and outside India, Seminars, and Symposia."
-        },
-        {
-            "tag": "Data-13",
-            "patterns": [
-                "What is AICTE-INAEDISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
-                "What is AICTE INTERNAE distaluishable VISITING PROFESSORSHIP SCHEME?",
-                "What is AICTE-INAE DISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
-                "What is the AICTE-INAEDISTINGUISHED SCHEME?",
-                "What is the AICTE-INAE- DISTINGUISHED VISITING PROFESSORSHIP SCHEME?",
-                "What is the AICTE-INAE-DISTINGUISHED VISITING PROFESSORSHIP STATEMENT?",
-                "What is the differing conduct of acte-inae/acte-inae?",
-                "What is AICTE-INAE Distinguished VISITING PROFESSORSHIP SCHEME?"
-            ],
-            "responses": "AICTE and INAE distinguished visiting Professor scheme envisages promotion of industry-institute interaction."
-        },
-        {
-            "tag": "Data-14",
-            "patterns": [
-                "What is AICTE ISTE Orientation/Refresher programme?",
-                "What is ISTE Orientation/ Refresher programme for ICTE?",
-                "What is AICTE ISTE Orientation/ Refresher Programme?",
-                "What is the ISTE Refresher/Orientation program?",
-                "What is the AICTE - ISTE Orientation/ Refresher Programme in India?",
-                "What is ISTE Orientation/ Refresher Programme?",
-                "What is the AICTE ISTE Orientation/Refresher Programme()?",
-                "What is the AICTE ISTE Orientation/ Refresher Programme/Information for Engineering Students?",
-                "What is AICTE ISTE Orientation/Refresher Programme (or equivalent)?",
-                "What is AICTE ISTE Refresher Programme?"
-            ],
-            "responses": "The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme."
-        },
-        {
-            "tag": "Data-15",
-            "patterns": [
-                "What is AICTE TECHNOLOGICAL BOOK WRITING & TRADING?",
-                "What is AICTE-Technical Book Writing and Translation?",
-                "What is AICTE Technical Book Writing and Translation?",
-                "What is the AICTE Technical book writing & translation?",
-                "What is AICTE technical book writing and translation?",
-                "What is AICTE technical books writing?"
-            ],
-            "responses": "To promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators."
-        },
-        {
-            "tag": "Data-16",
-            "patterns": [
-                "What is an AICTE-identified Chairperson?",
-                "What is AICTE DISTINGUISHED CHAIR PROFESSOR?",
-                "What is an AICTE distinguished president?",
-                "What is the definition of AICTE-DISTINGUISHED CHAIR PROFESSOR?",
-                "What is an AICTE-DISTINGUISHED CHAIR PROFESSOR?",
-                "What's a CD-DISTINUISHED CHAIR PROFESSOR?",
-                "What is the AICTE-DISTINGUISHED CHAIR PROFESSOR?",
-                "What is the AICTE-DISTINGUISHED Chairman?",
-                "What is AICTE's distinguished housekeeping system?"
-            ],
-            "responses": "The Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of\nhighly qualified and experienced superannuated Engineers who have made undoubtable,\nunchallengeable, unparalleled and exceptional contribution to the society in their respective fields in\nany discipline in engineering for the benefit of students/faculty of host institutes & of institutes located\nin the adjoining areas."
-        },
-        {
-            "tag": "Data-17",
-            "patterns": [
-                "What is AICTE leadership in teaching excellence?",
-                "What is AICTE -Leadership in Teaching Excellence (AICTE-LITE)?",
-                "What is Leadership in Teaching Excellence as a foundation for AICTE?",
-                "What is leadership in teaching excellence?",
-                "What is AICTE LEADERship in teaching excellence (AICTE-LITE)?",
-                "What is AICTE Leadership in Teaching Excellence (AICTE-LITE)?",
-                "What is the AICTE Leadership in Teaching Excellence (AICTE-LITE)?",
-                "What is AICTE Leadership in Teaching Excellence?",
-                "What is AICTE Leadership in Teaching Excellence (AICTE-LEADERship)?"
-            ],
-            "responses": "AICTE\u2019s Leadership in Teaching Excellence (LITE) is a national programme aims to bring modern software engineering knowledge through proven online teaching-learning methods to 100,000 teachers and 2.4 Crore students in India."
-        },
-        {
-            "tag": "Data-18",
-            "patterns": [
-                "What is reform for exams?",
-                "What is the preparation reform govt policy?",
-                "What is the examination reforms policy?",
-                "What is the Examination Reforms? How can we restructure our exams?",
-                "What is the Examination Reforms Policy?",
-                "What is the Examination Reform Policy?"
-            ],
-            "responses": "Examinations play a very important role in deciding the quality of education.This policy attempts to bring out recommendations for reforms in examination system to meet challenges of emerging engineering education landscape.Further to complete the policy for the purposes of implementation, AICTE is presently in the process of compiling the question banks as applicable to various disciplines in the field of Engineering."
-        },
-        {
-            "tag": "Data-19",
-            "patterns": [
-                "What is 360-degree feedback?",
-                "What is 360 Degree Feedback? What is its uses?",
-                "What's 360 Degree Feedback?"
-            ],
-            "responses": "360 Degree Feedback is aimed at benefitting the Faculty members, Students of institutes recognized by AICTE in which faculty members are subjected to feedback by management, administrative staff, HODs, students & the society to include (stake holders) on different parameters. 360 Degree Feedback app and a portal has been designed for the institutes, teachers and students. This activity has been made mandatory for the purposes of promotion to all the faculties in AICTE approved institution the AICTE Gazette dated 01 March 2019 and will be a mandatory part for qualification in AICTE - AQIS (financially funded schemes) as also for AICTE Visvesvaraya Best Teachers\u2019 Award."
+            "responses": "hey i am rutvik"
         }
     ]
 }

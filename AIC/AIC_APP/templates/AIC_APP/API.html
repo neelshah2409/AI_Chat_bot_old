@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    body{
+      height: 100vh;
+    background-image: url(https://res.cloudinary.com/sih2022/image/upload/v1659005475/home-1-min_hawroc.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 200vh;
+    background-position: center;
+      /* background-image: url('https://res.cloudinary.com/sih2022/image/upload/v1659005475/home-1-min_hawroc.png'); */
+    }
+    .toggle-switch-checkbox {
+      display: none;
+    }
+
+    .toggle-switch {
+      width: 3em;
+      height: 1.5em;
+      border-radius: 1.875em;
+      background-color: #ccc;
+      display: inline-block;
+      position: relative;
+      text-indent: -150%;
+      clip: rect(0 0 0 0);
+      color: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .toggle-switch:before,
+    .toggle-switch:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    .toggle-switch:before {
+      background-color: #777;
+      top: 0.25em;
+      left: 0.25em;
+      right: 0.25em;
+      bottom: 0.25em;
+      border-radius: 1.875em;
+    }
+
+    .toggle-switch:after {
+      background-color: #fff;
+      width: 1.25em;
+      height: 1.00em;
+      top: 0.25em;
+      left: 0.25em;
+      border-radius: 1.875em;
+      cursor: pointer;
+      box-shadow: 0.125em 0.25em 0.375em rgba(85, 85, 85, 0.3);
+    }
+
+    .toggle-switch-checkbox:checked+.toggle-switch:before {
+      background-color: #4caf50;
+    }
+
+    .toggle-switch-checkbox:checked+.toggle-switch:after {
+      left: 1.5em;
+    }
+
+    .csstransitions.csstransforms .toggle-switch:before {
+      -webkit-transition-property: background-color;
+      -moz-transition-property: background-color;
+      transition-property: background-color;
+      -webkit-transition-duration: 250ms;
+      -moz-transition-duration: 250ms;
+      transition-duration: 250ms;
+      -webkit-transition-timing-function: ease;
+      -moz-transition-timing-function: ease;
+      transition-timing-function: ease;
+    }
+
+    .csstransitions.csstransforms .toggle-switch:after {
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      transition-property: transform;
+      -webkit-transition-duration: 100ms;
+      -moz-transition-duration: 100ms;
+      transition-duration: 100ms;
+      -webkit-transition-timing-function: ease-in-out;
+      -moz-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+    }
+
+    .csstransitions.csstransforms .toggle-switch-checkbox:checked+.toggle-switch:after {
+      left: inherit;
+      -webkit-transform: translateX(4em);
+      -moz-transform: translateX(4em);
+      -ms-transform: translateX(4em);
+      -o-transform: translateX(4em);
+      transform: translateX(4em);
+    }
+
+    .GenerateAPIkey{
+      text-align: center;
+      color: #1c1c5d;
+    }
+    .btntogenerateapi{
+      background-color: #1c1c5d;
+    padding: 6px 18px;
+    border-radius: 19px;
+    color: white;
+    font-size: 17px;
+    border: 1px solid white;
+    }
+    .btntogenerateapi:hover{
+      cursor: pointer;
+    }
+    .tooptipshow:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="GenerateAPIkey mt-3 mb-4">
+    <h2 class="mb-4">Generate API</h2>
+    <form action="" name="Generateapi" id="Generateapi">
+      <button class="btntogenerateapi" id="btntogenerateapi">
+        Generate
+      </button>
+    </form>
+  </div>
+  <!-- <p>{{ request.session.Id}}</p> -->
+  <div class="container">
+    <div class="table-responsive">
+
+  <table class=" col-md-12 col-sm-12 col-12 table table-striped">
+    <thead>
+      <tr class="">
+        <th scope="col">Key</th>
+        <th scope="col">Name</th>
+        <th scope="col">Status</th>
+        <th scope="col" class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tablebody" class="tablebody">
+      <!-- <tr>
+        <td scope="row">99a73abfa1fed453b734fd5bf57b998b</td>
+        <td id="apiname">Default</td>
+        <td id="apistatus">Disable</td>
+        <td>
+          <input id="toggle-switch-1" type="checkbox" class="toggle-switch-checkbox">
+          <label for="toggle-switch-1" class="toggle-switch">Label</label>
+          <button id="deleteapi" class="deleteapi">Delete</button>
+          <button id="editapi" class="editapi">Edit</button>
+
+        </td>
+      </tr> -->
+
+    </tbody>
+  </table>
+</div>
+</div>
+
+  <!-- Edit modal  -->
+
+  <div class="modal" tabindex="-1" role="dialog" id="EditModal" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit API</h5>
+          <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="editform">
+            <input type="number" name="id2" hidden="" id="id2">
+            <input type="text" name="apikey2" hidden="" id="apikey2">
+            Name: <input type="text" name="apiname" id="apiname"><br><br>
+            Status : <input type="checkbox" name="enableCheckbox" id="enableCheckbox"> Enable
+
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" id="edsave2" value="Save">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closemodal2">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script>
+      $('[data-toggle="tooltip"]').click(function () {
+          $('[data-toggle="tooltip"]').tooltip("show");
+
+       });
+      function copyclipboard(element) {
+        // console.log(element);
+  var copyText = element;
+  console.log(copyText);
+
+  navigator.clipboard.writeText(copyText.innerText);
+
+  element.setAttribute('title','copied');
+  element.setAttribute('data-original-title','copied');
+var apiid=element.id;
+$('#'+apiid).tooltip("show");
+
+}
+function copied(element) {
+
+  element.setAttribute('title','Copy to clipboard');
+  element.setAttribute('data-original-title','');
+
+
+}
+    </script>
+  <script>
+
+    $(document).ready(function () {
+
+
+      // fetch api 
+      function loadtable() {
+        $.ajax({
+          url: 'http://localhost:8000/AIC/me/api/keys/',
+          type: "GET",
+          success: function (data) {
+            console.log(data);
+            console.log(data.length);
+            $.each(data, function (key, value) {
+              // $('#tablebody').html="";
+              var activestatusload;
+              if (value.active == true) {
+                activestatusload = "Active";
+              }
+              else {
+                activestatusload = "Disable"
+
+              }
+              $('#tablebody').append(`<tr>
+        <td scope="row" id="apikey`+ value.id + `" data-toggle="tooltip" data-placement="top" title="Copy to clipboard" class="tooptipshow" onclick="copyclipboard(this)" onmouseout="copied(this)">` + value.api_key + `</td>
+        <td id="apiname`+ value.id + `">` + value.name + `</td>
+        <td id="apistatus`+ value.id + `">` + activestatusload + `</td>
+        <td class="text-center">
+          
+          <button id="deleteapi`+ value.id + `" class="deleteapi btn btn-danger mr-4">Delete</button>
+          <button id="editapi`+ value.id + `" class="editapi btn btn-warning">Edit</button>
+
+        </td>
+      </tr>`);
+            })
+          }
+
+        })
+      }
+
+      loadtable();
+
+      //hide editmodal
+      $(document).on("click", "#close", function () {
+
+        $('#EditModal').hide();
+      });
+      $(document).on("click", "#closemodal2", function () {
+
+        $('#EditModal').hide();
+      });
+
+
+      //toggle switch
+
+      // $(document).on("change", ".toggle-switch-checkbox", function () {
+
+      //   var eid = $(this).attr('id');
+      //   // console.log(eid);
+      //   var lastidchar = (eid).replace(/[^\d]*/g, '');
+      //   var apistatus = $('#' + eid + '').is(":checked");
+      //   if (apistatus == true) {
+      //     $('#apistatus' + lastidchar + '').text("Active");
+      //   }
+      //   else {
+      //     $('#apistatus' + lastidchar + '').text("Disable");
+
+      //   }
+
+      // })
+
+
+
+
+
+
+
+      // generate api 
+      $(document).on("click", "#btntogenerateapi", function (e) {
+        e.preventDefault();
+        $.ajax({
+          url: 'http://localhost:8000/AIC/me/api/keys/',
+          type: "POST",
+          success: function (data) {
+            console.log(data);
+            if (data.status == "success") {
+              // loadtable();
+              window.location.href="http://localhost:8000/api";
+            }
+
+          }
+        })
+
+      })
+      // loadtable();
+
+
+
+      // delete api key 
+      $(document).on("click", ".deleteapi", function () {
+
+        var eid = $(this).attr('id');
+        console.log(eid);
+        var lastidchar = (eid).replace(/[^\d]*/g, '');
+
+        var apikeytext = $('#apikey' + lastidchar).text();
+        console.log(apikeytext);
+        console.log("http://localhost:8000/AIC/me/api/keys/" + apikeytext)
+
+        $.ajax({
+          url: 'http://localhost:8000/AIC/me/api/keys/' + apikeytext,
+          type: "DELETE",
+          success: function (data) {
+            console.log(data);
+            window.location.href="http://localhost:8000/api";
+
+
+
+          }
+        })
+        // loadtable();
+
+
+      })
+
+
+      // chnage the name of api 
+
+      $(document).on("click", ".editapi", function () {
+        $('#EditModal').show();
+
+
+        var eid = $(this).attr('id');
+        console.log(eid);
+        var lastidchar = (eid).replace(/[^\d]*/g, '');
+
+        var apikeytext = $('#apikey' + lastidchar).text();
+        console.log(apikeytext);
+        console.log("http://localhost:8000/AIC/me/api/keys/" + apikeytext);
+
+        var activestatus = $('#apistatus' + lastidchar).text();
+        var currentname = $('#apiname' + lastidchar).text();
+        var activebool;
+        if (activestatus == "false" || activestatus == "Disable") {
+          activebool = 0;
+        }
+        else {
+          activebool = 1;
+        }
+        console.log("Active status : " + activebool);
+        console.log("Current NAme: " + currentname);
+
+
+        $.ajax({
+          url: 'http://localhost:8000/AIC/me/api/keys/'+apikeytext,
+          type: "GET",
+          success: function (data) {
+            console.log("data : "+data['message'].api_key);
+            $('#apiname').val(data['message'].name);
+            $('#id2').val(data['message'].id);
+            $('#apikey2').val(data['message'].api_key);
+            if (data['message'].active == true) {
+              $('#enableCheckbox').attr('checked', true);
+
+            }
+            else {
+
+              $('#enableCheckbox').attr('checked', false);
+
+
+            }
+
+
+
+
+          }
+        })
+        // loadtable();
+
+
+      })
+
+
+
+
+      // modal saved 
+
+      $("#edsave2").on("click", function (e) {
+        e.preventDefault();
+        var enableapi;
+        var arr = $("#editform").serializeArray({
+          checkboxesAsBools: true
+        });
+
+        console.log(arr);
+        if(arr.length==3){
+enableapi=0;
+        }
+        if(arr.length==4){
+          enableapi=1;
+        }
+        var obj2 = {};
+        obj2['activate']=enableapi;
+        obj2["name"]=$('#apiname').val();
+
+        console.log(obj2);
+        var jstring = JSON.stringify(obj2);
+        console.log(jstring);
+
+  
+            $.ajax({
+                url: 'http://localhost:8000/AIC/me/api/keys/'+$('#apikey2').val(),
+                type: "PUT",
+                data: jstring,
+                success: function(data) {
+                    // console.log("message");
+                    console.log(data);
+              
+                    setTimeout(function() {
+
+                        document.location.reload(true);
+                    }, 50)
+                }
+            });
+        // }
+      });
+    })
+
+
+
+
+  </script>
+
+</body>
+
+</html>
