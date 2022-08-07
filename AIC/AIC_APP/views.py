@@ -257,6 +257,11 @@ def QueShow(request):
     except Exception as e:
         return redirect('signin')
     
+
+#api page
+def api(request):
+        return render(request, 'AIC_APP/API.html')
+
 # Train model
 def trainModel(request):
     # try:
@@ -273,8 +278,8 @@ def takeOutputdp(request):
     message = request.POST.get('message', 'hey')
     ints = predict_class(message,id)
     res = get_response(ints, intents)
-    destination = request.POST.get("destination")
-    res = translator.translate(res, src="en", dest=destination).text
+    # destination = request.POST.get("destination")
+    # res = translator.translate(res, src="en", dest=destination).text
     return HttpResponse(res)
 
 # this will redirect the page of question generations

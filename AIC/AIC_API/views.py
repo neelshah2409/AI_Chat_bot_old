@@ -1,3 +1,4 @@
+from urllib import request
 from rest_framework.parsers import JSONParser
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -58,13 +59,15 @@ class ChatAssistantView(APIView):
 
 #create your API key
 class ApiKeyView(APIView):
+    # print(request.session)
     def get(self, request, *args, **kwargs):
+        print(request.session.keys())
         if "Id" in request.session.keys():
             apis = Api.objects.filter(user_id=request.session["Id"])
             print(apis)
             serializer = ApiSerialize(apis, many=True)
             print(serializer.data)
-            return Response({"data": serializer.data})
+            return Response(serializer.data)
         else:
             return Response({
                 "status": "Failed",
@@ -97,8 +100,7 @@ def manageApiKeys(request, api):
                 serializer = ApiSerialize(api, many=False)
                 return Response({
                     "status": "Success",
-                    "message": {"name":serializer.data["name"],"api_key":serializer.data["api_key"],"active":serializer.data["active"]}
-                },status.HTTP_200_OK)
+                    "message": {"name":serializer.data["name"],"api_key":serializer.data["api_key"],"active":serializer.data["active"]}},status.HTTP_200_OK)
             except Exception as e:
                 return Response({
                     "status": "Failed",
