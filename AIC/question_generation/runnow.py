@@ -3,10 +3,18 @@ import json
 from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktParameters
 import os
 import re
+# try:
+#     from question_generation.pipelines import pipeline
+# except Exception as e:
+#     print("pipeline errr")
+import json
+
 try:
     from question_generation.pipelines import pipeline
 except Exception as e:
     print(f"Import pipeline error {e}")
+nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl",
+                   qg_format="prepend")
 
 
 def write_json(data,id):
@@ -15,19 +23,18 @@ def write_json(data,id):
         json.dump(data, f, indent=4)
 
 def givequeanstopara(data,id):
-    try:
-        from question_generation.pipelines import pipeline
-    except Exception as e:
-        print("pipeline errr")
-    import json
+    # try:
+    #     from question_generation.pipelines import pipeline
+    # except Exception as e:
+    #     print("pipeline errr")
 
     intentsfile = json.loads(open(
         f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json',encoding="utf8").read(),
                              )
 
     # nlp = pipeline("multitask-qa-qg")
-    nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl",
-                   qg_format="prepend")
+    # nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl",
+    #                qg_format="prepend")
 
     # to generate questions simply pass the text
     # ans = nlp('''Policies of privatisation should be considered as responses to several distinct pressures. First,
@@ -53,6 +60,8 @@ def givequeanstopara(data,id):
             full_ans.append(i) if j.replace("<pad> ", "") in i else ""
 
     return full_ans,quelist
+
+
 def runnow(data,id):
     try:
         from question_generation.pipelines import pipeline
@@ -114,13 +123,13 @@ def runnow(data,id):
             print("json data Written ..")
 
 def generatefromOnlyAns(Big_anslist):
-    try:
-        from question_generation.pipelines import pipeline
-    except Exception as e:
-        print("pipeline errr")
+    # try:
+    #     from question_generation.pipelines import pipeline
+    # except Exception as e:
+    #     print("pipeline errr")
 
 
-    nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
+    # nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", qg_format="prepend")
 
     updatedQuestionBigList = []
     for ans in Big_anslist:

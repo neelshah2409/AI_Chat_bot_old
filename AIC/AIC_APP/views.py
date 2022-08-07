@@ -70,7 +70,7 @@ def linkSubmit(request):
     if baseClass!="":
         quelist,anslist = getDataWithClass(data,baseClass,questionClass,answerClass)
         parafromqueans(anslist, quelist, id)
-    elif questionClass=="":
+    elif questionClass!="":
         anslist =getDataWithAnsClass()
         finalQuelist = generatefromOnlyAns(anslist)
         parafromqueans(anslists, finalQuelist, id)

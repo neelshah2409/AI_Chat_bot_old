@@ -1,9 +1,196 @@
 {
-                              "intents": [
-                                {
-                                  "tag": "Data-0",
-                                  "patterns": [],
-                                  "responses": ""
-                                }
-                              ]
-                            }
+    "intents": [
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "Who gives special scholarships for technical education?",
+                "Who manages the scholarship for technical education?",
+                "What is special scholarship to promote technical education?",
+                "Who runs special scholarship in advance of Technical Education?",
+                "Which category of scholarship is dedicated to creating technical and interdisciplinary scholarships?",
+                "Which institutes offer a scholarship to promote technical education?",
+                "Who runs the scholarship to help promote technical education?",
+                "Who organizes a scholarship to promote technical education?",
+                "Who establishes a specific scholarship to promote technical education?"
+            ],
+            "responses": "Explore various, schemes and special scholarship run by AICTE to promote technical education"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is purpose of a scheme for foster cross-border partnership?",
+                "What is the purpose of cross-border partnerships?",
+                "What's the aim of sharing cross-border partnerships?",
+                "What is the purpose of creating cross-border partnerships?",
+                "What's the purpose of a scheme to promote cross-border partnerships?",
+                "What is the purpose of building cross-border partnerships?",
+                "What is the purpose of raising money for trans-border partnerships?"
+            ],
+            "responses": "Scheme to foster cross-border partnerships focussed on creating a platform that opens the path for collaborative research between Canada and India to a wider pool of student talent in India."
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What are AICTE child approved by its neophytes?",
+                "What has AICTE approved for children from any category?",
+                "What shall be the reason of the AICTE acceptance for children from any one of the following categories?",
+                "What has AICTE approved for children from all categories of children?",
+                "What category have AICTE approved for children and whose parents?",
+                "Which category for children is approved by AICTE?",
+                "What have the AICTE approved for children from any one of the following categories?",
+                "What is AICTE approved for children from any one of the following categories?",
+                "What has AICTE approved for the child from any one of the following categories?"
+            ],
+            "responses": "AICTE has approved 'AICTE \u2013 SWANATH SCHOLARSHIP SCHEME' for children from any one of the following categories:<br/>           1. Orphan <br/>           2. Either or both parents died due to Covid-19 <br/>           3. Wards of Armed Forces and Central Paramilitary Forces martyred in action (Shaheed) <br/>            to provide them financial support of Rs. 50,000/- per annum for every year of study."
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What is the name of AICTE Study Tour Scheme for Himachal Pradesh?",
+                "What is the name of the AICTE Study Tours in Himachal Pradesh?",
+                "What is the name of the AICTE Scheme for study tour of Atal Nilgiri (Mumbai)?",
+                "What is the name of the AICTE study tour in ATAL TUNNEL in Himachal Pradesh?",
+                "Which institute for AICTE exam is BestATAL-TUNNEL? Which institute was the best?",
+                "What is the AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh?",
+                "What is the name of the AICTE Scheme for study tour of ATAL NNNEL, Himachal Pradesh?",
+                "What is the name of AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh?",
+                "What is the name of the AICTE Scheme, the study tour of ATAL TUNNEL, Himachal Pradesh?"
+            ],
+            "responses": "AICTE Scheme for study tour of ATAL TUNNEL, Himachal Pradesh\u2013 YOUTH UNDERTAKING VISIT FOR ACQUIRING KNOWLEDGE (YUVAK)"
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "What is the theme of the AICTE LILAVATI AWARD-2021-22?",
+                "What is the theme of AICTE's Lillavati Award 2021-22?",
+                "What's the aim of LILAVATI 2018/2019?",
+                "What is the theme of AICTE's LULANATI AWARD-2021-22?",
+                "Which is the theme of ALILAVATI AWARD-2021-22?",
+                "What is the theme of AICTE LILAVATI AWARD-2021-22?",
+                "What is the theme of LILAVATI AWARD-2021-22?",
+                "What is the theme of AICTE's LILAVATI AWARD 2021-22?"
+            ],
+            "responses": "AICTE intends to seek applications for AICTEs LILAVATI AWARD-2021-22 based on the theme \u201cWomen Empowerment\u201d from the eligible teams of AICTE approved institutions, who have undertaken remarkable intervention for the cause and made an impact that showcases their work under eight different sub-themes."
+        },
+        {
+            "tag": "Data-6",
+            "patterns": [
+                "What is the name of the scholarship given to a GATE/GPAT qualified student admitted to a recognized university?",
+                "What is the name of a scholarship awarded to full time GATE/GPAT qualified students admitted to the AICTE approved Institutions/Colleges?",
+                "What is the name of the scholarship awarded to GATE/GPAT qualified students admitted to AICTE approved Institutions/Colleges?",
+                "What is the name of scholarships awarded to GATE / GMAP qualified students admitted to AICTE approved Institutions/Colleges?",
+                "Which scholarship for GATE/GPAT 2019 is best?",
+                "What is the name of the scholarship awarded to non-gate qualified students admitted in AICTE approved institutions/Colleges?"
+            ],
+            "responses": "Scholarship is awarded to full time GATE/GPAT qualified students admitted to M.E./ M. Tech/ M. Arch and M.Pharma courses in AICTE approved Institutions/Colleges @Rs. 12,400/- PM/ student."
+        },
+        {
+            "tag": "Data-7",
+            "patterns": [
+                "Who approves Technical Institutes/University Departments for conducting research in thrust areas?",
+                "What shall be the reason of the approval by Technical Council for conducting research in thrust area?",
+                "Who approved Universities/University departments for conducting research in thrust areas?",
+                "Which Institution have approved Technical Institutes/University Departments for conducting Research in thrust areas in India?",
+                "Which Universities approved the Technical Institutes/University Departments for conducting research in thrust areas?",
+                "Who approved the thrust areas in CS and ES; who approved the Universities and Technical Institutes for research?",
+                "Who approved University Departments and Technical Institutes for conducting research in thrust areas?",
+                "Who approved institutions (universities) for conducting research on thrust areas?",
+                "Who approved Technical Institutes/University Departments, to conduct research in thrust areas (Project field)?"
+            ],
+            "responses": "Admitting full time meritorious research scholars by providing research fellowship who wants to seek admission to Ph.D. in AICTE approved Technical Institutes/University Departments for carrying out research in thrust areas"
+        },
+        {
+            "tag": "Data-8",
+            "patterns": [
+                "What is the name of the scholarship given to meritorious girls taking admission in AICTE approved technical institution?",
+                "What is the name of a scholarship given to incoming students of AICTE approved Technical institution?",
+                "What is the name of the scholarship awarded to girls taking admission in AICTE approved technical institution?",
+                "What's the name of the scholarship awarded for meritorious girls taking admission in AICTE approved Technical Institution?",
+                "What is the name of scholarships given to meritorious girls taking admission in AICTE approved technical colleges?",
+                "Which scholarship for meritorious girls is awarded by AICTE?",
+                "What is the name of the scholarship awarded to meritorious girls taking admission in AICTE approved technical institutions?",
+                "What is the name of the scholarship awarded to meritorious girls taking admission in AICTE approved Technical Institutions?",
+                "What is the Name of Scholarship awarded to meritorious girls taking admission in AICTE approved Technical Institution?"
+            ],
+            "responses": "Scholarship/Contingency is awarded to meritorious girls taking admission in AICTE approved Technical institution at Degree/ Diploma. Total 10000 scholarship are given @ Rs 50000 as incidentals each year."
+        },
+        {
+            "tag": "Data-9",
+            "patterns": [
+                "Who is awarded the scholarship/Contingency?",
+                "Who is awarded the scholarship / contingent?",
+                "What is scholarship at End of the term?",
+                "Who will be awarded a Scholarship or Contingent?",
+                "Who get Scholarships?",
+                "Which one is awarded a Scholarship/Contingency?",
+                "Who is selected in a scholarship?",
+                "Who is awarded a scholarship?",
+                "Who is awarded a Scholarship/Contingency?"
+            ],
+            "responses": "Scholarship/Contingency is awarded  to  Differently  abled students taking admission in AICTE approved Technical institution at Degree/ Diploma. Scholarship given @ Rs 50000 as incidentals each year."
+        },
+        {
+            "tag": "Data-10",
+            "patterns": [
+                "What is the purpose of scheme?",
+                "What is purpose of scheme?",
+                "What's the aim of the Scheme?",
+                "What is the purpose of a scheme?",
+                "What's the purpose of a scheme?",
+                "What is the main purpose of the scheme?"
+            ],
+            "responses": "The objective of the scheme is to provide travel assistance registration fees to a team of minimum 2 to 10 students for attending competition at international level in order to encourage engineering students to improve their field of technical education."
+        },
+        {
+            "tag": "Data-11",
+            "patterns": [
+                "What is Scheme? Why is it created?",
+                "What is purpose of Scheme?",
+                "What's the aim of the Scheme?",
+                "What is the purpose of a scheme?",
+                "What's the purpose of a Scheme?",
+                "What is the main purpose of the Scheme?",
+                "What is the purpose of scheme?"
+            ],
+            "responses": "Objective of the Scheme is to build up capacities in youth of J&K, educate, enable and empowering them to compete in normal course, enhancing and boosting employment potentials in students of J&K. Total 5000 scholarship are given @ Rs. 100000/- as Maintenance Charges and academic fee as Rs. 30000/- to General Degree, Rs. 125000/- to Engineering Degree & Rs. 300000/- to Medical Degree each year."
+        },
+        {
+            "tag": "Data-12",
+            "patterns": [
+                "What is the name of a scheme for engineering students to present papers abroad?",
+                "What's the name of the system for engineering students to present papers abroad?",
+                "Which is the name of the scheme for Engineering Students to present papers abroad?",
+                "What is the name of the scheme for engineering students to prepare papers abroad?",
+                "How can engineering students present papers abroad?"
+            ],
+            "responses": "An \u201cAICTE-INAE Travel Grant Scheme\u201d for Engineering Students to present papers abroad has been launched for enhancing the quality of engineering education in the country."
+        },
+        {
+            "tag": "Data-13",
+            "patterns": [
+                "What was the name of a conference held on 1st & 2nd April 2017?",
+                "What's the name of the event that was held on 1st & 2nd April 2017?",
+                "What was the name of an event that took place on 1st and 2nd April 2017?",
+                "Which event was held on 1st - 2nd April?",
+                "What is the name of event that has been held on 1st to 2nd April 2017?",
+                "What is the name of the event that was held on 1st to 2nd April 2017?",
+                "What is the name of event that was held on 1st \u2013 2nd April 2017?"
+            ],
+            "responses": "A unique initiative to identify new and disruptive digital solutions for solving the challenges faced by our country under the program of Smart India Hackathon 2017. This event was held on 1st \u2013 2nd April 2017 for 36 hrs non-stop competition. 9544 technology students, 598 problems statements, 29 different central govt. ministries, 26 different Nodal centres & funding of Rs. 3 Lakh per team for 100 qualified teams."
+        },
+        {
+            "tag": "Data-14",
+            "patterns": [
+                "What is innovation ecosystem? What do you think it would accomplish?",
+                "What is the objective of innovation ecosystem?",
+                "What is the main reason of the Innovation Ecosystem?",
+                "What's the aim of innovation ecosystem?",
+                "What is the purpose of innovation ecosystem?",
+                "What is the main aim of Innovation Ecosystem?",
+                "Who is the main aim of Innovation Ecosystem?",
+                "What is the aim of innovation ecosystem?"
+            ],
+            "responses": "The main objective of the scheme is to nurture an innovation ecosystem that benefits the technologically deficient MSMEs and technical institutes both. 408 Small and Medium Enterprises have given requirement of 738 Technology students."
+        }
+    ]
+}
