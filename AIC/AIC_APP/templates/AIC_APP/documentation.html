@@ -5,20 +5,20 @@
     <title>Documentation</title>
     {% include 'AIC_APP/header.html' %}
 </head>
-<body  data-bs-spy="scroll" data-bs-target=".scrollspy" data-bs-offset="50" style="position:relative;">
+<body  data-bs-spy="scroll" data-bs-target=".documentation-scrollspy" data-bs-offset="50" style="position:relative;">
     {% include "AIC_APP/navbar.html" %}
         <div class="row py-2 justify-content-center">
           <div class="col-md-4">
-              <div id="lex" class="list-group sticky-top">
-                <a class="list-group-item list-group-item-action" href="#aboutUs">Section 1</a>
-                <a class="list-group-item list-group-item-action" href="#howtouse">Section 2</a>
-                <a class="list-group-item list-group-item-action" href="#generateAPIKeys">Section 3</a>
-                <a class="list-group-item list-group-item-action" href="#HowToUseApiKey">Section 4</a>
-                <a class="list-group-item list-group-item-action" href="#TypesOfResponses">Section 5</a>
+              <div id="content" class="list-group sticky-top">
+                <a class="list-group-item list-group-item-action" href="#aboutUs">About Us</a>
+                <a class="list-group-item list-group-item-action" href="#howtouse">How To Use</a>
+                <a class="list-group-item list-group-item-action" href="#generateAPIKeys">Generate API Key</a>
+                <a class="list-group-item list-group-item-action" href="#HowToUseApiKey">How To Use API Key</a>
+                <a class="list-group-item list-group-item-action" href="#TypesOfResponses">Types of Responses</a>
               </div>
           </div>
           <div class="col-md-8">
-              <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#lex" id="work" data-offset="20" style="height: auto;">
+              <div class="documentation-scrollspy" data-bs-spy="scroll" data-bs-target="#content" id="documentation" data-offset="20" style="height: auto;">
                 <h4 id="aboutUs">About us</h4>
                 <p>
                   Your bot is a platfrom which allows you to build your own chat assistant as well as you can use our API to integrate it with your website / mobile App
@@ -197,7 +197,6 @@
               </div>
           </div>
         </div>
-    </div>
 </body>
 {% include 'AIC_APP/script.html' %}
 </html>

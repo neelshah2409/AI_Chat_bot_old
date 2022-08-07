@@ -1,9 +1,1 @@
-{
-                              "intents": [
-                                {
-                                  "tag": "Data-0",
-                                  "patterns": [],
-                                  "responses": ""
-                                }
-                              ]
-                            }
+{"intents":[]}
