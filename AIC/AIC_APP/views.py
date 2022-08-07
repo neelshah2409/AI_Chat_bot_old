@@ -606,7 +606,7 @@ def translate(request):
     return JsonResponse({"status": "success", "message": translator.translate(message, src=source, dest=destination).text})
 
 def documentation(request):
-    return render(request,"")
+    return render(request,"AIC_APP/documentation.html")
 
 if __name__ == '__main__':
     runcombine()

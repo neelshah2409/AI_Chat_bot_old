@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework_api_key.models import APIKey
+from rest_framework import status
 from .models import Api
 from .serializers import ApiSerialize
 from Predict.predict import predict_class, get_response
@@ -16,8 +17,6 @@ class ChatAssistantView(APIView):
     def get(self, request, *args, **kwargs):
         if request.GET.get("query",None)!=None:
             if request.GET.get("api",None)!=None:
-
-
                 try:
                     api = Api.objects.get(api_key=request.GET.get("api"))
                     serializer = ApiSerialize(api,many=False)
@@ -30,34 +29,32 @@ class ChatAssistantView(APIView):
                         return Response({
                             "status":"Success",
                             "message":res
-                        })
+                        },status.HTTP_200_OK)
 
                     else:
                         return Response({
                             "status": "Failed",
                             "message": "API Key Error"
-                        })
-
-
+                        },status.HTTP_401_UNAUTHORIZED)
                 except Exception as e:
                     print(e)
                     return Response({
                         "status": "Failed",
                         "message": "Sorry We Can't Help You"
-                    })
+                    },status.HTTP_404_NOT_FOUND)
 
 
             else:
                 return Response({
-                    "status": "Please Provide Active API Key"
-                })
+                    "status": "Failed","message":"Please Provide Active API Key"
+                },status.HTTP_400_BAD_REQUEST)
 
 
         else:
             return Response({
                 "status": "failed",
                 "message": "Query is Required"
-            })
+            },status.HTTP_400_BAD_REQUEST)
 
 #create your API key
 class ApiKeyView(APIView):
@@ -72,7 +69,7 @@ class ApiKeyView(APIView):
             return Response({
                 "status": "Failed",
                 "message": "Please Login First"
-            })
+            },status.HTTP_403_FORBIDDEN)
 
     def post(self, request, *args, **kwargs):
         if "Id" in request.session.keys():
@@ -83,12 +80,12 @@ class ApiKeyView(APIView):
             return Response({
                 "status": "success",
                 "message": "API Key Successfully Created"
-            })
+            },status.HTTP_201_CREATED)
         else:
             return Response({
                 "status": "Failed",
                 "message": "Please Login First"
-            })
+            },status.HTTP_403_FORBIDDEN)
 
 # for managing api keys: update and delete
 @api_view(["PUT","DELETE","GET"])
@@ -101,17 +98,17 @@ def manageApiKeys(request, api):
                 return Response({
                     "status": "Success",
                     "message": {"name":serializer.data["name"],"api_key":serializer.data["api_key"],"active":serializer.data["active"]}
-                })
+                },status.HTTP_200_OK)
             except Exception as e:
                 return Response({
                     "status": "Failed",
                     "message": "API Key Doesn't Exist"
-                })
+                },status.HTTP_404_NOT_FOUND)
         else:
             return Response({
                 "status": "Failed",
                 "message": "Please Login First"
-            })
+            },status.HTTP_403_FORBIDDEN)
 
     if request.method == "PUT":
         if "Id" in request.session.keys():
@@ -125,17 +122,17 @@ def manageApiKeys(request, api):
                 return Response({
                     "status": "Success",
                     "message": serializer.data
-                })
+                },status.HTTP_200_OK)
             except Exception as e:
                 return Response({
                     "status": "Failed",
                     "message": "API Key Doesn't Exist"
-                })
+                },status.HTTP_404_NOT_FOUND)
         else:
             return Response({
                 "status": "Failed",
                 "message": "Please Login First"
-            })
+            },status.HTTP_403_FORBIDDEN)
 
     if request.method == "DELETE":
         if "Id" in request.session.keys():
@@ -146,15 +143,15 @@ def manageApiKeys(request, api):
                 return Response({
                     "status": "Success",
                     "message": "API Key Deleted Successfully"
-                })
+                },status.HTTP_204_NO_CONTENT)
             except Exception as e:
                 print(e)
                 return Response({
                     "status": "Failed",
                     "message": "API Key Does Not Exists"
-                })
+                },status.HTTP_404_NOT_FOUND)
         else:
             return Response({
                 "status": "Failed",
                 "message": "Please Login First"
-            })
+            },status.HTTP_403_FORBIDDEN)
