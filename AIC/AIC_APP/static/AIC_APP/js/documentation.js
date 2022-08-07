@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $('#work').on('activate.bs.scrollspy')
+    $('.list-group').on('activate.bs.scrollspy',()=>{})
 });
