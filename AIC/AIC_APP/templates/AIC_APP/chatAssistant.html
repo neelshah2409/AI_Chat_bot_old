@@ -14,7 +14,33 @@
 
 <body class="bg-container">
     {% include 'AIC_APP/navbar.html' %}
-
+    <div class="modal modal-center fade" id="settings">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-dark text-light">
+            <div class="modal-header d-flex align-items-center">
+              <h5 class="modal-title">Chat Assistant Settings</h5>
+              <h6 class=" mb-0 mx-2 fade show" id="changesStatus"></h6>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="settingsForm">
+                <div class="modal-body">
+                    <div class="my-4">
+                        <label for="welcomeMessage" class="text-light my-2 fs-5">Custom Greeting Message</label>
+                        <input type="text" class="form-control" id="welcomeMessage" placeholder="Greeting Message is Required" value="">
+                    </div>
+                    <div class="my-4">
+                        <label for="welcomeMessage" class="text-light my-2 fs-5">Custom Sorry Message</label>
+                        <input type="text" class="form-control" id="sorryMessage" placeholder="Sorry Message is Required" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-success">Save</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
     <div class="row m-0 p-0">
         <main class="col-12" style="z-index:1!important">
             <div class="d-flex justify-content-center justify-content-md-end align-items-center" style="height: 90.8vh;" id="temp">
