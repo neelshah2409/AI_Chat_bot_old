@@ -11,5 +11,6 @@ class Yobotuser(models.Model):
     PhoneNum = models.IntegerField(default=0)
     ChatBotName = models.CharField(max_length=50, default="")
     APIKEY = models.SlugField(max_length=200, default="")
+    improvedata = models.CharField(max_length=1000, default="")
     class Meta:
         db_table = "userdata"

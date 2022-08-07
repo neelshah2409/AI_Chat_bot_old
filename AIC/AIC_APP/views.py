@@ -12,10 +12,13 @@ from googletrans import Translator,LANGUAGES
 translator = Translator(service_urls=['translate.googleapis.com'])
 try:
     # djngo server when run so it will accept this pass so ignore the error
-    from question_generation.runnow import runnow,generatefromOnlyAns
+    from question_generation.runnow import runnow,generatefromOnlyAns,givequeanstopara
     from Training.training import trainTheChatBot
     from Predict.predict import *
     from AIC_API.models import Api
+    from AIC_API.serializers import ApiSerialize
+    from AIC_APP.models import Yobotuser
+
 except Exception as e:
     print(f"Error In import Section Views.py{e}")
 
@@ -52,7 +55,9 @@ def fetchInputTextArea(request):
     id = request.session['Id']
     inputText = request.POST.get('inputText', 'default')
     print(inputText)
-    runcombine(inputText,id)
+    anslist,quelist = givequeanstopara(inputText, id)
+    # runcombine(inputText,id)
+    parafromqueans(anslist, quelist, id)
     return HttpResponse("success")
 
 # for handling the data(by link) given by the company xyz
@@ -293,17 +298,34 @@ def generateFAQs(request):
 
 # Feedback
 def improveFeatures(request):
-    try:
-        messege = request.POST.get('messege', 'default')
-        improvementData = Api.objects.filter(api_key='rishi').values()
-        context = {"improvementData": improvementData}
+    # try:
+    messege = request.POST.get('messege', 'default')
+    # improvementData = Api.objects.filter(api_key='rishi').values()
+    # context = {"improvementData": improvementData}
+    # api = Api.objects.get(api_key=request.GET.get("api"))
+    api = Api.objects.get(api_key="aJ0F7J0P.dGcWDnK5kWPQiCeQgUnsIVqBsy50GYsn")
+    serializer = ApiSerialize(api, many=False)
+    if api.active == True:
+        id = serializer.data['user_id']
+        print("this is id ",id)
+        oldimprovedata = Yobotuser.objects.only("improvedata").values()
+        for i in oldimprovedata:
+            print(i['improvedata'])
+            oldimprovedata =i['improvedata']
+        # print(oldimprovedata['improvedata'])
+        # print(oldimprovedata)
+        entry = Yobotuser.objects.filter(id= id).update(improvedata=oldimprovedata + " | " +messege)
+        # print("this is entry ",entry)
+        # entry.improvedata = messege
+        # entry.save()
+
         # file = open(f'{os.getcwd()}{os.sep}ExtraQuestionForImprovement', 'a')
         # file.writelines(messege)
         # file.close()
-        print("this is improvdata",improvementData,context)
+        # print("this is improvdata",improvementData,context)
         return HttpResponse("success")
-    except Exception as e:
-        return HttpResponse(f"failed")
+    # except Exception as e:
+    #     return HttpResponse(f"failed")
 
 
 def QueGenerator(request):
