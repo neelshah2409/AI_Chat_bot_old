@@ -22,7 +22,7 @@ class ChatAssistantView(APIView):
                     serializer = ApiSerialize(api,many=False)
                     if api.active==True:
                         id = serializer.data['user_id']
-                        intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read())
+                        intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json", encoding="utf-8").read())
                         message = request.POST.get('message', 'hey')
                         ints = predict_class(message, id)
                         res = get_response(ints, intents)
