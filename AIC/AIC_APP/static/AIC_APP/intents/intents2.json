@@ -12,6 +12,47 @@
                 "What is the name of the huhuh?"
             ],
             "responses": "huhuh"
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is called a rishi?",
+                "What is a rishi?",
+                "What's the name of a rishi?",
+                "Which is the name of a rishi?",
+                "What is the name of a Rita?"
+            ],
+            "responses": "hey i am rishi"
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "What is the name of the person I am?",
+                "What is the name of a person?",
+                "What is the name of the person that i am?",
+                "What's the name of the person you are, and why are you there?",
+                "What is the name of the person that you are?",
+                "Which is the name of the person I am?",
+                "What is the name of a person (men/girls)?",
+                "What is the name of the person that I am?",
+                "What is the name of the person the person is, the person is the person who called me?"
+            ],
+            "responses": "hey i am isiddhi"
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What is called the rutvik?",
+                "What is the name of rutvik?",
+                "What's the name of rutvik?",
+                "What is the meaning of rutvik?",
+                "Which is the name of rutvik?",
+                "What is the name of rutvik (sheomon)?",
+                "What is the name of rutvik and how did it fit?",
+                "What is the name of a Ritvik?",
+                "What is the Name of RUTVIS?"
+            ],
+            "responses": "hey i am rutvik"
         }
     ]
 }

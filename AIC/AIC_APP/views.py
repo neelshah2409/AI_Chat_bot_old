@@ -48,7 +48,8 @@ def setgreeterrmsg(request):
 # data send to js file for display in chatbot
 def getgreeterrmsg(request):
     try:
-        entry = Yobotuser.objects.only("greetmsg").values()
+        id = request.session['Id']
+        entry = Yobotuser.objects.filter(id = "id").values()
         for i in entry:
             greet =i['greetmsg']
             err =i['errmsg']
