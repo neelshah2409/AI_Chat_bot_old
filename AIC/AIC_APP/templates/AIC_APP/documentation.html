@@ -5,8 +5,199 @@
     <title>Documentation</title>
     {% include 'AIC_APP/header.html' %}
 </head>
-<body>
+<body  data-bs-spy="scroll" data-bs-target=".scrollspy" data-bs-offset="50" style="position:relative;">
+    {% include "AIC_APP/navbar.html" %}
+        <div class="row py-2 justify-content-center">
+          <div class="col-md-4">
+              <div id="lex" class="list-group sticky-top">
+                <a class="list-group-item list-group-item-action" href="#aboutUs">Section 1</a>
+                <a class="list-group-item list-group-item-action" href="#howtouse">Section 2</a>
+                <a class="list-group-item list-group-item-action" href="#generateAPIKeys">Section 3</a>
+                <a class="list-group-item list-group-item-action" href="#HowToUseApiKey">Section 4</a>
+                <a class="list-group-item list-group-item-action" href="#TypesOfResponses">Section 5</a>
+              </div>
+          </div>
+          <div class="col-md-8">
+              <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#lex" id="work" data-offset="20" style="height: auto;">
+                <h4 id="aboutUs">About us</h4>
+                <p>
+                  Your bot is a platfrom which allows you to build your own chat assistant as well as you can use our API to integrate it with your website / mobile App
+                </p>
+                <h4 id="howtouse">How To Use?</h4>
+                <p>
+                  You need to follow this steps to use our API<br/>
+                  <ol>
+                    <li class="api-link">
+                        <a href="/howToUse">
+                            Provide your data and Generate FAQs
+                        </a>
+                    </li>
+                    <li class="api-link">
+                        <a href="/QueShow">
+                            Review Generated FAQs
+                        </a>
+                    </li>
+                    <li class="api-link">
+                        <a href="/QueShow">
+                            Train model for your chat assistant
+                        </a>
+                    </li>
+                    <li class="api-link">
+                        <a href="/manageApi">
+                            Use API key to export
+                        </a>
+                    </li>
+                  </ol>
+                </p>
+                <h4 id="generateAPIKeys">Generate API Key</h4>
+                <p>
+                  <div class="d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="col-12 col-md-5 order-2 order-md-1">
+                        <h4 class="text-start">
+                            Step 1. Go To Your Profile
+                        </h4>
+                    </div>
+                    <div class="col-12 col-md-4 order-1 order-md-2">
+                        <img src="https://res.cloudinary.com/sih2022/image/upload/w_500,f_auto/v1659810778/Prativachan/demo-profile_nxlxuf.png" class="img-fluid" alt="" srcset="">
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="col-12 col-md-5 order-1 order-md-2">
+                        <h4 class="text-end">
+                            Step 2. Go to Manage API
+                        </h4>
+                    </div>
+                    <div class="col-12 col-md-4 order-2 order-md-1">
+                        <img src="https://res.cloudinary.com/sih2022/image/upload/w_500,f_auto/v1659811676/Prativachan/Demo-View-Profile_cw8qfm.png" class="img-fluid" alt="" srcset="">
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="col-12 col-md-5 order-2 order-md-1">
+                        <h4 class="text-start">
+                            Step 3. Generate your API Key
+                        </h4>
+                    </div>
+                    <div class="col-12 col-md-4 order-1 order-md-2">
+                        <img src="https://res.cloudinary.com/sih2022/image/upload/w_500,f_auto/v1659810778/Prativachan/demo-profile_nxlxuf.png" class="img-fluid" alt="" srcset="">
+                    </div>
+                  </div>
+                </p>
+                <h4 id="HowToUseApiKey">How to use API Key?</h4>
+                <p>
+                 <div class="d-flex align-items-center justify-content-center my-2 flex-wrap">
+                    <div class="col-12 col-md-5 order-2 order-md-1">
+                        <h5 class="text-start">
+                            Step 1. Activate Your API Key
+                        </h5>
+                    </div>
+                    <div class="col-12 col-md-6 order-1 order-md-2">
+                        <img src="https://res.cloudinary.com/sih2022/image/upload/w_500,f_auto/v1659810778/Prativachan/demo-profile_nxlxuf.png" class="img-fluid" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center my-1 flex-wrap">
+                    <div class="col-12 col-md-5 order-1 order-md-2">
+                        <h5 class="text-end">
+                            Step 2. Use Following url to fetch response
+                        </h5>
+                    </div>
+                    <div class="col-12 col-md-6 order-2 order-md-1 bg-light">
+                        <code>http://localhost:8000/AIC/api/chat_assistant/?api=<b>&ltYour Api Key&gt</b>&query=<b>&ltYour Question&gt</b></code>
+                    </div>
+                </div>
+                <div class="bg-light p-4 my-4">
+                    <h6 class="my-4">Example</h6>
+                    <code class="my-2">REQUEST : GET</code>
+                    <code class="my-2">http://localhost:8000/AIC/api/chat_assistant/?api=<b>abcdefghijklmnopqurstvbitnre</b>&query=<b>What is AICTE?</b></code>
+                    <p class="text-danger my-2">Note : Before using API Key please ensure that it is activated. Do not share your API key with anyone.</p>
+                </div>
+                </p>
+                <h4 id="TypesOfResponses">Types of Response</h4>
+                <p>
+                  <div>
+                    <div class="col-12">
+                        <h6 class="my-4">1. Query resolved successfully</h6>
+                        <p>Response Code : <span class="text-success">200 OK</span></p>
+                        <pre>
+{
+    "status": "Success",
+    "message": &lt Response For Your Question &gt
+}
+</pre>
 
+                    </div>
+                    <div class="col-12">
+                        <h6 class="my-4">2. Insufficient Data to answer question</h6>
+                        <p>Response Code : <span class="text-danger">404 Not Found</span></p>
+                        <pre>
+{
+    "status": "Failed",
+    "message": &lt Your Error Message &gt
+}
+</pre>
+                        <p class="text-danger">
+                            Note : This might occure to insufficient or incomplete data or the query you asked is not found. if you won't set error message default error message <code>"Sorry We Can't Help You"</code> will be used.
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <h6 class="my-4">3. You didn't send any api key or wrong API key</h6>
+                        <p>Response Code : <span class="text-danger">400 Bad Request</span></p>
+                        <pre>
+{
+    "status": "Failed",
+    "message": "Please Provide Active API Key"
+}
+</pre>
+                    </div>
+                    <div class="col-12">
+                        <h6 class="my-4">4. You didn't send any query</h6>
+                        <p>Response Code : <span class="text-danger">400 Bad Request</span></p>
+                        <pre>
+{
+    "status": "Failed",
+    "message": "Query is Required"
+}
+</pre>
+                    </div>
+                  </div>
+                </p>
+                <h4 id="HowToUseApiKey">Request Parameters</h4>
+                    <p>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Sr No.</th>
+                              <th scope="col">Parameter</th>
+                              <th scope="col">Significance</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>api</td>
+                              <td>API Key of user</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>query</td>
+                                <td>Question of user</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>source</td>
+                                <td>Language of sender</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>source</td>
+                                <td>Language of Response</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </p>
+              </div>
+          </div>
+        </div>
+    </div>
 </body>
 {% include 'AIC_APP/script.html' %}
 </html>
