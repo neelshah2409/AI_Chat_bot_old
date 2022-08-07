@@ -8,6 +8,7 @@ from django.shortcuts import render, redirect
 from Scraping.Scrap import getData,getDataWithClass,getDataWithAnsClass
 from django.http import HttpResponse, request,JsonResponse
 from rest_framework.parsers import JSONParser
+
 from googletrans import Translator,LANGUAGES
 translator = Translator(service_urls=['translate.googleapis.com'])
 try:
@@ -30,6 +31,33 @@ except Exception as e:
 
 
 
+
+# data come from form ......from js
+def setgreeterrmsg(request):
+
+    try:
+        id = request.session["Id"]
+        greet = "Hey welcome sir"
+        err = "sorry for inconviency for this please refer this site.."
+        Yobotuser.objects.filter(id=id).update(greetmsg = greet, errmsg = err)
+        return HttpResponse(f"greet - {greet}& err- {err}")
+    except:
+        return HttpResponse("failed")
+
+# data send to js file for display in chatbot
+def getgreeterrmsg(request):
+    try:
+        entry = Yobotuser.objects.only("greetmsg").values()
+        for i in entry:
+            greet =i['greetmsg']
+            err =i['errmsg']
+        data = {"greet": greet, "error":err}
+        # return HttpResponse(data)
+        print(data)
+        return HttpResponse(f"greet- {greet}& err- {err}")
+
+    except:
+        return HttpResponse("failed")
 
 
 # Landing page of website
@@ -73,7 +101,7 @@ def linkSubmit(request):
     elif questionClass!="":
         anslist =getDataWithAnsClass()
         finalQuelist = generatefromOnlyAns(anslist)
-        parafromqueans(anslists, finalQuelist, id)
+        parafromqueans(anslist, finalQuelist, id)
     else:
         siteData = getData(data)
         finalQuelist = generatefromOnlyAns(siteData)
@@ -166,58 +194,60 @@ def onlyAnswersData(request):
 
 
 # This function is reformat the json file if require
-def linkingAllFunc(data,id):
-    if data:
-        intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json', 'w')
-
-        intentsfile.write('''{
-                              "intents": [
-                                {
-                                  "tag": "Data-0",
-                                  "patterns": [],
-                                  "responses": ""
-                                }
-                              ]
-                            }''')
-        intentsfile.close()
-        print("Question is generating now...")
-        runnow(data, id)
-        return True
-    else:
-        return False
+# def linkingAllFunc(data,id):
+#     if data:
+#         intentsfile = open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json', 'w')
+#
+#         intentsfile.write('''{
+#                               "intents": [
+#                                 {
+#                                   "tag": "Data-0",
+#                                   "patterns": [],
+#                                   "responses": ""
+#                                 }
+#                               ]
+#                             }''')
+#         intentsfile.close()
+#         print("Question is generating now...")
+#         runnow(data, id)
+#         return True
+#     else:
+#         return False
 
 
 # this function working for paraphrasing and reformate function call if require
-def runcombine(data, id):
-
-    new_data = []
-    resutlLink = linkingAllFunc(data, id)
-
-    if (resutlLink):
-        new_data = []
-        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json') as json_file:
-            data = json.load(json_file)
-            print(f"this is mhaa data------------{data}")
-            temp = data["intents"]
-        i = 0
-        for entry in temp:
-            if i == 0:
-                i += 1
-            else:
-                new_data.append(entry)
-                i += 1
-        new_dict = {"intents": new_data}
-        print(f"this is new dict --------------------------------------------------------{new_dict}")
-        with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json', "w") as f:
-            json.dump(new_dict, f, indent=4)
-
-        run_main(id)
-        print("Intent Json file is completely updated..")
-    else:
-        print("Question Generation is failed")
-
+# def runcombine(data, id):
+#
+#     new_data = []
+#     resutlLink = linkingAllFunc(data, id)
+#
+#     if (resutlLink):
+#         new_data = []
+#         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json') as json_file:
+#             data = json.load(json_file)
+#             print(f"this is mhaa data------------{data}")
+#             temp = data["intents"]
+#         i = 0
+#         for entry in temp:
+#             if i == 0:
+#                 i += 1
+#             else:
+#                 new_data.append(entry)
+#                 i += 1
+#         new_dict = {"intents": new_data}
+#         print(f"this is new dict --------------------------------------------------------{new_dict}")
+#         with open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json', "w") as f:
+#             json.dump(new_dict, f, indent=4)
+#
+#         run_main(id)
+#         print("Intent Json file is completely updated..")
+#     else:
+#         print("Question Generation is failed")
+#
 
 # Question Ans show
+
+
 def QueShow(request):
     try:
         if request.session['Id']:
@@ -237,7 +267,7 @@ def trainModel(request):
 # predict ans from input
 def takeOutputdp(request):
     id = request.session['Id']
-    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json").read())
+    intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json", encoding="utf-8").read())
     message = request.POST.get('message', 'hey')
     ints = predict_class(message,id)
     res = get_response(ints, intents)
@@ -577,7 +607,7 @@ def updateJson(request):
 def resetAll(request):
     try:
         id=request.session['Id']
-        with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'w') as f:
+        with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'w', encoding='utf-8') as f:
             f.write('{"intents": []}')
             return redirect('QueShow')
     except Exception as e:
@@ -589,7 +619,7 @@ def getIntentsData(request):
         return redirect('signin')
     else:
         id = request.session['Id']
-        with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'r') as f:
+        with open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json",'r',encoding='utf-8') as f:
             data = f.read()
             f.close()
         return JsonResponse({"data": data})
@@ -630,6 +660,6 @@ def translate(request):
 def documentation(request):
     return render(request,"AIC_APP/documentation.html")
 
-if __name__ == '__main__':
-    runcombine()
+# if __name__ == '__main__':
+#     # runcombine()
 

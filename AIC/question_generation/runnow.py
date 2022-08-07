@@ -19,7 +19,7 @@ nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_
 
 def write_json(data,id):
     filename = f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json"
-    with open(filename, "w", encoding="utf8") as f:
+    with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
 def givequeanstopara(data,id):
@@ -29,7 +29,7 @@ def givequeanstopara(data,id):
     #     print("pipeline errr")
 
     intentsfile = json.loads(open(
-        f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json',encoding="utf8").read(),
+        f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json',encoding="utf-8").read(),
                              )
 
     # nlp = pipeline("multitask-qa-qg")
@@ -69,7 +69,7 @@ def runnow(data,id):
         print("pipeline errr")
     import json
 
-    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json').read(), encoding="utf8")
+    intentsfile = json.loads(open(f'{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json', encoding="utf-8").read())
 
     # nlp = pipeline("multitask-qa-qg")
     nlp = pipeline("question-generation", model="valhalla/t5-small-qg-prepend", ans_model="valhalla/t5-small-qa-qg-hl", qg_format="prepend")
@@ -112,7 +112,7 @@ def runnow(data,id):
             except:
                 pass
 
-            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents/intents{id}.json', encoding="utf8") as json_file:
+            with open(f'{os.getcwd()}/AIC_APP/static/AIC_APP/intents/intents{id}.json', encoding="utf-8") as json_file:
                 data = json.load(json_file)
                 temp = data["intents"]
                 y = {"tag": f"Data-{str(iterate + 1)}", "patterns": list, "responses": answer}

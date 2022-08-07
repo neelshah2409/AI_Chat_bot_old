@@ -12,13 +12,31 @@ lemmatizer = WordNetLemmatizer()
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
+    newsentence = []
+    for i in sentence_words:
+        newsentence.append(i.lower())
+    sentence_words = newsentence
+
     print("sentence_words",sentence_words)
+
     return sentence_words
 
 def bag_of_words(sentence,id):
     words = pickle.load(open(f"{os.getcwd()}{os.sep}Training{os.sep}words{os.sep}words{id}.pkl", 'rb'))
     sentence_words = clean_up_sentence(sentence)
-    print("words is word",words)
+    # print("words is word", words)
+    smallerwords= []
+
+    for i in words:
+        try:
+            i = i.lower()
+            smallerwords.append(i)
+        except:
+            smallerwords.append(i)
+
+    words = smallerwords
+    print("words is word", words)
+
     bag = [0] * len(words)
     for w in sentence_words:
         for i, word in enumerate(words):
