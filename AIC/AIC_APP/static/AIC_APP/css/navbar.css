@@ -41,3 +41,9 @@
     border: none;
     margin: 0.5rem 0rem;
 }
+#signupbtn:hover {
+    color: black !important;
+}
+#loginbtn:hover {
+    color: black !important;
+}

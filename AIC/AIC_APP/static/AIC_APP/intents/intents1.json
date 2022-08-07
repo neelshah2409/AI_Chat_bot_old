@@ -1,9 +1,332 @@
 {
-                              "intents": [
-                                {
-                                  "tag": "Data-0",
-                                  "patterns": [],
-                                  "responses": ""
-                                }
-                              ]
-                            }
+    "intents": [
+        {
+            "tag": "Data-1",
+            "patterns": [
+                "What is called the Co-ordinated Development Scheme?",
+                "What is the name of a scheme that promotes co-ordinated development in India?",
+                "What is the name of the plan for a coordinated development in India?",
+                "What is the name of the scheme designed to promote co-ordinated development in India?",
+                "What is the name of a coordinated development scheme backed by CNI?",
+                "Which is the name of the scheme on Co-ordinated Development?",
+                "What is the name of a scheme to promote co-ordinated development in India?",
+                "What is the name of the scheme that promotes coordinated development in India?",
+                "What is the name of Co-ordinated development scheme in India?",
+                "What is the Name of the Scheme for Co-ordinated Development in India?"
+            ],
+            "responses": "Learn about Schemes that promote co-ordinated development in India."
+        },
+        {
+            "tag": "Data-2",
+            "patterns": [
+                "What is Kaushal Augmentation and Restructuring Mission of AICTE?",
+                "What is the Kaushal Augmentation and Restructuring Mission of AICTE? What Is It Means For AICTE?",
+                "What is the Kaushal Restructuring Mission?"
+            ],
+            "responses": "AICTE is initiating \u201cKaushal Augmentation and Restructuring Mission of AICTE\u201d (KARMA) for all AICTE approved institutions in the country to overcome the dual challenge of scarcity of skilled manpower in jobs and low skill level of those who are presently in jobs."
+        },
+        {
+            "tag": "Data-3",
+            "patterns": [
+                "How many youth will have engineering skill?",
+                "What shall be the number of engineers in India?",
+                "How many people are in STEM field given STEM engineering skills?",
+                "How many youth will be trained in engineering?",
+                "How many youth are given engineering skills?",
+                "How many Lakh youth will be given industrial skills?",
+                "How many of lakh youth will be given engineering skills?",
+                "How many lakh youth are given engineering skills?",
+                "How many lakh youths will be the ones given the engineering skills?"
+            ],
+            "responses": "AICTE is implementing the PMKVY for Technical Institutes scheme through AICTE approved Technical Institutions in the country.Under this Scheme in next three years, 10.5 Lakh youth are to be given Engineering Skills."
+        },
+        {
+            "tag": "Data-4",
+            "patterns": [
+                "What is a rural development programme focusing on the development of the villages?",
+                "What is rural development?",
+                "What is the rural development programme?",
+                "What is a rural development programme focusing on a rural development of communities?",
+                "What is a rural development programme?",
+                "Rural development programme focusing on development in the villages?",
+                "Rural Development Programme?"
+            ],
+            "responses": "Saansad Aadarsh Gram Yojana is a rural development programme broadly focusing upon the development in the villages which includes social development, cultural development and spread motivation among the people on social mobilization of the village community."
+        },
+        {
+            "tag": "Data-5",
+            "patterns": [
+                "What is Ministry of Human Resource Development?",
+                "What's the name of the Ministry of Human Resources Development?",
+                "What is the Ministry of Human Resource Development?",
+                "Which is the name of the Ministries of Human Resource Development?",
+                "What is the name of Ministry of Human Resources Development?",
+                "What is the name of the Ministry of Human Resources Development?",
+                "What is the Name of Ministry of Human Resource Development, INDIA?"
+            ],
+            "responses": "ARIIA is an initiative of Ministry of Human Resource Development (MHRD), Govt. of India to systematically rank all major higher educational institutions and universities in India on indicators related to \u201cInnovation and Entrepreneurship Development\u201d amongst students and faculties.."
+        },
+        {
+            "tag": "Data-6",
+            "patterns": [
+                "What is the name of the course on faculty Development Scheme?",
+                "What is the name of a Faculty development scheme?",
+                "What is the name of Faculty Development Scheme?",
+                "What's the Faculty Development Scheme?",
+                "What is the name of Faculty development scheme?",
+                "What's the name of a Faculty Development Scheme?",
+                "What is the Name of Faculty Development Scheme?"
+            ],
+            "responses": "Learn about the various Faculty\u00a0development schemes and programmes."
+        },
+        {
+            "tag": "Data-7",
+            "patterns": [
+                "What are the annual exams of course on faculty Development Schemes of AICTE?",
+                "What is applicable to all curricular enhancement schemes of AICTE?",
+                "What is applicable to Faculty Development Scheme of AICTE?",
+                "Which framework for preparing SDAs for AICTE is applicable?",
+                "What is applicable to all Faculty Development Scheme of AICTE?",
+                "How is the AICTE Faculty Development Scheme managed?"
+            ],
+            "responses": "General Guidelines Applicable to all Faculty Development Schemes of AICTE."
+        },
+        {
+            "tag": "Data-8",
+            "patterns": [
+                "What shall StTP-SFURTI support?",
+                "Which organization will STTP-SFURTI support?",
+                "Which organisations would you want to support on STTP-SFURTI?",
+                "Who will STTP-SFURTI support?",
+                "What organizations will STTP-SFURTI support?",
+                "Which organizations will STTP Furti support?"
+            ],
+            "responses": "STTP-SFURTI intends to conduct faculty and student trainings through financial assistance from AICTE to enable faculty members and students in the field of technical education to introspect and learn techniques that can help prepare faculty and students to impart there research work in the development of small-scale business for the nation."
+        },
+        {
+            "tag": "Data-9",
+            "patterns": [
+                "What is the name of the National Institute of Technical Teachers Training?",
+                "What is the name of NITT Technical Training?",
+                "What is the name of the National Initiative for Technical Teacher Training?",
+                "What's the name of National Initiative for Technical Teachers Training?",
+                "What is the name of Technical Teachers Training?",
+                "Which is the name of the National Institute for Technical Teachers Training?",
+                "What is the name of National Initiative for Technical Teachers Training?",
+                "What is the name of the national initiative for technical teacher training?",
+                "What is the name of National Technical Teachers Training? What is the purpose of the National Initiative for Technical Teachers Training, but this is not a formal activity of the company.",
+                "What is the Name of National Initiative for Technical Teachers Training?"
+            ],
+            "responses": "In order to train the Inductee Teachers in AICTE approved / recognised institutions, National Initiative for Technical Teachers Training (for Inductee Teachers) has been launched. It imparts training to the Inductee Teachers in three phases. The first phase of the training programme for the Inductee Teachers shall be conducted in Massive Open Online Courses (MOOCs) mode for eight modules on the SWAYAM platform through the NITTT portal www.nittt.ac.in followed by one-month industrial internship (second phase) and then mentor based training (third phase)."
+        },
+        {
+            "tag": "Data-10",
+            "patterns": [
+                "When was the Quality Improvement Programme born?",
+                "When was the Quality Improvement Programme instituted?",
+                "What is quality improvement?",
+                "When did the Quality Improvement Programme get its first impact?",
+                "When did the Quality Improvement Programme (QIP) start?",
+                "How and when was the Quality Improvement Programme launched?"
+            ],
+            "responses": "The Government of India launched the Quality Improvement Programme in the year 1970. One of the main objectives of the programme is to upgrade the expertise and capabilities of the faculty members of the degree level institutions in the country.."
+        },
+        {
+            "tag": "Data-11",
+            "patterns": [
+                "What does RPS do for thrust areas of technical education?",
+                "What is RPS's thrust area for Technical Education?",
+                "What does RPS promote in categorized thrust areas of technical education?",
+                "What does RPS pursue in identified thrust areas of technical education?",
+                "What does RPS promote in specific thrust areas of Technical education?"
+            ],
+            "responses": "This scheme Promotes Research in identified thrust areas of in Technical Education. RPS is aimed to create research ambience in the institutes by promoting research in engineering sciences and innovations in established and newer technologies; and to generate Master\u2019s and Doctoral degree candidates to augment the quality of faculty and research. The limit of funding is Rs 25 Lakh for project duration of 3 years."
+        },
+        {
+            "tag": "Data-12",
+            "patterns": [
+                "What is the name of the course that provides scholarships to the faculty who fulfil eligibility criteria?",
+                "What is the name of a programme that grants scholarships to students who meet eligibility criteria?",
+                "What is the name of the programme that provides scholarships to the faculty who fulfill eligibility criteria?",
+                "Which is the programme that provides scholarships to the faculty who fulfil eligibility criteria?",
+                "What is the name of a scheme that provides scholarships to faculty who fulfil eligibility criteria?",
+                "What is the name of the program that provides scholarships to the faculty who fulfil eligibility criteria?"
+            ],
+            "responses": "Scheme provides scholarships to the faculty who fulfils eligibility criteria and obtains admission in the Doctoral Degree programme leading to award of PhD degree in any of the enlisted top 500 universities/institutes (based on the QS ranking, the Times ranking and the Shanghai ranking) in the world."
+        },
+        {
+            "tag": "Data-13",
+            "patterns": [
+                "What types of Training is the scheme intended to provide to teachers employed in AICTE approved Technical Institutions?",
+                "What types of training courses are being offered to teachers employed in AICTE approved Technical Institutions?",
+                "What is the scheme intended to provide to the teachers employed in AICTE approved Technical Institutions?",
+                "What kinds of training is the scheme designed to provide teachers employed in AICTE approved technical institutions?",
+                "Which type of training is the scheme intended to provide to teachers employed in AICTE approved technical institutions?",
+                "What type of training is instituted in POK/AICTE approved Technical Institutions?",
+                "What kind of training is the scheme intended to provide to teachers employed in an AICTE approved Technical Institution?",
+                "What sort of training is intended to the providers of certification to lecturers employed in AICTE approved technical Institutions?"
+            ],
+            "responses": "The scheme is intended to Institutions   for   induction training to   teachers employed in AICTE approved Technical Institutions to facilitate up-gradation of knowledge and skill. Rs 5-7 Lakh are granted for the 2 weeks FDP."
+        },
+        {
+            "tag": "Data-14",
+            "patterns": [
+                "What is purpose of Short Term Training?",
+                "What is the purpose of short term training?",
+                "What's the aim of short term training for engineering students?",
+                "What's the purpose of a short-term training program?",
+                "What is the purpose of short term training programs?",
+                "What is the purpose of short term training and how can I begin?",
+                "What is the purpose of Short term training?"
+            ],
+            "responses": "Short Term Training Program (STTP) intends to conduct faculty trainings through financial assistance from AICTE to enable faculty members in the field of technical education to introspect and learn techniques that can help prepare students for active and successful participants in a knowledge society."
+        },
+        {
+            "tag": "Data-15",
+            "patterns": [
+                "What type of recreation is used to develop the skill of the participants and their participation in the masses in traditional sports/games and fun games for physical activity?",
+                "What type of recreational activity is used to develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity?",
+                "Which type of recreation is used to develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity?",
+                "What type of recreation is used to develop the skill of participants to involve the masses in traditional sports/games and fun games for physical activity?",
+                "What type of recreation is used to develop the skill of the participants to involve mass in traditional sports/games and fun games for physical activity?",
+                "What kind of recreation is used to develop the skill of the participants to involve the masses in the traditional sports/games and fun games for physical activity?"
+            ],
+            "responses": "To Develop the skill of the participants to involve the masses in traditional sports/games and fun games for physical activity through recreation."
+        },
+        {
+            "tag": "Data-16",
+            "patterns": [
+                "What is purpose of AICTE?",
+                "What is the purpose of AICTE?",
+                "What's the aim of AICTE?",
+                "What's the purpose of AICTE?",
+                "What is the AICTE?",
+                "What is the main purpose of AICTE?"
+            ],
+            "responses": "The objective of the AICTE \u2013 University training programs is to conduct training for faculty members to prepare them for being successful in a knowledge society."
+        },
+        {
+            "tag": "Data-17",
+            "patterns": [
+                "What is the purpose of the course on Digital coding in the AICTE Training?",
+                "What is purpose of AICTE technical training program for librarians?",
+                "What is the purpose of the AICTE Technical University Training program for Librarians?",
+                "Why is the AICTE Training designed for Librarians?",
+                "What is the purpose of Technical University Training for librarians in AICTE?",
+                "What's the purpose of AICTE Technical University Training program?",
+                "What is the purpose of Technical University training (TUT) at AICTE for Librarians?",
+                "What is the purpose of technical training program for librarians by AICTE?",
+                "What is the purpose of AICTE Technical University training program for librarians?",
+                "What is the purpose of AICTE Technical University Training Program for Librarians?"
+            ],
+            "responses": "The objective, of AICTE \u2013 Technical University Training program for Librarians, is to conduct training for Librarians to prepare them for being successful and affective in a knowledge society. <br/>It provide a dynamic and quality user centered library and information services that enhance teaching, learning and research while inculcating life-long learning skills and fostering human development."
+        },
+        {
+            "tag": "Data-18",
+            "patterns": [
+                "What does the faculty interact with through their student scheme?",
+                "What is the scheme allows faculty to interact with?",
+                "What does the scheme allow faculty to interact with and eat?",
+                "How does the scheme allows faculty to interact with faculty?",
+                "What does the module allow teachers to interact with?"
+            ],
+            "responses": "The scheme enables meritorious faculty to interact at International Level Conferences, both within and outside India, Seminars, and Symposia."
+        },
+        {
+            "tag": "Data-19",
+            "patterns": [
+                "What is the purpose of the AICTE & INAE distinguished visiting professor scheme?",
+                "What is the objective of Distinguished visiting professor scheme?",
+                "What is the aim of the distinguished visiting professor scheme?",
+                "What's the aim of the AICTE/INAE distinguished visiting professor scheme?",
+                "What is the aim of AICTE and INAE distinguished visiting professor scheme?",
+                "What's the aim of AICTE and INAE distinguished visiting professor scheme?",
+                "What is the AICTE and INAE distinguished visiting professor scheme? How can I participate?",
+                "What is the purpose of AICTE and INAE distinguished visiting professor scheme?",
+                "What is the aim of AICTE and INAE distinguished visiting Professor scheme?"
+            ],
+            "responses": "AICTE and INAE distinguished visiting Professor scheme envisages promotion of industry-institute interaction."
+        },
+        {
+            "tag": "Data-20",
+            "patterns": [
+                "What is the purpose of a program?",
+                "What is purpose of a program?",
+                "What's the aim of a program?",
+                "What's the purpose of a program?",
+                "What is the main purpose of program?",
+                "What is the purpose of programming?"
+            ],
+            "responses": "The objective is to conduct AICTE-ISTE Induction/ Refresher Programmes for the teaching faculty working in technical institutions. Total 100 Refresher programme & 50 Orientation programme with the funding of Rs. 300000 per programme."
+        },
+        {
+            "tag": "Data-21",
+            "patterns": [
+                "What is the purpose of promoting the use of technical education?",
+                "What is purpose of promoting use of Technical Education?",
+                "Why should we promote use of technical education?",
+                "What is the purpose of Technical education?",
+                "What's the purpose in promoting the use of in technical education?",
+                "What is the purpose of public use of in technical education?",
+                "What is the purpose of use of the use of in the field of technical education?"
+            ],
+            "responses": "To promote use of 'Scheduled Regional Language' in Technical Education for creating knowledge base in local language and to encourage creation of treasure of latest technical knowledge incorporating the newest developments by grant of financial support to the distinguished faculty/writers/translators."
+        },
+        {
+            "tag": "Data-22",
+            "patterns": [
+                "What fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers?",
+                "What fellowship intends to use expertise of highly qualified and experienced superannuated engineers?",
+                "What is the fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers (captains)?",
+                "What Fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers?",
+                "Which fellowship intends to use the expertise of highly qualified and experienced superannuated Engineers?",
+                "How can I apply for a fellowship and how can I use my skills and/or experience as a superannuated engineer?",
+                "What fellowship intends to use the expertise of highly qualified and experienced superannuated engineers?",
+                "What fellowship intends to use the expertise of br/>highly qualified and experienced superannuated Engineers?"
+            ],
+            "responses": "The Emeritus Professor (Distinguished Practicing Engineer) Fellowship intends to utilize the expertise of<br/>highly qualified and experienced superannuated Engineers who have made undoubtable,<br/>unchallengeable, unparalleled and exceptional contribution to the society in their respective fields in<br/>any discipline in engineering for the benefit of students/faculty of host institutes & of institutes located<br/>in the adjoining areas."
+        },
+        {
+            "tag": "Data-23",
+            "patterns": [
+                "How many Indian teachers are enrolled in the Leadership in teaching Excellence Programme?",
+                "What is the process of Leadership in Teaching Excellence? How many teachers are in India?",
+                "How many teachers are in Leadership in Teaching Excellence?",
+                "How many teachers are participating in the leadership in teaching execration programme?",
+                "How many teachers are enrolled in the leadership in teaching excellence programme?",
+                "How many teachers are enrolled in the Leadership in Teaching Excellence scheme?",
+                "How many teachers in India do you think are enrolled in the Leadership in Teaching Excellence Programme?",
+                "How many teachers (Finance and Technical) are enrolled in the Leadership in Teaching Excellence programme in India, but aren't they registered?",
+                "How many teachers are enrolled in the Leadership in Teaching Excellence programme?"
+            ],
+            "responses": "AICTE\u2019s Leadership in Teaching Excellence (LITE) is a national programme aims to bring modern software engineering knowledge through proven online teaching-learning methods to 100,000 teachers and 2.4 Crore students in India."
+        },
+        {
+            "tag": "Data-24",
+            "patterns": [
+                "What are the major factors which determine the quality of education?",
+                "What factors determine the quality of education?",
+                "What is the main reason of quality education?",
+                "How do we define quality of education?",
+                "What are the factors which affect the quality of education?",
+                "Which factor determines quality education?",
+                "What are the factors to factor in quality of education?",
+                "How can I define best quality education?",
+                "What factors influence the quality of education?"
+            ],
+            "responses": "Examinations play a very important role in deciding the quality of education.This policy attempts to bring out recommendations for reforms in examination system to meet challenges of emerging engineering education landscape.Further to complete the policy for the purposes of implementation, AICTE is presently in the process of compiling the question banks as applicable to various disciplines in the field of Engineering."
+        },
+        {
+            "tag": "Data-25",
+            "patterns": [
+                "What app are intended to benefit Faculty members, Students of institutes recognized by AICTE?",
+                "What is intended to benefit Faculty members, students of institutes recognized by AICTE?",
+                "What app is intended to benefit Faculty members, Students, of institutes recognized by AICTE?",
+                "Which app would you suggest to a student studying at an AICTE?",
+                "What app is intended to benefit Faculty members and Students of institutes recognized by AICTE?",
+                "How can I use my app to help and encourage students of institutions recognized by AICTE?"
+            ],
+            "responses": "360 Degree Feedback is aimed at benefitting the Faculty members, Students of institutes recognized by AICTE in which faculty members are subjected to feedback by management, administrative staff, HODs, students & the society to include (stake holders) on different parameters. 360 Degree Feedback app and a portal has been designed for the institutes, teachers and students. This activity has been made mandatory for the purposes of promotion to all the faculties in AICTE approved institution the AICTE Gazette dated 01 March 2019 and will be a mandatory part for qualification in AICTE - AQIS (financially funded schemes) as also for AICTE Visvesvaraya Best Teachers\u2019 Award."
+        }
+    ]
+}

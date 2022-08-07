@@ -29,7 +29,10 @@ urlpatterns = [
     path('getIntentsData', views.getIntentsData, name="getIntentsData"),
     path('getUserData', views.getUserData, name="getUserData"),
     path('updateUserData', views.updateUserData, name="updateUserData"),
-    path('translate', views.translate, name="translate")
+
+    path('api', views.api, name="api"),
+        path('translate', views.translate, name="translate")
+
     # path('signup', views.signup, name='signup'),
     # path('activate/<uidb64>/<token>', views.activate, name='activate'),
     # path('signin', views.signin, name='signin'), #login sign in page
