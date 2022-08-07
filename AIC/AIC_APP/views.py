@@ -37,8 +37,9 @@ def setgreeterrmsg(request):
 
     try:
         id = request.session["Id"]
-        greet = "Hey welcome sir"
-        err = "sorry for inconviency for this please refer this site.."
+        greet = request.POST.get("greet")
+        err = request.POST.get("sorry")
+        print(greet,err)
         Yobotuser.objects.filter(id=id).update(greetmsg = greet, errmsg = err)
         return HttpResponse(f"greet - {greet}& err- {err}")
     except:
@@ -54,7 +55,7 @@ def getgreeterrmsg(request):
         data = {"greet": greet, "error":err}
         # return HttpResponse(data)
         print(data)
-        return HttpResponse(f"greet- {greet}& err- {err}")
+        return JsonResponse(data)
 
     except:
         return HttpResponse("failed")
