@@ -6,9 +6,6 @@ from django.urls import path, include
 urlpatterns = [
 
     path('', views.index, name="AIC"),
-    path('setgreeterrmsg', views.setgreeterrmsg, name="setgreeterrmsg"),
-    path('getgreeterrmsg', views.getgreeterrmsg, name="getgreeterrmsg"),
-
     path('fetchInputTextArea', views.fetchInputTextArea, name="fetchInputTextArea"),
     path('QueGenerator', views.QueGenerator, name="QueGenerator"),
     path('howToUse', views.generateFAQs, name="generateFAQs"),

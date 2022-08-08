@@ -35,7 +35,7 @@ var qcount=0;
         }
 
         temp1 += `<div class="accordion__content">
-            <p>${jd[i][j]['responses']}</p>
+            <p class='fw-bold'>${jd[i][j]['responses']}</p>
           </div>
           <span name='${iterate}' id='deleteQuestionSet' class="float-right" style="cursor: pointer;"><button type="button" class="closeall btn mt-2 mb-2  mb-3">Delete</button></span></div>`;
         iterate++;

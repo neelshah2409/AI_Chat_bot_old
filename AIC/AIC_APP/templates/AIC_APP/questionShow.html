@@ -14,16 +14,16 @@
   {% include "AIC_APP/navbar.html" %}
   <div class="modal fade" id="confirmationBox" tabindex="-1">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content bg-dark text-light">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <h5 class="modal-title text-warning">Confirm Reset !!</h5>
+          <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
           <p class="text-danger">Are You Want Sure To Reset All Question-Answers? You Cannot Undo Your Actions</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn closeall" data-bs-dismiss="modal">Cancel</button>
           <button type="button" id="resetbutton" class="btn btn-danger">Confirm Reset</button>
         </div>
       </div>

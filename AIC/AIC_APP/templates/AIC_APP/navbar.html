@@ -15,38 +15,38 @@
             </div>
             <div class="modal-body">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                  <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
                   <label for="name">Name</label>
                 </div>
                 <div class="d-flex flex-wrap">
                   <div class="form-floating col-12 col-md-6 mb-1">
-                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address">
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
                     <label for="email">Email address</label>
                   </div>
                   <div class="form-floating col-12 col-md-5 ms-auto mb-1">
-                    <input type="mobile" class="form-control" id="mobile" placeholder="Enter Your Mobile">
+                    <input type="mobile" class="form-control" id="mobile" placeholder="Enter Your Mobile" required>
                     <label for="mobile">Mobile</label>
                   </div>
                 </div>
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="organization" placeholder="Enter Your Organization's Name">
+                  <input type="text" class="form-control" id="organization" placeholder="Enter Your Organization's Name" required>
                   <label for="organization">Organization</label>
                 </div>
                 <div class="text-end">
-                  <a href="#" class="text-decoration-none fw-bold w-100 "><i class="fa-solid fa-key"></i>Manage API</a>
+                  <a href="/api" class="text-decoration-none fw-bold w-100 "><i class="fa-solid fa-key"></i>Manage API</a>
                 </div>
                 <h3 class="text-light">Chatbot Setting</h3>
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="custom_greeting" placeholder="Enter Your Custom Greeting">
-                  <label for="name">Greeting message for your chatbot</label>
+                  <input type="text" class="form-control" id="welcomeMessage" placeholder="Custom Greeting Message" required>
+                  <label for="name">Custom Greeting Message</label>
                 </div>
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="custom_failure_message" placeholder="Enter custom failure message">
-                  <label for="name">Custom failure message</label>
+                  <input type="text" class="form-control" id="sorryMessage" placeholder="Custom Sorry Message" required>
+                  <label for="name">Custom Sorry Message</label>
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
               <button type="submit" class="btn btn-primary">Save</button>
             </div>
           </form>
@@ -65,28 +65,42 @@
           </li>
           <li class="nav-item mx-2">
               <a class="nav-link" href="/documentation"><i class="fa-solid fa-key"></i>API</a>
-            </li>
-          <li class="nav-item mx-2 generateFAQs">
+          </li>
+          <li class="nav-item generateFAQs">
             <div class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-gears"></i>Generate FAQs</a>
-            <div class="generateFAQOptions dropdown-menu">
-              <div class="list-group">
-                <a href="/questionAnswers" class="dropdown-item">
-                  Using Question-Answers
-                </a>
-                <a href="/onlyAnswers" class="dropdown-item">
-                  Using Only Answers
-                </a>
-                <a href="/filesInput" class="dropdown-item">
-                  Using File
-                </a>
-                <a href="/paragraph" class="dropdown-item">
-                  Using Paragraph
-                </a>
-                <a href="/linkInput" class="dropdown-item">
-                  Using Site Link
-                </a>
-              </div>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-gears"></i>Generate FAQs</a>
+              <div class="generateFAQOptions p-0 dropdown-menu bg-light">
+                <ul class="list-group">
+                  <li class="navbarCategory list-group-item dropend text-end bg-light text-light">
+                    <a href="#" class="text-decoration-none text-dark dropdown-toggle">
+                      Using Structured Data
+                    </a>
+                    <div class="categoryDropdown text-light rounded-2 bg-dark">
+                      <a href="/questionAnswers" class="dropdown-item py-2 px-4 text-light text-start">
+                        Using Question-Answers
+                      </a>
+                      <a href="/onlyAnswers" class="dropdown-item py-2 px-4 text-light text-start">
+                        Using Only Answers
+                      </a>
+                      <a href="/filesInput" class="dropdown-item py-2 px-4 text-light text-start">
+                        Using File
+                      </a>
+                    </div>
+                  </li>
+                  <li class="navbarCategory list-group-item dropend text-end bg-light text-light">
+                    <a href="#" class="text-decoration-none text-dark dropdown-toggle">
+                      Using Unstructured Data
+                    </a>
+                    <div class="categoryDropdown text-light rounded-2 bg-dark">
+                      <a href="/paragraph" class="dropdown-item py-2 px-4 text-light text-start">
+                        Using Paragraph
+                      </a>
+                      <a href="/linkInput" class="dropdown-item py-2 px-4 text-light text-start">
+                        Using Site Link
+                      </a>
+                    </div>
+                  </li>
+                </ul>
             </div>
           </li>
           <li class="nav-item mx-2">

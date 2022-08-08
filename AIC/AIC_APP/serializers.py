@@ -5,7 +5,7 @@ from rest_framework import serializers
 class YobotuserSerialize(serializers.ModelSerializer):
     class Meta:
         model = Yobotuser
-        fields= ["Name","Email","CompanyName","PhoneNum"]
+        fields= ["Name","Email","CompanyName","PhoneNum","greetmsg","errmsg"]
 
     def create(self, validated_data):
         return Yobotuser(**validated_data)
