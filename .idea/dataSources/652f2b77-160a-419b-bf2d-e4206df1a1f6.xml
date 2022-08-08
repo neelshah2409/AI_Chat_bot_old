@@ -1825,11 +1825,26 @@ model</ColNames>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="482" parent="359" name="userdata_APIKEY_cfb3262d">
+    <column id="482" parent="359" name="improvedata">
+      <Position>9</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="483" parent="359" name="errmsg">
+      <Position>10</Position>
+      <DataType>varchar(300)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="484" parent="359" name="greetmsg">
+      <Position>11</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="485" parent="359" name="userdata_APIKEY_cfb3262d">
       <ColNames>APIKEY</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="483" parent="359" name="PRIMARY">
+    <key id="486" parent="359" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

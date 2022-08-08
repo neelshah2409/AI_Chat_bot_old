@@ -33,33 +33,7 @@ except Exception as e:
 
 
 # data come from form ......from js
-def setgreeterrmsg(request):
-
-    try:
-        id = request.session["Id"]
-        greet = request.POST.get("greet")
-        err = request.POST.get("sorry")
-        print(greet,err)
-        Yobotuser.objects.filter(id=id).update(greetmsg = greet, errmsg = err)
-        return HttpResponse(f"greet - {greet}& err- {err}")
-    except:
-        return HttpResponse("failed")
-
 # data send to js file for display in chatbot
-def getgreeterrmsg(request):
-    try:
-        id = request.session['Id']
-        entry = Yobotuser.objects.filter(id = "id").values()
-        for i in entry:
-            greet =i['greetmsg']
-            err =i['errmsg']
-        data = {"greet": greet, "error":err}
-        # return HttpResponse(data)
-        print(data)
-        return JsonResponse(data)
-
-    except:
-        return HttpResponse("failed")
 
 
 # Landing page of website
@@ -653,6 +627,8 @@ def updateUserData(request):
         user.Email = data["email"]
         user.CompanyName = data["organization"]
         user.PhoneNum = data["mobile"]
+        user.greetmsg = data["welcome"]
+        user.errmsg = data["sorry"]
         user.save()
         request.session["Name"] = data["name"]
         serializer = YobotuserSerialize(user, many=False)
