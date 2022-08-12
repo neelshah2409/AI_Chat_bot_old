@@ -2,6 +2,13 @@
 import json
 import os
 
+
+
+import pyttsx3   # pip install pyttsx3
+
+
+import speech_recognition as sr         # pip install SpeechRecognition
+
 from django.core.files.storage import FileSystemStorage
 from Files.filesConvert import csvData, txtData, docxData
 from django.shortcuts import render, redirect
@@ -29,6 +36,44 @@ except Exception as e:
     print(e)
     print("Run main load failed")
 
+
+# for text to speech module
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+# print(voices[1].id)
+engine.setProperty('voice', voices[0].id)
+
+
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+def takecommand():
+    # Initialize the recognizer
+    r = sr.Recognizer()
+
+    with sr.Microphone() as source2:
+        # wait for a second to let the recognizer
+        # adjust the energy threshold based on
+        # the surrounding noise level
+        r.adjust_for_ambient_noise(source2, duration=0.2)
+
+        # listens for the user's input
+        print("listening....")
+        r.pause_threshold = 1
+        our_audio = r.listen(source2)
+
+        try:
+            print("recognizing...")
+            # Using google to recognize audio
+            YourText = r.recognize_google(our_audio, language='en-in')
+            print(f"did you say this {YourText}")
+        except Exception as e:
+            print(e)
+            print("Say that again please")
+            return None
+        return YourText
 
 
 
@@ -247,14 +292,28 @@ def trainModel(request):
 
 # predict ans from input
 def takeOutputdp(request):
-    id = request.session['Id']
     intents = json.loads(open(f"{os.getcwd()}{os.sep}AIC_APP{os.sep}static{os.sep}AIC_APP{os.sep}intents{os.sep}intents{id}.json", encoding="utf-8").read())
-    message = request.POST.get('message', 'hey')
-    ints = predict_class(message,id)
-    res = get_response(ints, intents)
-    # destination = request.POST.get("destination")
-    # res = translator.translate(res, src="en", dest=destination).text
-    return HttpResponse(res)
+    id = request.session['Id']
+
+    # This speak variable is given from frontend if speak is true then its take input from microphone and speak loud otherwise as normal
+    # condition
+    speak = False
+    if (speak == True):
+        print("Bot is Listening...")
+        # This line is taking the input from microphone and its return text from audio input For more details check fun takecommand()
+        AudioToText = takecommand().lower()
+        ints = predict_class(AudioToText, id)
+        res = get_response(ints, intents)
+        # It speak loud the response
+        speak(res)
+        return HttpResponse(res)
+    else:
+        message = request.POST.get('message', 'hey')
+        ints = predict_class(message,id)
+        res = get_response(ints, intents)
+        # destination = request.POST.get("destination")
+        # res = translator.translate(res, src="en", dest=destination).text
+        return HttpResponse(res)
 
 # this will redirect the page of question generations
 def generateFAQs(request):
